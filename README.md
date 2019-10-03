@@ -24,6 +24,6 @@ varierà al variare della difficoltà della missione. In alcune missioni special
 come ricompensa delle armature o armi esclusive della missione, per tanto tali missioni non sono
 ripetibili una volta completate, le armi avranno dei benefici rispetto alle armi in vendita dal
 mercante.
-I giocatori potranno decidere di fondare dei gruppi, chiamati clan, dove sarà possibile giocare in
+I giocatori potranno decidere di creare dei gruppi, chiamati clan, dove sarà possibile giocare in
 gruppo. Sarà presente la figura del capo clan che avrà fondato il gruppo, avrà i privilegi per:
 aggiungere nuovi giocatori o di cacciare dei giocatori dal clan.
