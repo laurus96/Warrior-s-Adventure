@@ -21,7 +21,7 @@ import javax.validation.constraints.Size;
 @Entity
 @NamedQueries({
     
-    @NamedQuery(name = Giocatore.FIND_BYUSER, query = "SELECT b FROM Giocatore b WHERE b.username = ?1 && b.password = ?2")
+    @NamedQuery(name = Giocatore.FIND_BYUSER, query = "SELECT b FROM Giocatore b WHERE b.username = ?1 AND b.password = ?2")
 
 })
 public class Giocatore implements Serializable{
