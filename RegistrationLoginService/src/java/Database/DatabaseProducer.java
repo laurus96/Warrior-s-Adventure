@@ -17,7 +17,7 @@ import javax.persistence.EntityManager;
 public class DatabaseProducer {
     
     @Produces
-    @PersistenceContext(unitName = "BookPU")
+    @PersistenceContext(unitName = "DatabasePU")
     private EntityManager em;
     
 }
