@@ -12,6 +12,7 @@ import java.util.regex.Pattern;
 import javax.ejb.Stateless;
 import javax.ejb.LocalBean;
 import javax.inject.Inject;
+import javax.jws.WebService;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 
@@ -19,6 +20,7 @@ import javax.persistence.TypedQuery;
  *
  * @author lorenzopaolococchinone
  */
+@WebService
 @Stateless
 @LocalBean
 public class LoginRegistrationEJB implements LoginRegistrationEJBRemote {
