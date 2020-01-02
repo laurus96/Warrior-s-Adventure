@@ -20,13 +20,13 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @Entity
 @NamedQueries({
-    @NamedQuery(name = Arma.FIND_ND, query = "SELECT a FROM Arma a WHERE a.name= :name AND a.livello= :livello"),
+    @NamedQuery(name = Arma.FIND_WEAPON, query = "SELECT a FROM Arma a WHERE a.name= :name AND a.livello= :livello"),
 })
 public class Arma implements Serializable {
     
     public static final long serialVersionUID=1L;
     
-    public static final String FIND_ND="Arma.FIND_ND";
+    public static final String FIND_WEAPON="Arma.Find_Weapon";
     
     @Id @GeneratedValue
     private long id;
