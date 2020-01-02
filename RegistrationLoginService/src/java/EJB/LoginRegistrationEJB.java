@@ -45,6 +45,7 @@ public class LoginRegistrationEJB implements LoginRegistrationEJBRemote {
     @Override
     public String registration(String username, String password, String email) {
         
+        
         if(Pattern.matches("[A-Za-z0-9]+", username) == false || username.length() < 5 || username.length() > 20){
             return "FE_UN";
         }
@@ -58,15 +59,32 @@ public class LoginRegistrationEJB implements LoginRegistrationEJBRemote {
 
         }
         
+        if(findRegistrationUser(username, email))
+            return "DE_UN";
+        
         //Database Operation
         //Save new player        
         em.persist(new Giocatore(username, password, email));
        
        return "PASS"; 
     }
+    
+    public boolean findRegistrationUser(String username, String email){
+        TypedQuery<Giocatore> query = em.createNamedQuery(Giocatore.FIND_BYUSER, Giocatore.class)
+                .setParameter("username", username)
+                .setParameter("email", email);
+        
+        if(query.getResultList() == null)
+            return true;
+            
+ 
+        return false;
+        
+    }
+    
 
     public Giocatore findGiocatore(String username, String password){
-        TypedQuery<Giocatore> query = em.createNamedQuery(Giocatore.FIND_BYUSER, Giocatore.class)
+        TypedQuery<Giocatore> query = em.createNamedQuery(Giocatore.FIND_BYUSERPW, Giocatore.class)
                 .setParameter("username", username)
                 .setParameter("password", password);
         try{
@@ -77,4 +95,5 @@ public class LoginRegistrationEJB implements LoginRegistrationEJBRemote {
         }
 
     }
+  
 }

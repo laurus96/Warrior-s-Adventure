@@ -20,14 +20,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @Entity
 @NamedQueries({
-    
-    @NamedQuery(name = Giocatore.FIND_BYUSER, query = "SELECT b FROM Giocatore b WHERE b.username = :username AND b.password = :password")
+    @NamedQuery(name = Giocatore.FIND_ALL, query = "SELECT b FROM Giocatore b"),
+    @NamedQuery(name = Giocatore.FIND_BYUSERPW, query = "SELECT b FROM Giocatore b WHERE b.username = :username AND b.password = :password"),
+    @NamedQuery(name = Giocatore.FIND_BYUSER, query = "SELECT b FROM Giocatore b WHERE b.username = :username OR b.email = :email")
 
 })
 public class Giocatore implements Serializable{
     
     private static final long serialVersionUID = 1L;
     
+    public static final String FIND_ALL = "Giocatore.FindAllGiocatore";
+    public static final String FIND_BYUSERPW = "Giocatore.findByUserpw";
     public static final String FIND_BYUSER = "Giocatore.findByUser";
 
     
