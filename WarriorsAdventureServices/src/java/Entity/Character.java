@@ -147,6 +147,9 @@ public class Character implements Serializable {
 
     @Override
     public String toString() {
-        return "Character{" + "name=" + name + ", classe=" + classe + ", level=" + level + ", vitality=" + vitality + ", defense=" + defense + ", strenght=" + strenght + ", gold=" + gold + ", guild=" + guild + ", exp=" + exp + '}';
+        return "Character{" + "name=" + name + ", classe=" + classe + 
+                ", level=" + level + ", vitality=" + vitality + ", defense=" + 
+                defense + ", strenght=" + strenght + ", gold=" + gold + 
+                ", guild=" + guild + ", exp=" + exp + '}';
     }
 }

@@ -30,35 +30,21 @@ public class AdministrationEJB implements AdministrationEJBRemote {
     
     @Inject
     private EntityManager em;
+    
+    @Inject 
+    private PlayerEJB playerEJB;
 
     @Override
-    public List<Giocatore> allGiocatori() {
-        TypedQuery<Giocatore> query = em.createNamedQuery(Giocatore.FIND_ALL, Giocatore.class);
+    public List<Giocatore> allPlayers() {
+        TypedQuery<Giocatore> query = em.createNamedQuery(Giocatore.FIND_ALL,
+                Giocatore.class);
         return query.getResultList();
 
     }
-
+    
     @Override
-    public String banGiocatore(String username) {
-        TypedQuery<Giocatore> query = em.createNamedQuery(Giocatore.FIND_BYUSERNAME, Giocatore.class)
-                .setParameter("username", username);
-        try{
-            Giocatore ban = (Giocatore) query.getSingleResult();
-            ban.setBan(true);
-            
-            //Database operation
-            
-        
-            return "Giocatore: " + ban.getUsername() + "Bannato";
-   
-        }catch(NoResultException e){
-            return "Giocatore non trovato";
-        }
-    }
-
-    @Override
-    public List<Giocatore> BannedGiocatori() {
-        List<Giocatore> all = allGiocatori();
+    public List<Giocatore> BannedPlayers() {
+        List<Giocatore> all = allPlayers();
         List<Giocatore> banned = new ArrayList<>();
         
         for(Giocatore e : all){
@@ -69,7 +55,23 @@ public class AdministrationEJB implements AdministrationEJBRemote {
         return banned;
     }
     
-    
-    //prova 
+    @Override
+    public String banPlayer(String username) {
+        
+        TypedQuery<Giocatore> query = em.createNamedQuery(
+                Giocatore.FIND_BYUSERNAME, Giocatore.class)
+                .setParameter("username", username);
+        try{
+            Giocatore ban = (Giocatore) query.getSingleResult();
+            ban.setBan(true);
+            
+            this.playerEJB.updatePlayer(ban);
+            
+            return "Giocatore: " + ban.getUsername() + "Bannato";
+   
+        }catch(NoResultException e){
+            return "Giocatore non trovato";
+        }
+    }
     
 }

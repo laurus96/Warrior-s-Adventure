@@ -16,10 +16,8 @@ import javax.ejb.Remote;
 @Remote
 public interface AdministrationEJBRemote {
     
-    List<Giocatore> allGiocatori();
-    String banGiocatore(Giocatore player);
-    List<Giocatore> BannedGiocatori();
-    
-    
-    
+    List<Giocatore> allPlayers();
+    List<Giocatore> BannedPlayers();
+    String banPlayer(String username);
+ 
 }
