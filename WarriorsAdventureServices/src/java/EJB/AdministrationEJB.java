@@ -8,6 +8,7 @@ package EJB;
 
 import EJBInterface.AdministrationEJBRemote;
 import Entity.Giocatore;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.ejb.Stateless;
@@ -30,12 +31,14 @@ public class AdministrationEJB implements AdministrationEJBRemote {
     @Inject
     private EntityManager em;
 
+    @Override
     public List<Giocatore> allGiocatori() {
         TypedQuery<Giocatore> query = em.createNamedQuery(Giocatore.FIND_ALL, Giocatore.class);
         return query.getResultList();
 
     }
 
+    @Override
     public String banGiocatore(Giocatore player) {
         TypedQuery<Giocatore> query = em.createNamedQuery(Giocatore.FIND_BYUSER, Giocatore.class)
                 .setParameter("username", player.getUsername());
@@ -49,8 +52,12 @@ public class AdministrationEJB implements AdministrationEJBRemote {
 
     @Override
     public List<Giocatore> BannedGiocatori() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        List<Giocatore> all = allGiocatori();
+        List<Giocatore> banned = new ArrayList<Giocatore>();
+        
+        return banned;
     }
+    
     
     
     
