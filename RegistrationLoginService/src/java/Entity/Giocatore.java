@@ -39,6 +39,7 @@ public class Giocatore implements Serializable{
     private String username;
     private String password;
     private String email;
+    private boolean ban;
 
     public Giocatore() {
     }
@@ -47,6 +48,7 @@ public class Giocatore implements Serializable{
         this.username = username;
         this.password = password;
         this.email = email;
+        this.ban = false;
     }
 
     public String getUsername() {
@@ -73,9 +75,22 @@ public class Giocatore implements Serializable{
         this.email = email;
     }
 
+    public boolean isBan() {
+        return ban;
+    }
+
+    public void setBan(boolean ban) {
+        this.ban = ban;
+    }
+
     @Override
     public String toString() {
-        return "Giocatore{" + "id=" + id + ", username=" + username + ", password=" + password + ", email=" + email + '}';
+        return "Giocatore{" + "username=" + username + ", password=" + password + ", email=" + email + ", ban=" + ban + '}';
     }
+    
+
+    
+    
+
     
 }
