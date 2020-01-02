@@ -38,5 +38,4 @@ public class CharacterEJB implements CharacterEJBRemote{
         }
         chr.setGold(chr.getGold()-gold);
     }
-
 }

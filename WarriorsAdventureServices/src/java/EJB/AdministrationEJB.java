@@ -39,20 +39,21 @@ public class AdministrationEJB implements AdministrationEJBRemote {
     }
 
     @Override
-    public String banGiocatore(Giocatore player) {
-        TypedQuery<Giocatore> query = em.createNamedQuery(Giocatore.FIND_BYUSER, Giocatore.class)
-                .setParameter("username", player.getUsername());
+    public String banGiocatore(String username) {
+        TypedQuery<Giocatore> query = em.createNamedQuery(Giocatore.FIND_BYUSERNAME, Giocatore.class)
+                .setParameter("username", username);
         try{
             Giocatore ban = (Giocatore) query.getSingleResult();
             ban.setBan(true);
+            
+            //Database operation
+            
         
             return "Giocatore: " + ban.getUsername() + "Bannato";
    
         }catch(NoResultException e){
             return "Giocatore non trovato";
         }
-        
-        
     }
 
     @Override
