@@ -46,6 +46,11 @@ public class AdministrationEJB implements AdministrationEJBRemote {
         return "Giocatore: " + ban.getUsername() + "Bannato";
         
     }
+
+    @Override
+    public List<Giocatore> BannedGiocatori() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
     
