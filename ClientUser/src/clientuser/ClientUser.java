@@ -18,8 +18,8 @@ public class ClientUser {
      */
     public static void main(String[] args) {
        // System.out.println(registration("Laurus", "Ciao@ciao12", "lorenzo.cocchinone@gmail.com"));
-        if(login("Lau12367rus", "Ciao@ciao12") == null)
-            System.out.println("Username o password errati");
+        if(login("Laurus", "Ciao@ciao12") != null)
+            System.out.println("loggato");
         
     }
 
