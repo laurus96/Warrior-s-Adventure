@@ -19,5 +19,6 @@ public interface AdministrationEJBRemote {
     List<Giocatore> allPlayers();
     List<Giocatore> BannedPlayers();
     String banPlayer(String username);
+    //Moderatore promoteModerator(Moderatore mod);
  
 }

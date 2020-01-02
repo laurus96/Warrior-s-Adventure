@@ -24,7 +24,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 })
 public class Armatura implements Serializable{
     
-    public static final long serialVersionUID=1L;
+    public static final long serialVersionUID=3L;
     
     public static final String FIND_ARMOR="Arma.FIND_Armor";
     
