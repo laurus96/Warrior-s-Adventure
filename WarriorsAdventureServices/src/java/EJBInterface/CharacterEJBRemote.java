@@ -6,12 +6,16 @@
 package EJBInterface;
 
 import Entity.Character;
+import Entity.Giocatore;
+import java.util.List;
 /**
  *
  * @author giuse
  */
 public interface CharacterEJBRemote {
-    public void addGold(Character chr,int gold);
-    public void subGold(Character chr,int gold);
-    public void addExp(Character chr,int exp);
+    void addGold(Character chr,int gold);
+    void subGold(Character chr,int gold);
+    void addExp(Character chr,int exp);
+    void createCharacter(String name, String classe, Giocatore p);
+    List<Character> listCharacter(Giocatore p);
 }

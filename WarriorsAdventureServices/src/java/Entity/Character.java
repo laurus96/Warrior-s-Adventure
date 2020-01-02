@@ -10,16 +10,19 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 @Entity
 @NamedQueries({
-
+    @NamedQuery(name = Character.FIND_BYUSERNAME, query = "SELECT b FROM Character b WHERE b.username = :username"),
 })
 public class Character implements Serializable {
     
     private static final long serialVersionUID = 1L;
+    
+    public static final String FIND_BYUSERNAME = "Character.findByUsername";
     
     @Id @GeneratedValue
     private long id;
