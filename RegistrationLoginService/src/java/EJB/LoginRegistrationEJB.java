@@ -15,6 +15,7 @@ import javax.inject.Inject;
 import javax.jws.WebService;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
+import javax.persistence.NoResultException;
 
 /**
  *
@@ -48,7 +49,7 @@ public class LoginRegistrationEJB implements LoginRegistrationEJBRemote {
             return "FE_UN";
         }
         
-        if(Pattern.matches("[A-Za-z0-9-._]+@", password) == false || password.length() < 8 || password.length() > 16){
+        if(Pattern.matches("^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$", password) == false || password.length() <= 8 || password.length() >= 16){
             return "FE_PW";
         }
         
@@ -65,7 +66,15 @@ public class LoginRegistrationEJB implements LoginRegistrationEJBRemote {
     }
 
     public Giocatore findGiocatore(String username, String password){
-        TypedQuery<Giocatore> query = em.createNamedQuery(Giocatore.FIND_BYUSER, Giocatore.class);
-        return query.getSingleResult();
+        TypedQuery<Giocatore> query = em.createNamedQuery(Giocatore.FIND_BYUSER, Giocatore.class)
+                .setParameter("username", username)
+                .setParameter("password", password);
+        try{
+            return query.getSingleResult();
+            
+        }catch(NoResultException e){
+            return null;
+        }
+
     }
 }
