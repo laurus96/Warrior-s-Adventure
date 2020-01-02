@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
+  <services>
+    <service name="LoginRegistrationEJB">
+      <implementation-class>EJB.LoginRegistrationEJB</implementation-class>
+    </service>
+    <service name="AdministrationEJB">
+      <implementation-class>EJB.AdministrationEJB</implementation-class>
+    </service>
+  </services>
+  <clients/>
+</jax-ws>
