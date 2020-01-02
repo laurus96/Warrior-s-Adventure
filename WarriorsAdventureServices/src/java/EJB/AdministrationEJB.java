@@ -42,18 +42,28 @@ public class AdministrationEJB implements AdministrationEJBRemote {
     public String banGiocatore(Giocatore player) {
         TypedQuery<Giocatore> query = em.createNamedQuery(Giocatore.FIND_BYUSER, Giocatore.class)
                 .setParameter("username", player.getUsername());
+        try{
+            Giocatore ban = (Giocatore) query.getSingleResult();
+            ban.setBan(true);
         
-        Giocatore ban = (Giocatore) query.getSingleResult();
-        ban.setBan(true);
+            return "Giocatore: " + ban.getUsername() + "Bannato";
+   
+        }catch(NoResultException e){
+            return "Giocatore non trovato";
+        }
         
-        return "Giocatore: " + ban.getUsername() + "Bannato";
         
     }
 
     @Override
     public List<Giocatore> BannedGiocatori() {
         List<Giocatore> all = allGiocatori();
-        List<Giocatore> banned = new ArrayList<Giocatore>();
+        List<Giocatore> banned = new ArrayList<>();
+        
+        for(Giocatore e : all){
+            if(e.isBan())
+                banned.add(e);
+        }
         
         return banned;
     }
