@@ -74,28 +74,28 @@ public class PlayerEJB implements PlayerEJBRemote{
     }
 
     @Override
-    public Giocatore registration(String username, String password, String email) {
+    public String registration(String username, String password, String email) {
         
         
         if(Pattern.matches("[A-Za-z0-9]+", username) == false || 
                 username.length() < 5 || username.length() > 20){
-            return null;
+            return "FE_UN";
         }
         
         if(Pattern.matches(
                 "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$"
                 , password) == false || password.length() <= 8 || 
                 password.length() >= 16){
-            return null;
+            return "FE_PW";
         }
         
         if(Pattern.matches("[a-zA-Z0-9._%+-]+@[a-zA-Z0-9]{3,}+.[a-zA-Z]{2,}$",
                 email) == false){
-            return null;
+            return "FE_EM";
         }
         
         if(findRegisteredPlayer(username, email))
-            return null;
+            return "DE_UN_EM";
         
         //Database Operation
         //Save new player 
@@ -103,7 +103,7 @@ public class PlayerEJB implements PlayerEJBRemote{
         Giocatore player = insertPlayer(new Giocatore(username, password, email));
         
        
-        return player; 
+        return "PASS"; 
     }
     
     @Override

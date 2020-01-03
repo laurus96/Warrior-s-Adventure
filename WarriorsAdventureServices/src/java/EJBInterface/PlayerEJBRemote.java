@@ -20,7 +20,7 @@ public interface PlayerEJBRemote {
     void removePlayer(Giocatore player);
 
     Giocatore login(String username, String password);
-    Giocatore registration(String username, String password, String email);
+    String registration(String username, String password, String email);
     boolean findRegisteredPlayer(String username, String email);
     
 }

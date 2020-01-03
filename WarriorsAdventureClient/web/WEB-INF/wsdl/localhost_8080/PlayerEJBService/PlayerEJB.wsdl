@@ -10,23 +10,17 @@
 <message name="registrationResponse">
 <part name="parameters" element="tns:registrationResponse"/>
 </message>
+<message name="login">
+<part name="parameters" element="tns:login"/>
+</message>
+<message name="loginResponse">
+<part name="parameters" element="tns:loginResponse"/>
+</message>
 <message name="findPlayer">
 <part name="parameters" element="tns:findPlayer"/>
 </message>
 <message name="findPlayerResponse">
 <part name="parameters" element="tns:findPlayerResponse"/>
-</message>
-<message name="removePlayer">
-<part name="parameters" element="tns:removePlayer"/>
-</message>
-<message name="removePlayerResponse">
-<part name="parameters" element="tns:removePlayerResponse"/>
-</message>
-<message name="insertPlayer">
-<part name="parameters" element="tns:insertPlayer"/>
-</message>
-<message name="insertPlayerResponse">
-<part name="parameters" element="tns:insertPlayerResponse"/>
 </message>
 <message name="findRegisteredPlayer">
 <part name="parameters" element="tns:findRegisteredPlayer"/>
@@ -34,46 +28,52 @@
 <message name="findRegisteredPlayerResponse">
 <part name="parameters" element="tns:findRegisteredPlayerResponse"/>
 </message>
+<message name="insertPlayer">
+<part name="parameters" element="tns:insertPlayer"/>
+</message>
+<message name="insertPlayerResponse">
+<part name="parameters" element="tns:insertPlayerResponse"/>
+</message>
+<message name="removePlayer">
+<part name="parameters" element="tns:removePlayer"/>
+</message>
+<message name="removePlayerResponse">
+<part name="parameters" element="tns:removePlayerResponse"/>
+</message>
 <message name="updatePlayer">
 <part name="parameters" element="tns:updatePlayer"/>
 </message>
 <message name="updatePlayerResponse">
 <part name="parameters" element="tns:updatePlayerResponse"/>
 </message>
-<message name="login">
-<part name="parameters" element="tns:login"/>
-</message>
-<message name="loginResponse">
-<part name="parameters" element="tns:loginResponse"/>
-</message>
 <portType name="PlayerEJB">
 <operation name="registration">
 <input wsam:Action="http://EJB/PlayerEJB/registrationRequest" message="tns:registration"/>
 <output wsam:Action="http://EJB/PlayerEJB/registrationResponse" message="tns:registrationResponse"/>
 </operation>
+<operation name="login">
+<input wsam:Action="http://EJB/PlayerEJB/loginRequest" message="tns:login"/>
+<output wsam:Action="http://EJB/PlayerEJB/loginResponse" message="tns:loginResponse"/>
+</operation>
 <operation name="findPlayer">
 <input wsam:Action="http://EJB/PlayerEJB/findPlayerRequest" message="tns:findPlayer"/>
 <output wsam:Action="http://EJB/PlayerEJB/findPlayerResponse" message="tns:findPlayerResponse"/>
-</operation>
-<operation name="removePlayer">
-<input wsam:Action="http://EJB/PlayerEJB/removePlayerRequest" message="tns:removePlayer"/>
-<output wsam:Action="http://EJB/PlayerEJB/removePlayerResponse" message="tns:removePlayerResponse"/>
-</operation>
-<operation name="insertPlayer">
-<input wsam:Action="http://EJB/PlayerEJB/insertPlayerRequest" message="tns:insertPlayer"/>
-<output wsam:Action="http://EJB/PlayerEJB/insertPlayerResponse" message="tns:insertPlayerResponse"/>
 </operation>
 <operation name="findRegisteredPlayer">
 <input wsam:Action="http://EJB/PlayerEJB/findRegisteredPlayerRequest" message="tns:findRegisteredPlayer"/>
 <output wsam:Action="http://EJB/PlayerEJB/findRegisteredPlayerResponse" message="tns:findRegisteredPlayerResponse"/>
 </operation>
+<operation name="insertPlayer">
+<input wsam:Action="http://EJB/PlayerEJB/insertPlayerRequest" message="tns:insertPlayer"/>
+<output wsam:Action="http://EJB/PlayerEJB/insertPlayerResponse" message="tns:insertPlayerResponse"/>
+</operation>
+<operation name="removePlayer">
+<input wsam:Action="http://EJB/PlayerEJB/removePlayerRequest" message="tns:removePlayer"/>
+<output wsam:Action="http://EJB/PlayerEJB/removePlayerResponse" message="tns:removePlayerResponse"/>
+</operation>
 <operation name="updatePlayer">
 <input wsam:Action="http://EJB/PlayerEJB/updatePlayerRequest" message="tns:updatePlayer"/>
 <output wsam:Action="http://EJB/PlayerEJB/updatePlayerResponse" message="tns:updatePlayerResponse"/>
-</operation>
-<operation name="login">
-<input wsam:Action="http://EJB/PlayerEJB/loginRequest" message="tns:login"/>
-<output wsam:Action="http://EJB/PlayerEJB/loginResponse" message="tns:loginResponse"/>
 </operation>
 </portType>
 <binding name="PlayerEJBPortBinding" type="tns:PlayerEJB">
@@ -87,25 +87,16 @@
 <soap:body use="literal"/>
 </output>
 </operation>
+<operation name="login">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
 <operation name="findPlayer">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="removePlayer">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="insertPlayer">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -123,7 +114,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="updatePlayer">
+<operation name="insertPlayer">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -132,7 +123,16 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="login">
+<operation name="removePlayer">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="updatePlayer">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
