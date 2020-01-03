@@ -13,6 +13,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.xml.ws.WebServiceRef;
 
 /**
@@ -35,30 +36,30 @@ public class RegistrationServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+        
+        HttpSession session = request.getSession();
+        
+        synchronized(session){
+            response.setContentType("text/html;charset=UTF-8");
         
         String username = request.getParameter("username");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         
-        Giocatore registered = registration(username, password, email);
+        String status = registration(username, password, email);
+        session.setAttribute("status", status);
         
-        
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet RegistrationServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet RegistrationServlet at " + registered.getUsername() + "</h1>");
-            out.println("<h1>Servlet RegistrationServlet at " + registered.getEmail() + "</h1>");
-            out.println("<h1>Servlet RegistrationServlet at " + registered.getPassword() + "</h1>");
-
-            out.println("</body>");
-            out.println("</html>");
+        if(status.compareTo("PASS") == 0){
+            request.getRequestDispatcher("index.jsp").forward(request, response);   
         }
+        else{
+            request.getRequestDispatcher("registration.jsp").forward(request, response);
+        }
+        
+        
+        
+        }
+      
     }
     
     
@@ -102,11 +103,12 @@ public class RegistrationServlet extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-    private Giocatore registration(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2) {
+    private String registration(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2) {
         // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
         // If the calling of port operations may lead to race condition some synchronization is required.
         ejb.PlayerEJB port = service.getPlayerEJBPort();
         return port.registration(arg0, arg1, arg2);
     }
+
 
 }

@@ -13,6 +13,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.xml.ws.WebServiceRef;
 
 /**
@@ -36,28 +37,26 @@ public class LoginServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
+        HttpSession session = request.getSession();
         
-        Giocatore logged = login(username, password);
-       
-        
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet LoginServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet LoginServlet at " + logged.getUsername() + "</h1>");
-            out.println("<h1>Servlet LoginServlet at " + logged.getPassword() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+        synchronized(session){
+            String username = request.getParameter("username");
+            String password = request.getParameter("password");
+
+            Giocatore logged = login(username, password);
+            
+            if(logged != null){
+                //pagina di gioco
+            }
+            else{
+                session.setAttribute("login", "FAIL");
+                request.getRequestDispatcher("index.jsp").forward(request, response);
+            }
+
+
+            
         }
-        
-        
+
         
     }
 
