@@ -20,7 +20,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 })
 public class Character implements Serializable {
     
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 2L;
     
     public static final String FIND_BYUSERNAME = "Character.findByUsername";
     

@@ -22,7 +22,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Administration implements Serializable {
     
     
-    private static final long serialVersionUID = 2L;
+    private static final long serialVersionUID = 5L;
         
     @Id @GeneratedValue
     private Long id;

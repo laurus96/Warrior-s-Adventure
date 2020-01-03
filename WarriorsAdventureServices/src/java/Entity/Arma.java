@@ -24,7 +24,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 })
 public class Arma implements Serializable {
     
-    public static final long serialVersionUID=1L;
+    public static final long serialVersionUID=4L;
     
     public static final String FIND_WEAPON="Arma.Find_Weapon";
     
