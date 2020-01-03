@@ -4,11 +4,11 @@
     <service name="AdministrationEJB">
       <implementation-class>EJB.AdministrationEJB</implementation-class>
     </service>
-    <service name="CharacterEJB">
-      <implementation-class>EJB.CharacterEJB</implementation-class>
-    </service>
     <service name="PlayerEJB">
       <implementation-class>EJB.PlayerEJB</implementation-class>
+    </service>
+    <service name="CharacterEJB">
+      <implementation-class>EJB.CharacterEJB</implementation-class>
     </service>
   </services>
   <clients/>
