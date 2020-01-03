@@ -5,8 +5,12 @@
  */
 package Database;
 
+import EJB.GiocatoreEJB;
+import EJB.PersonaggioEJB;
 import Entity.Arma;
 import Entity.Armatura;
+import Entity.Giocatore;
+import Entity.Personaggio;
 import java.util.ArrayList;
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
@@ -35,6 +39,15 @@ public class DatabasePopulator {
     
     @Inject
     private EntityManager em;
+    
+    @Inject
+    private GiocatoreEJB playerejb;
+    
+    @Inject
+    private PersonaggioEJB characterejb;
+    
+    private Giocatore player1;
+    private Giocatore player2;
     
     private ArrayList<Arma> al=new ArrayList<>();
     private ArrayList<Armatura> aml=new ArrayList<>();
@@ -99,6 +112,15 @@ public class DatabasePopulator {
         for (Armatura e: aml){
             em.persist(e);
         }
+        
+        player1 = new Giocatore("laurus", "metin@Server1", "lorenzo.cocchinone@gmail.com");
+        player2 = new Giocatore("tempesta58", "metin@Server1", "giuseppe090gmail.com");
+                
+        playerejb.insertPlayer(player1);
+        playerejb.insertPlayer(player2);
+        
+        characterejb.createCharacter("Lithia", "Paladino", player1);
+
     }
     
     @PreDestroy
@@ -109,5 +131,9 @@ public class DatabasePopulator {
         for (Armatura e: aml){
             em.remove(e);
         }
+        
+        playerejb.removePlayer(player1);
+        playerejb.removePlayer(player2);
+        
     }
 }

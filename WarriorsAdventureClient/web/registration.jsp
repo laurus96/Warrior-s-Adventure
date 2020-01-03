@@ -32,9 +32,19 @@
                             alert("Formato email non valido");
                         </script>
                     <%}
-                if(status.compareTo("DE_UN_EM") == 0){%>
+                if(status.compareTo("DE_UN") == 0){%>
                         <script>
-                            alert("Utente già presente");
+                            alert("Username già utilizzato");
+                        </script>
+                    <%}
+                if(status.compareTo("DE_EM") == 0){%>
+                        <script>
+                            alert("Email già utilizzata");
+                        </script>
+                    <%}
+                if(status.compareTo("PW_MS") == 0){%>
+                        <script>
+                            alert("Le password non corrispondono");
                         </script>
                     <%}
                 }%>
@@ -47,6 +57,9 @@
                 <input type="text" placeholder="E-mail" name="email" required><br>
                 
                 <input type="password" placeholder="Password" name="password" required><br>
+                
+                <input type="password" placeholder="Re-Password" name="repassword" required><br>
+
                 
                 <input class="button" type="submit" value="Registrati"><br>
             </form>

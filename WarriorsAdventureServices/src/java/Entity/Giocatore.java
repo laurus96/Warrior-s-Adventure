@@ -22,10 +22,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 @NamedQueries({
     @NamedQuery(name = Giocatore.FIND_ALL, query = "SELECT b FROM Giocatore b"),
     @NamedQuery(name = Giocatore.FIND_BYUSERNAME, query = "SELECT b FROM Giocatore b WHERE b.username = :username"),
-    @NamedQuery(name = Giocatore.FIND_BYUSERPW, query = "SELECT b FROM Giocatore b WHERE b.username = :username AND b.password = :password"),
     @NamedQuery(name = Giocatore.FIND_BYEMAIL, query = "SELECT b FROM Giocatore b WHERE b.email = :email"),
-    @NamedQuery(name = Giocatore.FIND_BYUSEM, query = "SELECT b FROM Giocatore b WHERE b.username = :username OR b.email = :email ")
-
+    @NamedQuery(name = Giocatore.FIND_BYUSERPW, query = "SELECT b FROM Giocatore b WHERE b.username = :username AND b.password = :password")
 })
 public class Giocatore implements Serializable{
     

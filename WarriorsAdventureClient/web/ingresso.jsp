@@ -20,12 +20,17 @@
     </head>
 <body>
     
-    <h1 class="username">Nome Utente: ${player.username}</h1> 
+    <h1 class="username">Nome Utente: ${player.username}</h1>
+    <!--
+    <h1 class="username">E-mail: ${player.email}</h1> 
+    -->
 
     <div class="div1">
         <form action="">
+            <!--
             <input class="b1" type="button" value="Personaggio 1 Mago livello 10"><br>
             <input class="b2" type="button" value="Personaggio 2 Mago livello 10"><br>
+            -->
             <input id="b3" class="b3" type="button" value="+">  
         </form>
         <div class="div2">

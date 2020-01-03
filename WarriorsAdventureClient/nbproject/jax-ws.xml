@@ -2,9 +2,9 @@
 <jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
   <services/>
   <clients>
-    <client name="PlayerEJB">
-      <wsdl-url>http://localhost:8080/PlayerEJBService/PlayerEJB?wsdl</wsdl-url>
-      <local-wsdl-file>localhost_8080/PlayerEJBService/PlayerEJB.wsdl</local-wsdl-file>
+    <client name="GiocatoreEJB">
+      <wsdl-url>http://localhost:8080/GiocatoreEJBService/GiocatoreEJB?wsdl</wsdl-url>
+      <local-wsdl-file>localhost_8080/GiocatoreEJBService/GiocatoreEJB.wsdl</local-wsdl-file>
       <package-name>ejb</package-name>
       <catalog-file>catalog.xml</catalog-file>
       <wsimport-options>
@@ -22,7 +22,7 @@
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>wsdlLocation</wsimport-option-name>
-          <wsimport-option-value>http://localhost:8080/PlayerEJBService/PlayerEJB?wsdl</wsimport-option-value>
+          <wsimport-option-value>http://localhost:8080/GiocatoreEJBService/GiocatoreEJB?wsdl</wsimport-option-value>
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>xnocompile</wsimport-option-name>
@@ -34,9 +34,9 @@
         </wsimport-option>
       </wsimport-options>
     </client>
-    <client name="CharacterEJB">
-      <wsdl-url>http://localhost:8080/CharacterEJBService/CharacterEJB?wsdl</wsdl-url>
-      <local-wsdl-file>localhost_8080/CharacterEJBService/CharacterEJB.wsdl</local-wsdl-file>
+    <client name="PersonaggioEJB">
+      <wsdl-url>http://localhost:8080/PersonaggioEJBService/PersonaggioEJB?wsdl</wsdl-url>
+      <local-wsdl-file>localhost_8080/PersonaggioEJBService/PersonaggioEJB.wsdl</local-wsdl-file>
       <package-name>ejb</package-name>
       <catalog-file>catalog.xml</catalog-file>
       <wsimport-options>
@@ -54,7 +54,7 @@
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>wsdlLocation</wsimport-option-name>
-          <wsimport-option-value>http://localhost:8080/CharacterEJBService/CharacterEJB?wsdl</wsimport-option-value>
+          <wsimport-option-value>http://localhost:8080/PersonaggioEJBService/PersonaggioEJB?wsdl</wsimport-option-value>
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>xnocompile</wsimport-option-name>

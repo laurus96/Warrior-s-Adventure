@@ -26,37 +26,37 @@
             <isset property="conf.dir"/>
         </condition>
     </target>
-    <target name="wsimport-client-PlayerEJB" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/PlayerEJB"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/PlayerEJB" destdir="${build.generated.dir}/jax-wsCache/PlayerEJB" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/PlayerEJB/wsdl/localhost_8080/PlayerEJBService/PlayerEJB.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/PlayerEJBService/PlayerEJB?wsdl" xnocompile="true" xendorsed="true">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/PlayerEJB/wsdl/localhost_8080/PlayerEJBService/PlayerEJB.wsdl"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/PlayerEJB"/>
+    <target name="wsimport-client-GiocatoreEJB" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/GiocatoreEJB"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/GiocatoreEJB" destdir="${build.generated.dir}/jax-wsCache/GiocatoreEJB" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/GiocatoreEJB/wsdl/localhost_8080/GiocatoreEJBService/GiocatoreEJB.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/GiocatoreEJBService/GiocatoreEJB?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/GiocatoreEJB/wsdl/localhost_8080/GiocatoreEJBService/GiocatoreEJB.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/GiocatoreEJB"/>
         </wsimport>
         <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/PlayerEJB">
+            <fileset dir="${build.generated.dir}/jax-wsCache/GiocatoreEJB">
                 <include name="**/*.java"/>
             </fileset>
         </copy>
     </target>
-    <target name="wsimport-client-clean-PlayerEJB" depends="-init-project">
+    <target name="wsimport-client-clean-GiocatoreEJB" depends="-init-project">
         <delete dir="${build.generated.sources.dir}/jax-ws/ejb"/>
-        <delete dir="${build.generated.dir}/jax-wsCache/PlayerEJB"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/GiocatoreEJB"/>
     </target>
-    <target name="wsimport-client-CharacterEJB" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/CharacterEJB"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/CharacterEJB" destdir="${build.generated.dir}/jax-wsCache/CharacterEJB" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/CharacterEJB/wsdl/localhost_8080/CharacterEJBService/CharacterEJB.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/CharacterEJBService/CharacterEJB?wsdl" xnocompile="true" xendorsed="true">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/CharacterEJB/wsdl/localhost_8080/CharacterEJBService/CharacterEJB.wsdl"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/CharacterEJB"/>
+    <target name="wsimport-client-PersonaggioEJB" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/PersonaggioEJB"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/PersonaggioEJB" destdir="${build.generated.dir}/jax-wsCache/PersonaggioEJB" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/PersonaggioEJB/wsdl/localhost_8080/PersonaggioEJBService/PersonaggioEJB.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/PersonaggioEJBService/PersonaggioEJB?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/PersonaggioEJB/wsdl/localhost_8080/PersonaggioEJBService/PersonaggioEJB.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/PersonaggioEJB"/>
         </wsimport>
         <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/CharacterEJB">
+            <fileset dir="${build.generated.dir}/jax-wsCache/PersonaggioEJB">
                 <include name="**/*.java"/>
             </fileset>
         </copy>
     </target>
-    <target name="wsimport-client-clean-CharacterEJB" depends="-init-project">
+    <target name="wsimport-client-clean-PersonaggioEJB" depends="-init-project">
         <delete dir="${build.generated.sources.dir}/jax-ws/ejb"/>
-        <delete dir="${build.generated.dir}/jax-wsCache/CharacterEJB"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/PersonaggioEJB"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-PlayerEJB, wsimport-client-CharacterEJB"/>
+    <target name="wsimport-client-generate" depends="wsimport-client-GiocatoreEJB, wsimport-client-PersonaggioEJB"/>
 </project>

@@ -5,10 +5,10 @@
  */
 package Servlet;
 
-import ejb.Giocatore;
-import ejb.PlayerEJBService;
+
+
+import ejb.GiocatoreEJBService;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -22,8 +22,9 @@ import javax.xml.ws.WebServiceRef;
  */
 public class RegistrationServlet extends HttpServlet {
 
-    @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/localhost_8080/PlayerEJBService/PlayerEJB.wsdl")
-    private PlayerEJBService service;
+    @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/localhost_8080/GiocatoreEJBService/GiocatoreEJB.wsdl")
+    private GiocatoreEJBService service;
+
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -40,23 +41,23 @@ public class RegistrationServlet extends HttpServlet {
         HttpSession session = request.getSession();
         
         synchronized(session){
-            response.setContentType("text/html;charset=UTF-8");
         
-        String username = request.getParameter("username");
-        String email = request.getParameter("email");
-        String password = request.getParameter("password");
-        
-        String status = registration(username, password, email);
-        session.setAttribute("status", status);
-        
-        if(status.compareTo("PASS") == 0){
-            request.getRequestDispatcher("index.jsp").forward(request, response);   
-        }
-        else{
-            request.getRequestDispatcher("registration.jsp").forward(request, response);
-        }
-        
-        
+            String username = request.getParameter("username").toLowerCase();
+            String email = request.getParameter("email").toLowerCase();
+            String password = request.getParameter("password");
+            String repassword = request.getParameter("repassword");
+
+
+            String status = registration(username, password, repassword, email);
+            session.setAttribute("status", status);
+            System.out.println(status);
+
+            if(status.compareTo("PASS") == 0){
+                request.getRequestDispatcher("index.jsp").forward(request, response);   
+            }
+            else{
+                request.getRequestDispatcher("registration.jsp").forward(request, response);
+            }
         
         }
       
@@ -103,12 +104,15 @@ public class RegistrationServlet extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-    private String registration(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2) {
+    private String registration(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3) {
         // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
         // If the calling of port operations may lead to race condition some synchronization is required.
-        ejb.PlayerEJB port = service.getPlayerEJBPort();
-        return port.registration(arg0, arg1, arg2);
+        ejb.GiocatoreEJB port = service.getGiocatoreEJBPort();
+        return port.registration(arg0, arg1, arg2, arg3);
     }
+
+
+
 
 
 }

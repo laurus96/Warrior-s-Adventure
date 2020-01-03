@@ -4,16 +4,16 @@
  * and open the template in the editor.
  */
 $(document).ready(function(){
-        $.getJSON("CharacterLoadServlet", function(){
-            for(i in object){
+        $.getJSON("CharacterLoadServlet", function(object, status){
+            for(x in object){
                 var limit = 1;
-                var character = "<input class=\"b"+ limit +"\" type=\"button\" value=\""+ object[i].name + " " + object[i].classe +"\"><br>";
+                var character = "<input class=\"b"+ limit +"\" type=\"button\" value=\"Nome: "+ object[x].name + ", Livello: " + object[x].level + "\"><br>";
+                $(".div1").append(character);
                 limit++;
                 
-                $(".div1").append(character);
-            }
-    })
-})
+            }    
+    });
+});
 
 
 

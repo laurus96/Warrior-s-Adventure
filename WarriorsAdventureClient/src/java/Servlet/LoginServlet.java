@@ -6,9 +6,8 @@
 package Servlet;
 
 import ejb.Giocatore;
-import ejb.PlayerEJBService;
+import ejb.GiocatoreEJBService;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -22,8 +21,10 @@ import javax.xml.ws.WebServiceRef;
  */
 public class LoginServlet extends HttpServlet {
 
+    @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/localhost_8080/GiocatoreEJBService/GiocatoreEJB.wsdl")
+    private GiocatoreEJBService service;
+
     @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/localhost_8080/PlayerEJBService/PlayerEJB.wsdl")
-    private PlayerEJBService service;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -40,7 +41,7 @@ public class LoginServlet extends HttpServlet {
         HttpSession session = request.getSession();
         
         synchronized(session){
-            String username = request.getParameter("username");
+            String username = request.getParameter("username").toLowerCase();
             String password = request.getParameter("password");
             
 
@@ -100,8 +101,7 @@ public class LoginServlet extends HttpServlet {
     private Giocatore login(java.lang.String arg0, java.lang.String arg1) {
         // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
         // If the calling of port operations may lead to race condition some synchronization is required.
-        ejb.PlayerEJB port = service.getPlayerEJBPort();
+        ejb.GiocatoreEJB port = service.getGiocatoreEJBPort();
         return port.login(arg0, arg1);
     }
-
 }

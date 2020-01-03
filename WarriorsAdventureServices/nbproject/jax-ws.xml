@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
   <services>
-    <service name="AdministrationEJB">
-      <implementation-class>EJB.AdministrationEJB</implementation-class>
+    <service name="GiocatoreEJB">
+      <implementation-class>EJB.GiocatoreEJB</implementation-class>
     </service>
-    <service name="PlayerEJB">
-      <implementation-class>EJB.PlayerEJB</implementation-class>
+    <service name="PersonaggioEJB">
+      <implementation-class>EJB.PersonaggioEJB</implementation-class>
     </service>
-    <service name="CharacterEJB">
-      <implementation-class>EJB.CharacterEJB</implementation-class>
+    <service name="AmministratoreEJB">
+      <implementation-class>EJB.AmministratoreEJB</implementation-class>
     </service>
   </services>
   <clients/>
