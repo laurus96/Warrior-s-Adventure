@@ -29,19 +29,16 @@ public class PlayerEJB implements PlayerEJBRemote{
     private EntityManager em;
     
     @Override
-    public Giocatore findPlayer(String username, String password){
+    public Giocatore findPlayer(String username) {
         TypedQuery<Giocatore> query = em.createNamedQuery(
-                Giocatore.FIND_BYUSERPW, Giocatore.class)
-                .setParameter("username", username)
-                .setParameter("password", password);
+                Giocatore.FIND_BYUSERNAME, Giocatore.class)
+                .setParameter("username", username);
         try{
             return query.getSingleResult();
             
         }catch(NoResultException e){
             return null;
-        }
-
-    }
+        }    }
     
     @Override
     public Giocatore insertPlayer(Giocatore newPlayer) {
@@ -64,13 +61,19 @@ public class PlayerEJB implements PlayerEJBRemote{
     public Giocatore login(String username, String password) {
         
         //Database Operation
-        Giocatore player = findPlayer(username, password);
-        
-        if(player == null){
+        TypedQuery<Giocatore> query = em.createNamedQuery(
+                Giocatore.FIND_BYUSERPW, Giocatore.class)
+                .setParameter("username", username)
+                .setParameter("password", password);
+        try{
+            Giocatore player = query.getSingleResult();
+           
+            return player;
+            
+        }catch(NoResultException e){
             return null;
         }
-        
-        return player;
+   
     }
 
     @Override
@@ -116,5 +119,6 @@ public class PlayerEJB implements PlayerEJBRemote{
         return query.getResultList() == null;
         
     }
-    
+
+ 
 }

@@ -14,7 +14,7 @@ import javax.ejb.Remote;
  */
 @Remote
 public interface PlayerEJBRemote {
-    Giocatore findPlayer(String username, String password);
+    Giocatore findPlayer(String username);
     Giocatore insertPlayer(Giocatore newPlayer);
     Giocatore updatePlayer(Giocatore player);
     void removePlayer(Giocatore player);
