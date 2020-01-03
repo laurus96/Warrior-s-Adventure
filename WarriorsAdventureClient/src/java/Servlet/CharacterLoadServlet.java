@@ -5,10 +5,12 @@
  */
 package Servlet;
 
+import ejb.CharacterEJBService;
 import ejb.Giocatore;
 import ejb.PlayerEJBService;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,10 +22,13 @@ import javax.xml.ws.WebServiceRef;
  *
  * @author laurus
  */
-public class LoginServlet extends HttpServlet {
+public class CharacterLoadServlet extends HttpServlet {
 
     @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/localhost_8080/PlayerEJBService/PlayerEJB.wsdl")
-    private PlayerEJBService service;
+    private PlayerEJBService service_1;
+
+    @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/localhost_8080/CharacterEJBService/CharacterEJB.wsdl")
+    private CharacterEJBService service;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -40,25 +45,15 @@ public class LoginServlet extends HttpServlet {
         HttpSession session = request.getSession();
         
         synchronized(session){
-            String username = request.getParameter("username");
-            String password = request.getParameter("password");
-
-            Giocatore logged = login(username, password);
+            String username_player = (String) session.getAttribute("player");
             
-            if(logged != null){
-                session.setAttribute("player", logged.getUsername());
-                request.getRequestDispatcher("ingresso.jsp").forward(request, response);
-            }
-            else{
-                session.setAttribute("login", "FAIL");
-                request.getRequestDispatcher("index.jsp").forward(request, response);
-            }
-
-
+            Giocatore  player = findPlayer(username_player);
+            List<Character> list = new ArrayList<>();
+            
+            //list = listCharacter(player);
+            
             
         }
-
-        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -100,11 +95,19 @@ public class LoginServlet extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-    private Giocatore login(java.lang.String arg0, java.lang.String arg1) {
+    private Giocatore findPlayer(java.lang.String arg0) {
         // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
         // If the calling of port operations may lead to race condition some synchronization is required.
-        ejb.PlayerEJB port = service.getPlayerEJBPort();
-        return port.login(arg0, arg1);
+        ejb.PlayerEJB port = service_1.getPlayerEJBPort();
+        return port.findPlayer(arg0);
     }
+
+    private java.util.List<ejb.Character> listCharacter(ejb.Giocatore arg0) {
+        // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
+        // If the calling of port operations may lead to race condition some synchronization is required.
+        ejb.CharacterEJB port = service.getCharacterEJBPort();
+        return port.listCharacter(arg0);
+    }
+
 
 }

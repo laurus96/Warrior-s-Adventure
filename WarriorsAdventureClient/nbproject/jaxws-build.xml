@@ -42,5 +42,21 @@
         <delete dir="${build.generated.sources.dir}/jax-ws/ejb"/>
         <delete dir="${build.generated.dir}/jax-wsCache/PlayerEJB"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-PlayerEJB"/>
+    <target name="wsimport-client-CharacterEJB" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/CharacterEJB"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/CharacterEJB" destdir="${build.generated.dir}/jax-wsCache/CharacterEJB" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/CharacterEJB/wsdl/localhost_8080/CharacterEJBService/CharacterEJB.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/CharacterEJBService/CharacterEJB?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/CharacterEJB/wsdl/localhost_8080/CharacterEJBService/CharacterEJB.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/CharacterEJB"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/CharacterEJB">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-CharacterEJB" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ejb"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/CharacterEJB"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-PlayerEJB, wsimport-client-CharacterEJB"/>
 </project>

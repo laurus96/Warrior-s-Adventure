@@ -11,7 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta charset="UTF-8">
         <title>Login</title>
-        <link rel="stylesheet" type="text/css" href="login_reg_css.css">
+        <link rel="stylesheet" type="text/css" href="css/login_reg.css">
     </head>
     <body>
         
