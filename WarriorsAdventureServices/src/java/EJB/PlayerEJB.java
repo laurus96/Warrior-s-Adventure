@@ -109,7 +109,7 @@ public class PlayerEJB implements PlayerEJBRemote{
     @Override
     public boolean findRegisteredPlayer(String username, String email){
         TypedQuery<Giocatore> query = em.createNamedQuery(
-                Giocatore.FIND_BYUSERNAME, Giocatore.class)
+                Giocatore.FIND_BYUSEM, Giocatore.class)
                 .setParameter("username", username)
                 .setParameter("email", email);
         

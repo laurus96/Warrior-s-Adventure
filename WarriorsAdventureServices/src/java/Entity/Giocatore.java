@@ -23,7 +23,8 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = Giocatore.FIND_ALL, query = "SELECT b FROM Giocatore b"),
     @NamedQuery(name = Giocatore.FIND_BYUSERNAME, query = "SELECT b FROM Giocatore b WHERE b.username = :username"),
     @NamedQuery(name = Giocatore.FIND_BYUSERPW, query = "SELECT b FROM Giocatore b WHERE b.username = :username AND b.password = :password"),
-    @NamedQuery(name = Giocatore.FIND_BYEMAIL, query = "SELECT b FROM Giocatore b WHERE b.email = :email")
+    @NamedQuery(name = Giocatore.FIND_BYEMAIL, query = "SELECT b FROM Giocatore b WHERE b.email = :email"),
+    @NamedQuery(name = Giocatore.FIND_BYUSEM, query = "SELECT b FROM Giocatore b WHERE b.username = :username OR b.email = :email ")
 
 })
 public class Giocatore implements Serializable{
@@ -34,6 +35,7 @@ public class Giocatore implements Serializable{
     public static final String FIND_BYUSERNAME = "Giocatore.findByUsername";
     public static final String FIND_BYUSERPW = "Giocatore.findByUserpw";
     public static final String FIND_BYEMAIL = "Giocatore.findByEmail";
+    public static final String FIND_BYUSEM = "Giocatore.findByUSEM";
 
     
     @Id @GeneratedValue
