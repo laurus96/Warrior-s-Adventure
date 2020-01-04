@@ -16,7 +16,6 @@ import javax.xml.ws.WebServiceRef;
 
 import com.google.gson.Gson;
 import ejb.Giocatore;
-import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.http.HttpSession;
 
@@ -44,8 +43,7 @@ public class AmministratorListPlayer extends HttpServlet {
         HttpSession session = request.getSession();
         
         synchronized(session){
-            List<Giocatore> players = new ArrayList<>();
-            players = allPlayers();
+            List<Giocatore> players = allPlayers();
             
             PrintWriter out = response.getWriter();
             

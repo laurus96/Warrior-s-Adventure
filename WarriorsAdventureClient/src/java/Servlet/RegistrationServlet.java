@@ -50,8 +50,7 @@ public class RegistrationServlet extends HttpServlet {
 
             String status = registration(username, password, repassword, email);
             session.setAttribute("status", status);
-            System.out.println(status);
-
+            
             if(status.compareTo("PASS") == 0){
                 request.getRequestDispatcher("index.jsp").forward(request, response);   
             }

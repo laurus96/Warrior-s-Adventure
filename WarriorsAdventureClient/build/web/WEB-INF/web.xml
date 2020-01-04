@@ -33,6 +33,10 @@
         <servlet-name>ToGame</servlet-name>
         <servlet-class>Servlet.ToGameServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UnbanServlet</servlet-name>
+        <servlet-class>Servlet.UnbanServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/faces/*</url-pattern>
@@ -60,6 +64,10 @@
     <servlet-mapping>
         <servlet-name>ToGame</servlet-name>
         <url-pattern>/ToGame</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UnbanServlet</servlet-name>
+        <url-pattern>/UnbanServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

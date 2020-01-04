@@ -55,7 +55,10 @@ public class GiocatoreEJB implements GiocatoreEJBRemote{
 
     @Override
     public void removePlayer(Giocatore player) {
-        em.remove(em.merge(player));
+        em.createNamedQuery(Giocatore.REMOVE_PLAYER)
+                .setParameter("username", player.getUsername())
+                .executeUpdate();
+
     }
 
     @Override

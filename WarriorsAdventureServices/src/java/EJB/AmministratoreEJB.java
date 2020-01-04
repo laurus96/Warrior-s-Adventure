@@ -7,7 +7,6 @@ package EJB;
 
 
 import Entity.Giocatore;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.ejb.Stateless;
@@ -37,23 +36,19 @@ public class AmministratoreEJB implements AmministratoreEJBRemote {
 
     @Override
     public List<Giocatore> allPlayers() {
-        TypedQuery<Giocatore> query = em.createNamedQuery(Giocatore.FIND_ALL,
-                Giocatore.class);
+        TypedQuery<Giocatore> query = em.createNamedQuery(Giocatore.FIND_ALL_BAN,
+                Giocatore.class).setParameter("ban", false);
+        
         return query.getResultList();
 
     }
     
     @Override
     public List<Giocatore> BannedPlayers() {
-        List<Giocatore> all = allPlayers();
-        List<Giocatore> banned = new ArrayList<>();
+        TypedQuery<Giocatore> query = em.createNamedQuery(Giocatore.FIND_ALL_BAN,
+                Giocatore.class).setParameter("ban", true);
         
-        for(Giocatore e : all){
-            if(e.isBan())
-                banned.add(e);
-        }
-        
-        return banned;
+        return query.getResultList();
     }
     
     @Override
@@ -66,12 +61,12 @@ public class AmministratoreEJB implements AmministratoreEJBRemote {
             Giocatore ban = (Giocatore) query.getSingleResult();
             ban.setBan(true);
             
-            this.playerEJB.updatePlayer(ban);
+            playerEJB.updatePlayer(ban);
             
-            return "Giocatore: " + ban.getUsername() + "Bannato";
+            return "BAN_OK";
    
         }catch(NoResultException e){
-            return "Giocatore non trovato";
+            return "ER_BAN";
         }
     }
 
@@ -106,5 +101,22 @@ public class AmministratoreEJB implements AmministratoreEJBRemote {
     public void removeAmministratore(Amministratore am) {
         em.remove(em.merge(am));
     }
+
+    @Override
+    public String unbanPlayer(String username) {
+        TypedQuery<Giocatore> query = em.createNamedQuery(
+                Giocatore.FIND_BYUSERNAME, Giocatore.class)
+                .setParameter("username", username);
+        try{
+            Giocatore unban = (Giocatore) query.getSingleResult();
+            unban.setBan(false);
+            
+            playerEJB.updatePlayer(unban);
+            
+            return "BAN_OK";
+   
+        }catch(NoResultException e){
+            return "ER_BAN";
+        }    }
     
 }

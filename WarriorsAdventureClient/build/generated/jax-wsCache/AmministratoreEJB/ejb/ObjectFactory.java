@@ -33,7 +33,9 @@ public class ObjectFactory {
     private final static QName _BanPlayerResponse_QNAME = new QName("http://EJB/", "banPlayerResponse");
     private final static QName _LogginAmministratoreResponse_QNAME = new QName("http://EJB/", "logginAmministratoreResponse");
     private final static QName _RemoveAmministratoreResponse_QNAME = new QName("http://EJB/", "removeAmministratoreResponse");
+    private final static QName _UnbanPlayer_QNAME = new QName("http://EJB/", "unbanPlayer");
     private final static QName _BannedPlayers_QNAME = new QName("http://EJB/", "BannedPlayers");
+    private final static QName _UnbanPlayerResponse_QNAME = new QName("http://EJB/", "unbanPlayerResponse");
     private final static QName _UpdateAmministratore_QNAME = new QName("http://EJB/", "updateAmministratore");
     private final static QName _InsertAmministratoreResponse_QNAME = new QName("http://EJB/", "insertAmministratoreResponse");
     private final static QName _UpdateAmministratoreResponse_QNAME = new QName("http://EJB/", "updateAmministratoreResponse");
@@ -169,11 +171,27 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link UnbanPlayerResponse }
+     * 
+     */
+    public UnbanPlayerResponse createUnbanPlayerResponse() {
+        return new UnbanPlayerResponse();
+    }
+
+    /**
      * Create an instance of {@link RemoveAmministratoreResponse }
      * 
      */
     public RemoveAmministratoreResponse createRemoveAmministratoreResponse() {
         return new RemoveAmministratoreResponse();
+    }
+
+    /**
+     * Create an instance of {@link UnbanPlayer }
+     * 
+     */
+    public UnbanPlayer createUnbanPlayer() {
+        return new UnbanPlayer();
     }
 
     /**
@@ -258,12 +276,30 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link UnbanPlayer }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://EJB/", name = "unbanPlayer")
+    public JAXBElement<UnbanPlayer> createUnbanPlayer(UnbanPlayer value) {
+        return new JAXBElement<UnbanPlayer>(_UnbanPlayer_QNAME, UnbanPlayer.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link BannedPlayers }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://EJB/", name = "BannedPlayers")
     public JAXBElement<BannedPlayers> createBannedPlayers(BannedPlayers value) {
         return new JAXBElement<BannedPlayers>(_BannedPlayers_QNAME, BannedPlayers.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link UnbanPlayerResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://EJB/", name = "unbanPlayerResponse")
+    public JAXBElement<UnbanPlayerResponse> createUnbanPlayerResponse(UnbanPlayerResponse value) {
+        return new JAXBElement<UnbanPlayerResponse>(_UnbanPlayerResponse_QNAME, UnbanPlayerResponse.class, null, value);
     }
 
     /**

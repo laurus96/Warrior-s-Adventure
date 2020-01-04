@@ -21,19 +21,23 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Entity
 @NamedQueries({
     @NamedQuery(name = Giocatore.FIND_ALL, query = "SELECT b FROM Giocatore b"),
+    @NamedQuery(name = Giocatore.FIND_ALL_BAN, query = "SELECT b FROM Giocatore b WHERE b.ban = :ban"),
     @NamedQuery(name = Giocatore.FIND_BYUSERNAME, query = "SELECT b FROM Giocatore b WHERE b.username = :username"),
     @NamedQuery(name = Giocatore.FIND_BYEMAIL, query = "SELECT b FROM Giocatore b WHERE b.email = :email"),
-    @NamedQuery(name = Giocatore.FIND_BYUSERPW, query = "SELECT b FROM Giocatore b WHERE b.username = :username AND b.password = :password")
+    @NamedQuery(name = Giocatore.FIND_BYUSERPW, query = "SELECT b FROM Giocatore b WHERE b.username = :username AND b.password = :password"),
+    @NamedQuery(name = Giocatore.REMOVE_PLAYER, query = "DELETE FROM Giocatore WHERE username = :username")
 })
 public class Giocatore implements Serializable{
     
     private static final long serialVersionUID = 1L;
     
     public static final String FIND_ALL = "Giocatore.FindAllGiocatore";
-    public static final String FIND_BYUSERNAME = "Giocatore.findByUsername";
-    public static final String FIND_BYUSERPW = "Giocatore.findByUserpw";
-    public static final String FIND_BYEMAIL = "Giocatore.findByEmail";
-    public static final String FIND_BYUSEM = "Giocatore.findByUSEM";
+    public static final String FIND_BYUSERNAME = "Giocatore.findbyUsername";
+    public static final String FIND_BYUSERPW = "Giocatore.findbyUserpw";
+    public static final String FIND_BYEMAIL = "Giocatore.findBbyEmail";
+    public static final String FIND_BYUSEM = "Giocatore.findbyUSEM";
+    public static final String FIND_ALL_BAN = "Giocatore.findbyBan";
+    public static final String REMOVE_PLAYER = "Giocatore.RemovePlayer";
 
     
     @Id @GeneratedValue
@@ -89,10 +93,5 @@ public class Giocatore implements Serializable{
     public String toString() {
         return "Giocatore{" + "username=" + username + ", password=" + password + ", email=" + email + ", ban=" + ban + '}';
     }
-    
-
-    
-    
-
     
 }

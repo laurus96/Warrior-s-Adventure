@@ -41,7 +41,7 @@
     -->
 
     <div class="div1">
-        <form action="ToGame" id="togameForm">
+        <form action="ToGame" id="togameForm" method="post">
             <!--
             <input class="b1" type="button" value="Personaggio 1 Mago livello 10"><br>
             <input class="b2" type="button" value="Personaggio 2 Mago livello 10"><br>
@@ -59,7 +59,7 @@
         <!-- Modal content -->
         <div class="modal-content">
             <span class="close">&times;</span>
-            <form action="CharacterCreationServlet">
+            <form action="CharacterCreationServlet"  method="post">
                 <input class="im3" type="text" name="name" placeholder="Nome personaggio">
                 <select class="im2"name="classe">
                     <option value="Guerriero">Guerriero</option>

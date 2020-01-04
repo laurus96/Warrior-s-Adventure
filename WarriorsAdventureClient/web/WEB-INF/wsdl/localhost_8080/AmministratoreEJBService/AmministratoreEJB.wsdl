@@ -4,23 +4,17 @@
 <xsd:import namespace="http://EJB/" schemaLocation="http://localhost:8080/AmministratoreEJBService/AmministratoreEJB?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="allPlayers">
-<part name="parameters" element="tns:allPlayers"/>
+<message name="banPlayer">
+<part name="parameters" element="tns:banPlayer"/>
 </message>
-<message name="allPlayersResponse">
-<part name="parameters" element="tns:allPlayersResponse"/>
+<message name="banPlayerResponse">
+<part name="parameters" element="tns:banPlayerResponse"/>
 </message>
 <message name="BannedPlayers">
 <part name="parameters" element="tns:BannedPlayers"/>
 </message>
 <message name="BannedPlayersResponse">
 <part name="parameters" element="tns:BannedPlayersResponse"/>
-</message>
-<message name="banPlayer">
-<part name="parameters" element="tns:banPlayer"/>
-</message>
-<message name="banPlayerResponse">
-<part name="parameters" element="tns:banPlayerResponse"/>
 </message>
 <message name="logginAmministratore">
 <part name="parameters" element="tns:logginAmministratore"/>
@@ -46,18 +40,26 @@
 <message name="removeAmministratoreResponse">
 <part name="parameters" element="tns:removeAmministratoreResponse"/>
 </message>
+<message name="allPlayers">
+<part name="parameters" element="tns:allPlayers"/>
+</message>
+<message name="allPlayersResponse">
+<part name="parameters" element="tns:allPlayersResponse"/>
+</message>
+<message name="unbanPlayer">
+<part name="parameters" element="tns:unbanPlayer"/>
+</message>
+<message name="unbanPlayerResponse">
+<part name="parameters" element="tns:unbanPlayerResponse"/>
+</message>
 <portType name="AmministratoreEJB">
-<operation name="allPlayers">
-<input wsam:Action="http://EJB/AmministratoreEJB/allPlayersRequest" message="tns:allPlayers"/>
-<output wsam:Action="http://EJB/AmministratoreEJB/allPlayersResponse" message="tns:allPlayersResponse"/>
+<operation name="banPlayer">
+<input wsam:Action="http://EJB/AmministratoreEJB/banPlayerRequest" message="tns:banPlayer"/>
+<output wsam:Action="http://EJB/AmministratoreEJB/banPlayerResponse" message="tns:banPlayerResponse"/>
 </operation>
 <operation name="BannedPlayers">
 <input wsam:Action="http://EJB/AmministratoreEJB/BannedPlayersRequest" message="tns:BannedPlayers"/>
 <output wsam:Action="http://EJB/AmministratoreEJB/BannedPlayersResponse" message="tns:BannedPlayersResponse"/>
-</operation>
-<operation name="banPlayer">
-<input wsam:Action="http://EJB/AmministratoreEJB/banPlayerRequest" message="tns:banPlayer"/>
-<output wsam:Action="http://EJB/AmministratoreEJB/banPlayerResponse" message="tns:banPlayerResponse"/>
 </operation>
 <operation name="logginAmministratore">
 <input wsam:Action="http://EJB/AmministratoreEJB/logginAmministratoreRequest" message="tns:logginAmministratore"/>
@@ -75,10 +77,18 @@
 <input wsam:Action="http://EJB/AmministratoreEJB/removeAmministratoreRequest" message="tns:removeAmministratore"/>
 <output wsam:Action="http://EJB/AmministratoreEJB/removeAmministratoreResponse" message="tns:removeAmministratoreResponse"/>
 </operation>
+<operation name="allPlayers">
+<input wsam:Action="http://EJB/AmministratoreEJB/allPlayersRequest" message="tns:allPlayers"/>
+<output wsam:Action="http://EJB/AmministratoreEJB/allPlayersResponse" message="tns:allPlayersResponse"/>
+</operation>
+<operation name="unbanPlayer">
+<input wsam:Action="http://EJB/AmministratoreEJB/unbanPlayerRequest" message="tns:unbanPlayer"/>
+<output wsam:Action="http://EJB/AmministratoreEJB/unbanPlayerResponse" message="tns:unbanPlayerResponse"/>
+</operation>
 </portType>
 <binding name="AmministratoreEJBPortBinding" type="tns:AmministratoreEJB">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="allPlayers">
+<operation name="banPlayer">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -88,15 +98,6 @@
 </output>
 </operation>
 <operation name="BannedPlayers">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="banPlayer">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -133,6 +134,24 @@
 </output>
 </operation>
 <operation name="removeAmministratore">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="allPlayers">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="unbanPlayer">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

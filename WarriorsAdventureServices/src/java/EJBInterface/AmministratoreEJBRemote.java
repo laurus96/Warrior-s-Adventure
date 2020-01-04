@@ -24,6 +24,7 @@ public interface AmministratoreEJBRemote {
     List<Giocatore> allPlayers();
     List<Giocatore> BannedPlayers();
     String banPlayer(String username);
+    String unbanPlayer(String username);
     //Moderatore promoteModerator(Moderatore mod);
  
 }

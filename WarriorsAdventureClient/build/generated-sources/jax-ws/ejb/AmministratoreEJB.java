@@ -27,30 +27,6 @@ public interface AmministratoreEJB {
 
     /**
      * 
-     * @return
-     *     returns java.util.List<ejb.Giocatore>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "allPlayers", targetNamespace = "http://EJB/", className = "ejb.AllPlayers")
-    @ResponseWrapper(localName = "allPlayersResponse", targetNamespace = "http://EJB/", className = "ejb.AllPlayersResponse")
-    @Action(input = "http://EJB/AmministratoreEJB/allPlayersRequest", output = "http://EJB/AmministratoreEJB/allPlayersResponse")
-    public List<Giocatore> allPlayers();
-
-    /**
-     * 
-     * @return
-     *     returns java.util.List<ejb.Giocatore>
-     */
-    @WebMethod(operationName = "BannedPlayers")
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "BannedPlayers", targetNamespace = "http://EJB/", className = "ejb.BannedPlayers")
-    @ResponseWrapper(localName = "BannedPlayersResponse", targetNamespace = "http://EJB/", className = "ejb.BannedPlayersResponse")
-    @Action(input = "http://EJB/AmministratoreEJB/BannedPlayersRequest", output = "http://EJB/AmministratoreEJB/BannedPlayersResponse")
-    public List<Giocatore> bannedPlayers();
-
-    /**
-     * 
      * @param arg0
      * @return
      *     returns java.lang.String
@@ -63,6 +39,18 @@ public interface AmministratoreEJB {
     public String banPlayer(
         @WebParam(name = "arg0", targetNamespace = "")
         String arg0);
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<ejb.Giocatore>
+     */
+    @WebMethod(operationName = "BannedPlayers")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "BannedPlayers", targetNamespace = "http://EJB/", className = "ejb.BannedPlayers")
+    @ResponseWrapper(localName = "BannedPlayersResponse", targetNamespace = "http://EJB/", className = "ejb.BannedPlayersResponse")
+    @Action(input = "http://EJB/AmministratoreEJB/BannedPlayersRequest", output = "http://EJB/AmministratoreEJB/BannedPlayersResponse")
+    public List<Giocatore> bannedPlayers();
 
     /**
      * 
@@ -123,5 +111,32 @@ public interface AmministratoreEJB {
     public void removeAmministratore(
         @WebParam(name = "arg0", targetNamespace = "")
         Amministratore arg0);
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<ejb.Giocatore>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "allPlayers", targetNamespace = "http://EJB/", className = "ejb.AllPlayers")
+    @ResponseWrapper(localName = "allPlayersResponse", targetNamespace = "http://EJB/", className = "ejb.AllPlayersResponse")
+    @Action(input = "http://EJB/AmministratoreEJB/allPlayersRequest", output = "http://EJB/AmministratoreEJB/allPlayersResponse")
+    public List<Giocatore> allPlayers();
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "unbanPlayer", targetNamespace = "http://EJB/", className = "ejb.UnbanPlayer")
+    @ResponseWrapper(localName = "unbanPlayerResponse", targetNamespace = "http://EJB/", className = "ejb.UnbanPlayerResponse")
+    @Action(input = "http://EJB/AmministratoreEJB/unbanPlayerRequest", output = "http://EJB/AmministratoreEJB/unbanPlayerResponse")
+    public String unbanPlayer(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
 
 }

@@ -18,6 +18,5 @@ public class DatabaseProducer {
     
     @Produces
     @PersistenceContext(unitName = "WarriorsPU")
-    private EntityManager em;
-    
+    private EntityManager em;    
 }

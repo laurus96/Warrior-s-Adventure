@@ -44,10 +44,6 @@ public class CharacterCreationServlet extends HttpServlet {
             String classe = request.getParameter("classe");
             Giocatore logged = (Giocatore) session.getAttribute("player");
             
-            System.out.println(name);
-            System.out.println(classe);
-            System.out.println(logged.getUsername());
-            
             String status = createCharacter(name, classe, logged);
             
             session.setAttribute("status_c", status);

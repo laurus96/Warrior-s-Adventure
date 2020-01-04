@@ -10,7 +10,6 @@ import ejb.AmministratoreEJBService;
 import ejb.Giocatore;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -41,8 +40,7 @@ public class AmministratorListPlayerBan extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        List<Giocatore> players = new ArrayList<>();
-        players = bannedPlayers();
+        List<Giocatore> players = bannedPlayers();
             
         PrintWriter out = response.getWriter();
             

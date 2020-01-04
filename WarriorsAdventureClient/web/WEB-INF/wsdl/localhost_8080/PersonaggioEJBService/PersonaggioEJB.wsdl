@@ -10,6 +10,24 @@
 <message name="createCharacterResponse">
 <part name="parameters" element="tns:createCharacterResponse"/>
 </message>
+<message name="addGold">
+<part name="parameters" element="tns:addGold"/>
+</message>
+<message name="addGoldResponse">
+<part name="parameters" element="tns:addGoldResponse"/>
+</message>
+<message name="findCharacter">
+<part name="parameters" element="tns:findCharacter"/>
+</message>
+<message name="findCharacterResponse">
+<part name="parameters" element="tns:findCharacterResponse"/>
+</message>
+<message name="subGold">
+<part name="parameters" element="tns:subGold"/>
+</message>
+<message name="subGoldResponse">
+<part name="parameters" element="tns:subGoldResponse"/>
+</message>
 <message name="addExp">
 <part name="parameters" element="tns:addExp"/>
 </message>
@@ -28,18 +46,6 @@
 <message name="listCharacterResponse">
 <part name="parameters" element="tns:listCharacterResponse"/>
 </message>
-<message name="subGold">
-<part name="parameters" element="tns:subGold"/>
-</message>
-<message name="subGoldResponse">
-<part name="parameters" element="tns:subGoldResponse"/>
-</message>
-<message name="addGold">
-<part name="parameters" element="tns:addGold"/>
-</message>
-<message name="addGoldResponse">
-<part name="parameters" element="tns:addGoldResponse"/>
-</message>
 <message name="updatePersonaggio">
 <part name="parameters" element="tns:updatePersonaggio"/>
 </message>
@@ -52,16 +58,22 @@
 <message name="removePersonaggioResponse">
 <part name="parameters" element="tns:removePersonaggioResponse"/>
 </message>
-<message name="findCharacter">
-<part name="parameters" element="tns:findCharacter"/>
-</message>
-<message name="findCharacterResponse">
-<part name="parameters" element="tns:findCharacterResponse"/>
-</message>
 <portType name="PersonaggioEJB">
 <operation name="createCharacter">
 <input wsam:Action="http://EJB/PersonaggioEJB/createCharacterRequest" message="tns:createCharacter"/>
 <output wsam:Action="http://EJB/PersonaggioEJB/createCharacterResponse" message="tns:createCharacterResponse"/>
+</operation>
+<operation name="addGold">
+<input wsam:Action="http://EJB/PersonaggioEJB/addGoldRequest" message="tns:addGold"/>
+<output wsam:Action="http://EJB/PersonaggioEJB/addGoldResponse" message="tns:addGoldResponse"/>
+</operation>
+<operation name="findCharacter">
+<input wsam:Action="http://EJB/PersonaggioEJB/findCharacterRequest" message="tns:findCharacter"/>
+<output wsam:Action="http://EJB/PersonaggioEJB/findCharacterResponse" message="tns:findCharacterResponse"/>
+</operation>
+<operation name="subGold">
+<input wsam:Action="http://EJB/PersonaggioEJB/subGoldRequest" message="tns:subGold"/>
+<output wsam:Action="http://EJB/PersonaggioEJB/subGoldResponse" message="tns:subGoldResponse"/>
 </operation>
 <operation name="addExp">
 <input wsam:Action="http://EJB/PersonaggioEJB/addExpRequest" message="tns:addExp"/>
@@ -75,14 +87,6 @@
 <input wsam:Action="http://EJB/PersonaggioEJB/listCharacterRequest" message="tns:listCharacter"/>
 <output wsam:Action="http://EJB/PersonaggioEJB/listCharacterResponse" message="tns:listCharacterResponse"/>
 </operation>
-<operation name="subGold">
-<input wsam:Action="http://EJB/PersonaggioEJB/subGoldRequest" message="tns:subGold"/>
-<output wsam:Action="http://EJB/PersonaggioEJB/subGoldResponse" message="tns:subGoldResponse"/>
-</operation>
-<operation name="addGold">
-<input wsam:Action="http://EJB/PersonaggioEJB/addGoldRequest" message="tns:addGold"/>
-<output wsam:Action="http://EJB/PersonaggioEJB/addGoldResponse" message="tns:addGoldResponse"/>
-</operation>
 <operation name="updatePersonaggio">
 <input wsam:Action="http://EJB/PersonaggioEJB/updatePersonaggioRequest" message="tns:updatePersonaggio"/>
 <output wsam:Action="http://EJB/PersonaggioEJB/updatePersonaggioResponse" message="tns:updatePersonaggioResponse"/>
@@ -91,14 +95,37 @@
 <input wsam:Action="http://EJB/PersonaggioEJB/removePersonaggioRequest" message="tns:removePersonaggio"/>
 <output wsam:Action="http://EJB/PersonaggioEJB/removePersonaggioResponse" message="tns:removePersonaggioResponse"/>
 </operation>
-<operation name="findCharacter">
-<input wsam:Action="http://EJB/PersonaggioEJB/findCharacterRequest" message="tns:findCharacter"/>
-<output wsam:Action="http://EJB/PersonaggioEJB/findCharacterResponse" message="tns:findCharacterResponse"/>
-</operation>
 </portType>
 <binding name="PersonaggioEJBPortBinding" type="tns:PersonaggioEJB">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
 <operation name="createCharacter">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="addGold">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="findCharacter">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="subGold">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -134,24 +161,6 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="subGold">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="addGold">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
 <operation name="updatePersonaggio">
 <soap:operation soapAction=""/>
 <input>
@@ -162,15 +171,6 @@
 </output>
 </operation>
 <operation name="removePersonaggio">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="findCharacter">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
