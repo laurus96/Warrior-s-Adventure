@@ -24,7 +24,6 @@ public class LoginServlet extends HttpServlet {
     @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/localhost_8080/GiocatoreEJBService/GiocatoreEJB.wsdl")
     private GiocatoreEJBService service;
 
-    @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/localhost_8080/PlayerEJBService/PlayerEJB.wsdl")
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>

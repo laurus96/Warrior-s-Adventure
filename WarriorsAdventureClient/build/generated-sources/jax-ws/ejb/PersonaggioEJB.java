@@ -27,6 +27,36 @@ public interface PersonaggioEJB {
 
     /**
      * 
+     * @param arg0
+     * @return
+     *     returns java.util.List<ejb.Personaggio>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listCharacter", targetNamespace = "http://EJB/", className = "ejb.ListCharacter")
+    @ResponseWrapper(localName = "listCharacterResponse", targetNamespace = "http://EJB/", className = "ejb.ListCharacterResponse")
+    @Action(input = "http://EJB/PersonaggioEJB/listCharacterRequest", output = "http://EJB/PersonaggioEJB/listCharacterResponse")
+    public List<Personaggio> listCharacter(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Giocatore arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns ejb.Personaggio
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "insertPersonaggio", targetNamespace = "http://EJB/", className = "ejb.InsertPersonaggio")
+    @ResponseWrapper(localName = "insertPersonaggioResponse", targetNamespace = "http://EJB/", className = "ejb.InsertPersonaggioResponse")
+    @Action(input = "http://EJB/PersonaggioEJB/insertPersonaggioRequest", output = "http://EJB/PersonaggioEJB/insertPersonaggioResponse")
+    public Personaggio insertPersonaggio(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Personaggio arg0);
+
+    /**
+     * 
      * @param arg1
      * @param arg0
      */
@@ -75,12 +105,15 @@ public interface PersonaggioEJB {
      * @param arg2
      * @param arg1
      * @param arg0
+     * @return
+     *     returns java.lang.String
      */
     @WebMethod
+    @WebResult(targetNamespace = "")
     @RequestWrapper(localName = "createCharacter", targetNamespace = "http://EJB/", className = "ejb.CreateCharacter")
     @ResponseWrapper(localName = "createCharacterResponse", targetNamespace = "http://EJB/", className = "ejb.CreateCharacterResponse")
     @Action(input = "http://EJB/PersonaggioEJB/createCharacterRequest", output = "http://EJB/PersonaggioEJB/createCharacterResponse")
-    public void createCharacter(
+    public String createCharacter(
         @WebParam(name = "arg0", targetNamespace = "")
         String arg0,
         @WebParam(name = "arg1", targetNamespace = "")
@@ -92,15 +125,27 @@ public interface PersonaggioEJB {
      * 
      * @param arg0
      * @return
-     *     returns java.util.List<ejb.Personaggio>
+     *     returns ejb.Personaggio
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "listCharacter", targetNamespace = "http://EJB/", className = "ejb.ListCharacter")
-    @ResponseWrapper(localName = "listCharacterResponse", targetNamespace = "http://EJB/", className = "ejb.ListCharacterResponse")
-    @Action(input = "http://EJB/PersonaggioEJB/listCharacterRequest", output = "http://EJB/PersonaggioEJB/listCharacterResponse")
-    public List<Personaggio> listCharacter(
+    @RequestWrapper(localName = "updatePersonaggio", targetNamespace = "http://EJB/", className = "ejb.UpdatePersonaggio")
+    @ResponseWrapper(localName = "updatePersonaggioResponse", targetNamespace = "http://EJB/", className = "ejb.UpdatePersonaggioResponse")
+    @Action(input = "http://EJB/PersonaggioEJB/updatePersonaggioRequest", output = "http://EJB/PersonaggioEJB/updatePersonaggioResponse")
+    public Personaggio updatePersonaggio(
         @WebParam(name = "arg0", targetNamespace = "")
-        Giocatore arg0);
+        Personaggio arg0);
+
+    /**
+     * 
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "removePersonaggio", targetNamespace = "http://EJB/", className = "ejb.RemovePersonaggio")
+    @ResponseWrapper(localName = "removePersonaggioResponse", targetNamespace = "http://EJB/", className = "ejb.RemovePersonaggioResponse")
+    @Action(input = "http://EJB/PersonaggioEJB/removePersonaggioRequest", output = "http://EJB/PersonaggioEJB/removePersonaggioResponse")
+    public void removePersonaggio(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Personaggio arg0);
 
 }

@@ -26,15 +26,21 @@ public class ObjectFactory {
 
     private final static QName _Giocatore_QNAME = new QName("http://EJB/", "giocatore");
     private final static QName _SubGoldResponse_QNAME = new QName("http://EJB/", "subGoldResponse");
-    private final static QName _ListCharacter_QNAME = new QName("http://EJB/", "listCharacter");
     private final static QName _AddExp_QNAME = new QName("http://EJB/", "addExp");
     private final static QName _AddGoldResponse_QNAME = new QName("http://EJB/", "addGoldResponse");
     private final static QName _CreateCharacterResponse_QNAME = new QName("http://EJB/", "createCharacterResponse");
+    private final static QName _RemovePersonaggio_QNAME = new QName("http://EJB/", "removePersonaggio");
     private final static QName _CreateCharacter_QNAME = new QName("http://EJB/", "createCharacter");
     private final static QName _Personaggio_QNAME = new QName("http://EJB/", "personaggio");
-    private final static QName _SubGold_QNAME = new QName("http://EJB/", "subGold");
     private final static QName _AddGold_QNAME = new QName("http://EJB/", "addGold");
+    private final static QName _InsertPersonaggioResponse_QNAME = new QName("http://EJB/", "insertPersonaggioResponse");
     private final static QName _ListCharacterResponse_QNAME = new QName("http://EJB/", "listCharacterResponse");
+    private final static QName _UpdatePersonaggio_QNAME = new QName("http://EJB/", "updatePersonaggio");
+    private final static QName _InsertPersonaggio_QNAME = new QName("http://EJB/", "insertPersonaggio");
+    private final static QName _ListCharacter_QNAME = new QName("http://EJB/", "listCharacter");
+    private final static QName _SubGold_QNAME = new QName("http://EJB/", "subGold");
+    private final static QName _UpdatePersonaggioResponse_QNAME = new QName("http://EJB/", "updatePersonaggioResponse");
+    private final static QName _RemovePersonaggioResponse_QNAME = new QName("http://EJB/", "removePersonaggioResponse");
     private final static QName _AddExpResponse_QNAME = new QName("http://EJB/", "addExpResponse");
 
     /**
@@ -45,11 +51,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AddExpResponse }
+     * Create an instance of {@link UpdatePersonaggio }
      * 
      */
-    public AddExpResponse createAddExpResponse() {
-        return new AddExpResponse();
+    public UpdatePersonaggio createUpdatePersonaggio() {
+        return new UpdatePersonaggio();
     }
 
     /**
@@ -58,6 +64,14 @@ public class ObjectFactory {
      */
     public AddGold createAddGold() {
         return new AddGold();
+    }
+
+    /**
+     * Create an instance of {@link InsertPersonaggioResponse }
+     * 
+     */
+    public InsertPersonaggioResponse createInsertPersonaggioResponse() {
+        return new InsertPersonaggioResponse();
     }
 
     /**
@@ -101,19 +115,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link SubGold }
-     * 
-     */
-    public SubGold createSubGold() {
-        return new SubGold();
-    }
-
-    /**
      * Create an instance of {@link CreateCharacterResponse }
      * 
      */
     public CreateCharacterResponse createCreateCharacterResponse() {
         return new CreateCharacterResponse();
+    }
+
+    /**
+     * Create an instance of {@link RemovePersonaggio }
+     * 
+     */
+    public RemovePersonaggio createRemovePersonaggio() {
+        return new RemovePersonaggio();
     }
 
     /**
@@ -130,6 +144,46 @@ public class ObjectFactory {
      */
     public Giocatore createGiocatore() {
         return new Giocatore();
+    }
+
+    /**
+     * Create an instance of {@link AddExpResponse }
+     * 
+     */
+    public AddExpResponse createAddExpResponse() {
+        return new AddExpResponse();
+    }
+
+    /**
+     * Create an instance of {@link RemovePersonaggioResponse }
+     * 
+     */
+    public RemovePersonaggioResponse createRemovePersonaggioResponse() {
+        return new RemovePersonaggioResponse();
+    }
+
+    /**
+     * Create an instance of {@link UpdatePersonaggioResponse }
+     * 
+     */
+    public UpdatePersonaggioResponse createUpdatePersonaggioResponse() {
+        return new UpdatePersonaggioResponse();
+    }
+
+    /**
+     * Create an instance of {@link SubGold }
+     * 
+     */
+    public SubGold createSubGold() {
+        return new SubGold();
+    }
+
+    /**
+     * Create an instance of {@link InsertPersonaggio }
+     * 
+     */
+    public InsertPersonaggio createInsertPersonaggio() {
+        return new InsertPersonaggio();
     }
 
     /**
@@ -156,15 +210,6 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://EJB/", name = "subGoldResponse")
     public JAXBElement<SubGoldResponse> createSubGoldResponse(SubGoldResponse value) {
         return new JAXBElement<SubGoldResponse>(_SubGoldResponse_QNAME, SubGoldResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ListCharacter }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://EJB/", name = "listCharacter")
-    public JAXBElement<ListCharacter> createListCharacter(ListCharacter value) {
-        return new JAXBElement<ListCharacter>(_ListCharacter_QNAME, ListCharacter.class, null, value);
     }
 
     /**
@@ -195,6 +240,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RemovePersonaggio }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://EJB/", name = "removePersonaggio")
+    public JAXBElement<RemovePersonaggio> createRemovePersonaggio(RemovePersonaggio value) {
+        return new JAXBElement<RemovePersonaggio>(_RemovePersonaggio_QNAME, RemovePersonaggio.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link CreateCharacter }{@code >}}
      * 
      */
@@ -213,15 +267,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SubGold }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://EJB/", name = "subGold")
-    public JAXBElement<SubGold> createSubGold(SubGold value) {
-        return new JAXBElement<SubGold>(_SubGold_QNAME, SubGold.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link AddGold }{@code >}}
      * 
      */
@@ -231,12 +276,75 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link InsertPersonaggioResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://EJB/", name = "insertPersonaggioResponse")
+    public JAXBElement<InsertPersonaggioResponse> createInsertPersonaggioResponse(InsertPersonaggioResponse value) {
+        return new JAXBElement<InsertPersonaggioResponse>(_InsertPersonaggioResponse_QNAME, InsertPersonaggioResponse.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link ListCharacterResponse }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://EJB/", name = "listCharacterResponse")
     public JAXBElement<ListCharacterResponse> createListCharacterResponse(ListCharacterResponse value) {
         return new JAXBElement<ListCharacterResponse>(_ListCharacterResponse_QNAME, ListCharacterResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdatePersonaggio }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://EJB/", name = "updatePersonaggio")
+    public JAXBElement<UpdatePersonaggio> createUpdatePersonaggio(UpdatePersonaggio value) {
+        return new JAXBElement<UpdatePersonaggio>(_UpdatePersonaggio_QNAME, UpdatePersonaggio.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link InsertPersonaggio }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://EJB/", name = "insertPersonaggio")
+    public JAXBElement<InsertPersonaggio> createInsertPersonaggio(InsertPersonaggio value) {
+        return new JAXBElement<InsertPersonaggio>(_InsertPersonaggio_QNAME, InsertPersonaggio.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ListCharacter }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://EJB/", name = "listCharacter")
+    public JAXBElement<ListCharacter> createListCharacter(ListCharacter value) {
+        return new JAXBElement<ListCharacter>(_ListCharacter_QNAME, ListCharacter.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SubGold }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://EJB/", name = "subGold")
+    public JAXBElement<SubGold> createSubGold(SubGold value) {
+        return new JAXBElement<SubGold>(_SubGold_QNAME, SubGold.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdatePersonaggioResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://EJB/", name = "updatePersonaggioResponse")
+    public JAXBElement<UpdatePersonaggioResponse> createUpdatePersonaggioResponse(UpdatePersonaggioResponse value) {
+        return new JAXBElement<UpdatePersonaggioResponse>(_UpdatePersonaggioResponse_QNAME, UpdatePersonaggioResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RemovePersonaggioResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://EJB/", name = "removePersonaggioResponse")
+    public JAXBElement<RemovePersonaggioResponse> createRemovePersonaggioResponse(RemovePersonaggioResponse value) {
+        return new JAXBElement<RemovePersonaggioResponse>(_RemovePersonaggioResponse_QNAME, RemovePersonaggioResponse.class, null, value);
     }
 
     /**

@@ -19,8 +19,23 @@
 
     </head>
 <body>
+    <%String status = (String) session.getAttribute("status_c");
+            if(status != null){
+                session.removeAttribute("status_c");
+                if(status.compareTo("DP_NA") == 0){%>
+                        <script>
+                            alert("Hai già il massimo dei personaggi");
+                        </script>
+                    <%}
+                if(status.compareTo("PASS") == 0){%>
+                        <script>
+                            alert("Personaggio creato");
+                        </script>
+                    <%}%>
+            <%}%>
+
     
-    <h1 class="username">Nome Utente: ${player.username}</h1>
+    <h1 class="username">${player.username}</h1>
     <!--
     <h1 class="username">E-mail: ${player.email}</h1> 
     -->
@@ -31,7 +46,7 @@
             <input class="b1" type="button" value="Personaggio 1 Mago livello 10"><br>
             <input class="b2" type="button" value="Personaggio 2 Mago livello 10"><br>
             -->
-            <input id="b3" class="b3" type="button" value="+">  
+            <input id="b4" class="b4" type="button" value="+">  
         </form>
         <div class="div2">
             <a class="a1"><b>Gilda:</b> (Presto disponibile)</a>
@@ -44,9 +59,9 @@
         <!-- Modal content -->
         <div class="modal-content">
             <span class="close">&times;</span>
-            <form action="/action_page.php">
+            <form action="CharacterCreationServlet">
                 <input class="im3" type="text" name="name" placeholder="Nome personaggio">
-                <select class="im2"name="cars">
+                <select class="im2"name="classe">
                     <option value="Guerriero">Guerriero</option>
                     <option value="Paladino">Paladino</option>
                     <option value="Cavaliere">Cavaliere</option>
@@ -61,7 +76,7 @@
         var modal = document.getElementById("myModal");
 
         // Get the button that opens the modal
-        var btn = document.getElementById("b3");
+        var btn = document.getElementById("b4");
 
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];

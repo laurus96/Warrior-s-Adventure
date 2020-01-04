@@ -120,7 +120,6 @@ public class DatabasePopulator {
         playerejb.insertPlayer(player2);
         
         characterejb.createCharacter("Lithia", "Paladino", player1);
-
     }
     
     @PreDestroy

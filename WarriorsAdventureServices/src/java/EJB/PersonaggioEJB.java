@@ -48,8 +48,13 @@ public class PersonaggioEJB implements PersonaggioEJBRemote{
     }
 
     @Override
-    public void createCharacter(String name, String classe, Giocatore p) {
-        em.persist(new Personaggio(name, classe, p.getUsername()));
+    public String createCharacter(String name, String classe, Giocatore p) {
+        Personaggio new_character = new Personaggio(name, classe, p.getUsername());
+        if(listCharacter(p).size() > 2){
+            return "DP_NA";
+        }
+        insertPersonaggio(new_character);
+        return "PASS";
     }
 
     @Override
@@ -58,4 +63,22 @@ public class PersonaggioEJB implements PersonaggioEJBRemote{
                 .setParameter("username", p.getUsername());
         return  query.getResultList();
     }
+
+    @Override
+    public Personaggio insertPersonaggio(Personaggio p) {
+        em.persist(p);
+        return p;
+    }
+
+    @Override
+    public Personaggio updatePersonaggio(Personaggio p) {
+        em.merge(p);
+        return p;
+    }
+
+    @Override
+    public void removePersonaggio(Personaggio p) {
+        em.remove(em.merge(p));
+    }
+
 }

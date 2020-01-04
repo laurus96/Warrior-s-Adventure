@@ -4,12 +4,6 @@
 <xsd:import namespace="http://EJB/" schemaLocation="http://localhost:8080/GiocatoreEJBService/GiocatoreEJB?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="findEmail">
-<part name="parameters" element="tns:findEmail"/>
-</message>
-<message name="findEmailResponse">
-<part name="parameters" element="tns:findEmailResponse"/>
-</message>
 <message name="login">
 <part name="parameters" element="tns:login"/>
 </message>
@@ -21,6 +15,12 @@
 </message>
 <message name="registrationResponse">
 <part name="parameters" element="tns:registrationResponse"/>
+</message>
+<message name="findEmail">
+<part name="parameters" element="tns:findEmail"/>
+</message>
+<message name="findEmailResponse">
+<part name="parameters" element="tns:findEmailResponse"/>
 </message>
 <message name="insertPlayer">
 <part name="parameters" element="tns:insertPlayer"/>
@@ -53,10 +53,6 @@
 <part name="parameters" element="tns:findUsernameResponse"/>
 </message>
 <portType name="GiocatoreEJB">
-<operation name="findEmail">
-<input wsam:Action="http://EJB/GiocatoreEJB/findEmailRequest" message="tns:findEmail"/>
-<output wsam:Action="http://EJB/GiocatoreEJB/findEmailResponse" message="tns:findEmailResponse"/>
-</operation>
 <operation name="login">
 <input wsam:Action="http://EJB/GiocatoreEJB/loginRequest" message="tns:login"/>
 <output wsam:Action="http://EJB/GiocatoreEJB/loginResponse" message="tns:loginResponse"/>
@@ -64,6 +60,10 @@
 <operation name="registration">
 <input wsam:Action="http://EJB/GiocatoreEJB/registrationRequest" message="tns:registration"/>
 <output wsam:Action="http://EJB/GiocatoreEJB/registrationResponse" message="tns:registrationResponse"/>
+</operation>
+<operation name="findEmail">
+<input wsam:Action="http://EJB/GiocatoreEJB/findEmailRequest" message="tns:findEmail"/>
+<output wsam:Action="http://EJB/GiocatoreEJB/findEmailResponse" message="tns:findEmailResponse"/>
 </operation>
 <operation name="insertPlayer">
 <input wsam:Action="http://EJB/GiocatoreEJB/insertPlayerRequest" message="tns:insertPlayer"/>
@@ -88,15 +88,6 @@
 </portType>
 <binding name="GiocatoreEJBPortBinding" type="tns:GiocatoreEJB">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="findEmail">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
 <operation name="login">
 <soap:operation soapAction=""/>
 <input>
@@ -107,6 +98,15 @@
 </output>
 </operation>
 <operation name="registration">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="findEmail">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

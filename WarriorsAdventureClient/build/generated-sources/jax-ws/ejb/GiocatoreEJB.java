@@ -26,21 +26,6 @@ public interface GiocatoreEJB {
 
     /**
      * 
-     * @param arg0
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "findEmail", targetNamespace = "http://EJB/", className = "ejb.FindEmail")
-    @ResponseWrapper(localName = "findEmailResponse", targetNamespace = "http://EJB/", className = "ejb.FindEmailResponse")
-    @Action(input = "http://EJB/GiocatoreEJB/findEmailRequest", output = "http://EJB/GiocatoreEJB/findEmailResponse")
-    public boolean findEmail(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0);
-
-    /**
-     * 
      * @param arg1
      * @param arg0
      * @return
@@ -80,6 +65,21 @@ public interface GiocatoreEJB {
         String arg2,
         @WebParam(name = "arg3", targetNamespace = "")
         String arg3);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "findEmail", targetNamespace = "http://EJB/", className = "ejb.FindEmail")
+    @ResponseWrapper(localName = "findEmailResponse", targetNamespace = "http://EJB/", className = "ejb.FindEmailResponse")
+    @Action(input = "http://EJB/GiocatoreEJB/findEmailRequest", output = "http://EJB/GiocatoreEJB/findEmailResponse")
+    public boolean findEmail(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
 
     /**
      * 

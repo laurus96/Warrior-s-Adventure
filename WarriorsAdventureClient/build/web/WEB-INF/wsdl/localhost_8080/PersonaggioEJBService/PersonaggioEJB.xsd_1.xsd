@@ -14,20 +14,31 @@
 
 <xs:element name="giocatore" type="tns:giocatore"/>
 
+<xs:element name="insertPersonaggio" type="tns:insertPersonaggio"/>
+
+<xs:element name="insertPersonaggioResponse" type="tns:insertPersonaggioResponse"/>
+
 <xs:element name="listCharacter" type="tns:listCharacter"/>
 
 <xs:element name="listCharacterResponse" type="tns:listCharacterResponse"/>
 
 <xs:element name="personaggio" type="tns:personaggio"/>
 
+<xs:element name="removePersonaggio" type="tns:removePersonaggio"/>
+
+<xs:element name="removePersonaggioResponse" type="tns:removePersonaggioResponse"/>
+
 <xs:element name="subGold" type="tns:subGold"/>
 
 <xs:element name="subGoldResponse" type="tns:subGoldResponse"/>
 
-<xs:complexType name="addGold">
+<xs:element name="updatePersonaggio" type="tns:updatePersonaggio"/>
+
+<xs:element name="updatePersonaggioResponse" type="tns:updatePersonaggioResponse"/>
+
+<xs:complexType name="updatePersonaggio">
 <xs:sequence>
 <xs:element name="arg0" type="tns:personaggio" minOccurs="0"/>
-<xs:element name="arg1" type="xs:int"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -42,6 +53,19 @@
 <xs:element name="name" type="xs:string" minOccurs="0"/>
 <xs:element name="strenght" type="xs:int"/>
 <xs:element name="vitality" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updatePersonaggioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:personaggio" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addGold">
+<xs:sequence>
+<xs:element name="arg0" type="tns:personaggio" minOccurs="0"/>
+<xs:element name="arg1" type="xs:int"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -78,6 +102,18 @@
 </xs:complexType>
 
 <xs:complexType name="createCharacterResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removePersonaggio">
+<xs:sequence>
+<xs:element name="arg0" type="tns:personaggio" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removePersonaggioResponse">
 <xs:sequence/>
 </xs:complexType>
 
@@ -101,6 +137,18 @@
 <xs:complexType name="listCharacterResponse">
 <xs:sequence>
 <xs:element name="return" type="tns:personaggio" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertPersonaggio">
+<xs:sequence>
+<xs:element name="arg0" type="tns:personaggio" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertPersonaggioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:personaggio" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 </xs:schema>

@@ -21,6 +21,10 @@
         <servlet-name>CharacterLoadServlet</servlet-name>
         <servlet-class>Servlet.CharacterLoadServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CharacterCreationServlet</servlet-name>
+        <servlet-class>Servlet.CharacterCreationServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/faces/*</url-pattern>
@@ -36,6 +40,10 @@
     <servlet-mapping>
         <servlet-name>CharacterLoadServlet</servlet-name>
         <url-pattern>/CharacterLoadServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CharacterCreationServlet</servlet-name>
+        <url-pattern>/CharacterCreationServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
