@@ -56,11 +56,17 @@ public class LoginServlet extends HttpServlet {
             }
             else{
                 Giocatore logged = login(username, password);
+                
+                if(logged != null && logged.isBan()){
+                    session.setAttribute("login", "BAN");
+                    request.getRequestDispatcher("index.jsp").forward(request, response);
+                }
             
-                if(logged != null){
+                else if(logged != null && !logged.isBan()){
                     session.setAttribute("player", logged);
                     request.getRequestDispatcher("ingresso.jsp").forward(request, response);
                 }
+                
                 else{
                     session.setAttribute("login", "FAIL");
                     request.getRequestDispatcher("index.jsp").forward(request, response);

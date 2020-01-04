@@ -53,6 +53,7 @@ public class DatabasePopulator {
     
     private Giocatore player1;
     private Giocatore player2;
+    private Giocatore ban;
         
     private Amministratore am1;
     
@@ -122,9 +123,12 @@ public class DatabasePopulator {
         
         player1 = new Giocatore("laurus96", "metin@Server1", "lorenzo.cocchinone@gmail.com");
         player2 = new Giocatore("tempesta59", "metin@Server1", "giuseppe090gmail.com");
+        ban = new Giocatore("ciao", "metin@Server1", "ciao@gmail.com" );
+        ban.setBan(true);
                 
         playerejb.insertPlayer(player1);
         playerejb.insertPlayer(player2);
+        playerejb.insertPlayer(ban);
         
         characterejb.createCharacter("Lithia", "Paladino", player1);
         
@@ -144,6 +148,7 @@ public class DatabasePopulator {
         
         playerejb.removePlayer(player1);
         playerejb.removePlayer(player2);
+        playerejb.removePlayer(ban);
         
         amminiejb.removeAmministratore(am1);
 

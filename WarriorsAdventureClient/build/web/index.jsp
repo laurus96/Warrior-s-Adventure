@@ -32,6 +32,12 @@
                         <script>
                             alert("Username o Password errate");
                         </script>    
+                <%}
+                if(login.compareTo("BAN") == 0){
+                    session.removeAttribute("login");%>
+                        <script>
+                            alert("Utente bannato");
+                        </script>    
                 <%}%>
             <%}%>
             
