@@ -22,7 +22,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @Entity
 @NamedQueries({
-    @NamedQuery(name = Amministratore.FIND_BYAM, query = "SELECT b FROM Giocatore b WHERE b.username = :username AND b.password = :password")
+    @NamedQuery(name = Amministratore.FIND_BYAM, query = "SELECT b FROM Amministratore b WHERE b.username = :username AND b.password = :password")
 })
 public class Amministratore implements Serializable {
     

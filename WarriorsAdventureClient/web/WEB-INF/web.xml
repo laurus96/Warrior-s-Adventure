@@ -25,6 +25,10 @@
         <servlet-name>CharacterCreationServlet</servlet-name>
         <servlet-class>Servlet.CharacterCreationServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AmministratorListPlayer</servlet-name>
+        <servlet-class>Servlet.AmministratorListPlayer</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/faces/*</url-pattern>
@@ -44,6 +48,10 @@
     <servlet-mapping>
         <servlet-name>CharacterCreationServlet</servlet-name>
         <url-pattern>/CharacterCreationServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AmministratorListPlayer</servlet-name>
+        <url-pattern>/AmministratorListPlayer</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

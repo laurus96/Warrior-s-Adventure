@@ -52,20 +52,23 @@ public class LoginServlet extends HttpServlet {
             Amministratore trylog = logginAmministratore(username, password);
             
             if(trylog != null){
-                System.out.println(trylog.getUsername());
                 request.getRequestDispatcher("amministratore.jsp").forward(request, response);
             }
-            
-            Giocatore logged = login(username, password);
-            
-            if(logged != null){
-                session.setAttribute("player", logged);
-                request.getRequestDispatcher("ingresso.jsp").forward(request, response);
-            }
             else{
-                session.setAttribute("login", "FAIL");
-                request.getRequestDispatcher("index.jsp").forward(request, response);
+                Giocatore logged = login(username, password);
+            
+                if(logged != null){
+                    session.setAttribute("player", logged);
+                    request.getRequestDispatcher("ingresso.jsp").forward(request, response);
+                }
+                else{
+                    session.setAttribute("login", "FAIL");
+                    request.getRequestDispatcher("index.jsp").forward(request, response);
+                }
+                
             }
+            
+            
 
         }
     }
