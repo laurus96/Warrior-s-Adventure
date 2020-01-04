@@ -6,8 +6,8 @@
     <system systemId="http://localhost:8080/CharacterEJBService/CharacterEJB?xsd=1" uri="src/conf/xml-resources/web-service-references/CharacterEJB/wsdl/localhost_8080/CharacterEJBService/CharacterEJB.xsd_1.xsd"/>
     <system systemId="http://localhost:8080/GiocatoreEJBService/GiocatoreEJB?wsdl" uri="src/conf/xml-resources/web-service-references/GiocatoreEJB/wsdl/localhost_8080/GiocatoreEJBService/GiocatoreEJB.wsdl"/>
     <system systemId="http://localhost:8080/GiocatoreEJBService/GiocatoreEJB?xsd=1" uri="src/conf/xml-resources/web-service-references/GiocatoreEJB/wsdl/localhost_8080/GiocatoreEJBService/GiocatoreEJB.xsd_1.xsd"/>
-    <system systemId="http://localhost:8080/PersonaggioEJBService/PersonaggioEJB?wsdl" uri="src/conf/xml-resources/web-service-references/PersonaggioEJB/wsdl/localhost_8080/PersonaggioEJBService/PersonaggioEJB.wsdl"/>
-    <system systemId="http://localhost:8080/PersonaggioEJBService/PersonaggioEJB?xsd=1" uri="src/conf/xml-resources/web-service-references/PersonaggioEJB/wsdl/localhost_8080/PersonaggioEJBService/PersonaggioEJB.xsd_1.xsd"/>
     <system systemId="http://localhost:8080/AmministratoreEJBService/AmministratoreEJB?wsdl" uri="src/conf/xml-resources/web-service-references/AmministratoreEJB/wsdl/localhost_8080/AmministratoreEJBService/AmministratoreEJB.wsdl"/>
     <system systemId="http://localhost:8080/AmministratoreEJBService/AmministratoreEJB?xsd=1" uri="src/conf/xml-resources/web-service-references/AmministratoreEJB/wsdl/localhost_8080/AmministratoreEJBService/AmministratoreEJB.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/PersonaggioEJBService/PersonaggioEJB?wsdl" uri="src/conf/xml-resources/web-service-references/PersonaggioEJB/wsdl/localhost_8080/PersonaggioEJBService/PersonaggioEJB.wsdl"/>
+    <system systemId="http://localhost:8080/PersonaggioEJBService/PersonaggioEJB?xsd=1" uri="src/conf/xml-resources/web-service-references/PersonaggioEJB/wsdl/localhost_8080/PersonaggioEJBService/PersonaggioEJB.xsd_1.xsd"/>
 </catalog>

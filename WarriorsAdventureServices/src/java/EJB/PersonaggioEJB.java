@@ -81,4 +81,13 @@ public class PersonaggioEJB implements PersonaggioEJBRemote{
         em.remove(em.merge(p));
     }
 
+    @Override
+    public Personaggio findCharacter(String username, String name) {
+        TypedQuery<Personaggio> query = em.createNamedQuery(Personaggio.FIND_BYUSNA, Personaggio.class)
+                .setParameter("username", username)
+                .setParameter("name", name);
+        
+        return query.getSingleResult();
+    }
+
 }

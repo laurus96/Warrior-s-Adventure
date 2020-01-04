@@ -8,11 +8,13 @@ $(document).ready(function(){
             var x = 0;
             var limit = 1;
             console.log(object);
-
+            
+            
             for(x in object){
-                console.log("ciao");
-                var character = "<input class=\"b"+ limit +"\" type=\"button\" value=\"Nome: "+ object[x].name + ", Livello: " + object[x].level + "\"><br>";
-                $(".div1").append(character);
+                var name_value = "<input  type=\"hidden\" name=\"name_value\" value=\"" + object[x].name  + "\">";
+                var character = "<input class=\"b"+ limit +"\" type=\"submit\" value=\"Nome: "+ object[x].name + ", Livello: " + object[x].level + "\"><br>";
+                $("#togameForm").append(name_value);
+                $("#togameForm").append(character);
                 limit++;
                 
             }
@@ -21,6 +23,7 @@ $(document).ready(function(){
                 document.getElementById("b4").style.visibility = "hidden";
             }
     });
+    
 });
 
 

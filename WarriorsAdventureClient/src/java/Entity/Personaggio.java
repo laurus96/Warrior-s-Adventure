@@ -17,12 +17,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Entity
 @NamedQueries({
     @NamedQuery(name = Personaggio.FIND_BYUS, query = "SELECT b FROM Personaggio b WHERE b.username = :username"),
+    @NamedQuery(name = Personaggio.FIND_BYUSNA, query = "SELECT b FROM Personaggio b WHERE b.username = :username AND b.name = :name")
 })
 public class Personaggio implements Serializable {
     
     private static final long serialVersionUID = 2L;
     
     public static final String FIND_BYUS = "Personaggio.findByUsername";
+    public static final String FIND_BYUSNA = "Personaggio.findByUsernameName";
+
     
     @Id @GeneratedValue
     private long id;

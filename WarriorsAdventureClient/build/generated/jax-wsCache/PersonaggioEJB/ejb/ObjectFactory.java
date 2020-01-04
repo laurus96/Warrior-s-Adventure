@@ -35,11 +35,13 @@ public class ObjectFactory {
     private final static QName _AddGold_QNAME = new QName("http://EJB/", "addGold");
     private final static QName _InsertPersonaggioResponse_QNAME = new QName("http://EJB/", "insertPersonaggioResponse");
     private final static QName _ListCharacterResponse_QNAME = new QName("http://EJB/", "listCharacterResponse");
+    private final static QName _FindCharacter_QNAME = new QName("http://EJB/", "findCharacter");
     private final static QName _UpdatePersonaggio_QNAME = new QName("http://EJB/", "updatePersonaggio");
     private final static QName _InsertPersonaggio_QNAME = new QName("http://EJB/", "insertPersonaggio");
     private final static QName _ListCharacter_QNAME = new QName("http://EJB/", "listCharacter");
     private final static QName _SubGold_QNAME = new QName("http://EJB/", "subGold");
     private final static QName _UpdatePersonaggioResponse_QNAME = new QName("http://EJB/", "updatePersonaggioResponse");
+    private final static QName _FindCharacterResponse_QNAME = new QName("http://EJB/", "findCharacterResponse");
     private final static QName _RemovePersonaggioResponse_QNAME = new QName("http://EJB/", "removePersonaggioResponse");
     private final static QName _AddExpResponse_QNAME = new QName("http://EJB/", "addExpResponse");
 
@@ -56,6 +58,14 @@ public class ObjectFactory {
      */
     public UpdatePersonaggio createUpdatePersonaggio() {
         return new UpdatePersonaggio();
+    }
+
+    /**
+     * Create an instance of {@link FindCharacter }
+     * 
+     */
+    public FindCharacter createFindCharacter() {
+        return new FindCharacter();
     }
 
     /**
@@ -144,6 +154,14 @@ public class ObjectFactory {
      */
     public Giocatore createGiocatore() {
         return new Giocatore();
+    }
+
+    /**
+     * Create an instance of {@link FindCharacterResponse }
+     * 
+     */
+    public FindCharacterResponse createFindCharacterResponse() {
+        return new FindCharacterResponse();
     }
 
     /**
@@ -294,6 +312,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link FindCharacter }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://EJB/", name = "findCharacter")
+    public JAXBElement<FindCharacter> createFindCharacter(FindCharacter value) {
+        return new JAXBElement<FindCharacter>(_FindCharacter_QNAME, FindCharacter.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link UpdatePersonaggio }{@code >}}
      * 
      */
@@ -336,6 +363,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://EJB/", name = "updatePersonaggioResponse")
     public JAXBElement<UpdatePersonaggioResponse> createUpdatePersonaggioResponse(UpdatePersonaggioResponse value) {
         return new JAXBElement<UpdatePersonaggioResponse>(_UpdatePersonaggioResponse_QNAME, UpdatePersonaggioResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link FindCharacterResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://EJB/", name = "findCharacterResponse")
+    public JAXBElement<FindCharacterResponse> createFindCharacterResponse(FindCharacterResponse value) {
+        return new JAXBElement<FindCharacterResponse>(_FindCharacterResponse_QNAME, FindCharacterResponse.class, null, value);
     }
 
     /**

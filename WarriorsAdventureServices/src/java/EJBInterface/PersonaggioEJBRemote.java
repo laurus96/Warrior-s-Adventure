@@ -17,8 +17,10 @@ public interface PersonaggioEJBRemote {
     void subGold(Personaggio chr,int gold);
     void addExp(Personaggio chr,int exp);
     String createCharacter(String name, String classe, Giocatore p);
+    Personaggio findCharacter(String username, String name);
     Personaggio insertPersonaggio(Personaggio p);
     Personaggio updatePersonaggio(Personaggio p);
     void removePersonaggio(Personaggio p);
     List<Personaggio> listCharacter(Giocatore p);
+    
 }

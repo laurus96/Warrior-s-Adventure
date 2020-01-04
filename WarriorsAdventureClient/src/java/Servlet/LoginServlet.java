@@ -55,7 +55,7 @@ public class LoginServlet extends HttpServlet {
                 request.getRequestDispatcher("amministratore.jsp").forward(request, response);
             }
             else{
-                Giocatore logged = login(username, password);
+                ejb.Giocatore logged = login(username, password);
                 
                 if(logged != null && logged.isBan()){
                     session.setAttribute("login", "BAN");

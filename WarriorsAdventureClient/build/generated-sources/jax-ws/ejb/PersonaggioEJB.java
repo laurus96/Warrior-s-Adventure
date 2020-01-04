@@ -27,81 +27,6 @@ public interface PersonaggioEJB {
 
     /**
      * 
-     * @param arg0
-     * @return
-     *     returns java.util.List<ejb.Personaggio>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "listCharacter", targetNamespace = "http://EJB/", className = "ejb.ListCharacter")
-    @ResponseWrapper(localName = "listCharacterResponse", targetNamespace = "http://EJB/", className = "ejb.ListCharacterResponse")
-    @Action(input = "http://EJB/PersonaggioEJB/listCharacterRequest", output = "http://EJB/PersonaggioEJB/listCharacterResponse")
-    public List<Personaggio> listCharacter(
-        @WebParam(name = "arg0", targetNamespace = "")
-        Giocatore arg0);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns ejb.Personaggio
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "insertPersonaggio", targetNamespace = "http://EJB/", className = "ejb.InsertPersonaggio")
-    @ResponseWrapper(localName = "insertPersonaggioResponse", targetNamespace = "http://EJB/", className = "ejb.InsertPersonaggioResponse")
-    @Action(input = "http://EJB/PersonaggioEJB/insertPersonaggioRequest", output = "http://EJB/PersonaggioEJB/insertPersonaggioResponse")
-    public Personaggio insertPersonaggio(
-        @WebParam(name = "arg0", targetNamespace = "")
-        Personaggio arg0);
-
-    /**
-     * 
-     * @param arg1
-     * @param arg0
-     */
-    @WebMethod
-    @RequestWrapper(localName = "addGold", targetNamespace = "http://EJB/", className = "ejb.AddGold")
-    @ResponseWrapper(localName = "addGoldResponse", targetNamespace = "http://EJB/", className = "ejb.AddGoldResponse")
-    @Action(input = "http://EJB/PersonaggioEJB/addGoldRequest", output = "http://EJB/PersonaggioEJB/addGoldResponse")
-    public void addGold(
-        @WebParam(name = "arg0", targetNamespace = "")
-        Personaggio arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        int arg1);
-
-    /**
-     * 
-     * @param arg1
-     * @param arg0
-     */
-    @WebMethod
-    @RequestWrapper(localName = "addExp", targetNamespace = "http://EJB/", className = "ejb.AddExp")
-    @ResponseWrapper(localName = "addExpResponse", targetNamespace = "http://EJB/", className = "ejb.AddExpResponse")
-    @Action(input = "http://EJB/PersonaggioEJB/addExpRequest", output = "http://EJB/PersonaggioEJB/addExpResponse")
-    public void addExp(
-        @WebParam(name = "arg0", targetNamespace = "")
-        Personaggio arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        int arg1);
-
-    /**
-     * 
-     * @param arg1
-     * @param arg0
-     */
-    @WebMethod
-    @RequestWrapper(localName = "subGold", targetNamespace = "http://EJB/", className = "ejb.SubGold")
-    @ResponseWrapper(localName = "subGoldResponse", targetNamespace = "http://EJB/", className = "ejb.SubGoldResponse")
-    @Action(input = "http://EJB/PersonaggioEJB/subGoldRequest", output = "http://EJB/PersonaggioEJB/subGoldResponse")
-    public void subGold(
-        @WebParam(name = "arg0", targetNamespace = "")
-        Personaggio arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        int arg1);
-
-    /**
-     * 
      * @param arg2
      * @param arg1
      * @param arg0
@@ -120,6 +45,81 @@ public interface PersonaggioEJB {
         String arg1,
         @WebParam(name = "arg2", targetNamespace = "")
         Giocatore arg2);
+
+    /**
+     * 
+     * @param arg1
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "addExp", targetNamespace = "http://EJB/", className = "ejb.AddExp")
+    @ResponseWrapper(localName = "addExpResponse", targetNamespace = "http://EJB/", className = "ejb.AddExpResponse")
+    @Action(input = "http://EJB/PersonaggioEJB/addExpRequest", output = "http://EJB/PersonaggioEJB/addExpResponse")
+    public void addExp(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Personaggio arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        int arg1);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns ejb.Personaggio
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "insertPersonaggio", targetNamespace = "http://EJB/", className = "ejb.InsertPersonaggio")
+    @ResponseWrapper(localName = "insertPersonaggioResponse", targetNamespace = "http://EJB/", className = "ejb.InsertPersonaggioResponse")
+    @Action(input = "http://EJB/PersonaggioEJB/insertPersonaggioRequest", output = "http://EJB/PersonaggioEJB/insertPersonaggioResponse")
+    public Personaggio insertPersonaggio(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Personaggio arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.util.List<ejb.Personaggio>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listCharacter", targetNamespace = "http://EJB/", className = "ejb.ListCharacter")
+    @ResponseWrapper(localName = "listCharacterResponse", targetNamespace = "http://EJB/", className = "ejb.ListCharacterResponse")
+    @Action(input = "http://EJB/PersonaggioEJB/listCharacterRequest", output = "http://EJB/PersonaggioEJB/listCharacterResponse")
+    public List<Personaggio> listCharacter(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Giocatore arg0);
+
+    /**
+     * 
+     * @param arg1
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "subGold", targetNamespace = "http://EJB/", className = "ejb.SubGold")
+    @ResponseWrapper(localName = "subGoldResponse", targetNamespace = "http://EJB/", className = "ejb.SubGoldResponse")
+    @Action(input = "http://EJB/PersonaggioEJB/subGoldRequest", output = "http://EJB/PersonaggioEJB/subGoldResponse")
+    public void subGold(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Personaggio arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        int arg1);
+
+    /**
+     * 
+     * @param arg1
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "addGold", targetNamespace = "http://EJB/", className = "ejb.AddGold")
+    @ResponseWrapper(localName = "addGoldResponse", targetNamespace = "http://EJB/", className = "ejb.AddGoldResponse")
+    @Action(input = "http://EJB/PersonaggioEJB/addGoldRequest", output = "http://EJB/PersonaggioEJB/addGoldResponse")
+    public void addGold(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Personaggio arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        int arg1);
 
     /**
      * 
@@ -147,5 +147,23 @@ public interface PersonaggioEJB {
     public void removePersonaggio(
         @WebParam(name = "arg0", targetNamespace = "")
         Personaggio arg0);
+
+    /**
+     * 
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns ejb.Personaggio
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "findCharacter", targetNamespace = "http://EJB/", className = "ejb.FindCharacter")
+    @ResponseWrapper(localName = "findCharacterResponse", targetNamespace = "http://EJB/", className = "ejb.FindCharacterResponse")
+    @Action(input = "http://EJB/PersonaggioEJB/findCharacterRequest", output = "http://EJB/PersonaggioEJB/findCharacterResponse")
+    public Personaggio findCharacter(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        String arg1);
 
 }

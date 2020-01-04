@@ -41,7 +41,7 @@
     -->
 
     <div class="div1">
-        <form action="">
+        <form action="ToGame" id="togameForm">
             <!--
             <input class="b1" type="button" value="Personaggio 1 Mago livello 10"><br>
             <input class="b2" type="button" value="Personaggio 2 Mago livello 10"><br>

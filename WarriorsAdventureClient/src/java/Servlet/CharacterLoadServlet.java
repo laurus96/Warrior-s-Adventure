@@ -49,7 +49,7 @@ public class CharacterLoadServlet extends HttpServlet {
             Giocatore  player = (Giocatore) session.getAttribute("player");
             List<Personaggio> characters = new ArrayList<>();
             characters = listCharacter(player);
-            
+                        
             PrintWriter out = response.getWriter();
             
             String json = new Gson().toJson(characters);
