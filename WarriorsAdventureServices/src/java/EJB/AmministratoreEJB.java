@@ -18,6 +18,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import javax.persistence.NoResultException;
 import EJBInterface.AmministratoreEJBRemote;
+import Entity.Amministratore;
 
 /**
  *
@@ -72,6 +73,38 @@ public class AmministratoreEJB implements AmministratoreEJBRemote {
         }catch(NoResultException e){
             return "Giocatore non trovato";
         }
+    }
+
+    @Override
+    public Amministratore logginAmministratore(String username, String password) {
+                TypedQuery<Amministratore> query = em.createNamedQuery(
+                Amministratore.FIND_BYAM, Amministratore.class)
+                .setParameter("username", username)
+                .setParameter("password", password);
+        try{
+            return query.getSingleResult();
+            
+        }catch(NoResultException e){
+            return null;
+        }  
+        
+    }
+
+    @Override
+    public Amministratore insertAmministratore(Amministratore am) {
+        em.persist(am);
+        return am;
+    }
+
+    @Override
+    public Amministratore updateAmministratore(Amministratore am) {
+        em.merge(am);
+        return am;
+    }
+
+    @Override
+    public void removeAmministratore(Amministratore am) {
+        em.remove(em.merge(am));
     }
     
 }

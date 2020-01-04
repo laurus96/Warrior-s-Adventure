@@ -38,7 +38,8 @@ public class GiocatoreEJB implements GiocatoreEJBRemote{
             
         }catch(NoResultException e){
             return null;
-        }    }
+        }    
+    }
     
     @Override
     public Giocatore insertPlayer(Giocatore newPlayer) {

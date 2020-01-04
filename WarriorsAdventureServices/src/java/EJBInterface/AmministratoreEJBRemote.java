@@ -5,6 +5,7 @@
  */
 package EJBInterface;
 
+import Entity.Amministratore;
 import Entity.Giocatore;
 import java.util.List;
 import javax.ejb.Remote;
@@ -16,6 +17,10 @@ import javax.ejb.Remote;
 @Remote
 public interface AmministratoreEJBRemote {
     
+    Amministratore logginAmministratore(String username, String password);
+    Amministratore insertAmministratore(Amministratore am);
+    Amministratore updateAmministratore(Amministratore am);
+    void removeAmministratore(Amministratore am);
     List<Giocatore> allPlayers();
     List<Giocatore> BannedPlayers();
     String banPlayer(String username);

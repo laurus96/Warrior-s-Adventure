@@ -5,6 +5,8 @@
  */
 package Servlet;
 
+import ejb.Amministratore;
+import ejb.AmministratoreEJBService;
 import ejb.Giocatore;
 import ejb.GiocatoreEJBService;
 import java.io.IOException;
@@ -20,6 +22,9 @@ import javax.xml.ws.WebServiceRef;
  * @author laurus
  */
 public class LoginServlet extends HttpServlet {
+
+    @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/localhost_8080/AmministratoreEJBService/AmministratoreEJB.wsdl")
+    private AmministratoreEJBService service_1;
 
     @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/localhost_8080/GiocatoreEJBService/GiocatoreEJB.wsdl")
     private GiocatoreEJBService service;
@@ -43,7 +48,14 @@ public class LoginServlet extends HttpServlet {
             String username = request.getParameter("username").toLowerCase();
             String password = request.getParameter("password");
             
-
+            //Check if amministrator has logged
+            Amministratore trylog = logginAmministratore(username, password);
+            
+            if(trylog != null){
+                System.out.println(trylog.getUsername());
+                request.getRequestDispatcher("amministratore.jsp").forward(request, response);
+            }
+            
             Giocatore logged = login(username, password);
             
             if(logged != null){
@@ -103,4 +115,13 @@ public class LoginServlet extends HttpServlet {
         ejb.GiocatoreEJB port = service.getGiocatoreEJBPort();
         return port.login(arg0, arg1);
     }
+
+    private ejb.Amministratore logginAmministratore(java.lang.String arg0, java.lang.String arg1) {
+        // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
+        // If the calling of port operations may lead to race condition some synchronization is required.
+        ejb.AmministratoreEJB port = service_1.getAmministratoreEJBPort();
+        return port.logginAmministratore(arg0, arg1);
+    }
+    
+    
 }

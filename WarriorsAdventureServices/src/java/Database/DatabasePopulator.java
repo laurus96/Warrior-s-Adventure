@@ -5,12 +5,13 @@
  */
 package Database;
 
+import EJB.AmministratoreEJB;
 import EJB.GiocatoreEJB;
 import EJB.PersonaggioEJB;
+import Entity.Amministratore;
 import Entity.Arma;
 import Entity.Armatura;
 import Entity.Giocatore;
-import Entity.Personaggio;
 import java.util.ArrayList;
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
@@ -46,8 +47,14 @@ public class DatabasePopulator {
     @Inject
     private PersonaggioEJB characterejb;
     
+    @Inject
+    private AmministratoreEJB amminiejb;
+    
+    
     private Giocatore player1;
     private Giocatore player2;
+        
+    private Amministratore am1;
     
     private ArrayList<Arma> al=new ArrayList<>();
     private ArrayList<Armatura> aml=new ArrayList<>();
@@ -113,13 +120,17 @@ public class DatabasePopulator {
             em.persist(e);
         }
         
-        player1 = new Giocatore("laurus", "metin@Server1", "lorenzo.cocchinone@gmail.com");
-        player2 = new Giocatore("tempesta58", "metin@Server1", "giuseppe090gmail.com");
+        player1 = new Giocatore("laurus96", "metin@Server1", "lorenzo.cocchinone@gmail.com");
+        player2 = new Giocatore("tempesta59", "metin@Server1", "giuseppe090gmail.com");
                 
         playerejb.insertPlayer(player1);
         playerejb.insertPlayer(player2);
         
         characterejb.createCharacter("Lithia", "Paladino", player1);
+        
+        am1 = new Amministratore("laurus", "metin@Server1");
+        
+        amminiejb.insertAmministratore(am1);
     }
     
     @PreDestroy
@@ -134,5 +145,7 @@ public class DatabasePopulator {
         playerejb.removePlayer(player1);
         playerejb.removePlayer(player2);
         
+        amminiejb.removeAmministratore(am1);
+
     }
 }

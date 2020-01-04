@@ -15,14 +15,21 @@ import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 @Entity
+@NamedQueries({
+    @NamedQuery(name = Amministratore.FIND_BYAM, query = "SELECT b FROM Amministratore b WHERE b.username = :username AND b.password = :password")
+})
 public class Amministratore implements Serializable {
     
     
     private static final long serialVersionUID = 5L;
+    
+    public static final String FIND_BYAM = "Amministratore.Find_Am";
         
     @Id @GeneratedValue
     private Long id;
