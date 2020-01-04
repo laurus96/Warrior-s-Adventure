@@ -74,6 +74,21 @@ public interface GiocatoreEJB {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "findUsername", targetNamespace = "http://EJB/", className = "ejb.FindUsername")
+    @ResponseWrapper(localName = "findUsernameResponse", targetNamespace = "http://EJB/", className = "ejb.FindUsernameResponse")
+    @Action(input = "http://EJB/GiocatoreEJB/findUsernameRequest", output = "http://EJB/GiocatoreEJB/findUsernameResponse")
+    public boolean findUsername(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
     @RequestWrapper(localName = "findEmail", targetNamespace = "http://EJB/", className = "ejb.FindEmail")
     @ResponseWrapper(localName = "findEmailResponse", targetNamespace = "http://EJB/", className = "ejb.FindEmailResponse")
     @Action(input = "http://EJB/GiocatoreEJB/findEmailRequest", output = "http://EJB/GiocatoreEJB/findEmailResponse")
@@ -137,20 +152,5 @@ public interface GiocatoreEJB {
     public void removePlayer(
         @WebParam(name = "arg0", targetNamespace = "")
         Giocatore arg0);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "findUsername", targetNamespace = "http://EJB/", className = "ejb.FindUsername")
-    @ResponseWrapper(localName = "findUsernameResponse", targetNamespace = "http://EJB/", className = "ejb.FindUsernameResponse")
-    @Action(input = "http://EJB/GiocatoreEJB/findUsernameRequest", output = "http://EJB/GiocatoreEJB/findUsernameResponse")
-    public boolean findUsername(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0);
 
 }

@@ -85,18 +85,6 @@ public interface AmministratoreEJB {
     /**
      * 
      * @param arg0
-     */
-    @WebMethod
-    @RequestWrapper(localName = "removeAmministratore", targetNamespace = "http://EJB/", className = "ejb.RemoveAmministratore")
-    @ResponseWrapper(localName = "removeAmministratoreResponse", targetNamespace = "http://EJB/", className = "ejb.RemoveAmministratoreResponse")
-    @Action(input = "http://EJB/AmministratoreEJB/removeAmministratoreRequest", output = "http://EJB/AmministratoreEJB/removeAmministratoreResponse")
-    public void removeAmministratore(
-        @WebParam(name = "arg0", targetNamespace = "")
-        Amministratore arg0);
-
-    /**
-     * 
-     * @param arg0
      * @return
      *     returns ejb.Amministratore
      */
@@ -121,6 +109,18 @@ public interface AmministratoreEJB {
     @ResponseWrapper(localName = "updateAmministratoreResponse", targetNamespace = "http://EJB/", className = "ejb.UpdateAmministratoreResponse")
     @Action(input = "http://EJB/AmministratoreEJB/updateAmministratoreRequest", output = "http://EJB/AmministratoreEJB/updateAmministratoreResponse")
     public Amministratore updateAmministratore(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Amministratore arg0);
+
+    /**
+     * 
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "removeAmministratore", targetNamespace = "http://EJB/", className = "ejb.RemoveAmministratore")
+    @ResponseWrapper(localName = "removeAmministratoreResponse", targetNamespace = "http://EJB/", className = "ejb.RemoveAmministratoreResponse")
+    @Action(input = "http://EJB/AmministratoreEJB/removeAmministratoreRequest", output = "http://EJB/AmministratoreEJB/removeAmministratoreResponse")
+    public void removeAmministratore(
         @WebParam(name = "arg0", targetNamespace = "")
         Amministratore arg0);
 
