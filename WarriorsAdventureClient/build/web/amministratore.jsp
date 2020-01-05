@@ -59,6 +59,8 @@
                         </script>    
                 <%}%>
             <%}%>
+
+        
         <div class="tp">
             <div class="usdiv">
                 <h1 class="username">Nome Amministratore</h1>
@@ -73,6 +75,10 @@
                     -->
                 </table> 
                 <input class="buttonBanList" type="button" id="b3" value="Visualizza Giocatori Bannati">
+                
+                <form action="LogoutServlet", method="post">
+                    <input type="submit" value="Logout" class="logout">
+                </form>
             </div>
         </div>
         <!-- The Modal -->

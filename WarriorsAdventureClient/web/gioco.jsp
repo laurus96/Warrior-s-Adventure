@@ -6,7 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-<jsp:useBean id="session_character" class="Entity.Personaggio"></jsp:useBean>
+<jsp:useBean id="session_character" class="ejb.Personaggio"></jsp:useBean>
 
 <!DOCTYPE html>
 <html>
@@ -26,8 +26,8 @@
     <body>
         <div class="ussa">
             <h1 class="username">${character.name}</h1>
-            <form action="">
-                <input type="button" value="Logout" class="logout">
+            <form action="LogoutServlet", method="post">
+                <input type="submit" value="Logout" class="logout">
             </form>
             <h1 class="saldo">Saldo: ${character.gold} G</h1>
         </div>

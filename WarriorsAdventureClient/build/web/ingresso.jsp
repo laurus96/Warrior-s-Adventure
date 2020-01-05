@@ -6,7 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-<jsp:useBean id="session_user" class="Entity.Giocatore"></jsp:useBean>
+<jsp:useBean id="session_user" class="ejb.Giocatore"></jsp:useBean>
 <!DOCTYPE html>
 <html>
     <head>
@@ -51,6 +51,9 @@
         <div class="div2">
             <a class="a1"><b>Gilda:</b> (Presto disponibile)</a>
             <a class="a2"><b>Tornei:</b> (Presto disponibile)</a>
+            <form action="LogoutServlet", method="post">
+                <input type="submit" value="Logout" class="logout">
+            </form>
         </div>
     </div> 
 
