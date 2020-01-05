@@ -17,6 +17,11 @@
         <link rel="stylesheet" type="text/css" href="css/gioco.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Warrior's Adventure</title>
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="javascript/marketLoad.js"></script>
+
     </head>
     <body>
         <div class="ussa">
@@ -63,9 +68,11 @@
             <h1 class="markettitle"> Mercato:</h1>
             <div class="marketlist">
                 <table class="markettable">
+                    <!--
                     <tr><td class="td">Spada LV5 <b>200G</b></td><td><form action=""><input class="marketbutton" type="button" value="Compra"></form></td></tr>
                     <tr><td class="td">Martello LV5 <b>200G</b></td><td><form action=""><input class="marketbutton" type="button" value="Compra"></form></td></tr>
                     <tr><td class="td">Scudo LV5 <b>200G</b></td><td><form action=""><input class="marketbutton" type="button" value="Compra"></form></td></tr>
+                    -->
                 </table>
             </div>
         </div>

@@ -37,6 +37,14 @@
         <servlet-name>UnbanServlet</servlet-name>
         <servlet-class>Servlet.UnbanServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>WeaponLoadServlet</servlet-name>
+        <servlet-class>Servlet.WeaponLoadServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ArmorLoadServlet</servlet-name>
+        <servlet-class>Servlet.ArmorLoadServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/faces/*</url-pattern>
@@ -68,6 +76,14 @@
     <servlet-mapping>
         <servlet-name>UnbanServlet</servlet-name>
         <url-pattern>/UnbanServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>WeaponLoadServlet</servlet-name>
+        <url-pattern>/WeaponLoadServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ArmorLoadServlet</servlet-name>
+        <url-pattern>/ArmorLoadServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

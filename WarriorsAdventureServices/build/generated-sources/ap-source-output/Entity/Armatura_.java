@@ -4,12 +4,13 @@ import javax.annotation.Generated;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2020-01-04T22:11:37")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2020-01-05T10:45:02")
 @StaticMetamodel(Armatura.class)
 public class Armatura_ { 
 
     public static volatile SingularAttribute<Armatura, Integer> forza;
     public static volatile SingularAttribute<Armatura, String> name;
+    public static volatile SingularAttribute<Armatura, Integer> prezzo;
     public static volatile SingularAttribute<Armatura, Long> id;
     public static volatile SingularAttribute<Armatura, Integer> vitalità;
     public static volatile SingularAttribute<Armatura, Integer> difesa;

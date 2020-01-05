@@ -74,5 +74,37 @@
         <delete dir="${build.generated.sources.dir}/jax-ws/ejb"/>
         <delete dir="${build.generated.dir}/jax-wsCache/AmministratoreEJB"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-GiocatoreEJB, wsimport-client-PersonaggioEJB, wsimport-client-AmministratoreEJB"/>
+    <target name="wsimport-client-ArmaEJB" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ArmaEJB"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ArmaEJB" destdir="${build.generated.dir}/jax-wsCache/ArmaEJB" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/ArmaEJB/wsdl/localhost_8080/ArmaEJBService/ArmaEJB.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ArmaEJBService/ArmaEJB?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/ArmaEJB/wsdl/localhost_8080/ArmaEJBService/ArmaEJB.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ArmaEJB"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ArmaEJB">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ArmaEJB" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ejb"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/ArmaEJB"/>
+    </target>
+    <target name="wsimport-client-ArmaturaEJB" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ArmaturaEJB"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ArmaturaEJB" destdir="${build.generated.dir}/jax-wsCache/ArmaturaEJB" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/ArmaturaEJB/wsdl/localhost_8080/ArmaturaEJBService/ArmaturaEJB.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ArmaturaEJBService/ArmaturaEJB?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/ArmaturaEJB/wsdl/localhost_8080/ArmaturaEJBService/ArmaturaEJB.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ArmaturaEJB"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ArmaturaEJB">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ArmaturaEJB" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ejb"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/ArmaturaEJB"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-GiocatoreEJB, wsimport-client-PersonaggioEJB, wsimport-client-AmministratoreEJB, wsimport-client-ArmaEJB, wsimport-client-ArmaturaEJB"/>
 </project>

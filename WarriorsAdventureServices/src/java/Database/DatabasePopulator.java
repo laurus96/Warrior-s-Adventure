@@ -62,60 +62,62 @@ public class DatabasePopulator {
     
     @PostConstruct
     public void populate(){
-        al.add(new Arma("Spada",1));
-        al.add(new Arma("Spada",2));
-        al.add(new Arma("Spada",3));
-        al.add(new Arma("Spada",4));
-        al.add(new Arma("Spada",5));
-        al.add(new Arma("Spada",6));
-        al.add(new Arma("Spada",7));
-        al.add(new Arma("Spada",8));
-        al.add(new Arma("Spada",9));
-        al.add(new Arma("Spada",10));
         
-        al.add(new Arma("Martello",1));
-        al.add(new Arma("Martello",2));
-        al.add(new Arma("Martello",3));
-        al.add(new Arma("Martello",4));
-        al.add(new Arma("Martello",5));
-        al.add(new Arma("Martello",6));
-        al.add(new Arma("Martello",7));
-        al.add(new Arma("Martello",8));
-        al.add(new Arma("Martello",9));
-        al.add(new Arma("Martello",10));
+        al.add(new Arma("Spada", 1, 100));
+        al.add(new Arma("Spada", 2, 200));
+        al.add(new Arma("Spada", 3, 300));
+        al.add(new Arma("Spada", 4, 400));
+        al.add(new Arma("Spada", 5, 500));
+        al.add(new Arma("Spada", 6, 600));
+        al.add(new Arma("Spada", 7, 700));
+        al.add(new Arma("Spada", 8, 800));
+        al.add(new Arma("Spada", 9, 900));
+        al.add(new Arma("Spada", 10, 1000));
+        
+        al.add(new Arma("Martello", 1, 100));
+        al.add(new Arma("Martello", 2, 200));
+        al.add(new Arma("Martello", 3, 300));
+        al.add(new Arma("Martello", 4, 400));
+        al.add(new Arma("Martello", 5, 500));
+        al.add(new Arma("Martello", 6, 600));
+        al.add(new Arma("Martello", 7, 700));
+        al.add(new Arma("Martello", 8, 800));
+        al.add(new Arma("Martello", 9, 900));
+        al.add(new Arma("Martello", 10, 100));
 
-        al.add(new Arma("Ascia",1));
-        al.add(new Arma("Ascia",2));
-        al.add(new Arma("Ascia",3));
-        al.add(new Arma("Ascia",4));
-        al.add(new Arma("Ascia",5));
-        al.add(new Arma("Ascia",6));
-        al.add(new Arma("Ascia",7));
-        al.add(new Arma("Ascia",8));
-        al.add(new Arma("Ascia",9));
-        al.add(new Arma("Ascia",10));
+        al.add(new Arma("Ascia", 1, 100));
+        al.add(new Arma("Ascia", 2, 200));
+        al.add(new Arma("Ascia", 3, 300));
+        al.add(new Arma("Ascia", 4, 400));
+        al.add(new Arma("Ascia", 5, 500));
+        al.add(new Arma("Ascia", 6, 600));
+        al.add(new Arma("Ascia", 7, 700));
+        al.add(new Arma("Ascia", 8, 800));
+        al.add(new Arma("Ascia", 9, 900));
+        al.add(new Arma("Ascia", 10, 1000));
         
         for (Arma e: al){
             em.persist(e);
         }
         
-        aml.add(new Armatura("Armatura del Guerriero",1));
-        aml.add(new Armatura("Armatura del Guerriero",2));
-        aml.add(new Armatura("Armatura del Guerriero",3));
-        aml.add(new Armatura("Armatura del Guerriero",4));
-        aml.add(new Armatura("Armatura del Guerriero",5));
-        
-        aml.add(new Armatura("Armatura del Paladino",1));
-        aml.add(new Armatura("Armatura del Paladino",2));
-        aml.add(new Armatura("Armatura del Paladino",3));
-        aml.add(new Armatura("Armatura del Paladino",4));
-        aml.add(new Armatura("Armatura del Paladino",5));
-        
-        aml.add(new Armatura("Armatura del Cavaliere",1));
-        aml.add(new Armatura("Armatura del Cavaliere",2));
-        aml.add(new Armatura("Armatura del Cavaliere",3));
-        aml.add(new Armatura("Armatura del Cavaliere",4));
-        aml.add(new Armatura("Armatura del Cavaliere",5));
+                aml.add(new Armatura("Armatura del Guerriero", 1, 100));
+        aml.add(new Armatura("Armatura del Guerriero", 2, 200));
+        aml.add(new Armatura("Armatura del Guerriero", 3, 300));
+        aml.add(new Armatura("Armatura del Guerriero", 4, 400));
+        aml.add(new Armatura("Armatura del Guerriero", 5, 500));
+       
+        aml.add(new Armatura("Armatura del Paladino", 1, 100));
+        aml.add(new Armatura("Armatura del Paladino", 2, 200));
+        aml.add(new Armatura("Armatura del Paladino", 3, 300));
+        aml.add(new Armatura("Armatura del Paladino", 4, 400));
+        aml.add(new Armatura("Armatura del Paladino", 5, 500));
+
+        aml.add(new Armatura("Armatura del Cavaliere", 1, 100));
+        aml.add(new Armatura("Armatura del Cavaliere", 2, 200));
+        aml.add(new Armatura("Armatura del Cavaliere", 3, 300));
+        aml.add(new Armatura("Armatura del Cavaliere", 4, 400));
+        aml.add(new Armatura("Armatura del Cavaliere", 5, 500));
+
         
         for (Armatura e: aml){
             em.persist(e);
