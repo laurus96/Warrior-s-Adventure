@@ -21,6 +21,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Entity
 @NamedQueries({
     @NamedQuery(name = Armatura.FIND_ARMOR, query = "SELECT a FROM Armatura a WHERE a.livello = :livello"),
+    @NamedQuery(name = Armatura.BOUGHT_ARMOR, query = "SELECT a FROM Armatura a WHERE a.id = :id"),
     @NamedQuery(name = Armatura.DELETE_ARMOR, query = "DELETE FROM Armatura WHERE id = :id")
 })
 public class Armatura implements Serializable{
@@ -28,6 +29,7 @@ public class Armatura implements Serializable{
     public static final long serialVersionUID=3L;
     
     public static final String FIND_ARMOR="Armatura.FIND_Armor";
+    public static final String BOUGHT_ARMOR = "Armatuta.Bought_Armor";
     public static final String DELETE_ARMOR = "Armatura.Delete_Armor";
     
     @Id @GeneratedValue

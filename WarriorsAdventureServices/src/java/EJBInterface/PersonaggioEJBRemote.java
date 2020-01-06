@@ -5,6 +5,8 @@
  */
 package EJBInterface;
 
+import Entity.Arma;
+import Entity.Armatura;
 import Entity.Personaggio;
 import Entity.Giocatore;
 import java.util.List;
@@ -22,5 +24,8 @@ public interface PersonaggioEJBRemote {
     Personaggio updatePersonaggio(Personaggio p);
     void removePersonaggio(Personaggio p);
     List<Personaggio> listCharacter(Giocatore p);
+    
+    Personaggio boughtWeapon(Personaggio p, Arma weapon);
+    Personaggio boughtArmor(Personaggio p, Armatura armor);
     
 }

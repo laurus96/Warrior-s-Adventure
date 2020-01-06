@@ -1,16 +1,20 @@
 package Entity;
 
+import Entity.Arma;
+import Entity.Armatura;
 import javax.annotation.Generated;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2020-01-05T10:45:02")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2020-01-06T18:46:21")
 @StaticMetamodel(Personaggio.class)
 public class Personaggio_ { 
 
+    public static volatile SingularAttribute<Personaggio, String> classe;
     public static volatile SingularAttribute<Personaggio, Integer> gold;
     public static volatile SingularAttribute<Personaggio, String> guild;
-    public static volatile SingularAttribute<Personaggio, String> classe;
+    public static volatile SingularAttribute<Personaggio, Arma> weapon;
+    public static volatile SingularAttribute<Personaggio, Armatura> armor;
     public static volatile SingularAttribute<Personaggio, Integer> defense;
     public static volatile SingularAttribute<Personaggio, Integer> vitality;
     public static volatile SingularAttribute<Personaggio, String> name;

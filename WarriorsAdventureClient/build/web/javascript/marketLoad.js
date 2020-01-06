@@ -10,8 +10,8 @@ $(document).ready(function(){
        var x = 0;
        
        for(x in object){
-           var weapon ="<tr><td class=\"td\">" + object[x].name + " <b> " + object[x].prezzo + " G </b></td>\n\
-                        <td><form action=\"\" method=\"post\">\n\
+           var weapon ="<tr><td class=\"td\">" + object[x].name + " <b> " + object[x].prezzo + " G " + " <b> Lv: " + object[x].livello + "</b></td>\n\
+                        <td><form action=\"BoughtWeaponServlet\" method=\"post\">\n\
                         <input type=\"hidden\" name=\"id_value\" value=\"" + object[x].id  + "\">\n\
                         <input class=\"marketbutton\" type=\"submit\" value=\"Compra\"></form></td></tr>";
            
@@ -26,8 +26,8 @@ $(document).ready(function(){
         var x = 0;
        
         for(x in object){
-           var armor ="<tr><td class=\"td\">" + object[x].name + " <b> " + object[x].prezzo + " G </b></td>\n\
-                        <td><form action=\"\" method=\"post\">\n\
+           var armor ="<tr><td class=\"td\">" + object[x].name + " <b> " + object[x].prezzo + " G " + " <b> Lv: " + object[x].livello + "</b></td>\n\
+                        <td><form action=\"BoughtArmorServlet\" method=\"post\">\n\
                         <input type=\"hidden\" name=\"id_value\" value=\"" + object[x].id  + "\">\n\
                         <input class=\"marketbutton\" type=\"submit\" value=\"Compra\"></form></td></tr>";
            

@@ -19,12 +19,12 @@
                 session.removeAttribute("status");
                 if(status.compareTo("FE_UN") == 0){%>
                         <script>
-                            alert("Formato username non valido");
+                            alert("Formato username non valido. L'username deve contenere solo lettere e numeri e deve essere compreso tra 5 e 20.");
                         </script>
                     <%}
                 if(status.compareTo("FE_PW") == 0){%>
                         <script>
-                            alert("Formato password non valido");
+                            alert("Formato password non valido. La password deve contenere un carattere maiuscolo, un carattere speciale e almeno un numero e il tutto compreso tra 8 e 16 caratteri. ");
                         </script>
                     <%}
                 if(status.compareTo("FE_EM") == 0){%>

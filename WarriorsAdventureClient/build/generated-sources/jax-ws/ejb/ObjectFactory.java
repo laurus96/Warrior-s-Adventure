@@ -24,24 +24,18 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _Giocatore_QNAME = new QName("http://EJB/", "giocatore");
-    private final static QName _AllPlayers_QNAME = new QName("http://EJB/", "allPlayers");
-    private final static QName _LogginAmministratore_QNAME = new QName("http://EJB/", "logginAmministratore");
-    private final static QName _AllPlayersResponse_QNAME = new QName("http://EJB/", "allPlayersResponse");
-    private final static QName _BanPlayer_QNAME = new QName("http://EJB/", "banPlayer");
-    private final static QName _InsertAmministratore_QNAME = new QName("http://EJB/", "insertAmministratore");
-    private final static QName _BanPlayerResponse_QNAME = new QName("http://EJB/", "banPlayerResponse");
-    private final static QName _LogginAmministratoreResponse_QNAME = new QName("http://EJB/", "logginAmministratoreResponse");
-    private final static QName _RemoveAmministratoreResponse_QNAME = new QName("http://EJB/", "removeAmministratoreResponse");
-    private final static QName _UnbanPlayer_QNAME = new QName("http://EJB/", "unbanPlayer");
-    private final static QName _BannedPlayers_QNAME = new QName("http://EJB/", "BannedPlayers");
-    private final static QName _UnbanPlayerResponse_QNAME = new QName("http://EJB/", "unbanPlayerResponse");
-    private final static QName _UpdateAmministratore_QNAME = new QName("http://EJB/", "updateAmministratore");
-    private final static QName _InsertAmministratoreResponse_QNAME = new QName("http://EJB/", "insertAmministratoreResponse");
-    private final static QName _UpdateAmministratoreResponse_QNAME = new QName("http://EJB/", "updateAmministratoreResponse");
-    private final static QName _BannedPlayersResponse_QNAME = new QName("http://EJB/", "BannedPlayersResponse");
-    private final static QName _RemoveAmministratore_QNAME = new QName("http://EJB/", "removeAmministratore");
-    private final static QName _Amministratore_QNAME = new QName("http://EJB/", "amministratore");
+    private final static QName _DeleteWeapon_QNAME = new QName("http://EJB/", "deleteWeapon");
+    private final static QName _InsertWeapon_QNAME = new QName("http://EJB/", "insertWeapon");
+    private final static QName _FindWeaponsBylv_QNAME = new QName("http://EJB/", "findWeapons_bylv");
+    private final static QName _Arma_QNAME = new QName("http://EJB/", "arma");
+    private final static QName _FindWeaponsResponse_QNAME = new QName("http://EJB/", "findWeaponsResponse");
+    private final static QName _UpdateWeapon_QNAME = new QName("http://EJB/", "updateWeapon");
+    private final static QName _Personaggio_QNAME = new QName("http://EJB/", "personaggio");
+    private final static QName _FindWeaponsBylvResponse_QNAME = new QName("http://EJB/", "findWeapons_bylvResponse");
+    private final static QName _DeleteWeaponResponse_QNAME = new QName("http://EJB/", "deleteWeaponResponse");
+    private final static QName _FindWeapons_QNAME = new QName("http://EJB/", "findWeapons");
+    private final static QName _InsertWeaponResponse_QNAME = new QName("http://EJB/", "insertWeaponResponse");
+    private final static QName _UpdateWeaponResponse_QNAME = new QName("http://EJB/", "updateWeaponResponse");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: ejb
@@ -51,309 +45,207 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AllPlayersResponse }
+     * Create an instance of {@link FindWeapons }
      * 
      */
-    public AllPlayersResponse createAllPlayersResponse() {
-        return new AllPlayersResponse();
+    public FindWeapons createFindWeapons() {
+        return new FindWeapons();
     }
 
     /**
-     * Create an instance of {@link BanPlayer }
+     * Create an instance of {@link DeleteWeaponResponse }
      * 
      */
-    public BanPlayer createBanPlayer() {
-        return new BanPlayer();
+    public DeleteWeaponResponse createDeleteWeaponResponse() {
+        return new DeleteWeaponResponse();
     }
 
     /**
-     * Create an instance of {@link InsertAmministratore }
+     * Create an instance of {@link UpdateWeaponResponse }
      * 
      */
-    public InsertAmministratore createInsertAmministratore() {
-        return new InsertAmministratore();
+    public UpdateWeaponResponse createUpdateWeaponResponse() {
+        return new UpdateWeaponResponse();
     }
 
     /**
-     * Create an instance of {@link LogginAmministratoreResponse }
+     * Create an instance of {@link InsertWeaponResponse }
      * 
      */
-    public LogginAmministratoreResponse createLogginAmministratoreResponse() {
-        return new LogginAmministratoreResponse();
+    public InsertWeaponResponse createInsertWeaponResponse() {
+        return new InsertWeaponResponse();
     }
 
     /**
-     * Create an instance of {@link BanPlayerResponse }
+     * Create an instance of {@link FindWeaponsBylvResponse }
      * 
      */
-    public BanPlayerResponse createBanPlayerResponse() {
-        return new BanPlayerResponse();
+    public FindWeaponsBylvResponse createFindWeaponsBylvResponse() {
+        return new FindWeaponsBylvResponse();
     }
 
     /**
-     * Create an instance of {@link Giocatore }
+     * Create an instance of {@link Arma }
      * 
      */
-    public Giocatore createGiocatore() {
-        return new Giocatore();
+    public Arma createArma() {
+        return new Arma();
     }
 
     /**
-     * Create an instance of {@link LogginAmministratore }
+     * Create an instance of {@link FindWeaponsResponse }
      * 
      */
-    public LogginAmministratore createLogginAmministratore() {
-        return new LogginAmministratore();
+    public FindWeaponsResponse createFindWeaponsResponse() {
+        return new FindWeaponsResponse();
     }
 
     /**
-     * Create an instance of {@link AllPlayers }
+     * Create an instance of {@link UpdateWeapon }
      * 
      */
-    public AllPlayers createAllPlayers() {
-        return new AllPlayers();
+    public UpdateWeapon createUpdateWeapon() {
+        return new UpdateWeapon();
     }
 
     /**
-     * Create an instance of {@link Amministratore }
+     * Create an instance of {@link Personaggio }
      * 
      */
-    public Amministratore createAmministratore() {
-        return new Amministratore();
+    public Personaggio createPersonaggio() {
+        return new Personaggio();
     }
 
     /**
-     * Create an instance of {@link RemoveAmministratore }
+     * Create an instance of {@link DeleteWeapon }
      * 
      */
-    public RemoveAmministratore createRemoveAmministratore() {
-        return new RemoveAmministratore();
+    public DeleteWeapon createDeleteWeapon() {
+        return new DeleteWeapon();
     }
 
     /**
-     * Create an instance of {@link InsertAmministratoreResponse }
+     * Create an instance of {@link FindWeaponsBylv }
      * 
      */
-    public InsertAmministratoreResponse createInsertAmministratoreResponse() {
-        return new InsertAmministratoreResponse();
+    public FindWeaponsBylv createFindWeaponsBylv() {
+        return new FindWeaponsBylv();
     }
 
     /**
-     * Create an instance of {@link UpdateAmministratore }
+     * Create an instance of {@link InsertWeapon }
      * 
      */
-    public UpdateAmministratore createUpdateAmministratore() {
-        return new UpdateAmministratore();
+    public InsertWeapon createInsertWeapon() {
+        return new InsertWeapon();
     }
 
     /**
-     * Create an instance of {@link BannedPlayersResponse }
+     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteWeapon }{@code >}}
      * 
      */
-    public BannedPlayersResponse createBannedPlayersResponse() {
-        return new BannedPlayersResponse();
+    @XmlElementDecl(namespace = "http://EJB/", name = "deleteWeapon")
+    public JAXBElement<DeleteWeapon> createDeleteWeapon(DeleteWeapon value) {
+        return new JAXBElement<DeleteWeapon>(_DeleteWeapon_QNAME, DeleteWeapon.class, null, value);
     }
 
     /**
-     * Create an instance of {@link UpdateAmministratoreResponse }
+     * Create an instance of {@link JAXBElement }{@code <}{@link InsertWeapon }{@code >}}
      * 
      */
-    public UpdateAmministratoreResponse createUpdateAmministratoreResponse() {
-        return new UpdateAmministratoreResponse();
+    @XmlElementDecl(namespace = "http://EJB/", name = "insertWeapon")
+    public JAXBElement<InsertWeapon> createInsertWeapon(InsertWeapon value) {
+        return new JAXBElement<InsertWeapon>(_InsertWeapon_QNAME, InsertWeapon.class, null, value);
     }
 
     /**
-     * Create an instance of {@link BannedPlayers }
+     * Create an instance of {@link JAXBElement }{@code <}{@link FindWeaponsBylv }{@code >}}
      * 
      */
-    public BannedPlayers createBannedPlayers() {
-        return new BannedPlayers();
+    @XmlElementDecl(namespace = "http://EJB/", name = "findWeapons_bylv")
+    public JAXBElement<FindWeaponsBylv> createFindWeaponsBylv(FindWeaponsBylv value) {
+        return new JAXBElement<FindWeaponsBylv>(_FindWeaponsBylv_QNAME, FindWeaponsBylv.class, null, value);
     }
 
     /**
-     * Create an instance of {@link UnbanPlayerResponse }
+     * Create an instance of {@link JAXBElement }{@code <}{@link Arma }{@code >}}
      * 
      */
-    public UnbanPlayerResponse createUnbanPlayerResponse() {
-        return new UnbanPlayerResponse();
+    @XmlElementDecl(namespace = "http://EJB/", name = "arma")
+    public JAXBElement<Arma> createArma(Arma value) {
+        return new JAXBElement<Arma>(_Arma_QNAME, Arma.class, null, value);
     }
 
     /**
-     * Create an instance of {@link RemoveAmministratoreResponse }
+     * Create an instance of {@link JAXBElement }{@code <}{@link FindWeaponsResponse }{@code >}}
      * 
      */
-    public RemoveAmministratoreResponse createRemoveAmministratoreResponse() {
-        return new RemoveAmministratoreResponse();
+    @XmlElementDecl(namespace = "http://EJB/", name = "findWeaponsResponse")
+    public JAXBElement<FindWeaponsResponse> createFindWeaponsResponse(FindWeaponsResponse value) {
+        return new JAXBElement<FindWeaponsResponse>(_FindWeaponsResponse_QNAME, FindWeaponsResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link UnbanPlayer }
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateWeapon }{@code >}}
      * 
      */
-    public UnbanPlayer createUnbanPlayer() {
-        return new UnbanPlayer();
+    @XmlElementDecl(namespace = "http://EJB/", name = "updateWeapon")
+    public JAXBElement<UpdateWeapon> createUpdateWeapon(UpdateWeapon value) {
+        return new JAXBElement<UpdateWeapon>(_UpdateWeapon_QNAME, UpdateWeapon.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Giocatore }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link Personaggio }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://EJB/", name = "giocatore")
-    public JAXBElement<Giocatore> createGiocatore(Giocatore value) {
-        return new JAXBElement<Giocatore>(_Giocatore_QNAME, Giocatore.class, null, value);
+    @XmlElementDecl(namespace = "http://EJB/", name = "personaggio")
+    public JAXBElement<Personaggio> createPersonaggio(Personaggio value) {
+        return new JAXBElement<Personaggio>(_Personaggio_QNAME, Personaggio.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AllPlayers }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FindWeaponsBylvResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://EJB/", name = "allPlayers")
-    public JAXBElement<AllPlayers> createAllPlayers(AllPlayers value) {
-        return new JAXBElement<AllPlayers>(_AllPlayers_QNAME, AllPlayers.class, null, value);
+    @XmlElementDecl(namespace = "http://EJB/", name = "findWeapons_bylvResponse")
+    public JAXBElement<FindWeaponsBylvResponse> createFindWeaponsBylvResponse(FindWeaponsBylvResponse value) {
+        return new JAXBElement<FindWeaponsBylvResponse>(_FindWeaponsBylvResponse_QNAME, FindWeaponsBylvResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LogginAmministratore }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteWeaponResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://EJB/", name = "logginAmministratore")
-    public JAXBElement<LogginAmministratore> createLogginAmministratore(LogginAmministratore value) {
-        return new JAXBElement<LogginAmministratore>(_LogginAmministratore_QNAME, LogginAmministratore.class, null, value);
+    @XmlElementDecl(namespace = "http://EJB/", name = "deleteWeaponResponse")
+    public JAXBElement<DeleteWeaponResponse> createDeleteWeaponResponse(DeleteWeaponResponse value) {
+        return new JAXBElement<DeleteWeaponResponse>(_DeleteWeaponResponse_QNAME, DeleteWeaponResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AllPlayersResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link FindWeapons }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://EJB/", name = "allPlayersResponse")
-    public JAXBElement<AllPlayersResponse> createAllPlayersResponse(AllPlayersResponse value) {
-        return new JAXBElement<AllPlayersResponse>(_AllPlayersResponse_QNAME, AllPlayersResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://EJB/", name = "findWeapons")
+    public JAXBElement<FindWeapons> createFindWeapons(FindWeapons value) {
+        return new JAXBElement<FindWeapons>(_FindWeapons_QNAME, FindWeapons.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BanPlayer }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link InsertWeaponResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://EJB/", name = "banPlayer")
-    public JAXBElement<BanPlayer> createBanPlayer(BanPlayer value) {
-        return new JAXBElement<BanPlayer>(_BanPlayer_QNAME, BanPlayer.class, null, value);
+    @XmlElementDecl(namespace = "http://EJB/", name = "insertWeaponResponse")
+    public JAXBElement<InsertWeaponResponse> createInsertWeaponResponse(InsertWeaponResponse value) {
+        return new JAXBElement<InsertWeaponResponse>(_InsertWeaponResponse_QNAME, InsertWeaponResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link InsertAmministratore }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateWeaponResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://EJB/", name = "insertAmministratore")
-    public JAXBElement<InsertAmministratore> createInsertAmministratore(InsertAmministratore value) {
-        return new JAXBElement<InsertAmministratore>(_InsertAmministratore_QNAME, InsertAmministratore.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BanPlayerResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://EJB/", name = "banPlayerResponse")
-    public JAXBElement<BanPlayerResponse> createBanPlayerResponse(BanPlayerResponse value) {
-        return new JAXBElement<BanPlayerResponse>(_BanPlayerResponse_QNAME, BanPlayerResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link LogginAmministratoreResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://EJB/", name = "logginAmministratoreResponse")
-    public JAXBElement<LogginAmministratoreResponse> createLogginAmministratoreResponse(LogginAmministratoreResponse value) {
-        return new JAXBElement<LogginAmministratoreResponse>(_LogginAmministratoreResponse_QNAME, LogginAmministratoreResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RemoveAmministratoreResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://EJB/", name = "removeAmministratoreResponse")
-    public JAXBElement<RemoveAmministratoreResponse> createRemoveAmministratoreResponse(RemoveAmministratoreResponse value) {
-        return new JAXBElement<RemoveAmministratoreResponse>(_RemoveAmministratoreResponse_QNAME, RemoveAmministratoreResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UnbanPlayer }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://EJB/", name = "unbanPlayer")
-    public JAXBElement<UnbanPlayer> createUnbanPlayer(UnbanPlayer value) {
-        return new JAXBElement<UnbanPlayer>(_UnbanPlayer_QNAME, UnbanPlayer.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BannedPlayers }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://EJB/", name = "BannedPlayers")
-    public JAXBElement<BannedPlayers> createBannedPlayers(BannedPlayers value) {
-        return new JAXBElement<BannedPlayers>(_BannedPlayers_QNAME, BannedPlayers.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UnbanPlayerResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://EJB/", name = "unbanPlayerResponse")
-    public JAXBElement<UnbanPlayerResponse> createUnbanPlayerResponse(UnbanPlayerResponse value) {
-        return new JAXBElement<UnbanPlayerResponse>(_UnbanPlayerResponse_QNAME, UnbanPlayerResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateAmministratore }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://EJB/", name = "updateAmministratore")
-    public JAXBElement<UpdateAmministratore> createUpdateAmministratore(UpdateAmministratore value) {
-        return new JAXBElement<UpdateAmministratore>(_UpdateAmministratore_QNAME, UpdateAmministratore.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link InsertAmministratoreResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://EJB/", name = "insertAmministratoreResponse")
-    public JAXBElement<InsertAmministratoreResponse> createInsertAmministratoreResponse(InsertAmministratoreResponse value) {
-        return new JAXBElement<InsertAmministratoreResponse>(_InsertAmministratoreResponse_QNAME, InsertAmministratoreResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateAmministratoreResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://EJB/", name = "updateAmministratoreResponse")
-    public JAXBElement<UpdateAmministratoreResponse> createUpdateAmministratoreResponse(UpdateAmministratoreResponse value) {
-        return new JAXBElement<UpdateAmministratoreResponse>(_UpdateAmministratoreResponse_QNAME, UpdateAmministratoreResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BannedPlayersResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://EJB/", name = "BannedPlayersResponse")
-    public JAXBElement<BannedPlayersResponse> createBannedPlayersResponse(BannedPlayersResponse value) {
-        return new JAXBElement<BannedPlayersResponse>(_BannedPlayersResponse_QNAME, BannedPlayersResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RemoveAmministratore }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://EJB/", name = "removeAmministratore")
-    public JAXBElement<RemoveAmministratore> createRemoveAmministratore(RemoveAmministratore value) {
-        return new JAXBElement<RemoveAmministratore>(_RemoveAmministratore_QNAME, RemoveAmministratore.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Amministratore }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://EJB/", name = "amministratore")
-    public JAXBElement<Amministratore> createAmministratore(Amministratore value) {
-        return new JAXBElement<Amministratore>(_Amministratore_QNAME, Amministratore.class, null, value);
+    @XmlElementDecl(namespace = "http://EJB/", name = "updateWeaponResponse")
+    public JAXBElement<UpdateWeaponResponse> createUpdateWeaponResponse(UpdateWeaponResponse value) {
+        return new JAXBElement<UpdateWeaponResponse>(_UpdateWeaponResponse_QNAME, UpdateWeaponResponse.class, null, value);
     }
 
 }

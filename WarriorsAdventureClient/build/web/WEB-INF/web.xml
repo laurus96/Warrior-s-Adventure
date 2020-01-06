@@ -49,6 +49,14 @@
         <servlet-name>LogoutServlet</servlet-name>
         <servlet-class>Servlet.LogoutServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>BoughtArmorServlet</servlet-name>
+        <servlet-class>Servlet.BoughtArmorServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BoughtWeaponServlet</servlet-name>
+        <servlet-class>Servlet.BoughtWeaponServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/faces/*</url-pattern>
@@ -92,6 +100,14 @@
     <servlet-mapping>
         <servlet-name>LogoutServlet</servlet-name>
         <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BoughtArmorServlet</servlet-name>
+        <url-pattern>/BoughtArmorServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BoughtWeaponServlet</servlet-name>
+        <url-pattern>/BoughtWeaponServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

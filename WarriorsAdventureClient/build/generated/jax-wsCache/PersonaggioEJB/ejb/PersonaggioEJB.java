@@ -42,27 +42,6 @@ public interface PersonaggioEJB {
 
     /**
      * 
-     * @param arg2
-     * @param arg1
-     * @param arg0
-     * @return
-     *     returns java.lang.String
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "createCharacter", targetNamespace = "http://EJB/", className = "ejb.CreateCharacter")
-    @ResponseWrapper(localName = "createCharacterResponse", targetNamespace = "http://EJB/", className = "ejb.CreateCharacterResponse")
-    @Action(input = "http://EJB/PersonaggioEJB/createCharacterRequest", output = "http://EJB/PersonaggioEJB/createCharacterResponse")
-    public String createCharacter(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        String arg1,
-        @WebParam(name = "arg2", targetNamespace = "")
-        Giocatore arg2);
-
-    /**
-     * 
      * @param arg1
      * @param arg0
      */
@@ -75,24 +54,6 @@ public interface PersonaggioEJB {
         Personaggio arg0,
         @WebParam(name = "arg1", targetNamespace = "")
         int arg1);
-
-    /**
-     * 
-     * @param arg1
-     * @param arg0
-     * @return
-     *     returns ejb.Personaggio
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "findCharacter", targetNamespace = "http://EJB/", className = "ejb.FindCharacter")
-    @ResponseWrapper(localName = "findCharacterResponse", targetNamespace = "http://EJB/", className = "ejb.FindCharacterResponse")
-    @Action(input = "http://EJB/PersonaggioEJB/findCharacterRequest", output = "http://EJB/PersonaggioEJB/findCharacterResponse")
-    public Personaggio findCharacter(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0,
-        @WebParam(name = "arg1", targetNamespace = "")
-        String arg1);
 
     /**
      * 
@@ -141,6 +102,24 @@ public interface PersonaggioEJB {
 
     /**
      * 
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns ejb.Personaggio
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "boughtWeapon", targetNamespace = "http://EJB/", className = "ejb.BoughtWeapon")
+    @ResponseWrapper(localName = "boughtWeaponResponse", targetNamespace = "http://EJB/", className = "ejb.BoughtWeaponResponse")
+    @Action(input = "http://EJB/PersonaggioEJB/boughtWeaponRequest", output = "http://EJB/PersonaggioEJB/boughtWeaponResponse")
+    public Personaggio boughtWeapon(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Personaggio arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        Arma arg1);
+
+    /**
+     * 
      * @param arg0
      * @return
      *     returns ejb.Personaggio
@@ -165,5 +144,62 @@ public interface PersonaggioEJB {
     public void removePersonaggio(
         @WebParam(name = "arg0", targetNamespace = "")
         Personaggio arg0);
+
+    /**
+     * 
+     * @param arg2
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "createCharacter", targetNamespace = "http://EJB/", className = "ejb.CreateCharacter")
+    @ResponseWrapper(localName = "createCharacterResponse", targetNamespace = "http://EJB/", className = "ejb.CreateCharacterResponse")
+    @Action(input = "http://EJB/PersonaggioEJB/createCharacterRequest", output = "http://EJB/PersonaggioEJB/createCharacterResponse")
+    public String createCharacter(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        String arg1,
+        @WebParam(name = "arg2", targetNamespace = "")
+        Giocatore arg2);
+
+    /**
+     * 
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns ejb.Personaggio
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "boughtArmor", targetNamespace = "http://EJB/", className = "ejb.BoughtArmor")
+    @ResponseWrapper(localName = "boughtArmorResponse", targetNamespace = "http://EJB/", className = "ejb.BoughtArmorResponse")
+    @Action(input = "http://EJB/PersonaggioEJB/boughtArmorRequest", output = "http://EJB/PersonaggioEJB/boughtArmorResponse")
+    public Personaggio boughtArmor(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Personaggio arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        Armatura arg1);
+
+    /**
+     * 
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns ejb.Personaggio
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "findCharacter", targetNamespace = "http://EJB/", className = "ejb.FindCharacter")
+    @ResponseWrapper(localName = "findCharacterResponse", targetNamespace = "http://EJB/", className = "ejb.FindCharacterResponse")
+    @Action(input = "http://EJB/PersonaggioEJB/findCharacterRequest", output = "http://EJB/PersonaggioEJB/findCharacterResponse")
+    public Personaggio findCharacter(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        String arg1);
 
 }

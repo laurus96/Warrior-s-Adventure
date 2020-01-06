@@ -28,6 +28,33 @@ public interface ArmaturaEJB {
     /**
      * 
      * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "deleteArmor", targetNamespace = "http://EJB/", className = "ejb.DeleteArmor")
+    @ResponseWrapper(localName = "deleteArmorResponse", targetNamespace = "http://EJB/", className = "ejb.DeleteArmorResponse")
+    @Action(input = "http://EJB/ArmaturaEJB/deleteArmorRequest", output = "http://EJB/ArmaturaEJB/deleteArmorResponse")
+    public void deleteArmor(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Armatura arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns ejb.Armatura
+     */
+    @WebMethod(operationName = "findArmor_byid")
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "findArmor_byid", targetNamespace = "http://EJB/", className = "ejb.FindArmorByid")
+    @ResponseWrapper(localName = "findArmor_byidResponse", targetNamespace = "http://EJB/", className = "ejb.FindArmorByidResponse")
+    @Action(input = "http://EJB/ArmaturaEJB/findArmor_byidRequest", output = "http://EJB/ArmaturaEJB/findArmor_byidResponse")
+    public Armatura findArmorByid(
+        @WebParam(name = "arg0", targetNamespace = "")
+        long arg0);
+
+    /**
+     * 
+     * @param arg0
      * @return
      *     returns java.util.List<ejb.Armatura>
      */
@@ -67,18 +94,6 @@ public interface ArmaturaEJB {
     @ResponseWrapper(localName = "updateArmorResponse", targetNamespace = "http://EJB/", className = "ejb.UpdateArmorResponse")
     @Action(input = "http://EJB/ArmaturaEJB/updateArmorRequest", output = "http://EJB/ArmaturaEJB/updateArmorResponse")
     public Armatura updateArmor(
-        @WebParam(name = "arg0", targetNamespace = "")
-        Armatura arg0);
-
-    /**
-     * 
-     * @param arg0
-     */
-    @WebMethod
-    @RequestWrapper(localName = "deleteArmor", targetNamespace = "http://EJB/", className = "ejb.DeleteArmor")
-    @ResponseWrapper(localName = "deleteArmorResponse", targetNamespace = "http://EJB/", className = "ejb.DeleteArmorResponse")
-    @Action(input = "http://EJB/ArmaturaEJB/deleteArmorRequest", output = "http://EJB/ArmaturaEJB/deleteArmorResponse")
-    public void deleteArmor(
         @WebParam(name = "arg0", targetNamespace = "")
         Armatura arg0);
 

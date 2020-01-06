@@ -18,6 +18,7 @@ import javax.ejb.Remote;
 public interface ArmaturaEJBRemote {
     
     List<Armatura> findArmor(Personaggio p);
+    Armatura findArmor_byid(long id);
     
     Armatura insertArmor(Armatura armor);
     Armatura updateArmor(Armatura armor);

@@ -55,6 +55,18 @@
 </xs:sequence>
 </xs:complexType>
 
+<xs:complexType name="unbanPlayer">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="unbanPlayerResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
 <xs:complexType name="logginAmministratore">
 <xs:sequence>
 <xs:element name="arg0" type="xs:string" minOccurs="0"/>
@@ -72,18 +84,6 @@
 <xs:sequence>
 <xs:element name="password" type="xs:string" minOccurs="0"/>
 <xs:element name="username" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="unbanPlayer">
-<xs:sequence>
-<xs:element name="arg0" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="unbanPlayerResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 

@@ -3,16 +3,21 @@ html,body{
     font-family: sans-serif;}
 
 .usdiv{
-
-
     height: 10%;
-    width: 100%;}
+    width: 100%;
+}
 .tp{
-
-
     height: 98%;
-    width: 100%;}
+    width: 100%;
+}
 .tablediv{
+    
+    position: absolute;
+    top: 20%;
+    left: 45%;
+    width: 500px;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 
 
     margin-top: 10px;
@@ -20,10 +25,9 @@ html,body{
 
     margin-left: 5%;
 
-    float: left;
-
     height: fit-content;
-    width: 40%;}
+    width: 40%;
+}
 .bannedbuttondiv{
 
 
@@ -52,14 +56,13 @@ html,body{
 
     border-radius: 5px;}
 input{
-    margin: 5px;
     border-radius: 5px;
     border-style: solid;
     border-color: black;
     border-width: 2px;
     font-size: 17px;
-
-    margin: auto;}
+    margin: auto;
+}
 input:hover{
     background-color: black;
     color:white;}
@@ -114,3 +117,12 @@ input:hover{
     color: rgb(99, 99, 99);
     text-decoration: none;
     cursor: pointer;}
+
+.logout{
+    float: right;
+    margin: 30px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+    font-size: 20px;
+}

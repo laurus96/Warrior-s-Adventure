@@ -10,6 +10,10 @@
 
 <xs:element name="findWeaponsResponse" type="tns:findWeaponsResponse"/>
 
+<xs:element name="findWeapons_bylv" type="tns:findWeapons_bylv"/>
+
+<xs:element name="findWeapons_bylvResponse" type="tns:findWeapons_bylvResponse"/>
+
 <xs:element name="insertWeapon" type="tns:insertWeapon"/>
 
 <xs:element name="insertWeaponResponse" type="tns:insertWeaponResponse"/>
@@ -28,12 +32,14 @@
 
 <xs:complexType name="personaggio">
 <xs:sequence>
+<xs:element name="arma" type="xs:string" minOccurs="0"/>
+<xs:element name="armatura" type="xs:string" minOccurs="0"/>
 <xs:element name="classe" type="xs:string" minOccurs="0"/>
 <xs:element name="defense" type="xs:int"/>
 <xs:element name="exp" type="xs:int"/>
 <xs:element name="gold" type="xs:int"/>
 <xs:element name="guild" type="xs:string" minOccurs="0"/>
-<xs:element name="level" type="xs:int"/>
+<xs:element name="livello" type="xs:int"/>
 <xs:element name="name" type="xs:string" minOccurs="0"/>
 <xs:element name="strenght" type="xs:int"/>
 <xs:element name="vitality" type="xs:int"/>
@@ -75,6 +81,18 @@
 </xs:complexType>
 
 <xs:complexType name="insertWeaponResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:arma" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findWeapons_bylv">
+<xs:sequence>
+<xs:element name="arg0" type="xs:long"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findWeapons_bylvResponse">
 <xs:sequence>
 <xs:element name="return" type="tns:arma" minOccurs="0"/>
 </xs:sequence>

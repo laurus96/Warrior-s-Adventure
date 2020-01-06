@@ -4,6 +4,18 @@
 <xsd:import namespace="http://EJB/" schemaLocation="http://localhost:8080/ArmaturaEJBService/ArmaturaEJB?xsd=1"/>
 </xsd:schema>
 </types>
+<message name="deleteArmor">
+<part name="parameters" element="tns:deleteArmor"/>
+</message>
+<message name="deleteArmorResponse">
+<part name="parameters" element="tns:deleteArmorResponse"/>
+</message>
+<message name="findArmor_byid">
+<part name="parameters" element="tns:findArmor_byid"/>
+</message>
+<message name="findArmor_byidResponse">
+<part name="parameters" element="tns:findArmor_byidResponse"/>
+</message>
 <message name="findArmor">
 <part name="parameters" element="tns:findArmor"/>
 </message>
@@ -22,13 +34,15 @@
 <message name="updateArmorResponse">
 <part name="parameters" element="tns:updateArmorResponse"/>
 </message>
-<message name="deleteArmor">
-<part name="parameters" element="tns:deleteArmor"/>
-</message>
-<message name="deleteArmorResponse">
-<part name="parameters" element="tns:deleteArmorResponse"/>
-</message>
 <portType name="ArmaturaEJB">
+<operation name="deleteArmor">
+<input wsam:Action="http://EJB/ArmaturaEJB/deleteArmorRequest" message="tns:deleteArmor"/>
+<output wsam:Action="http://EJB/ArmaturaEJB/deleteArmorResponse" message="tns:deleteArmorResponse"/>
+</operation>
+<operation name="findArmor_byid">
+<input wsam:Action="http://EJB/ArmaturaEJB/findArmor_byidRequest" message="tns:findArmor_byid"/>
+<output wsam:Action="http://EJB/ArmaturaEJB/findArmor_byidResponse" message="tns:findArmor_byidResponse"/>
+</operation>
 <operation name="findArmor">
 <input wsam:Action="http://EJB/ArmaturaEJB/findArmorRequest" message="tns:findArmor"/>
 <output wsam:Action="http://EJB/ArmaturaEJB/findArmorResponse" message="tns:findArmorResponse"/>
@@ -41,13 +55,27 @@
 <input wsam:Action="http://EJB/ArmaturaEJB/updateArmorRequest" message="tns:updateArmor"/>
 <output wsam:Action="http://EJB/ArmaturaEJB/updateArmorResponse" message="tns:updateArmorResponse"/>
 </operation>
-<operation name="deleteArmor">
-<input wsam:Action="http://EJB/ArmaturaEJB/deleteArmorRequest" message="tns:deleteArmor"/>
-<output wsam:Action="http://EJB/ArmaturaEJB/deleteArmorResponse" message="tns:deleteArmorResponse"/>
-</operation>
 </portType>
 <binding name="ArmaturaEJBPortBinding" type="tns:ArmaturaEJB">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+<operation name="deleteArmor">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="findArmor_byid">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
 <operation name="findArmor">
 <soap:operation soapAction=""/>
 <input>
@@ -67,15 +95,6 @@
 </output>
 </operation>
 <operation name="updateArmor">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="deleteArmor">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

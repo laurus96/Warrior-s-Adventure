@@ -27,11 +27,13 @@ public class ObjectFactory {
     private final static QName _FindArmor_QNAME = new QName("http://EJB/", "findArmor");
     private final static QName _UpdateArmor_QNAME = new QName("http://EJB/", "updateArmor");
     private final static QName _DeleteArmor_QNAME = new QName("http://EJB/", "deleteArmor");
+    private final static QName _FindArmorByidResponse_QNAME = new QName("http://EJB/", "findArmor_byidResponse");
     private final static QName _Personaggio_QNAME = new QName("http://EJB/", "personaggio");
     private final static QName _InsertArmor_QNAME = new QName("http://EJB/", "insertArmor");
     private final static QName _DeleteArmorResponse_QNAME = new QName("http://EJB/", "deleteArmorResponse");
     private final static QName _FindArmorResponse_QNAME = new QName("http://EJB/", "findArmorResponse");
     private final static QName _UpdateArmorResponse_QNAME = new QName("http://EJB/", "updateArmorResponse");
+    private final static QName _FindArmorByid_QNAME = new QName("http://EJB/", "findArmor_byid");
     private final static QName _Armatura_QNAME = new QName("http://EJB/", "armatura");
     private final static QName _InsertArmorResponse_QNAME = new QName("http://EJB/", "insertArmorResponse");
 
@@ -40,6 +42,14 @@ public class ObjectFactory {
      * 
      */
     public ObjectFactory() {
+    }
+
+    /**
+     * Create an instance of {@link FindArmorByid }
+     * 
+     */
+    public FindArmorByid createFindArmorByid() {
+        return new FindArmorByid();
     }
 
     /**
@@ -88,6 +98,14 @@ public class ObjectFactory {
      */
     public FindArmorResponse createFindArmorResponse() {
         return new FindArmorResponse();
+    }
+
+    /**
+     * Create an instance of {@link FindArmorByidResponse }
+     * 
+     */
+    public FindArmorByidResponse createFindArmorByidResponse() {
+        return new FindArmorByidResponse();
     }
 
     /**
@@ -150,6 +168,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link FindArmorByidResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://EJB/", name = "findArmor_byidResponse")
+    public JAXBElement<FindArmorByidResponse> createFindArmorByidResponse(FindArmorByidResponse value) {
+        return new JAXBElement<FindArmorByidResponse>(_FindArmorByidResponse_QNAME, FindArmorByidResponse.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link Personaggio }{@code >}}
      * 
      */
@@ -192,6 +219,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://EJB/", name = "updateArmorResponse")
     public JAXBElement<UpdateArmorResponse> createUpdateArmorResponse(UpdateArmorResponse value) {
         return new JAXBElement<UpdateArmorResponse>(_UpdateArmorResponse_QNAME, UpdateArmorResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link FindArmorByid }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://EJB/", name = "findArmor_byid")
+    public JAXBElement<FindArmorByid> createFindArmorByid(FindArmorByid value) {
+        return new JAXBElement<FindArmorByid>(_FindArmorByid_QNAME, FindArmorByid.class, null, value);
     }
 
     /**

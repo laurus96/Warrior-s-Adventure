@@ -52,6 +52,7 @@ public class LoginServlet extends HttpServlet {
             Amministratore trylog = logginAmministratore(username, password);
             
             if(trylog != null){
+                session.setAttribute("amministratore", trylog);
                 request.getRequestDispatcher("amministratore.jsp").forward(request, response);
             }
             else{

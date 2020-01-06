@@ -42,22 +42,6 @@
         <delete dir="${build.generated.sources.dir}/jax-ws/ejb"/>
         <delete dir="${build.generated.dir}/jax-wsCache/GiocatoreEJB"/>
     </target>
-    <target name="wsimport-client-PersonaggioEJB" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/PersonaggioEJB"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/PersonaggioEJB" destdir="${build.generated.dir}/jax-wsCache/PersonaggioEJB" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/PersonaggioEJB/wsdl/localhost_8080/PersonaggioEJBService/PersonaggioEJB.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/PersonaggioEJBService/PersonaggioEJB?wsdl" xnocompile="true" xendorsed="true">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/PersonaggioEJB/wsdl/localhost_8080/PersonaggioEJBService/PersonaggioEJB.wsdl"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/PersonaggioEJB"/>
-        </wsimport>
-        <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/PersonaggioEJB">
-                <include name="**/*.java"/>
-            </fileset>
-        </copy>
-    </target>
-    <target name="wsimport-client-clean-PersonaggioEJB" depends="-init-project">
-        <delete dir="${build.generated.sources.dir}/jax-ws/ejb"/>
-        <delete dir="${build.generated.dir}/jax-wsCache/PersonaggioEJB"/>
-    </target>
     <target name="wsimport-client-AmministratoreEJB" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/AmministratoreEJB"/>
         <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/AmministratoreEJB" destdir="${build.generated.dir}/jax-wsCache/AmministratoreEJB" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/AmministratoreEJB/wsdl/localhost_8080/AmministratoreEJBService/AmministratoreEJB.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/AmministratoreEJBService/AmministratoreEJB?wsdl" xnocompile="true" xendorsed="true">
@@ -106,5 +90,21 @@
         <delete dir="${build.generated.sources.dir}/jax-ws/ejb"/>
         <delete dir="${build.generated.dir}/jax-wsCache/ArmaturaEJB"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-GiocatoreEJB, wsimport-client-PersonaggioEJB, wsimport-client-AmministratoreEJB, wsimport-client-ArmaEJB, wsimport-client-ArmaturaEJB"/>
+    <target name="wsimport-client-PersonaggioEJB" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/PersonaggioEJB"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/PersonaggioEJB" destdir="${build.generated.dir}/jax-wsCache/PersonaggioEJB" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/PersonaggioEJB/wsdl/localhost_8080/PersonaggioEJBService/PersonaggioEJB.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/PersonaggioEJBService/PersonaggioEJB?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/PersonaggioEJB/wsdl/localhost_8080/PersonaggioEJBService/PersonaggioEJB.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/PersonaggioEJB"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/PersonaggioEJB">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-PersonaggioEJB" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ejb"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/PersonaggioEJB"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-GiocatoreEJB, wsimport-client-AmministratoreEJB, wsimport-client-ArmaEJB, wsimport-client-ArmaturaEJB, wsimport-client-PersonaggioEJB"/>
 </project>

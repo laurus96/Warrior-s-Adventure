@@ -6,6 +6,8 @@
 package Database;
 
 import EJB.AmministratoreEJB;
+import EJB.ArmaEJB;
+import EJB.ArmaturaEJB;
 import EJB.GiocatoreEJB;
 import EJB.PersonaggioEJB;
 import Entity.Amministratore;
@@ -50,18 +52,27 @@ public class DatabasePopulator {
     @Inject
     private AmministratoreEJB amminiejb;
     
+    @Inject 
+    private ArmaturaEJB armorejb;
+    
+    @Inject
+    private ArmaEJB weaponejb;
+    
     
     private Giocatore player1;
     private Giocatore player2;
     private Giocatore ban;
         
     private Amministratore am1;
+    private Amministratore am2;
     
-    private ArrayList<Arma> al=new ArrayList<>();
-    private ArrayList<Armatura> aml=new ArrayList<>();
+
     
     @PostConstruct
     public void populate(){
+        
+        ArrayList<Arma> al=new ArrayList<>();
+        ArrayList<Armatura> aml=new ArrayList<>();
         
         al.add(new Arma("Spada", 1, 100));
         al.add(new Arma("Spada", 2, 200));
@@ -97,10 +108,10 @@ public class DatabasePopulator {
         al.add(new Arma("Ascia", 10, 1000));
         
         for (Arma e: al){
-            em.persist(e);
+            weaponejb.insertWeapon(e);
         }
-        
-                aml.add(new Armatura("Armatura del Guerriero", 1, 100));
+                
+        aml.add(new Armatura("Armatura del Guerriero", 1, 100));
         aml.add(new Armatura("Armatura del Guerriero", 2, 200));
         aml.add(new Armatura("Armatura del Guerriero", 3, 300));
         aml.add(new Armatura("Armatura del Guerriero", 4, 400));
@@ -120,11 +131,11 @@ public class DatabasePopulator {
 
         
         for (Armatura e: aml){
-            em.persist(e);
+            armorejb.insertArmor(e);
         }
-        
+                
         player1 = new Giocatore("laurus96", "metin@Server1", "lorenzo.cocchinone@gmail.com");
-        player2 = new Giocatore("tempesta59", "metin@Server1", "giuseppe090gmail.com");
+        player2 = new Giocatore("tempesta59", "metin@Server1", "giuseppe9909@gmail.com");
         ban = new Giocatore("ciao", "metin@Server1", "ciao@gmail.com" );
         ban.setBan(true);
                 
@@ -135,24 +146,22 @@ public class DatabasePopulator {
         characterejb.createCharacter("Lithia", "Paladino", player1);
         
         am1 = new Amministratore("laurus", "metin@Server1");
+        am2 = new Amministratore("tempesta58","metin@Server1");
         
         amminiejb.insertAmministratore(am1);
+        amminiejb.insertAmministratore(am2);
     }
     
     @PreDestroy
     public void destroy(){
-        for (Arma e: al){
-            em.remove(e);
-        }
-        for (Armatura e: aml){
-            em.remove(e);
-        }
         
         playerejb.removePlayer(player1);
         playerejb.removePlayer(player2);
         playerejb.removePlayer(ban);
         
         amminiejb.removeAmministratore(am1);
+        amminiejb.removeAmministratore(am2);
+
 
     }
 }

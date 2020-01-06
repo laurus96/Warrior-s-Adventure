@@ -8,6 +8,18 @@
 
 <xs:element name="addGoldResponse" type="tns:addGoldResponse"/>
 
+<xs:element name="arma" type="tns:arma"/>
+
+<xs:element name="armatura" type="tns:armatura"/>
+
+<xs:element name="boughtArmor" type="tns:boughtArmor"/>
+
+<xs:element name="boughtArmorResponse" type="tns:boughtArmorResponse"/>
+
+<xs:element name="boughtWeapon" type="tns:boughtWeapon"/>
+
+<xs:element name="boughtWeaponResponse" type="tns:boughtWeaponResponse"/>
+
 <xs:element name="createCharacter" type="tns:createCharacter"/>
 
 <xs:element name="createCharacterResponse" type="tns:createCharacterResponse"/>
@@ -40,27 +52,77 @@
 
 <xs:element name="updatePersonaggioResponse" type="tns:updatePersonaggioResponse"/>
 
-<xs:complexType name="updatePersonaggio">
+<xs:complexType name="boughtArmor">
 <xs:sequence>
 <xs:element name="arg0" type="tns:personaggio" minOccurs="0"/>
+<xs:element name="arg1" type="tns:armatura" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
 <xs:complexType name="personaggio">
 <xs:sequence>
+<xs:element name="arma" type="xs:string" minOccurs="0"/>
+<xs:element name="armatura" type="xs:string" minOccurs="0"/>
 <xs:element name="classe" type="xs:string" minOccurs="0"/>
 <xs:element name="defense" type="xs:int"/>
 <xs:element name="exp" type="xs:int"/>
 <xs:element name="gold" type="xs:int"/>
 <xs:element name="guild" type="xs:string" minOccurs="0"/>
-<xs:element name="level" type="xs:int"/>
+<xs:element name="livello" type="xs:int"/>
 <xs:element name="name" type="xs:string" minOccurs="0"/>
 <xs:element name="strenght" type="xs:int"/>
 <xs:element name="vitality" type="xs:int"/>
 </xs:sequence>
 </xs:complexType>
 
+<xs:complexType name="armatura">
+<xs:sequence>
+<xs:element name="difesa" type="xs:int"/>
+<xs:element name="forza" type="xs:int"/>
+<xs:element name="id" type="xs:long"/>
+<xs:element name="livello" type="xs:int"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="prezzo" type="xs:int"/>
+<xs:element name="vitalità" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="boughtArmorResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:personaggio" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updatePersonaggio">
+<xs:sequence>
+<xs:element name="arg0" type="tns:personaggio" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
 <xs:complexType name="updatePersonaggioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:personaggio" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="boughtWeapon">
+<xs:sequence>
+<xs:element name="arg0" type="tns:personaggio" minOccurs="0"/>
+<xs:element name="arg1" type="tns:arma" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="arma">
+<xs:sequence>
+<xs:element name="forza" type="xs:int"/>
+<xs:element name="id" type="xs:long"/>
+<xs:element name="livello" type="xs:int"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="prezzo" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="boughtWeaponResponse">
 <xs:sequence>
 <xs:element name="return" type="tns:personaggio" minOccurs="0"/>
 </xs:sequence>
@@ -90,6 +152,17 @@
 <xs:sequence/>
 </xs:complexType>
 
+<xs:complexType name="subGold">
+<xs:sequence>
+<xs:element name="arg0" type="tns:personaggio" minOccurs="0"/>
+<xs:element name="arg1" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="subGoldResponse">
+<xs:sequence/>
+</xs:complexType>
+
 <xs:complexType name="createCharacter">
 <xs:sequence>
 <xs:element name="arg0" type="xs:string" minOccurs="0"/>
@@ -111,17 +184,6 @@
 <xs:sequence>
 <xs:element name="return" type="xs:string" minOccurs="0"/>
 </xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="subGold">
-<xs:sequence>
-<xs:element name="arg0" type="tns:personaggio" minOccurs="0"/>
-<xs:element name="arg1" type="xs:int"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="subGoldResponse">
-<xs:sequence/>
 </xs:complexType>
 
 <xs:complexType name="removePersonaggio">

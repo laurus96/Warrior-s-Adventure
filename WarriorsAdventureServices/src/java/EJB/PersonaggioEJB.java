@@ -16,6 +16,8 @@ import javax.jws.WebService;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import EJBInterface.PersonaggioEJBRemote;
+import Entity.Arma;
+import Entity.Armatura;
 /**
  *
  * @author giuse
@@ -88,6 +90,24 @@ public class PersonaggioEJB implements PersonaggioEJBRemote{
                 .setParameter("name", name);
         
         return query.getSingleResult();
+    }
+
+    @Override
+    public Personaggio boughtWeapon(Personaggio p, Arma weapon) {
+        if(weapon.getPrezzo() > p.getGold()){
+            return null;
+        }
+        p.boughtWeapon(weapon);
+        return p;
+    }
+
+    @Override
+    public Personaggio boughtArmor(Personaggio p, Armatura armor) {
+        if(armor.getPrezzo() > p.getGold()){
+            return null;
+        }
+        p.boughtArmor(armor);
+        return p;
     }
 
 }

@@ -4,23 +4,11 @@
 <xsd:import namespace="http://EJB/" schemaLocation="http://localhost:8080/ArmaEJBService/ArmaEJB?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="findWeapons">
-<part name="parameters" element="tns:findWeapons"/>
-</message>
-<message name="findWeaponsResponse">
-<part name="parameters" element="tns:findWeaponsResponse"/>
-</message>
 <message name="insertWeapon">
 <part name="parameters" element="tns:insertWeapon"/>
 </message>
 <message name="insertWeaponResponse">
 <part name="parameters" element="tns:insertWeaponResponse"/>
-</message>
-<message name="updateWeapon">
-<part name="parameters" element="tns:updateWeapon"/>
-</message>
-<message name="updateWeaponResponse">
-<part name="parameters" element="tns:updateWeaponResponse"/>
 </message>
 <message name="deleteWeapon">
 <part name="parameters" element="tns:deleteWeapon"/>
@@ -28,27 +16,49 @@
 <message name="deleteWeaponResponse">
 <part name="parameters" element="tns:deleteWeaponResponse"/>
 </message>
+<message name="findWeapons">
+<part name="parameters" element="tns:findWeapons"/>
+</message>
+<message name="findWeaponsResponse">
+<part name="parameters" element="tns:findWeaponsResponse"/>
+</message>
+<message name="updateWeapon">
+<part name="parameters" element="tns:updateWeapon"/>
+</message>
+<message name="updateWeaponResponse">
+<part name="parameters" element="tns:updateWeaponResponse"/>
+</message>
+<message name="findWeapons_bylv">
+<part name="parameters" element="tns:findWeapons_bylv"/>
+</message>
+<message name="findWeapons_bylvResponse">
+<part name="parameters" element="tns:findWeapons_bylvResponse"/>
+</message>
 <portType name="ArmaEJB">
-<operation name="findWeapons">
-<input wsam:Action="http://EJB/ArmaEJB/findWeaponsRequest" message="tns:findWeapons"/>
-<output wsam:Action="http://EJB/ArmaEJB/findWeaponsResponse" message="tns:findWeaponsResponse"/>
-</operation>
 <operation name="insertWeapon">
 <input wsam:Action="http://EJB/ArmaEJB/insertWeaponRequest" message="tns:insertWeapon"/>
 <output wsam:Action="http://EJB/ArmaEJB/insertWeaponResponse" message="tns:insertWeaponResponse"/>
-</operation>
-<operation name="updateWeapon">
-<input wsam:Action="http://EJB/ArmaEJB/updateWeaponRequest" message="tns:updateWeapon"/>
-<output wsam:Action="http://EJB/ArmaEJB/updateWeaponResponse" message="tns:updateWeaponResponse"/>
 </operation>
 <operation name="deleteWeapon">
 <input wsam:Action="http://EJB/ArmaEJB/deleteWeaponRequest" message="tns:deleteWeapon"/>
 <output wsam:Action="http://EJB/ArmaEJB/deleteWeaponResponse" message="tns:deleteWeaponResponse"/>
 </operation>
+<operation name="findWeapons">
+<input wsam:Action="http://EJB/ArmaEJB/findWeaponsRequest" message="tns:findWeapons"/>
+<output wsam:Action="http://EJB/ArmaEJB/findWeaponsResponse" message="tns:findWeaponsResponse"/>
+</operation>
+<operation name="updateWeapon">
+<input wsam:Action="http://EJB/ArmaEJB/updateWeaponRequest" message="tns:updateWeapon"/>
+<output wsam:Action="http://EJB/ArmaEJB/updateWeaponResponse" message="tns:updateWeaponResponse"/>
+</operation>
+<operation name="findWeapons_bylv">
+<input wsam:Action="http://EJB/ArmaEJB/findWeapons_bylvRequest" message="tns:findWeapons_bylv"/>
+<output wsam:Action="http://EJB/ArmaEJB/findWeapons_bylvResponse" message="tns:findWeapons_bylvResponse"/>
+</operation>
 </portType>
 <binding name="ArmaEJBPortBinding" type="tns:ArmaEJB">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="findWeapons">
+<operation name="insertWeapon">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -57,7 +67,16 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="insertWeapon">
+<operation name="deleteWeapon">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="findWeapons">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -75,7 +94,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="deleteWeapon">
+<operation name="findWeapons_bylv">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

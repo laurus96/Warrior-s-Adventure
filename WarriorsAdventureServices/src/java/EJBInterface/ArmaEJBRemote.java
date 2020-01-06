@@ -17,6 +17,7 @@ import javax.ejb.Remote;
 @Remote
 public interface ArmaEJBRemote {
     List<Arma> findWeapons(Personaggio p);
+    Arma findWeapons_bylv(long id);
     
     Arma insertWeapon(Arma weapon);
     Arma updateWeapon(Arma weapon);

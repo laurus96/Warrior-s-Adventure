@@ -9,8 +9,11 @@ import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
@@ -41,11 +44,19 @@ public class Personaggio implements Serializable {
     private int exp;
     
     private String username;
-
+    
+    private String arma;
+    
+    private String armatura;
+    
     public Personaggio() {
     }
 
-    public Personaggio(String name, String classe,String username) {
+    public Personaggio(String name, String classe, String username) {
+        
+        this.arma = "Mani nude";
+        this.armatura = "Straccio di seta";
+       
         this.name = name;
         this.classe = classe;
         livello=1;
@@ -66,7 +77,7 @@ public class Personaggio implements Serializable {
             defense=100;
             strenght=75;
         }
-        gold=0;
+        gold=450;
         guild=null;
         exp=0;
         
@@ -87,7 +98,7 @@ public class Personaggio implements Serializable {
         return classe;
     }
 
-    public int getLevel() {
+    public int getLivello() {
         return livello;
     }
 
@@ -123,7 +134,7 @@ public class Personaggio implements Serializable {
         this.classe = classe;
     }
 
-    public void setLevel(int level) {
+    public void setLivello(int level) {
         this.livello = level;
     }
 
@@ -150,6 +161,63 @@ public class Personaggio implements Serializable {
     public void setExp(int exp) {
         this.exp = exp;
     }
+    
+    public Personaggio boughtWeapon(Arma w){
+        
+        if(w.getName().compareTo("Spada")==0){
+            this.strenght += w.getForza();
+        }
+        
+        if(w.getName().compareTo("Martello")==0){
+            this.strenght += w.getForza();
+        }
+        
+        if(w.getName().compareTo("Ascia")==0){
+            this.strenght += w.getForza();
+        }
+        
+        this.arma = w.getName();
+        this.gold -= w.getPrezzo();
+        return this;
+    }
+    
+    public Personaggio boughtArmor(Armatura a){
+
+        if (a.getName().compareTo("Armatura del Guerriero")==0){
+            this.strenght += a.getForza();
+        }
+        
+        if (a.getName().compareTo("Armatura del Paladino")==0){
+            this.vitality += a.getVitalità();
+        }
+        
+        if (a.getName().compareTo("Armatura del Cavaliere")==0){
+            this.defense += a.getDifesa();
+        }
+        
+        this.armatura = a.getName();
+        this.gold -= a.getPrezzo();
+
+        return this;
+    }
+
+    public String getArma() {
+        return arma;
+    }
+
+    public void setArma(String arma) {
+        this.arma = arma;
+    }
+
+    public String getArmatura() {
+        return armatura;
+    }
+
+    public void setArmatura(String armatura) {
+        this.armatura = armatura;
+    }
+
+    
 
     @Override
     public String toString() {

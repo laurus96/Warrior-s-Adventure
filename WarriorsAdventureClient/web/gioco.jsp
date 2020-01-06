@@ -65,6 +65,21 @@
             </div>
         </div>
         <div class="market">
+            <%String status = (String) session.getAttribute("status_bought");
+            if(status != null){
+                session.removeAttribute("status_bought");
+                if(status.compareTo("FAIL") == 0){%>
+                        <script>
+                            alert("Saldo insufficiente");
+                        </script>
+                    <%}
+                if(status.compareTo("PASS") == 0){
+                    session.removeAttribute("status_bought");%>
+                        <script>
+                            alert("Acquisto effettuato");
+                        </script>
+                    <%}%>
+            <%}%>
             <h1 class="markettitle"> Mercato:</h1>
             <div class="marketlist">
                 <table class="markettable">
@@ -89,7 +104,9 @@
                     <tr><td class="td"><b>Punti Vita: ${character.vitality} </b></td></tr>
                     <tr><td class="td"><b>Attacco: ${character.strenght} </b></td></tr>
                     <tr><td class="td"><b>Difesa: ${character.defense}</b></td></tr>
-                    <tr><td class="td"><b>livello: ${character.level}</b>(<b>${character.exp}</b> per il prossimo livello)</td></tr>
+                    <tr><td class="td"><b>Arma: ${character.arma}</b></td></tr>
+                    <tr><td class="td"><b>Armatura: ${character.armatura}</b></td></tr>
+                    <tr><td class="td"><b>livello: ${character.livello}</b>(<b>${character.exp}</b> per il prossimo livello)</td></tr>
                 </table>
             </div>
         </div>

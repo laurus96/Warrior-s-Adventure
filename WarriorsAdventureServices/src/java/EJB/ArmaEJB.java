@@ -31,9 +31,17 @@ public class ArmaEJB implements ArmaEJBRemote {
     @Override
     public List<Arma> findWeapons(Personaggio p) {
         TypedQuery<Arma> query = em.createNamedQuery(Arma.FIND_WEAPON, Arma.class)
-                .setParameter("livello", p.getLevel());
+                .setParameter("livello", p.getLivello());
         
         return query.getResultList();
+    }
+    
+    @Override
+    public Arma findWeapons_bylv(long id) {
+        TypedQuery<Arma> query = em.createNamedQuery(Arma.BOUGHT_WEAPON, Arma.class)
+                .setParameter("id", id);
+        
+        return query.getSingleResult();
     }
 
     @Override
