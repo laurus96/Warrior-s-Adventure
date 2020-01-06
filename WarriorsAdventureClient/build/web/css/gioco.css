@@ -68,7 +68,7 @@ Ussa Object
 .logout{
     position: absolute;
     top: 4%;
-    left: 50%;
+    left: 40%;
     width: 250px;
     margin-right: -50%;
     transform: translate(-50%, -50%);
@@ -80,7 +80,29 @@ Ussa Object
     font-size: 20px;}
 .logout:hover{
     background-color: black;
-    color: white;}
+    color: white;
+}
+.save{
+    
+    position: absolute;
+    top: 4%;
+    left: 60%;
+    width: 250px;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+
+    font-size: 20px;
+    
+}
+
+.save:hover{
+    background-color: black;
+    color: white;
+}
 .saldo{
     margin: auto;
     float: right;}

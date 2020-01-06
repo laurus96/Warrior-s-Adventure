@@ -8,10 +8,10 @@
     <system systemId="http://localhost:8080/GiocatoreEJBService/GiocatoreEJB?xsd=1" uri="src/conf/xml-resources/web-service-references/GiocatoreEJB/wsdl/localhost_8080/GiocatoreEJBService/GiocatoreEJB.xsd_1.xsd"/>
     <system systemId="http://localhost:8080/AmministratoreEJBService/AmministratoreEJB?wsdl" uri="src/conf/xml-resources/web-service-references/AmministratoreEJB/wsdl/localhost_8080/AmministratoreEJBService/AmministratoreEJB.wsdl"/>
     <system systemId="http://localhost:8080/AmministratoreEJBService/AmministratoreEJB?xsd=1" uri="src/conf/xml-resources/web-service-references/AmministratoreEJB/wsdl/localhost_8080/AmministratoreEJBService/AmministratoreEJB.xsd_1.xsd"/>
-    <system systemId="http://localhost:8080/PersonaggioEJBService/PersonaggioEJB?wsdl" uri="src/conf/xml-resources/web-service-references/PersonaggioEJB/wsdl/localhost_8080/PersonaggioEJBService/PersonaggioEJB.wsdl"/>
-    <system systemId="http://localhost:8080/PersonaggioEJBService/PersonaggioEJB?xsd=1" uri="src/conf/xml-resources/web-service-references/PersonaggioEJB/wsdl/localhost_8080/PersonaggioEJBService/PersonaggioEJB.xsd_1.xsd"/>
     <system systemId="http://localhost:8080/ArmaturaEJBService/ArmaturaEJB?wsdl" uri="src/conf/xml-resources/web-service-references/ArmaturaEJB/wsdl/localhost_8080/ArmaturaEJBService/ArmaturaEJB.wsdl"/>
     <system systemId="http://localhost:8080/ArmaturaEJBService/ArmaturaEJB?xsd=1" uri="src/conf/xml-resources/web-service-references/ArmaturaEJB/wsdl/localhost_8080/ArmaturaEJBService/ArmaturaEJB.xsd_1.xsd"/>
     <system systemId="http://localhost:8080/ArmaEJBService/ArmaEJB?wsdl" uri="src/conf/xml-resources/web-service-references/ArmaEJB/wsdl/localhost_8080/ArmaEJBService/ArmaEJB.wsdl"/>
     <system systemId="http://localhost:8080/ArmaEJBService/ArmaEJB?xsd=1" uri="src/conf/xml-resources/web-service-references/ArmaEJB/wsdl/localhost_8080/ArmaEJBService/ArmaEJB.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/PersonaggioEJBService/PersonaggioEJB?wsdl" uri="src/conf/xml-resources/web-service-references/PersonaggioEJB/wsdl/localhost_8080/PersonaggioEJBService/PersonaggioEJB.wsdl"/>
+    <system systemId="http://localhost:8080/PersonaggioEJBService/PersonaggioEJB?xsd=1" uri="src/conf/xml-resources/web-service-references/PersonaggioEJB/wsdl/localhost_8080/PersonaggioEJBService/PersonaggioEJB.xsd_1.xsd"/>
 </catalog>

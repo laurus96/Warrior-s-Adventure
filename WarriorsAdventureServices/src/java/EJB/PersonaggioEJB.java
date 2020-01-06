@@ -74,8 +74,30 @@ public class PersonaggioEJB implements PersonaggioEJBRemote{
 
     @Override
     public Personaggio updatePersonaggio(Personaggio p) {
-        em.merge(p);
-        return p;
+        try{
+            em.createNamedQuery(Personaggio.SAVE_BYID)
+                    .setParameter("livello", p.getLivello())
+                    .setParameter("vitality", p.getVitality()) 
+                    .setParameter("defense", p.getDefense())
+                    .setParameter("strenght", p.getStrenght()) 
+                    .setParameter("gold", p.getGold())
+                    .setParameter("exp", p.getExp())
+                    .setParameter("arma", p.getArma())
+                    .setParameter("armatura", p.getArmatura())
+                    .setParameter("base_vit", p.getBase_vit())
+                    .setParameter("base_def", p.getBase_def())
+                    .setParameter("base_str", p.getBase_str())
+                    .setParameter("armorLv", p.getArmorLv())
+                    .setParameter("weaponLv", p.getWeaponLv()) 
+                    .setParameter("armorStr", p.getArmorStr()) 
+                    .setParameter("armorDef", p.getArmorDef()) 
+                    .setParameter("armorVit", p.getArmorVit())
+                    .setParameter("id", p.getId()).executeUpdate();
+            return p;
+        }catch (IllegalArgumentException e){
+            return null;
+        }
+        
     }
 
     @Override
@@ -97,7 +119,17 @@ public class PersonaggioEJB implements PersonaggioEJBRemote{
         if(weapon.getPrezzo() > p.getGold()){
             return null;
         }
-        p.boughtWeapon(weapon);
+        if(p.getArma().compareTo(weapon.getName()) == 0 && p.getWeaponLv() == weapon.getLivello()){
+            return null;
+        }
+                
+        p.setStrenght(p.getArmorStr() + p.getBase_str() + weapon.getForza());
+
+        p.setWeaponStr(weapon.getForza());
+        p.setWeaponLv(weapon.getLivello());
+        p.setArma(weapon.getName());
+        p.setGold(p.getGold() - weapon.getPrezzo());
+
         return p;
     }
 
@@ -106,8 +138,39 @@ public class PersonaggioEJB implements PersonaggioEJBRemote{
         if(armor.getPrezzo() > p.getGold()){
             return null;
         }
-        p.boughtArmor(armor);
+        if(p.getArmatura().compareTo(armor.getName()) == 0 && p.getArmorLv() == armor.getLivello()){
+            return null;
+        }
+        
+        p.setStrenght(p.getWeaponStr() + p.getBase_str() + armor.getForza());
+        p.setDefense(p.getBase_def() + armor.getDifesa());
+        p.setVitality(p.getBase_vit() + armor.getVitalità());
+        
+        
+        p.setArmorLv(armor.getLivello());
+        p.setArmorStr(armor.getForza());
+        p.setArmorDef(armor.getDifesa());
+        p.setArmorVit(armor.getVitalità());
+        p.setArmatura(armor.getName());
+        p.setGold(p.getGold() - armor.getPrezzo());
+
         return p;
     }
 
+    @Override
+    public Personaggio levelUp(Personaggio prsng) {
+        prsng.setBase_vit(prsng.getBase_vit() + 1);
+        prsng.setBase_def(prsng.getBase_def() + 1);
+        prsng.setBase_str(prsng.getBase_str() + 1);
+        
+        prsng.setVitality(prsng.getVitality() + 1);
+        prsng.setDefense(prsng.getDefense() + 1);
+        prsng.setStrenght(prsng.getStrenght() + 1);
+        
+        prsng.setLivello(prsng.getLivello() + 1);
+        
+        return prsng;
+        
+    }
+  
 }

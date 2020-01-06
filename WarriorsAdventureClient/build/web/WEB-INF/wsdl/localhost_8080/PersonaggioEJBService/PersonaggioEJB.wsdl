@@ -70,6 +70,12 @@
 <message name="findCharacterResponse">
 <part name="parameters" element="tns:findCharacterResponse"/>
 </message>
+<message name="levelUp">
+<part name="parameters" element="tns:levelUp"/>
+</message>
+<message name="levelUpResponse">
+<part name="parameters" element="tns:levelUpResponse"/>
+</message>
 <portType name="PersonaggioEJB">
 <operation name="addExp">
 <input wsam:Action="http://EJB/PersonaggioEJB/addExpRequest" message="tns:addExp"/>
@@ -114,6 +120,10 @@
 <operation name="findCharacter">
 <input wsam:Action="http://EJB/PersonaggioEJB/findCharacterRequest" message="tns:findCharacter"/>
 <output wsam:Action="http://EJB/PersonaggioEJB/findCharacterResponse" message="tns:findCharacterResponse"/>
+</operation>
+<operation name="levelUp">
+<input wsam:Action="http://EJB/PersonaggioEJB/levelUpRequest" message="tns:levelUp"/>
+<output wsam:Action="http://EJB/PersonaggioEJB/levelUpResponse" message="tns:levelUpResponse"/>
 </operation>
 </portType>
 <binding name="PersonaggioEJBPortBinding" type="tns:PersonaggioEJB">
@@ -209,6 +219,15 @@
 </output>
 </operation>
 <operation name="findCharacter">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="levelUp">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

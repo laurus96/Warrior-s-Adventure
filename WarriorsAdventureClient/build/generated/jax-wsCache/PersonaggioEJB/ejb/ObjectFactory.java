@@ -39,6 +39,7 @@ public class ObjectFactory {
     private final static QName _ListCharacter_QNAME = new QName("http://EJB/", "listCharacter");
     private final static QName _FindCharacterResponse_QNAME = new QName("http://EJB/", "findCharacterResponse");
     private final static QName _AddExpResponse_QNAME = new QName("http://EJB/", "addExpResponse");
+    private final static QName _LevelUpResponse_QNAME = new QName("http://EJB/", "levelUpResponse");
     private final static QName _BoughtWeaponResponse_QNAME = new QName("http://EJB/", "boughtWeaponResponse");
     private final static QName _AddExp_QNAME = new QName("http://EJB/", "addExp");
     private final static QName _Personaggio_QNAME = new QName("http://EJB/", "personaggio");
@@ -47,6 +48,7 @@ public class ObjectFactory {
     private final static QName _InsertPersonaggio_QNAME = new QName("http://EJB/", "insertPersonaggio");
     private final static QName _SubGold_QNAME = new QName("http://EJB/", "subGold");
     private final static QName _UpdatePersonaggioResponse_QNAME = new QName("http://EJB/", "updatePersonaggioResponse");
+    private final static QName _LevelUp_QNAME = new QName("http://EJB/", "levelUp");
     private final static QName _Armatura_QNAME = new QName("http://EJB/", "armatura");
     private final static QName _BoughtArmor_QNAME = new QName("http://EJB/", "boughtArmor");
     private final static QName _RemovePersonaggioResponse_QNAME = new QName("http://EJB/", "removePersonaggioResponse");
@@ -91,6 +93,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link LevelUpResponse }
+     * 
+     */
+    public LevelUpResponse createLevelUpResponse() {
+        return new LevelUpResponse();
+    }
+
+    /**
      * Create an instance of {@link BoughtWeaponResponse }
      * 
      */
@@ -128,6 +138,14 @@ public class ObjectFactory {
      */
     public UpdatePersonaggioResponse createUpdatePersonaggioResponse() {
         return new UpdatePersonaggioResponse();
+    }
+
+    /**
+     * Create an instance of {@link LevelUp }
+     * 
+     */
+    public LevelUp createLevelUp() {
+        return new LevelUp();
     }
 
     /**
@@ -402,6 +420,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LevelUpResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://EJB/", name = "levelUpResponse")
+    public JAXBElement<LevelUpResponse> createLevelUpResponse(LevelUpResponse value) {
+        return new JAXBElement<LevelUpResponse>(_LevelUpResponse_QNAME, LevelUpResponse.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link BoughtWeaponResponse }{@code >}}
      * 
      */
@@ -471,6 +498,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://EJB/", name = "updatePersonaggioResponse")
     public JAXBElement<UpdatePersonaggioResponse> createUpdatePersonaggioResponse(UpdatePersonaggioResponse value) {
         return new JAXBElement<UpdatePersonaggioResponse>(_UpdatePersonaggioResponse_QNAME, UpdatePersonaggioResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LevelUp }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://EJB/", name = "levelUp")
+    public JAXBElement<LevelUp> createLevelUp(LevelUp value) {
+        return new JAXBElement<LevelUp>(_LevelUp_QNAME, LevelUp.class, null, value);
     }
 
     /**

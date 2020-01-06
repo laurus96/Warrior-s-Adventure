@@ -12,7 +12,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Gioco</title>
+        <title>Warrior's Adventure</title>
         
         <link rel="stylesheet" type="text/css" href="css/gioco.css">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -28,6 +28,24 @@
             <h1 class="username">${character.name}</h1>
             <form action="LogoutServlet", method="post">
                 <input type="submit" value="Logout" class="logout">
+            </form>
+            <%String status_save = (String) session.getAttribute("status_save");
+            if(status_save != null){
+                session.removeAttribute("status_save");
+                if(status_save.compareTo("FAIL") == 0){%>
+                        <script>
+                            alert("Salvataggio non effettuato");
+                        </script>
+                    <%}
+                if(status_save.compareTo("PASS") == 0){
+                    session.removeAttribute("status_save");%>
+                        <script>
+                            alert("Salvataggio effettuato correttamente");
+                        </script>
+                    <%}%>
+            <%}%>
+            <form action="SaveServlet", method="post">
+                <input type="submit" value="Salvataggio" class="save">
             </form>
             <h1 class="saldo">Saldo: ${character.gold} G</h1>
         </div>
@@ -46,7 +64,7 @@
             </div>
         </div>
         <div class="onpl">
-            <h1 class="onlineplayer"> Gioctori online:</h1>
+            <h1 class="onlineplayer"> Giocatori online:</h1>
             <div class="onlinelist">
                 <table class="ontable">
                     <tr><td class="td">Tempesta58</td><td><form action=""><input class="fightbutton" type="button" value="Fight"></form></td></tr>
@@ -70,7 +88,7 @@
                 session.removeAttribute("status_bought");
                 if(status.compareTo("FAIL") == 0){%>
                         <script>
-                            alert("Saldo insufficiente");
+                            alert("Saldo insufficiente o hai già acquistato questo oggetto");
                         </script>
                     <%}
                 if(status.compareTo("PASS") == 0){
@@ -101,11 +119,11 @@
             <h1 class="statstitle"> Statistiche:</h1>
             <div class="statslist">
                 <table class="statstable">
-                    <tr><td class="td"><b>Punti Vita: ${character.vitality} </b></td></tr>
-                    <tr><td class="td"><b>Attacco: ${character.strenght} </b></td></tr>
-                    <tr><td class="td"><b>Difesa: ${character.defense}</b></td></tr>
-                    <tr><td class="td"><b>Arma: ${character.arma}</b></td></tr>
-                    <tr><td class="td"><b>Armatura: ${character.armatura}</b></td></tr>
+                    <tr><td class="td"><b>Punti vita base: ${character.baseVit},   Punti Vita: ${character.vitality} </b></td></tr>
+                    <tr><td class="td"><b>Punti Forza base: ${character.baseStr},   Forza ${character.strenght} </b></td></tr>
+                    <tr><td class="td"><b>Punti Difesa base: ${character.baseDef},   Difesa: ${character.defense}</b></td></tr>
+                    <tr><td class="td"><b>Arma: ${character.arma}, Lv: ${character.weaponLv}, +${character.weaponStr} a Forza</b></td></tr>
+                    <tr><td class="td"><b>Armatura: ${character.armatura}, Lv: ${character.armorLv}, +${character.armorStr} a Forza, +${character.armorDef} a Difesa, +${character.armorVit} a Vitalità</b></td></tr>
                     <tr><td class="td"><b>livello: ${character.livello}</b>(<b>${character.exp}</b> per il prossimo livello)</td></tr>
                 </table>
             </div>

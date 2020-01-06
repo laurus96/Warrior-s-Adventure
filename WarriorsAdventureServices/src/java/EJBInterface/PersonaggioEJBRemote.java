@@ -25,6 +25,8 @@ public interface PersonaggioEJBRemote {
     void removePersonaggio(Personaggio p);
     List<Personaggio> listCharacter(Giocatore p);
     
+    Personaggio levelUp(Personaggio p);
+    
     Personaggio boughtWeapon(Personaggio p, Arma weapon);
     Personaggio boughtArmor(Personaggio p, Armatura armor);
     

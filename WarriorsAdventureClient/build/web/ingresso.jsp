@@ -52,6 +52,7 @@
         <div class="div2">
             <a class="a1"><b>Gilda:</b> (Presto disponibile)</a>
             <a class="a2"><b>Tornei:</b> (Presto disponibile)</a>
+            <a class="a3"><b>Ricordati di premere l'apposito tasto per il salvataggio dei progressi!!!</b></a>
         </div>
     </div> 
 

@@ -57,6 +57,10 @@
         <servlet-name>BoughtWeaponServlet</servlet-name>
         <servlet-class>Servlet.BoughtWeaponServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SaveServlet</servlet-name>
+        <servlet-class>Servlet.SaveServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/faces/*</url-pattern>
@@ -108,6 +112,10 @@
     <servlet-mapping>
         <servlet-name>BoughtWeaponServlet</servlet-name>
         <url-pattern>/BoughtWeaponServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SaveServlet</servlet-name>
+        <url-pattern>/SaveServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

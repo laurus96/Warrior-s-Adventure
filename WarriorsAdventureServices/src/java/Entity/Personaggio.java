@@ -9,18 +9,33 @@ import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 @Entity
 @NamedQueries({
     @NamedQuery(name = Personaggio.FIND_BYUS, query = "SELECT b FROM Personaggio b WHERE b.username = :username"),
-    @NamedQuery(name = Personaggio.FIND_BYUSNA, query = "SELECT b FROM Personaggio b WHERE b.username = :username AND b.name = :name")
+    @NamedQuery(name = Personaggio.FIND_BYUSNA, query = "SELECT b FROM Personaggio b WHERE b.username = :username AND b.name = :name"),
+    @NamedQuery(name = Personaggio.SAVE_BYID, query = "UPDATE Personaggio p \n" +
+                                                        "SET p.livello = :livello, \n" +
+                                                        "    p.vitality = :vitality, \n" +
+                                                        "    p.defense = :defense,\n" +
+                                                        "    p.strenght = :strenght,\n" +
+                                                        "    p.gold = :gold,\n" +
+                                                        "    p.exp = :exp,\n" +
+                                                        "    p.arma = :arma,\n" +
+                                                        "    p.armatura = :armatura,\n" +
+                                                        "    p.base_vit = :base_vit,\n" +
+                                                        "    p.base_def = :base_def,\n" +
+                                                        "    p.base_str = :base_str,\n" +
+                                                        "    p.armorLv = :armorLv,\n" +
+                                                        "    p.weaponLv = :weaponLv,\n" +
+                                                        "    p.armorStr = :armorStr,\n" +
+                                                        "    p.armorDef = :armorDef,\n" +
+                                                        "    p.armorVit = :armorVit\n" +
+                                                        "WHERE p.id = :id")
 })
 public class Personaggio implements Serializable {
     
@@ -28,12 +43,14 @@ public class Personaggio implements Serializable {
     
     public static final String FIND_BYUS = "Personaggio.findByUsername";
     public static final String FIND_BYUSNA = "Personaggio.findByUsernameName";
+    public static final String SAVE_BYID = "Personaggio.Save_by_id";
 
     
     @Id @GeneratedValue
     private long id;
     
     private String name;
+
     private String classe;
     private int livello;
     private int vitality;
@@ -49,6 +66,19 @@ public class Personaggio implements Serializable {
     
     private String armatura;
     
+    private int base_vit;
+    private int base_def;
+    private int base_str;
+    
+    private int armorStr;
+    private int armorVit;
+    private int armorDef;
+    private int weaponStr;
+    
+    private int armorLv;
+    private int weaponLv;
+    
+    
     public Personaggio() {
     }
 
@@ -61,33 +91,40 @@ public class Personaggio implements Serializable {
         this.classe = classe;
         livello=1;
         if (classe.compareTo("Guerriero")==0){
-            vitality=75;
-            defense=50;
-            strenght=100;
+            base_vit = 75;
+            base_def = 50;
+            base_str = 100;
+            
+            vitality = base_vit;
+            defense = base_def;
+            strenght = base_str;
         }
         
         if (classe.compareTo("Paladino")==0){
-            vitality=100;
-            defense=50;
-            strenght=75;
+            base_vit = 100;
+            base_def = 50;
+            base_str = 75;
+            
+            vitality = base_vit;
+            defense = base_def;
+            strenght = base_str;
         }
         
         if (classe.compareTo("Cavaliere")==0){
-            vitality=50;
-            defense=100;
-            strenght=75;
+            
+            base_vit = 50;
+            base_def = 100;
+            base_str = 75;
+            
+            vitality = base_vit;
+            defense = base_def;
+            strenght = base_str;
         }
-        gold=450;
+        gold=10000;
         guild=null;
         exp=0;
         
         this.username=username;
-    }
-
-    public void levelUp(){
-        vitality++;
-        defense++;
-        strenght++;
     }
     
     public String getName() {
@@ -161,45 +198,6 @@ public class Personaggio implements Serializable {
     public void setExp(int exp) {
         this.exp = exp;
     }
-    
-    public Personaggio boughtWeapon(Arma w){
-        
-        if(w.getName().compareTo("Spada")==0){
-            this.strenght += w.getForza();
-        }
-        
-        if(w.getName().compareTo("Martello")==0){
-            this.strenght += w.getForza();
-        }
-        
-        if(w.getName().compareTo("Ascia")==0){
-            this.strenght += w.getForza();
-        }
-        
-        this.arma = w.getName();
-        this.gold -= w.getPrezzo();
-        return this;
-    }
-    
-    public Personaggio boughtArmor(Armatura a){
-
-        if (a.getName().compareTo("Armatura del Guerriero")==0){
-            this.strenght += a.getForza();
-        }
-        
-        if (a.getName().compareTo("Armatura del Paladino")==0){
-            this.vitality += a.getVitalità();
-        }
-        
-        if (a.getName().compareTo("Armatura del Cavaliere")==0){
-            this.defense += a.getDifesa();
-        }
-        
-        this.armatura = a.getName();
-        this.gold -= a.getPrezzo();
-
-        return this;
-    }
 
     public String getArma() {
         return arma;
@@ -217,13 +215,84 @@ public class Personaggio implements Serializable {
         this.armatura = armatura;
     }
 
-    
-
-    @Override
-    public String toString() {
-        return "Character{" + "name=" + name + ", classe=" + classe + 
-                ", level=" + livello + ", vitality=" + vitality + ", defense=" + 
-                defense + ", strenght=" + strenght + ", gold=" + gold + 
-                ", guild=" + guild + ", exp=" + exp + '}';
+    public int getBase_vit() {
+        return base_vit;
     }
+
+    public void setBase_vit(int base_vit) {
+        this.base_vit = base_vit;
+    }
+
+    public int getBase_def() {
+        return base_def;
+    }
+
+    public void setBase_def(int base_def) {
+        this.base_def = base_def;
+    }
+
+    public int getBase_str() {
+        return base_str;
+    }
+
+    public void setBase_str(int base_str) {
+        this.base_str = base_str;
+    }
+
+    public int getArmorStr() {
+        return armorStr;
+    }
+
+    public void setArmorStr(int armorStr) {
+        this.armorStr = armorStr;
+    }
+
+    public int getWeaponStr() {
+        return weaponStr;
+    }
+
+    public void setWeaponStr(int weaponStr) {
+        this.weaponStr = weaponStr;
+    }
+
+    public int getArmorLv() {
+        return armorLv;
+    }
+
+    public void setArmorLv(int armorLv) {
+        this.armorLv = armorLv;
+    }
+
+    public int getWeaponLv() {
+        return weaponLv;
+    }
+
+    public void setWeaponLv(int weaponLv) {
+        this.weaponLv = weaponLv;
+    }
+
+    public int getArmorVit() {
+        return armorVit;
+    }
+
+    public void setArmorVit(int armorVit) {
+        this.armorVit = armorVit;
+    }
+
+    public int getArmorDef() {
+        return armorDef;
+    }
+
+    public void setArmorDef(int armorDef) {
+        this.armorDef = armorDef;
+    }
+    
+     public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+    
 }

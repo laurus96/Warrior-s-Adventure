@@ -202,4 +202,19 @@ public interface PersonaggioEJB {
         @WebParam(name = "arg1", targetNamespace = "")
         String arg1);
 
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns ejb.Personaggio
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "levelUp", targetNamespace = "http://EJB/", className = "ejb.LevelUp")
+    @ResponseWrapper(localName = "levelUpResponse", targetNamespace = "http://EJB/", className = "ejb.LevelUpResponse")
+    @Action(input = "http://EJB/PersonaggioEJB/levelUpRequest", output = "http://EJB/PersonaggioEJB/levelUpResponse")
+    public Personaggio levelUp(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Personaggio arg0);
+
 }
