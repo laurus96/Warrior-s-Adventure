@@ -3,7 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/laurus/Documents/GitHub/Warrior-s-Adventure/WarriorsAdventureServices/src/java/Entity/Amministratore.java</file>
+            <file>file:/C:/Users/giuse/Documents/Warrior-s-Adventure/WarriorsAdventureServices/src/java/Entity/Armatura.java</file>
+            <file>file:/C:/Users/giuse/Documents/Warrior-s-Adventure/WarriorsAdventureServices/src/java/EJBInterface/PersonaggioEJBRemote.java</file>
+            <file>file:/C:/Users/giuse/Documents/Warrior-s-Adventure/WarriorsAdventureServices/src/java/EJB/PersonaggioEJB.java</file>
+            <file>file:/C:/Users/giuse/Documents/Warrior-s-Adventure/WarriorsAdventureServices/src/java/Database/DatabasePopulator.java</file>
+            <file>file:/C:/Users/giuse/Documents/Warrior-s-Adventure/WarriorsAdventureServices/src/java/EJB/ArmaturaEJB.java</file>
+            <file>file:/C:/Users/giuse/Documents/Warrior-s-Adventure/WarriorsAdventureServices/src/java/EJB/GiocatoreEJB.java</file>
+            <file>file:/C:/Users/giuse/Documents/Warrior-s-Adventure/WarriorsAdventureServices/src/java/EJBInterface/ArmaturaEJBRemote.java</file>
+            <file>file:/C:/Users/giuse/Documents/Warrior-s-Adventure/WarriorsAdventureServices/src/java/Entity/Giocatore.java</file>
+            <file>file:/C:/Users/giuse/Documents/Warrior-s-Adventure/WarriorsAdventureServices/src/java/Entity/Personaggio.java</file>
         </group>
     </open-files>
 </project-private>
