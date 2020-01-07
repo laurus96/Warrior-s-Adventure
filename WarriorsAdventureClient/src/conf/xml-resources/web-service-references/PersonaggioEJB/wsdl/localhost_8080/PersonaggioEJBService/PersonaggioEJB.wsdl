@@ -4,41 +4,11 @@
 <xsd:import namespace="http://EJB/" schemaLocation="http://localhost:8080/PersonaggioEJBService/PersonaggioEJB?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="addExp">
-<part name="parameters" element="tns:addExp"/>
-</message>
-<message name="addExpResponse">
-<part name="parameters" element="tns:addExpResponse"/>
-</message>
-<message name="subGold">
-<part name="parameters" element="tns:subGold"/>
-</message>
-<message name="subGoldResponse">
-<part name="parameters" element="tns:subGoldResponse"/>
-</message>
-<message name="addGold">
-<part name="parameters" element="tns:addGold"/>
-</message>
-<message name="addGoldResponse">
-<part name="parameters" element="tns:addGoldResponse"/>
-</message>
-<message name="listCharacter">
-<part name="parameters" element="tns:listCharacter"/>
-</message>
-<message name="listCharacterResponse">
-<part name="parameters" element="tns:listCharacterResponse"/>
-</message>
 <message name="insertPersonaggio">
 <part name="parameters" element="tns:insertPersonaggio"/>
 </message>
 <message name="insertPersonaggioResponse">
 <part name="parameters" element="tns:insertPersonaggioResponse"/>
-</message>
-<message name="boughtWeapon">
-<part name="parameters" element="tns:boughtWeapon"/>
-</message>
-<message name="boughtWeaponResponse">
-<part name="parameters" element="tns:boughtWeaponResponse"/>
 </message>
 <message name="updatePersonaggio">
 <part name="parameters" element="tns:updatePersonaggio"/>
@@ -52,11 +22,35 @@
 <message name="removePersonaggioResponse">
 <part name="parameters" element="tns:removePersonaggioResponse"/>
 </message>
-<message name="createCharacter">
-<part name="parameters" element="tns:createCharacter"/>
+<message name="listCharacter">
+<part name="parameters" element="tns:listCharacter"/>
 </message>
-<message name="createCharacterResponse">
-<part name="parameters" element="tns:createCharacterResponse"/>
+<message name="listCharacterResponse">
+<part name="parameters" element="tns:listCharacterResponse"/>
+</message>
+<message name="addExp">
+<part name="parameters" element="tns:addExp"/>
+</message>
+<message name="addExpResponse">
+<part name="parameters" element="tns:addExpResponse"/>
+</message>
+<message name="findCharacter">
+<part name="parameters" element="tns:findCharacter"/>
+</message>
+<message name="findCharacterResponse">
+<part name="parameters" element="tns:findCharacterResponse"/>
+</message>
+<message name="subGold">
+<part name="parameters" element="tns:subGold"/>
+</message>
+<message name="subGoldResponse">
+<part name="parameters" element="tns:subGoldResponse"/>
+</message>
+<message name="addGold">
+<part name="parameters" element="tns:addGold"/>
+</message>
+<message name="addGoldResponse">
+<part name="parameters" element="tns:addGoldResponse"/>
 </message>
 <message name="boughtArmor">
 <part name="parameters" element="tns:boughtArmor"/>
@@ -64,11 +58,17 @@
 <message name="boughtArmorResponse">
 <part name="parameters" element="tns:boughtArmorResponse"/>
 </message>
-<message name="findCharacter">
-<part name="parameters" element="tns:findCharacter"/>
+<message name="createCharacter">
+<part name="parameters" element="tns:createCharacter"/>
 </message>
-<message name="findCharacterResponse">
-<part name="parameters" element="tns:findCharacterResponse"/>
+<message name="createCharacterResponse">
+<part name="parameters" element="tns:createCharacterResponse"/>
+</message>
+<message name="boughtWeapon">
+<part name="parameters" element="tns:boughtWeapon"/>
+</message>
+<message name="boughtWeaponResponse">
+<part name="parameters" element="tns:boughtWeaponResponse"/>
 </message>
 <message name="levelUp">
 <part name="parameters" element="tns:levelUp"/>
@@ -77,29 +77,9 @@
 <part name="parameters" element="tns:levelUpResponse"/>
 </message>
 <portType name="PersonaggioEJB">
-<operation name="addExp">
-<input wsam:Action="http://EJB/PersonaggioEJB/addExpRequest" message="tns:addExp"/>
-<output wsam:Action="http://EJB/PersonaggioEJB/addExpResponse" message="tns:addExpResponse"/>
-</operation>
-<operation name="subGold">
-<input wsam:Action="http://EJB/PersonaggioEJB/subGoldRequest" message="tns:subGold"/>
-<output wsam:Action="http://EJB/PersonaggioEJB/subGoldResponse" message="tns:subGoldResponse"/>
-</operation>
-<operation name="addGold">
-<input wsam:Action="http://EJB/PersonaggioEJB/addGoldRequest" message="tns:addGold"/>
-<output wsam:Action="http://EJB/PersonaggioEJB/addGoldResponse" message="tns:addGoldResponse"/>
-</operation>
-<operation name="listCharacter">
-<input wsam:Action="http://EJB/PersonaggioEJB/listCharacterRequest" message="tns:listCharacter"/>
-<output wsam:Action="http://EJB/PersonaggioEJB/listCharacterResponse" message="tns:listCharacterResponse"/>
-</operation>
 <operation name="insertPersonaggio">
 <input wsam:Action="http://EJB/PersonaggioEJB/insertPersonaggioRequest" message="tns:insertPersonaggio"/>
 <output wsam:Action="http://EJB/PersonaggioEJB/insertPersonaggioResponse" message="tns:insertPersonaggioResponse"/>
-</operation>
-<operation name="boughtWeapon">
-<input wsam:Action="http://EJB/PersonaggioEJB/boughtWeaponRequest" message="tns:boughtWeapon"/>
-<output wsam:Action="http://EJB/PersonaggioEJB/boughtWeaponResponse" message="tns:boughtWeaponResponse"/>
 </operation>
 <operation name="updatePersonaggio">
 <input wsam:Action="http://EJB/PersonaggioEJB/updatePersonaggioRequest" message="tns:updatePersonaggio"/>
@@ -109,17 +89,37 @@
 <input wsam:Action="http://EJB/PersonaggioEJB/removePersonaggioRequest" message="tns:removePersonaggio"/>
 <output wsam:Action="http://EJB/PersonaggioEJB/removePersonaggioResponse" message="tns:removePersonaggioResponse"/>
 </operation>
-<operation name="createCharacter">
-<input wsam:Action="http://EJB/PersonaggioEJB/createCharacterRequest" message="tns:createCharacter"/>
-<output wsam:Action="http://EJB/PersonaggioEJB/createCharacterResponse" message="tns:createCharacterResponse"/>
+<operation name="listCharacter">
+<input wsam:Action="http://EJB/PersonaggioEJB/listCharacterRequest" message="tns:listCharacter"/>
+<output wsam:Action="http://EJB/PersonaggioEJB/listCharacterResponse" message="tns:listCharacterResponse"/>
+</operation>
+<operation name="addExp">
+<input wsam:Action="http://EJB/PersonaggioEJB/addExpRequest" message="tns:addExp"/>
+<output wsam:Action="http://EJB/PersonaggioEJB/addExpResponse" message="tns:addExpResponse"/>
+</operation>
+<operation name="findCharacter">
+<input wsam:Action="http://EJB/PersonaggioEJB/findCharacterRequest" message="tns:findCharacter"/>
+<output wsam:Action="http://EJB/PersonaggioEJB/findCharacterResponse" message="tns:findCharacterResponse"/>
+</operation>
+<operation name="subGold">
+<input wsam:Action="http://EJB/PersonaggioEJB/subGoldRequest" message="tns:subGold"/>
+<output wsam:Action="http://EJB/PersonaggioEJB/subGoldResponse" message="tns:subGoldResponse"/>
+</operation>
+<operation name="addGold">
+<input wsam:Action="http://EJB/PersonaggioEJB/addGoldRequest" message="tns:addGold"/>
+<output wsam:Action="http://EJB/PersonaggioEJB/addGoldResponse" message="tns:addGoldResponse"/>
 </operation>
 <operation name="boughtArmor">
 <input wsam:Action="http://EJB/PersonaggioEJB/boughtArmorRequest" message="tns:boughtArmor"/>
 <output wsam:Action="http://EJB/PersonaggioEJB/boughtArmorResponse" message="tns:boughtArmorResponse"/>
 </operation>
-<operation name="findCharacter">
-<input wsam:Action="http://EJB/PersonaggioEJB/findCharacterRequest" message="tns:findCharacter"/>
-<output wsam:Action="http://EJB/PersonaggioEJB/findCharacterResponse" message="tns:findCharacterResponse"/>
+<operation name="createCharacter">
+<input wsam:Action="http://EJB/PersonaggioEJB/createCharacterRequest" message="tns:createCharacter"/>
+<output wsam:Action="http://EJB/PersonaggioEJB/createCharacterResponse" message="tns:createCharacterResponse"/>
+</operation>
+<operation name="boughtWeapon">
+<input wsam:Action="http://EJB/PersonaggioEJB/boughtWeaponRequest" message="tns:boughtWeapon"/>
+<output wsam:Action="http://EJB/PersonaggioEJB/boughtWeaponResponse" message="tns:boughtWeaponResponse"/>
 </operation>
 <operation name="levelUp">
 <input wsam:Action="http://EJB/PersonaggioEJB/levelUpRequest" message="tns:levelUp"/>
@@ -128,52 +128,7 @@
 </portType>
 <binding name="PersonaggioEJBPortBinding" type="tns:PersonaggioEJB">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="addExp">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="subGold">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="addGold">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="listCharacter">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
 <operation name="insertPersonaggio">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="boughtWeapon">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -200,7 +155,43 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="createCharacter">
+<operation name="listCharacter">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="addExp">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="findCharacter">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="subGold">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="addGold">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -218,7 +209,16 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="findCharacter">
+<operation name="createCharacter">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="boughtWeapon">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

@@ -52,7 +52,7 @@
         <div class="div2">
             <a class="a1"><b>Gilda:</b> (Presto disponibile)</a>
             <a class="a2"><b>Tornei:</b> (Presto disponibile)</a>
-            <a class="a3"><b>Ricordati di premere l'apposito tasto per il salvataggio dei progressi!!!</b></a>
+            <a class="a3"><b>Il gioco non dispone della funzione di autosalvataggio, ricordati di salvare !</b></a>
         </div>
     </div> 
 

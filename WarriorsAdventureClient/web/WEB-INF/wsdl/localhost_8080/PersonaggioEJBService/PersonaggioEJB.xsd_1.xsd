@@ -82,6 +82,7 @@
 <xs:element name="id" type="xs:long"/>
 <xs:element name="livello" type="xs:int"/>
 <xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="remainexp" type="xs:int"/>
 <xs:element name="strenght" type="xs:int"/>
 <xs:element name="vitality" type="xs:int"/>
 <xs:element name="weaponLv" type="xs:int"/>
@@ -131,6 +132,19 @@
 </xs:sequence>
 </xs:complexType>
 
+<xs:complexType name="findCharacter">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findCharacterResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:personaggio" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
 <xs:complexType name="boughtWeapon">
 <xs:sequence>
 <xs:element name="arg0" type="tns:personaggio" minOccurs="0"/>
@@ -149,19 +163,6 @@
 </xs:complexType>
 
 <xs:complexType name="boughtWeaponResponse">
-<xs:sequence>
-<xs:element name="return" type="tns:personaggio" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="findCharacter">
-<xs:sequence>
-<xs:element name="arg0" type="xs:string" minOccurs="0"/>
-<xs:element name="arg1" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="findCharacterResponse">
 <xs:sequence>
 <xs:element name="return" type="tns:personaggio" minOccurs="0"/>
 </xs:sequence>

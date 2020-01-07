@@ -124,7 +124,7 @@
                     <tr><td class="td"><b>Punti Difesa base: ${character.baseDef},   Difesa: ${character.defense}</b></td></tr>
                     <tr><td class="td"><b>Arma: ${character.arma}, Lv: ${character.weaponLv}, +${character.weaponStr} a Forza</b></td></tr>
                     <tr><td class="td"><b>Armatura: ${character.armatura}, Lv: ${character.armorLv}, +${character.armorStr} a Forza, +${character.armorDef} a Difesa, +${character.armorVit} a Vitalità</b></td></tr>
-                    <tr><td class="td"><b>livello: ${character.livello}</b>(<b>${character.exp}</b> per il prossimo livello)</td></tr>
+                    <tr><td class="td"><b>livello: ${character.livello}</b>(<b>${character.remainexp}</b> per il prossimo livello)</td></tr>
                 </table>
             </div>
         </div>

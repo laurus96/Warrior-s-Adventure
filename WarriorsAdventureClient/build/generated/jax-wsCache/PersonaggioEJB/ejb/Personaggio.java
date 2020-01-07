@@ -34,6 +34,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="livello" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="remainexp" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="strenght" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="vitality" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="weaponLv" type="{http://www.w3.org/2001/XMLSchema}int"/>
@@ -65,6 +66,7 @@ import javax.xml.bind.annotation.XmlType;
     "id",
     "livello",
     "name",
+    "remainexp",
     "strenght",
     "vitality",
     "weaponLv",
@@ -92,6 +94,7 @@ public class Personaggio {
     protected long id;
     protected int livello;
     protected String name;
+    protected int remainexp;
     protected int strenght;
     protected int vitality;
     protected int weaponLv;
@@ -407,6 +410,22 @@ public class Personaggio {
      */
     public void setName(String value) {
         this.name = value;
+    }
+
+    /**
+     * Recupera il valore della proprietà remainexp.
+     * 
+     */
+    public int getRemainexp() {
+        return remainexp;
+    }
+
+    /**
+     * Imposta il valore della proprietà remainexp.
+     * 
+     */
+    public void setRemainexp(int value) {
+        this.remainexp = value;
     }
 
     /**
