@@ -136,7 +136,7 @@ public class DatabasePopulator {
                 
         player1 = new Giocatore("laurus96", "metin@Server1", "lorenzo.cocchinone@gmail.com");
         player2 = new Giocatore("tempesta59", "metin@Server1", "giuseppe9909@gmail.com");
-        ban = new Giocatore("ciao", "metin@Server1", "ciao@gmail.com" );
+        ban = new Giocatore("DeBanPlayer", "metin@Server1", "DeBanPlayer@gmail.com" );
         ban.setBan(true);
                 
         playerejb.insertPlayer(player1);
@@ -144,6 +144,7 @@ public class DatabasePopulator {
         playerejb.insertPlayer(ban);
         
         characterejb.createCharacter("Lithia", "Paladino", player1);
+        characterejb.createCharacter("Marion", "Guerriero", player2);
         
         am1 = new Amministratore("laurus", "metin@Server1");
         am2 = new Amministratore("tempesta58","metin@Server1");
