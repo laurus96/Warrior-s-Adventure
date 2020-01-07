@@ -14,4 +14,6 @@
     <system systemId="http://localhost:8080/ArmaEJBService/ArmaEJB?xsd=1" uri="src/conf/xml-resources/web-service-references/ArmaEJB/wsdl/localhost_8080/ArmaEJBService/ArmaEJB.xsd_1.xsd"/>
     <system systemId="http://localhost:8080/PersonaggioEJBService/PersonaggioEJB?wsdl" uri="src/conf/xml-resources/web-service-references/PersonaggioEJB/wsdl/localhost_8080/PersonaggioEJBService/PersonaggioEJB.wsdl"/>
     <system systemId="http://localhost:8080/PersonaggioEJBService/PersonaggioEJB?xsd=1" uri="src/conf/xml-resources/web-service-references/PersonaggioEJB/wsdl/localhost_8080/PersonaggioEJBService/PersonaggioEJB.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/OnlinePlayerEJBService/OnlinePlayerEJB?wsdl" uri="src/conf/xml-resources/web-service-references/OnlinePlayerEJB/wsdl/localhost_8080/OnlinePlayerEJBService/OnlinePlayerEJB.wsdl"/>
+    <system systemId="http://localhost:8080/OnlinePlayerEJBService/OnlinePlayerEJB?xsd=1" uri="src/conf/xml-resources/web-service-references/OnlinePlayerEJB/wsdl/localhost_8080/OnlinePlayerEJBService/OnlinePlayerEJB.xsd_1.xsd"/>
 </catalog>

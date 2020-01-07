@@ -7,16 +7,14 @@ package EJBInterface;
 
 import Entity.Giocatore;
 import Entity.Personaggio;
-import java.util.Map;
 import javax.ejb.Remote;
 
 /**
  *
- * @author giuse
+ * @author laurus
  */
 @Remote
 public interface OnlinePlayerEJBRemote {
-    void login(Giocatore g,Personaggio p);
-    void logout(Giocatore g);
-    Map onlineList();
+    void addPlayer(Giocatore key, Personaggio value);
+    
 }
