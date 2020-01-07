@@ -8,6 +8,14 @@
 
 <xs:element name="personaggio" type="tns:personaggio"/>
 
+<xs:element name="removePlayer" type="tns:removePlayer"/>
+
+<xs:element name="removePlayerResponse" type="tns:removePlayerResponse"/>
+
+<xs:element name="returnHashMap" type="tns:returnHashMap"/>
+
+<xs:element name="returnHashMapResponse" type="tns:returnHashMapResponse"/>
+
 <xs:complexType name="addPlayer">
 <xs:sequence>
 <xs:element name="arg0" type="tns:giocatore" minOccurs="0"/>
@@ -52,6 +60,26 @@
 </xs:complexType>
 
 <xs:complexType name="addPlayerResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="returnHashMap">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="returnHashMapResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:personaggio" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removePlayer">
+<xs:sequence>
+<xs:element name="arg0" type="tns:giocatore" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removePlayerResponse">
 <xs:sequence/>
 </xs:complexType>
 </xs:schema>

@@ -8,6 +8,9 @@ package EJB;
 import EJBInterface.OnlinePlayerEJBRemote;
 import Entity.Giocatore;
 import Entity.Personaggio;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.jws.WebService;
@@ -20,10 +23,28 @@ import javax.jws.WebService;
 @Stateless
 @LocalBean
 public class OnlinePlayerEJB implements OnlinePlayerEJBRemote {
+    
+    private final Map<Giocatore, Personaggio> map = new HashMap<>();
 
     @Override
     public void addPlayer(Giocatore key, Personaggio value) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(!map.containsValue(value)){
+            System.out.println("Ciao");
+            map.put(key, value);
+        }
+        
+        
+    }
+    
+
+    @Override
+    public void removePlayer(Giocatore key) {
+        map.remove(key);
+    }
+
+    @Override
+    public Collection<Personaggio> returnHashMap() {
+        return map.values();
     }
     
 }

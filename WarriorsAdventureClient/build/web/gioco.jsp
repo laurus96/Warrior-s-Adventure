@@ -21,6 +21,8 @@
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="javascript/marketLoad.js"></script>
+        <script src="javascript/onlineList.js"></script>
+
 
     </head>
     <body>
@@ -67,8 +69,10 @@
             <h1 class="onlineplayer"> Giocatori online:</h1>
             <div class="onlinelist">
                 <table class="ontable">
+                    <!--
                     <tr><td class="td">Tempesta58</td><td><form action=""><input class="fightbutton" type="button" value="Fight"></form></td></tr>
                     <tr><td class="td">Laurus</td><td><form action=""><input class="fightbutton" type="button" value="Fight"></td></tr>
+                    -->
                 </table>
             </div>
         </div>

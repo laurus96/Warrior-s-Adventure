@@ -1,8 +1,10 @@
 
 package ejb;
 
+import java.util.List;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
+import javax.jws.WebResult;
 import javax.jws.WebService;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.ws.Action;
@@ -37,5 +39,29 @@ public interface OnlinePlayerEJB {
         Giocatore arg0,
         @WebParam(name = "arg1", targetNamespace = "")
         Personaggio arg1);
+
+    /**
+     * 
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "removePlayer", targetNamespace = "http://EJB/", className = "ejb.RemovePlayer")
+    @ResponseWrapper(localName = "removePlayerResponse", targetNamespace = "http://EJB/", className = "ejb.RemovePlayerResponse")
+    @Action(input = "http://EJB/OnlinePlayerEJB/removePlayerRequest", output = "http://EJB/OnlinePlayerEJB/removePlayerResponse")
+    public void removePlayer(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Giocatore arg0);
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<ejb.Personaggio>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "returnHashMap", targetNamespace = "http://EJB/", className = "ejb.ReturnHashMap")
+    @ResponseWrapper(localName = "returnHashMapResponse", targetNamespace = "http://EJB/", className = "ejb.ReturnHashMapResponse")
+    @Action(input = "http://EJB/OnlinePlayerEJB/returnHashMapRequest", output = "http://EJB/OnlinePlayerEJB/returnHashMapResponse")
+    public List<Personaggio> returnHashMap();
 
 }

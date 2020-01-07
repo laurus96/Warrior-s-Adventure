@@ -10,15 +10,53 @@
 <message name="addPlayerResponse">
 <part name="parameters" element="tns:addPlayerResponse"/>
 </message>
+<message name="removePlayer">
+<part name="parameters" element="tns:removePlayer"/>
+</message>
+<message name="removePlayerResponse">
+<part name="parameters" element="tns:removePlayerResponse"/>
+</message>
+<message name="returnHashMap">
+<part name="parameters" element="tns:returnHashMap"/>
+</message>
+<message name="returnHashMapResponse">
+<part name="parameters" element="tns:returnHashMapResponse"/>
+</message>
 <portType name="OnlinePlayerEJB">
 <operation name="addPlayer">
 <input wsam:Action="http://EJB/OnlinePlayerEJB/addPlayerRequest" message="tns:addPlayer"/>
 <output wsam:Action="http://EJB/OnlinePlayerEJB/addPlayerResponse" message="tns:addPlayerResponse"/>
 </operation>
+<operation name="removePlayer">
+<input wsam:Action="http://EJB/OnlinePlayerEJB/removePlayerRequest" message="tns:removePlayer"/>
+<output wsam:Action="http://EJB/OnlinePlayerEJB/removePlayerResponse" message="tns:removePlayerResponse"/>
+</operation>
+<operation name="returnHashMap">
+<input wsam:Action="http://EJB/OnlinePlayerEJB/returnHashMapRequest" message="tns:returnHashMap"/>
+<output wsam:Action="http://EJB/OnlinePlayerEJB/returnHashMapResponse" message="tns:returnHashMapResponse"/>
+</operation>
 </portType>
 <binding name="OnlinePlayerEJBPortBinding" type="tns:OnlinePlayerEJB">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
 <operation name="addPlayer">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="removePlayer">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="returnHashMap">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

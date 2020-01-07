@@ -5,6 +5,8 @@
  */
 package Servlet;
 
+import ejb.Giocatore;
+import ejb.OnlinePlayerEJBService;
 import ejb.Personaggio;
 import ejb.PersonaggioEJBService;
 import java.io.IOException;
@@ -21,6 +23,9 @@ import javax.xml.ws.WebServiceRef;
  * @author laurus
  */
 public class LogoutServlet extends HttpServlet {
+
+    @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/localhost_8080/OnlinePlayerEJBService/OnlinePlayerEJB.wsdl")
+    private OnlinePlayerEJBService service_1;
 
     @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/localhost_8080/PersonaggioEJBService/PersonaggioEJB.wsdl")
     private PersonaggioEJBService service;
@@ -42,6 +47,8 @@ public class LogoutServlet extends HttpServlet {
             Personaggio update_character = (Personaggio) session.getAttribute("character");
             
             updatePersonaggio(update_character);
+            
+            removePlayer((Giocatore) session.getAttribute("player"));
             
             session.invalidate(); 
 
@@ -96,6 +103,13 @@ public class LogoutServlet extends HttpServlet {
         // If the calling of port operations may lead to race condition some synchronization is required.
         ejb.PersonaggioEJB port = service.getPersonaggioEJBPort();
         return port.updatePersonaggio(arg0);
+    }
+
+    private void removePlayer(ejb.Giocatore arg0) {
+        // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
+        // If the calling of port operations may lead to race condition some synchronization is required.
+        ejb.OnlinePlayerEJB port = service_1.getOnlinePlayerEJBPort();
+        port.removePlayer(arg0);
     }
 
 }

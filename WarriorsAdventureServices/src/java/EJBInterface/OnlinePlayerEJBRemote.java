@@ -7,6 +7,9 @@ package EJBInterface;
 
 import Entity.Giocatore;
 import Entity.Personaggio;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 import javax.ejb.Remote;
 
 /**
@@ -16,5 +19,7 @@ import javax.ejb.Remote;
 @Remote
 public interface OnlinePlayerEJBRemote {
     void addPlayer(Giocatore key, Personaggio value);
+    void removePlayer(Giocatore key);
+    Collection<Personaggio> returnHashMap();
     
 }
