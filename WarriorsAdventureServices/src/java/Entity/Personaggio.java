@@ -59,6 +59,7 @@ public class Personaggio implements Serializable {
     private int gold;
     private String guild;
     private int exp;
+    private int remainexp;
     
     private String username;
     
@@ -77,8 +78,7 @@ public class Personaggio implements Serializable {
     
     private int armorLv;
     private int weaponLv;
-    
-    
+   
     public Personaggio() {
     }
 
@@ -123,8 +123,13 @@ public class Personaggio implements Serializable {
         gold=10000;
         guild=null;
         exp=0;
+        remainexp=1000-exp;
         
         this.username=username;
+    }
+
+    public int getRemainexp() {
+        return 1000-exp;
     }
     
     public String getName() {
@@ -163,6 +168,10 @@ public class Personaggio implements Serializable {
         return exp;
     }
 
+    public void setRemainexp(int remainexp) {
+        this.remainexp=remainexp;
+    }
+    
     public void setName(String name) {
         this.name = name;
     }

@@ -111,23 +111,23 @@ public class DatabasePopulator {
             weaponejb.insertWeapon(e);
         }
                 
-        aml.add(new Armatura("Armatura del Guerriero", 1, 100));
-        aml.add(new Armatura("Armatura del Guerriero", 2, 200));
-        aml.add(new Armatura("Armatura del Guerriero", 3, 300));
-        aml.add(new Armatura("Armatura del Guerriero", 4, 400));
-        aml.add(new Armatura("Armatura del Guerriero", 5, 500));
+        aml.add(new Armatura("Armatura da Guerra", 1, 100));
+        aml.add(new Armatura("Armatura da Guerra", 2, 200));
+        aml.add(new Armatura("Armatura da Guerra", 3, 300));
+        aml.add(new Armatura("Armatura da Guerra", 4, 400));
+        aml.add(new Armatura("Armatura da Guerra", 5, 500));
        
-        aml.add(new Armatura("Armatura del Paladino", 1, 100));
-        aml.add(new Armatura("Armatura del Paladino", 2, 200));
-        aml.add(new Armatura("Armatura del Paladino", 3, 300));
-        aml.add(new Armatura("Armatura del Paladino", 4, 400));
-        aml.add(new Armatura("Armatura del Paladino", 5, 500));
+        aml.add(new Armatura("Veste Runica", 1, 100));
+        aml.add(new Armatura("Veste Runica", 2, 200));
+        aml.add(new Armatura("Veste Runica", 3, 300));
+        aml.add(new Armatura("Veste Runica", 4, 400));
+        aml.add(new Armatura("Veste Runica", 5, 500));
 
-        aml.add(new Armatura("Armatura del Cavaliere", 1, 100));
-        aml.add(new Armatura("Armatura del Cavaliere", 2, 200));
-        aml.add(new Armatura("Armatura del Cavaliere", 3, 300));
-        aml.add(new Armatura("Armatura del Cavaliere", 4, 400));
-        aml.add(new Armatura("Armatura del Cavaliere", 5, 500));
+        aml.add(new Armatura("Armatura da Cavallo", 1, 100));
+        aml.add(new Armatura("Armatura da Cavallo", 2, 200));
+        aml.add(new Armatura("Armatura da Cavallo", 3, 300));
+        aml.add(new Armatura("Armatura da Cavallo", 4, 400));
+        aml.add(new Armatura("Armatura da Cavallo", 5, 500));
 
         
         for (Armatura e: aml){

@@ -49,19 +49,19 @@ public class Armatura implements Serializable{
         this.livello = livello;
         this.prezzo = prezzo;
         
-        if (name.compareTo("Armatura del Guerriero")==0){
+        if (name.compareTo("Armatura da Guerra")==0){
             forza=10*livello;
             vitalità=0;
             difesa=0;
         }
         
-        if (name.compareTo("Armatura del Paladino")==0){
+        if (name.compareTo("Veste Runica")==0){
             forza=0;
             vitalità=10*livello;
             difesa=0;
         }
         
-        if (name.compareTo("Armatura del Cavaliere")==0){
+        if (name.compareTo("Armatura da Cavallo")==0){
             forza=0;
             vitalità=0;
             difesa=10*livello;
