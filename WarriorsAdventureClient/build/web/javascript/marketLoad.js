@@ -6,7 +6,6 @@
 
 $(document).ready(function(){
    $.getJSON("WeaponLoadServlet", function(object, status){
-       console.log(object);
        var x = 0;
        
        for(x in object){
@@ -22,7 +21,6 @@ $(document).ready(function(){
    }); 
    
    $.getJSON("ArmorLoadServlet", function(object, status){
-       console.log(object);
         var x = 0;
        
         for(x in object){

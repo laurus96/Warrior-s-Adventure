@@ -22,6 +22,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="javascript/marketLoad.js"></script>
         <script src="javascript/onlineList.js"></script>
+        <script src="javascript/notify.js"></script>
+
 
 
     </head>
@@ -80,9 +82,11 @@
             <h1 class="notifytitle"> Notifiche:</h1>
             <div class="notifylist">
                 <table class="notifytable">
+                    <!--
                     <tr><td class="td">Vittorio scarano ti ha invitato al combattimento</td><td><form action=""><input class="notifybutton" type="button" value="Accept"></form></td></tr>
                     <tr><td class="td">Laurus ti ha invitato a un gilda</td><td><form action=""><input class="notifybutton" type="button" value="Accept"></form></td></tr>
                     <tr><td class="td">Laurus ti ha invitato a un torneo</td><td><form action=""><input class="notifybutton" type="button" value="Accept"></form></td></tr>
+                -->
                 </table>
             </div>
         </div>
