@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:webproject2="http://www.netbeans.org/ns/web-project/2" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSGEN SECTION
+                ===================
+            -->
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <fail if="${wsimport.bad.version}" message="WsImport ant task defined in the classpath ${j2ee.platform.wsimport.classpath} has a serious bug. See http://wiki.netbeans.org/MetroIssue for details."/>
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <property name="j2ee.platform.wsimport.classpath" value="${libs.jaxws21.classpath}"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${java.home}/../lib/tools.jar:${j2ee.platform.wsimport.classpath}:${javac.classpath}"/>
+        </taskdef>
+        <condition property="conf-dir" value="${conf.dir}/" else="">
+            <isset property="conf.dir"/>
+        </condition>
+    </target>
+    <target name="wsimport-client-GiocatoreEJB" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/GiocatoreEJB"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/GiocatoreEJB" destdir="${build.generated.dir}/jax-wsCache/GiocatoreEJB" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/GiocatoreEJB/wsdl/localhost_8080/GiocatoreEJBService/GiocatoreEJB.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/GiocatoreEJBService/GiocatoreEJB?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/GiocatoreEJB/wsdl/localhost_8080/GiocatoreEJBService/GiocatoreEJB.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/GiocatoreEJB"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/GiocatoreEJB">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-GiocatoreEJB" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ejb"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/GiocatoreEJB"/>
+    </target>
+    <target name="wsimport-client-PersonaggioEJB" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/PersonaggioEJB"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/PersonaggioEJB" destdir="${build.generated.dir}/jax-wsCache/PersonaggioEJB" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/PersonaggioEJB/wsdl/localhost_8080/PersonaggioEJBService/PersonaggioEJB.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/PersonaggioEJBService/PersonaggioEJB?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/PersonaggioEJB/wsdl/localhost_8080/PersonaggioEJBService/PersonaggioEJB.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/PersonaggioEJB"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/PersonaggioEJB">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-PersonaggioEJB" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ejb"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/PersonaggioEJB"/>
+    </target>
+    <target name="wsimport-client-AmministratoreEJB" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/AmministratoreEJB"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/AmministratoreEJB" destdir="${build.generated.dir}/jax-wsCache/AmministratoreEJB" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/AmministratoreEJB/wsdl/localhost_8080/AmministratoreEJBService/AmministratoreEJB.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/AmministratoreEJBService/AmministratoreEJB?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/AmministratoreEJB/wsdl/localhost_8080/AmministratoreEJBService/AmministratoreEJB.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/AmministratoreEJB"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/AmministratoreEJB">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-AmministratoreEJB" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ejb"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/AmministratoreEJB"/>
+    </target>
+    <target name="wsimport-client-ArmaEJB" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ArmaEJB"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ArmaEJB" destdir="${build.generated.dir}/jax-wsCache/ArmaEJB" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/ArmaEJB/wsdl/localhost_8080/ArmaEJBService/ArmaEJB.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ArmaEJBService/ArmaEJB?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/ArmaEJB/wsdl/localhost_8080/ArmaEJBService/ArmaEJB.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ArmaEJB"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ArmaEJB">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ArmaEJB" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ejb"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/ArmaEJB"/>
+    </target>
+    <target name="wsimport-client-ArmaturaEJB" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/ArmaturaEJB"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/ArmaturaEJB" destdir="${build.generated.dir}/jax-wsCache/ArmaturaEJB" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/ArmaturaEJB/wsdl/localhost_8080/ArmaturaEJBService/ArmaturaEJB.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/ArmaturaEJBService/ArmaturaEJB?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/ArmaturaEJB/wsdl/localhost_8080/ArmaturaEJBService/ArmaturaEJB.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/ArmaturaEJB"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/ArmaturaEJB">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-ArmaturaEJB" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ejb"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/ArmaturaEJB"/>
+    </target>
+    <target name="wsimport-client-OnlinePlayerEJB" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/OnlinePlayerEJB"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/OnlinePlayerEJB" destdir="${build.generated.dir}/jax-wsCache/OnlinePlayerEJB" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/OnlinePlayerEJB/wsdl/localhost_8080/OnlinePlayerEJBService/OnlinePlayerEJB.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/OnlinePlayerEJBService/OnlinePlayerEJB?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/OnlinePlayerEJB/wsdl/localhost_8080/OnlinePlayerEJBService/OnlinePlayerEJB.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/OnlinePlayerEJB"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/OnlinePlayerEJB">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-OnlinePlayerEJB" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ejb"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/OnlinePlayerEJB"/>
+    </target>
+    <target name="wsimport-client-NotifyPlayerEJB" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/NotifyPlayerEJB"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/NotifyPlayerEJB" destdir="${build.generated.dir}/jax-wsCache/NotifyPlayerEJB" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/NotifyPlayerEJB/wsdl/localhost_8080/NotifyPlayerEJBService/NotifyPlayerEJB.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/NotifyPlayerEJBService/NotifyPlayerEJB?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/NotifyPlayerEJB/wsdl/localhost_8080/NotifyPlayerEJBService/NotifyPlayerEJB.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/NotifyPlayerEJB"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/NotifyPlayerEJB">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-NotifyPlayerEJB" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ejb"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/NotifyPlayerEJB"/>
+    </target>
+    <target name="wsimport-client-CombatCommonEJB" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/CombatCommonEJB"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/CombatCommonEJB" destdir="${build.generated.dir}/jax-wsCache/CombatCommonEJB" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/CombatCommonEJB/wsdl/localhost_8080/CombatCommonEJBService/CombatCommonEJB.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/CombatCommonEJBService/CombatCommonEJB?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/CombatCommonEJB/wsdl/localhost_8080/CombatCommonEJBService/CombatCommonEJB.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/CombatCommonEJB"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/CombatCommonEJB">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-CombatCommonEJB" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ejb"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/CombatCommonEJB"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-GiocatoreEJB, wsimport-client-PersonaggioEJB, wsimport-client-AmministratoreEJB, wsimport-client-ArmaEJB, wsimport-client-ArmaturaEJB, wsimport-client-OnlinePlayerEJB, wsimport-client-NotifyPlayerEJB, wsimport-client-CombatCommonEJB"/>
+</project>
