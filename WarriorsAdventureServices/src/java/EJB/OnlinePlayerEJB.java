@@ -24,13 +24,12 @@ import javax.jws.WebService;
 @LocalBean
 public class OnlinePlayerEJB implements OnlinePlayerEJBRemote {
     
-    private final Map<Giocatore, Personaggio> map = new HashMap<>();
+    private final Map<String, Personaggio> map = new HashMap<>();
 
     @Override
     public void addPlayer(Giocatore key, Personaggio value) {
         if(!map.containsValue(value)){
-            System.out.println("Ciao");
-            map.put(key, value);
+            map.put(key.getUsername(), value);
         }
         
         
@@ -39,7 +38,7 @@ public class OnlinePlayerEJB implements OnlinePlayerEJBRemote {
 
     @Override
     public void removePlayer(Giocatore key) {
-        map.remove(key);
+        map.remove(key.getUsername());
     }
 
     @Override

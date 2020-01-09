@@ -122,5 +122,21 @@
         <delete dir="${build.generated.sources.dir}/jax-ws/ejb"/>
         <delete dir="${build.generated.dir}/jax-wsCache/OnlinePlayerEJB"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-GiocatoreEJB, wsimport-client-AmministratoreEJB, wsimport-client-ArmaEJB, wsimport-client-ArmaturaEJB, wsimport-client-PersonaggioEJB, wsimport-client-OnlinePlayerEJB"/>
+    <target name="wsimport-client-NotifyPlayerEJB" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/NotifyPlayerEJB"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/NotifyPlayerEJB" destdir="${build.generated.dir}/jax-wsCache/NotifyPlayerEJB" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/NotifyPlayerEJB/wsdl/localhost_8080/NotifyPlayerEJBService/NotifyPlayerEJB.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/NotifyPlayerEJBService/NotifyPlayerEJB?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/NotifyPlayerEJB/wsdl/localhost_8080/NotifyPlayerEJBService/NotifyPlayerEJB.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/NotifyPlayerEJB"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/NotifyPlayerEJB">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-NotifyPlayerEJB" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/ejb"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/NotifyPlayerEJB"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-GiocatoreEJB, wsimport-client-AmministratoreEJB, wsimport-client-ArmaEJB, wsimport-client-ArmaturaEJB, wsimport-client-PersonaggioEJB, wsimport-client-OnlinePlayerEJB, wsimport-client-NotifyPlayerEJB"/>
 </project>

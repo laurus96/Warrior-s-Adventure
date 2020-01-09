@@ -65,6 +65,18 @@
         <servlet-name>OnlineListServlet</servlet-name>
         <servlet-class>Servlet.OnlineListServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>NotifyServlet</servlet-name>
+        <servlet-class>Servlet.NotifyServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AcceptPvpServlet</servlet-name>
+        <servlet-class>Servlet.AcceptPvpServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>NotifyDisplayServlet</servlet-name>
+        <servlet-class>Servlet.NotifyDisplayServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/faces/*</url-pattern>
@@ -124,6 +136,18 @@
     <servlet-mapping>
         <servlet-name>OnlineListServlet</servlet-name>
         <url-pattern>/OnlineListServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>NotifyServlet</servlet-name>
+        <url-pattern>/NotifyServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AcceptPvpServlet</servlet-name>
+        <url-pattern>/AcceptPvpServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>NotifyDisplayServlet</servlet-name>
+        <url-pattern>/NotifyDisplayServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

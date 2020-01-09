@@ -16,4 +16,6 @@
     <system systemId="http://localhost:8080/ArmaturaEJBService/ArmaturaEJB?xsd=1" uri="wsdl/localhost_8080/ArmaturaEJBService/ArmaturaEJB.xsd_1.xsd"/>
     <system systemId="http://localhost:8080/OnlinePlayerEJBService/OnlinePlayerEJB?wsdl" uri="wsdl/localhost_8080/OnlinePlayerEJBService/OnlinePlayerEJB.wsdl"/>
     <system systemId="http://localhost:8080/OnlinePlayerEJBService/OnlinePlayerEJB?xsd=1" uri="wsdl/localhost_8080/OnlinePlayerEJBService/OnlinePlayerEJB.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/NotifyPlayerEJBService/NotifyPlayerEJB?wsdl" uri="wsdl/localhost_8080/NotifyPlayerEJBService/NotifyPlayerEJB.wsdl"/>
+    <system systemId="http://localhost:8080/NotifyPlayerEJBService/NotifyPlayerEJB?xsd=1" uri="wsdl/localhost_8080/NotifyPlayerEJBService/NotifyPlayerEJB.xsd_1.xsd"/>
 </catalog>

@@ -6,6 +6,7 @@
 package Servlet;
 
 import ejb.Giocatore;
+import ejb.NotifyPlayerEJBService;
 import ejb.OnlinePlayerEJBService;
 import ejb.Personaggio;
 import ejb.PersonaggioEJBService;
@@ -22,6 +23,9 @@ import javax.xml.ws.WebServiceRef;
  * @author laurus
  */
 public class ToGameServlet extends HttpServlet {
+
+    @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/localhost_8080/NotifyPlayerEJBService/NotifyPlayerEJB.wsdl")
+    private NotifyPlayerEJBService service_2;
 
     @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/localhost_8080/OnlinePlayerEJBService/OnlinePlayerEJB.wsdl")
     private OnlinePlayerEJBService service_1;
@@ -51,6 +55,8 @@ public class ToGameServlet extends HttpServlet {
 
             
             Personaggio character = findCharacter(logged_player.getUsername(), username);
+            
+            inizialization(character.getId());
             
             addPlayer(logged_player, character);
             
@@ -113,6 +119,13 @@ public class ToGameServlet extends HttpServlet {
         // If the calling of port operations may lead to race condition some synchronization is required.
         ejb.OnlinePlayerEJB port = service_1.getOnlinePlayerEJBPort();
         port.addPlayer(arg0, arg1);
+    }
+
+    private void inizialization(java.lang.Long arg0) {
+        // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
+        // If the calling of port operations may lead to race condition some synchronization is required.
+        ejb.NotifyPlayerEJB port = service_2.getNotifyPlayerEJBPort();
+        port.inizialization(arg0);
     }
 
 }
