@@ -6,30 +6,36 @@
 
 $(document).ready(function (){
     
-    $("#attack").click(function(){
-        $.getJSON("FightServlet", {"val": "atk"}, function(object, status){
-            
+    window.setInterval(function (){
+        console.log("Ciao");
+         $("#attack").click(function(){
+            $.getJSON("FightServlet", {"val": "atk"}, function(object, status){
+
+                document.getElementById("combatlog").innerHTML = object;
+
+            });
         });
-    });
     
-    $("#defense").click(function(){
-        $.getJSON("FightServlet", {"val": "def"}, function(object, status){
-            
+        $("#defense").click(function(){
+            $.getJSON("FightServlet", {"val": "def"}, function(object, status){
+
+            });
         });
-    });
     
-    $("#heals").click(function(){
-        $.getJSON("FightServlet", {"val": "hls"}, function(object, status){
-            
+        $("#heals").click(function(){
+            $.getJSON("FightServlet", {"val": "hls"}, function(object, status){
+
+            });
         });
-    });
     
-    $("#leave").click(function(){
-        $.getJSON("FightServlet", {"val": "lev"}, function(object, status){
-            
+        $("#leave").click(function(){
+            $.getJSON("FightServlet", {"val": "lev"}, function(object, status){
+
+            });
         });
-    });
-    
+         
+    }, 1000);
+     
 });
 
 

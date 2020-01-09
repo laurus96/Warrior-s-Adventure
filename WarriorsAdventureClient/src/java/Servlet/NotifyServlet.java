@@ -44,8 +44,8 @@ public class NotifyServlet extends HttpServlet {
             long id_enemy = Long.parseLong(request.getParameter("id_enemy"));
             
             addNotify(id_enemy, ch_session);
-           
             
+
             request.getRequestDispatcher("gioco.jsp").forward(request, response);
 
         }

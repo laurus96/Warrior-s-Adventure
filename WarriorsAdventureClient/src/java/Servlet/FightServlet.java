@@ -10,6 +10,8 @@ import ejb.CombatCommonEJBService;
 import ejb.Personaggio;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -44,19 +46,21 @@ public class FightServlet extends HttpServlet {
             Personaggio session_ch = (Personaggio) session.getAttribute("character");
             
             String val = request.getParameter("val");
-            String result = "";
+            List<String> result = new ArrayList<>();
             
-            System.out.println(val);
             
             if(val.compareTo("atk") == 0){
                 result = attack(session_ch);
-                System.out.println(result);    
+                for(String e : result){
+                    System.out.println(result);
+                }
+                    
             }
             
             
             PrintWriter out = response.getWriter();
             
-            String json = new Gson().toJson(val);
+            String json = new Gson().toJson(result);
             
             response.setContentType("application/json");
             response.setCharacterEncoding("UTF-8");
@@ -108,12 +112,14 @@ public class FightServlet extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-    private String attack(ejb.Personaggio arg0) {
+    private java.util.List<java.lang.String> attack(ejb.Personaggio arg0) {
         // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
         // If the calling of port operations may lead to race condition some synchronization is required.
         ejb.CombatCommonEJB port = service.getCombatCommonEJBPort();
         return port.attack(arg0);
     }
+
+
 
 
 

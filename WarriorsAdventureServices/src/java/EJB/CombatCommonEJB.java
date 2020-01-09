@@ -8,6 +8,7 @@ package EJB;
 import EJBInterface.CombatCommonEJBRemote;
 import Entity.Fight;
 import Entity.Personaggio;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import javax.ejb.LocalBean;
@@ -25,6 +26,7 @@ import javax.jws.WebService;
 public class CombatCommonEJB implements CombatCommonEJBRemote{
     
     private static Map<Long, Fight> combatMap = new HashMap<>();
+    private Map<Long, ArrayList<String>> combatLog = new HashMap<>();
     
     @Inject
     private PersonaggioEJB ejb;
@@ -38,6 +40,7 @@ public class CombatCommonEJB implements CombatCommonEJBRemote{
        Fight combat = new Fight(a,b);
        
        combatMap.put(n_combat, combat);
+       combatLog.put(n_combat, new ArrayList<String>());
        
        a.setCombat_key(n_combat);
        b.setCombat_key(n_combat);
@@ -64,12 +67,13 @@ public class CombatCommonEJB implements CombatCommonEJBRemote{
     }
     
     @Override
-    public String attack(Personaggio a){
-
-        Fight current = combatMap.get(a.getCombat_key());
+    public ArrayList<String> attack(Personaggio a){
+        String result = combatMap.get(a.getCombat_key()).attacca(a);
         
-        return current.attacca(a);
-
+        combatLog.get(a.getCombat_key()).add(result);
+        
+        return combatLog.get(a.getCombat_key());
+        
     }
     
 }

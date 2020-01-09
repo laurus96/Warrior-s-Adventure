@@ -27,17 +27,9 @@ public class Fight {
     }
     
     public String attacca(Personaggio attack){
-        int crit = 1 + ram.nextInt(19);
-        int danni = 2 * crit * (attack.getStrenght() / 100);
-        
-        System.out.println("Crit: " + crit);
-        System.out.println(attack.getStrenght() / 100);
-        System.out.println("Danni: " + danni);
-        System.out.println(a.getName() + "ha: " + a.getVitality());
-        System.out.println(b.getName() + "ha: " + b.getVitality());
+        int crit = 1 + ram.nextInt(9);
+        int danni = 2 * crit * (attack.getStrenght() / 50);
 
-        
-        
         if(attack.getId() == a.getId()){
             //Attacca A
             if(this.dif_b){
@@ -49,10 +41,10 @@ public class Fight {
                 return a.getId() + "";
             }
             
-            if(crit >= 15){
-                return b.getName() + " ha subito: " + danni + " danni, con un colpo critico, la sua vitalità è scesa a: " + b.getVitality();
+            if(crit >= 8){
+                return "<br/>" + b.getName() + " ha subito: " + danni + " danni, con un colpo critico, la sua vitalità è scesa a: " + b.getVitality() + "<br/>";
             }
-            return b.getName() + " ha subito: " + danni + " danni, la sua vitalità è scesa a: " + b.getVitality();
+            return "<br/>" + b.getName() + " ha subito: " + danni + " danni, la sua vitalità è scesa a: " + b.getVitality() + "<br/>";
             
             
         }else if(attack.getId() == b.getId()){
@@ -65,10 +57,10 @@ public class Fight {
             if(a.getVitality() <= 0){
                 return b.getId() + "";
             }
-            if(crit >= 15){
-                return a.getName() + " ha subito: " + danni + " danni, con un colpo critico, la sua vitalità è scesa a: " + a.getVitality();
+            if(crit >= 8){
+                return "<br/>" + a.getName() + " ha subito: " + danni + " danni, con un colpo critico, la sua vitalità è scesa a: " + a.getVitality()+ "<br/>";
             }
-            return a.getName() + " ha subito: " + danni + " danni, la sua vitalità è scesa a: " + a.getVitality();
+            return "<br/>" + a.getName() + " ha subito: " + danni + " danni, la sua vitalità è scesa a: " + a.getVitality()+ "<br/>";
         }
         
         return "Scarano";

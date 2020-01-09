@@ -21,7 +21,9 @@
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="javascript/marketLoad.js"></script>
-        <script src="javascript/onlineList.js"></script>
+        <!--
+        <script src="javascript/onlineList.js"></script> 
+        -->
         <script src="javascript/notify.js"></script>
         <script src="javascript/buttonGame.js"></script>
         <script src="javascript/combatScript.js"></script>
@@ -63,15 +65,7 @@
         <div class="fight">
             <h1 class="logcombat">Log Combattimento:</h1>
             <div class="textarea">
-            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet consectetur adipiscing elit ut. 
-                Blandit volutpat maecenas volutpat blandit aliquam. Eget egestas purus viverra accumsan. Blandit massa enim nec dui nunc mattis enim ut. Cursus metus aliquam eleifend mi in nulla posuere sollicitudin. 
-                Ultricies lacus sed turpis tincidunt id aliquet risus feugiat in. Blandit turpis cursus in hac habitasse platea. Urna id volutpat lacus laoreet non curabitur. Nibh praesent tristique magna sit amet purus.
-                Aliquam ut porttitor leo a. Sit amet luctus venenatis lectus. Velit dignissim sodales ut eu sem integer. Vivamus arcu felis bibendum ut tristique et. Senectus et netus et malesuada fames ac turpis. Volutpat sed cras ornare arcu dui vivamus. 
-                Neque vitae tempus quam pellentesque nec nam. Nulla pharetra diam sit amet nisl. Gravida rutrum quisque non tellus orci. Non enim praesent elementum facilisis leo vel fringilla est ullamcorper.  
-                Nulla malesuada pellentesque elit eget gravida cum sociis natoque penatibus. Neque aliquam vestibulum morbi blandit cursus. At consectetur lorem donec massa sapien faucibus et molestie. Eget velit aliquet sagittis id consectetur. 
-                Diam maecenas sed enim ut sem viverra aliquet eget sit. Varius morbi enim nunc faucibus a. Eu ultrices vitae auctor eu. Elit duis tristique sollicitudin nibh sit. Ornare suspendisse sed nisi lacus sed viverra tellus in. 
-                Tincidunt tortor aliquam nulla facilisi cras. Gravida dictum fusce ut placerat orci nulla. Mauris pellentesque pulvinar pellentesque habitant morbi. Volutpat est velit egestas dui id ornare arcu odio. 
-                Bibendum neque egestas congue quisque egestas diam in. Mauris ultrices eros in cursus turpis massa tincidunt. Tellus molestie nunc non blandit.</p>
+            <p id="combatlog" class="text"></p><br>
             </div>
         </div>
         <div class="onpl">
