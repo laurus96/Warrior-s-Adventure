@@ -4,18 +4,6 @@
 <xsd:import namespace="http://EJB/" schemaLocation="http://localhost:8080/CombatCommonEJBService/CombatCommonEJB?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="inizialization_combat">
-<part name="parameters" element="tns:inizialization_combat"/>
-</message>
-<message name="inizialization_combatResponse">
-<part name="parameters" element="tns:inizialization_combatResponse"/>
-</message>
-<message name="removeCombat">
-<part name="parameters" element="tns:removeCombat"/>
-</message>
-<message name="removeCombatResponse">
-<part name="parameters" element="tns:removeCombatResponse"/>
-</message>
 <message name="returnFight">
 <part name="parameters" element="tns:returnFight"/>
 </message>
@@ -28,15 +16,19 @@
 <message name="attackResponse">
 <part name="parameters" element="tns:attackResponse"/>
 </message>
+<message name="removeCombat">
+<part name="parameters" element="tns:removeCombat"/>
+</message>
+<message name="removeCombatResponse">
+<part name="parameters" element="tns:removeCombatResponse"/>
+</message>
+<message name="inizialization_combat">
+<part name="parameters" element="tns:inizialization_combat"/>
+</message>
+<message name="inizialization_combatResponse">
+<part name="parameters" element="tns:inizialization_combatResponse"/>
+</message>
 <portType name="CombatCommonEJB">
-<operation name="inizialization_combat">
-<input wsam:Action="http://EJB/CombatCommonEJB/inizialization_combatRequest" message="tns:inizialization_combat"/>
-<output wsam:Action="http://EJB/CombatCommonEJB/inizialization_combatResponse" message="tns:inizialization_combatResponse"/>
-</operation>
-<operation name="removeCombat">
-<input wsam:Action="http://EJB/CombatCommonEJB/removeCombatRequest" message="tns:removeCombat"/>
-<output wsam:Action="http://EJB/CombatCommonEJB/removeCombatResponse" message="tns:removeCombatResponse"/>
-</operation>
 <operation name="returnFight">
 <input wsam:Action="http://EJB/CombatCommonEJB/returnFightRequest" message="tns:returnFight"/>
 <output wsam:Action="http://EJB/CombatCommonEJB/returnFightResponse" message="tns:returnFightResponse"/>
@@ -45,10 +37,27 @@
 <input wsam:Action="http://EJB/CombatCommonEJB/attackRequest" message="tns:attack"/>
 <output wsam:Action="http://EJB/CombatCommonEJB/attackResponse" message="tns:attackResponse"/>
 </operation>
+<operation name="removeCombat">
+<input wsam:Action="http://EJB/CombatCommonEJB/removeCombatRequest" message="tns:removeCombat"/>
+<output wsam:Action="http://EJB/CombatCommonEJB/removeCombatResponse" message="tns:removeCombatResponse"/>
+</operation>
+<operation name="inizialization_combat">
+<input wsam:Action="http://EJB/CombatCommonEJB/inizialization_combatRequest" message="tns:inizialization_combat"/>
+<output wsam:Action="http://EJB/CombatCommonEJB/inizialization_combatResponse" message="tns:inizialization_combatResponse"/>
+</operation>
 </portType>
 <binding name="CombatCommonEJBPortBinding" type="tns:CombatCommonEJB">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="inizialization_combat">
+<operation name="returnFight">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="attack">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -66,16 +75,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="returnFight">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="attack">
+<operation name="inizialization_combat">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

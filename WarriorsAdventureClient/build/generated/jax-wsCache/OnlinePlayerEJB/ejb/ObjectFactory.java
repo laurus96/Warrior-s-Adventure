@@ -24,13 +24,13 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _Giocatore_QNAME = new QName("http://EJB/", "giocatore");
-    private final static QName _AddPlayerResponse_QNAME = new QName("http://EJB/", "addPlayerResponse");
-    private final static QName _RemovePlayer_QNAME = new QName("http://EJB/", "removePlayer");
-    private final static QName _ReturnHashMap_QNAME = new QName("http://EJB/", "returnHashMap");
-    private final static QName _RemovePlayerResponse_QNAME = new QName("http://EJB/", "removePlayerResponse");
-    private final static QName _Personaggio_QNAME = new QName("http://EJB/", "personaggio");
     private final static QName _AddPlayer_QNAME = new QName("http://EJB/", "addPlayer");
+    private final static QName _AddPlayerResponse_QNAME = new QName("http://EJB/", "addPlayerResponse");
+    private final static QName _Giocatore_QNAME = new QName("http://EJB/", "giocatore");
+    private final static QName _Personaggio_QNAME = new QName("http://EJB/", "personaggio");
+    private final static QName _RemovePlayer_QNAME = new QName("http://EJB/", "removePlayer");
+    private final static QName _RemovePlayerResponse_QNAME = new QName("http://EJB/", "removePlayerResponse");
+    private final static QName _ReturnHashMap_QNAME = new QName("http://EJB/", "returnHashMap");
     private final static QName _ReturnHashMapResponse_QNAME = new QName("http://EJB/", "returnHashMapResponse");
 
     /**
@@ -41,43 +41,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ReturnHashMapResponse }
-     * 
-     */
-    public ReturnHashMapResponse createReturnHashMapResponse() {
-        return new ReturnHashMapResponse();
-    }
-
-    /**
      * Create an instance of {@link AddPlayer }
      * 
      */
     public AddPlayer createAddPlayer() {
         return new AddPlayer();
-    }
-
-    /**
-     * Create an instance of {@link RemovePlayerResponse }
-     * 
-     */
-    public RemovePlayerResponse createRemovePlayerResponse() {
-        return new RemovePlayerResponse();
-    }
-
-    /**
-     * Create an instance of {@link ReturnHashMap }
-     * 
-     */
-    public ReturnHashMap createReturnHashMap() {
-        return new ReturnHashMap();
-    }
-
-    /**
-     * Create an instance of {@link Personaggio }
-     * 
-     */
-    public Personaggio createPersonaggio() {
-        return new Personaggio();
     }
 
     /**
@@ -97,6 +65,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link Personaggio }
+     * 
+     */
+    public Personaggio createPersonaggio() {
+        return new Personaggio();
+    }
+
+    /**
      * Create an instance of {@link RemovePlayer }
      * 
      */
@@ -105,62 +81,36 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Giocatore }{@code >}}
+     * Create an instance of {@link RemovePlayerResponse }
      * 
      */
-    @XmlElementDecl(namespace = "http://EJB/", name = "giocatore")
-    public JAXBElement<Giocatore> createGiocatore(Giocatore value) {
-        return new JAXBElement<Giocatore>(_Giocatore_QNAME, Giocatore.class, null, value);
+    public RemovePlayerResponse createRemovePlayerResponse() {
+        return new RemovePlayerResponse();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AddPlayerResponse }{@code >}}
+     * Create an instance of {@link ReturnHashMap }
      * 
      */
-    @XmlElementDecl(namespace = "http://EJB/", name = "addPlayerResponse")
-    public JAXBElement<AddPlayerResponse> createAddPlayerResponse(AddPlayerResponse value) {
-        return new JAXBElement<AddPlayerResponse>(_AddPlayerResponse_QNAME, AddPlayerResponse.class, null, value);
+    public ReturnHashMap createReturnHashMap() {
+        return new ReturnHashMap();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RemovePlayer }{@code >}}
+     * Create an instance of {@link ReturnHashMapResponse }
      * 
      */
-    @XmlElementDecl(namespace = "http://EJB/", name = "removePlayer")
-    public JAXBElement<RemovePlayer> createRemovePlayer(RemovePlayer value) {
-        return new JAXBElement<RemovePlayer>(_RemovePlayer_QNAME, RemovePlayer.class, null, value);
+    public ReturnHashMapResponse createReturnHashMapResponse() {
+        return new ReturnHashMapResponse();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ReturnHashMap }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddPlayer }{@code >}
      * 
-     */
-    @XmlElementDecl(namespace = "http://EJB/", name = "returnHashMap")
-    public JAXBElement<ReturnHashMap> createReturnHashMap(ReturnHashMap value) {
-        return new JAXBElement<ReturnHashMap>(_ReturnHashMap_QNAME, ReturnHashMap.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RemovePlayerResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://EJB/", name = "removePlayerResponse")
-    public JAXBElement<RemovePlayerResponse> createRemovePlayerResponse(RemovePlayerResponse value) {
-        return new JAXBElement<RemovePlayerResponse>(_RemovePlayerResponse_QNAME, RemovePlayerResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Personaggio }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://EJB/", name = "personaggio")
-    public JAXBElement<Personaggio> createPersonaggio(Personaggio value) {
-        return new JAXBElement<Personaggio>(_Personaggio_QNAME, Personaggio.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AddPlayer }{@code >}}
-     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link AddPlayer }{@code >}
      */
     @XmlElementDecl(namespace = "http://EJB/", name = "addPlayer")
     public JAXBElement<AddPlayer> createAddPlayer(AddPlayer value) {
@@ -168,8 +118,90 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ReturnHashMapResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddPlayerResponse }{@code >}
      * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link AddPlayerResponse }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://EJB/", name = "addPlayerResponse")
+    public JAXBElement<AddPlayerResponse> createAddPlayerResponse(AddPlayerResponse value) {
+        return new JAXBElement<AddPlayerResponse>(_AddPlayerResponse_QNAME, AddPlayerResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Giocatore }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link Giocatore }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://EJB/", name = "giocatore")
+    public JAXBElement<Giocatore> createGiocatore(Giocatore value) {
+        return new JAXBElement<Giocatore>(_Giocatore_QNAME, Giocatore.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Personaggio }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link Personaggio }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://EJB/", name = "personaggio")
+    public JAXBElement<Personaggio> createPersonaggio(Personaggio value) {
+        return new JAXBElement<Personaggio>(_Personaggio_QNAME, Personaggio.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RemovePlayer }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link RemovePlayer }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://EJB/", name = "removePlayer")
+    public JAXBElement<RemovePlayer> createRemovePlayer(RemovePlayer value) {
+        return new JAXBElement<RemovePlayer>(_RemovePlayer_QNAME, RemovePlayer.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RemovePlayerResponse }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link RemovePlayerResponse }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://EJB/", name = "removePlayerResponse")
+    public JAXBElement<RemovePlayerResponse> createRemovePlayerResponse(RemovePlayerResponse value) {
+        return new JAXBElement<RemovePlayerResponse>(_RemovePlayerResponse_QNAME, RemovePlayerResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ReturnHashMap }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link ReturnHashMap }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://EJB/", name = "returnHashMap")
+    public JAXBElement<ReturnHashMap> createReturnHashMap(ReturnHashMap value) {
+        return new JAXBElement<ReturnHashMap>(_ReturnHashMap_QNAME, ReturnHashMap.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ReturnHashMapResponse }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link ReturnHashMapResponse }{@code >}
      */
     @XmlElementDecl(namespace = "http://EJB/", name = "returnHashMapResponse")
     public JAXBElement<ReturnHashMapResponse> createReturnHashMapResponse(ReturnHashMapResponse value) {

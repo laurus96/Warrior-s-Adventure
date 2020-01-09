@@ -7,6 +7,7 @@ package EJBInterface;
 
 import Entity.Fight;
 import Entity.Personaggio;
+import java.util.ArrayList;
 
 /**
  *
@@ -18,7 +19,7 @@ public interface CombatCommonEJBRemote {
     void removeCombat(Personaggio a, Personaggio b);
     Fight returnFight(Personaggio a);
     
-    String attack(Personaggio a);
+    ArrayList<String> attack(Personaggio a);
 
     
 }

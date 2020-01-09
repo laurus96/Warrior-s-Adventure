@@ -34,8 +34,7 @@ public class OnlinePlayerEJB implements OnlinePlayerEJBRemote {
         
         
     }
-    
-
+  
     @Override
     public void removePlayer(Giocatore key) {
         map.remove(key.getUsername());
