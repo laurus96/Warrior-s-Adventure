@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.3 (RELEASE-2.4.3-ad3323c; 2019-01-21T17:46:06+0000) JAXWS-RI/2.3.2 JAXWS-API/2.3.2 JAXB-RI/2.3.2 JAXB-API/2.3.2 git-revision#unknown. --><xs:schema xmlns:tns="http://EJB/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://EJB/">
+
+<xs:element name="attack" type="tns:attack"/>
+
+<xs:element name="attackResponse" type="tns:attackResponse"/>
+
+<xs:element name="inizialization_combat" type="tns:inizialization_combat"/>
+
+<xs:element name="inizialization_combatResponse" type="tns:inizialization_combatResponse"/>
+
+<xs:element name="personaggio" type="tns:personaggio"/>
+
+<xs:element name="removeCombat" type="tns:removeCombat"/>
+
+<xs:element name="removeCombatResponse" type="tns:removeCombatResponse"/>
+
+<xs:element name="returnFight" type="tns:returnFight"/>
+
+<xs:element name="returnFightResponse" type="tns:returnFightResponse"/>
+
+<xs:complexType name="removeCombat">
+<xs:sequence>
+<xs:element name="arg0" type="tns:personaggio" minOccurs="0"/>
+<xs:element name="arg1" type="tns:personaggio" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="personaggio">
+<xs:sequence>
+<xs:element name="arma" type="xs:string" minOccurs="0"/>
+<xs:element name="armatura" type="xs:string" minOccurs="0"/>
+<xs:element name="armorDef" type="xs:int"/>
+<xs:element name="armorLv" type="xs:int"/>
+<xs:element name="armorStr" type="xs:int"/>
+<xs:element name="armorVit" type="xs:int"/>
+<xs:element name="base_def" type="xs:int"/>
+<xs:element name="base_str" type="xs:int"/>
+<xs:element name="base_vit" type="xs:int"/>
+<xs:element name="classe" type="xs:string" minOccurs="0"/>
+<xs:element name="combat_key" type="xs:long"/>
+<xs:element name="defense" type="xs:int"/>
+<xs:element name="exp" type="xs:int"/>
+<xs:element name="gold" type="xs:int"/>
+<xs:element name="guild" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:long"/>
+<xs:element name="livello" type="xs:int"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="remainexp" type="xs:int"/>
+<xs:element name="strenght" type="xs:int"/>
+<xs:element name="vitality" type="xs:int"/>
+<xs:element name="weaponLv" type="xs:int"/>
+<xs:element name="weaponStr" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeCombatResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="returnFight">
+<xs:sequence>
+<xs:element name="arg0" type="tns:personaggio" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="returnFightResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:fight" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="fight">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="attack">
+<xs:sequence>
+<xs:element name="arg0" type="tns:personaggio" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="attackResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="inizialization_combat">
+<xs:sequence>
+<xs:element name="arg0" type="tns:personaggio" minOccurs="0"/>
+<xs:element name="arg1" type="tns:personaggio" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="inizialization_combatResponse">
+<xs:sequence/>
+</xs:complexType>
+</xs:schema>
