@@ -13,36 +13,37 @@ import javax.xml.bind.annotation.XmlType;
  * <p>Il seguente frammento di schema specifica il contenuto previsto contenuto in questa classe.
  * 
  * <pre>
- * &lt;complexType name="personaggio">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="arma" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="armatura" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="armorDef" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="armorLv" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="armorStr" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="armorVit" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="base_def" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="base_str" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="base_vit" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="classe" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="defense" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="exp" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="gold" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="guild" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="livello" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="remainexp" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="strenght" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="vitality" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="weaponLv" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="weaponStr" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="personaggio"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="arma" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="armatura" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="armorDef" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="armorLv" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="armorStr" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="armorVit" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="base_def" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="base_str" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="base_vit" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="classe" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="combat_key" type="{http://www.w3.org/2001/XMLSchema}long"/&gt;
+ *         &lt;element name="defense" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="exp" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="gold" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="guild" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}long"/&gt;
+ *         &lt;element name="livello" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="remainexp" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="strenght" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="vitality" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="weaponLv" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="weaponStr" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -59,6 +60,7 @@ import javax.xml.bind.annotation.XmlType;
     "baseStr",
     "baseVit",
     "classe",
+    "combatKey",
     "defense",
     "exp",
     "gold",
@@ -87,6 +89,8 @@ public class Personaggio {
     @XmlElement(name = "base_vit")
     protected int baseVit;
     protected String classe;
+    @XmlElement(name = "combat_key")
+    protected long combatKey;
     protected int defense;
     protected int exp;
     protected int gold;
@@ -282,6 +286,22 @@ public class Personaggio {
      */
     public void setClasse(String value) {
         this.classe = value;
+    }
+
+    /**
+     * Recupera il valore della proprietà combatKey.
+     * 
+     */
+    public long getCombatKey() {
+        return combatKey;
+    }
+
+    /**
+     * Imposta il valore della proprietà combatKey.
+     * 
+     */
+    public void setCombatKey(long value) {
+        this.combatKey = value;
     }
 
     /**
