@@ -7,6 +7,8 @@
 window.setInterval(function (){
     
     $.getJSON("ButtonDisplayServlet", function(object, status){
+        console.log(object);
+        /*
         if(object === null){
             $('.actionbuttonsx').attr('disabled','disabled');
             $('.actionbuttondx').attr('disabled','disabled');
@@ -14,7 +16,7 @@ window.setInterval(function (){
             $('.actionbuttonsx').removeAttr('disabled');
             $('.actionbuttonsx').removeAttr('disabled');
         }
-       
+       */
         
 });}, 1000);
 

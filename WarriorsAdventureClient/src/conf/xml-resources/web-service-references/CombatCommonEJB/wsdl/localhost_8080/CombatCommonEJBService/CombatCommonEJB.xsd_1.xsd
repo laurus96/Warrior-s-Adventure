@@ -4,9 +4,21 @@
 
 <xs:element name="attackResponse" type="tns:attackResponse"/>
 
-<xs:element name="inizialization_combat" type="tns:inizialization_combat"/>
+<xs:element name="defense" type="tns:defense"/>
 
-<xs:element name="inizialization_combatResponse" type="tns:inizialization_combatResponse"/>
+<xs:element name="defenseResponse" type="tns:defenseResponse"/>
+
+<xs:element name="heals" type="tns:heals"/>
+
+<xs:element name="healsResponse" type="tns:healsResponse"/>
+
+<xs:element name="inizializationCombat" type="tns:inizializationCombat"/>
+
+<xs:element name="inizializationCombatResponse" type="tns:inizializationCombatResponse"/>
+
+<xs:element name="leave" type="tns:leave"/>
+
+<xs:element name="leaveResponse" type="tns:leaveResponse"/>
 
 <xs:element name="personaggio" type="tns:personaggio"/>
 
@@ -18,10 +30,25 @@
 
 <xs:element name="returnFightResponse" type="tns:returnFightResponse"/>
 
-<xs:complexType name="removeCombat">
+<xs:element name="winner" type="tns:winner"/>
+
+<xs:element name="winnerResponse" type="tns:winnerResponse"/>
+
+<xs:complexType name="winner">
+<xs:sequence>
+<xs:element name="arg0" type="xs:long" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="winnerResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:long" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="heals">
 <xs:sequence>
 <xs:element name="arg0" type="tns:personaggio" minOccurs="0"/>
-<xs:element name="arg1" type="tns:personaggio" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -53,8 +80,33 @@
 </xs:sequence>
 </xs:complexType>
 
+<xs:complexType name="healsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="removeCombat">
+<xs:sequence>
+<xs:element name="arg0" type="tns:personaggio" minOccurs="0"/>
+<xs:element name="arg1" type="tns:personaggio" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
 <xs:complexType name="removeCombatResponse">
 <xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="defense">
+<xs:sequence>
+<xs:element name="arg0" type="tns:personaggio" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="defenseResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
 </xs:complexType>
 
 <xs:complexType name="returnFight">
@@ -73,6 +125,18 @@
 <xs:sequence/>
 </xs:complexType>
 
+<xs:complexType name="leave">
+<xs:sequence>
+<xs:element name="arg0" type="tns:personaggio" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="leaveResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
 <xs:complexType name="attack">
 <xs:sequence>
 <xs:element name="arg0" type="tns:personaggio" minOccurs="0"/>
@@ -81,18 +145,18 @@
 
 <xs:complexType name="attackResponse">
 <xs:sequence>
-<xs:element name="return" type="xs:string" minOccurs="0"/>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="inizialization_combat">
+<xs:complexType name="inizializationCombat">
 <xs:sequence>
 <xs:element name="arg0" type="tns:personaggio" minOccurs="0"/>
 <xs:element name="arg1" type="tns:personaggio" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="inizialization_combatResponse">
+<xs:complexType name="inizializationCombatResponse">
 <xs:sequence/>
 </xs:complexType>
 </xs:schema>

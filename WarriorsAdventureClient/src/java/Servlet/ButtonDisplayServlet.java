@@ -50,17 +50,11 @@ public class ButtonDisplayServlet extends HttpServlet {
         synchronized(session){
             Personaggio session_ch = (Personaggio) session.getAttribute("character");
             
-            Personaggio update_ch = (Personaggio) findByID(session_ch.getId());
-            
-            session.setAttribute("character", update_ch);
-            
-            //System.out.println("update id combat: " + update_ch.getName() + " "+ update_ch.getCombatKey());
-            
-            Fight session_combat = returnFight(update_ch);
+            Fight session_combat = returnFight(session_ch);
                     
             PrintWriter out = response.getWriter();
             
-            String json = new Gson().toJson(session_combat);
+            String json = new Gson().toJson("Button BUG");
             
             response.setContentType("application/json");
             response.setCharacterEncoding("UTF-8");

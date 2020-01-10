@@ -133,6 +133,7 @@ public class Personaggio implements Serializable {
         this.username=username;
         this.combat_key = 0;
     }
+    
 
     public int getRemainexp() {
         return 1000-exp;

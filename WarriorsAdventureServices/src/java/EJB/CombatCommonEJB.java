@@ -8,7 +8,9 @@ package EJB;
 import EJBInterface.CombatCommonEJBRemote;
 import Entity.Fight;
 import Entity.Personaggio;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
@@ -24,7 +26,8 @@ import javax.jws.WebService;
 @LocalBean
 public class CombatCommonEJB implements CombatCommonEJBRemote{
     
-    private static Map<Long, Fight> combatMap = new HashMap<>();
+    private static final Map<Long, Fight> combatMap = new HashMap<>();
+    private static final Map<Long, List<String>> combatLog = new HashMap<>();
     
     @Inject
     private PersonaggioEJB ejb;
@@ -32,12 +35,16 @@ public class CombatCommonEJB implements CombatCommonEJBRemote{
     
     
     @Override
-    public void inizialization_combat(Personaggio a, Personaggio b) {
+    public void inizializationCombat(Personaggio a, Personaggio b) {
         
        long n_combat = combatMap.size() + 1;
+
        Fight combat = new Fight(a,b);
        
        combatMap.put(n_combat, combat);
+       combatLog.put(n_combat, new ArrayList<String>());
+       
+       combatLog.get(n_combat).add("Il combattimento tra <b> " + a.getName() + "</b> e  <b>" + b.getName() + "</b>" );
        
        a.setCombat_key(n_combat);
        b.setCombat_key(n_combat);
@@ -64,12 +71,38 @@ public class CombatCommonEJB implements CombatCommonEJBRemote{
     }
     
     @Override
-    public String attack(Personaggio a){
-
-        Fight current = combatMap.get(a.getCombat_key());
-        
-        return current.attacca(a);
-
+    public List<String> attack(Personaggio a){
+        combatLog.get(a.getCombat_key()).add(combatMap.get(a.getCombat_key()).attacca(a));
+        return combatLog.get(a.getCombat_key());
     }
     
+    @Override
+    public List<String> defense(Personaggio a){
+        combatLog.get(a.getCombat_key()).add(combatMap.get(a.getCombat_key()).difesa(a));
+        return combatLog.get(a.getCombat_key());
+    }
+    
+    @Override
+    public List<String> heals(Personaggio a){
+        combatLog.get(a.getCombat_key()).add(combatMap.get(a.getCombat_key()).cura(a));
+        return combatLog.get(a.getCombat_key());
+    }
+    
+    @Override
+    public List<String> leave(Personaggio a){
+        combatLog.get(a.getCombat_key()).add(combatMap.get(a.getCombat_key()).fuga(a));
+        return combatLog.get(a.getCombat_key());
+    }
+
+    @Override
+    public Long winner(Long combatKey) {
+        long id = combatMap.get(combatKey).verifyWinner();
+        if(id != -1L){
+            return id;
+        }
+        
+        return -1L;
+    }
+    
+   
 }

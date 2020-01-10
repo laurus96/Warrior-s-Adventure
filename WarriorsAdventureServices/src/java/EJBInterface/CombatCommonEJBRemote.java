@@ -7,6 +7,7 @@ package EJBInterface;
 
 import Entity.Fight;
 import Entity.Personaggio;
+import java.util.List;
 
 /**
  *
@@ -14,11 +15,16 @@ import Entity.Personaggio;
  */
 public interface CombatCommonEJBRemote {
 
-    void inizialization_combat(Personaggio a, Personaggio b);
+    void inizializationCombat(Personaggio a, Personaggio b);
     void removeCombat(Personaggio a, Personaggio b);
     Fight returnFight(Personaggio a);
     
-    String attack(Personaggio a);
+    List<String> attack(Personaggio a);
+    List<String> defense(Personaggio a);
+    List<String> heals(Personaggio a);
+    List<String> leave(Personaggio a);
+    
+    Long winner(Long combatKey);
 
     
 }

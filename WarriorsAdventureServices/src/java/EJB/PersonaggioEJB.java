@@ -182,5 +182,20 @@ public class PersonaggioEJB implements PersonaggioEJBRemote{
         return query.getSingleResult();
         
     }
+    
+    @Override
+    public void fineDuello(Personaggio winner){
+        winner.setGold(winner.getGold() + 150);
+        winner.setExp(winner.getExp() + 200);
+        
+        if(winner.getRemainexp() <= 0){
+            winner.setExp(0);
+            levelUp(winner);
+           
+        }
+        
+        updatePersonaggio(winner);
+        
+    }
   
 }

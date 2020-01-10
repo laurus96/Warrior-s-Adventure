@@ -23,11 +23,14 @@ import javax.xml.ws.WebServiceRef;
  */
 public class StartCombatServlet extends HttpServlet {
 
+    @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/localhost_8080/CombatCommonEJBService/CombatCommonEJB.wsdl")
+    private CombatCommonEJBService service;
+
+
+
     @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/localhost_8080/PersonaggioEJBService/PersonaggioEJB.wsdl")
     private PersonaggioEJBService service_1;
 
-    @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/localhost_8080/CombatCommonEJBService/CombatCommonEJB.wsdl")
-    private CombatCommonEJBService service;
 
 
 
@@ -100,12 +103,6 @@ public class StartCombatServlet extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-    private void inizializationCombat(ejb.Personaggio arg0, ejb.Personaggio arg1) {
-        // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
-        // If the calling of port operations may lead to race condition some synchronization is required.
-        ejb.CombatCommonEJB port = service.getCombatCommonEJBPort();
-        port.inizializationCombat(arg0, arg1);
-    }
 
     private Personaggio findByID(long arg0) {
         // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
@@ -114,11 +111,14 @@ public class StartCombatServlet extends HttpServlet {
         return port.findByID(arg0);
     }
 
-    private Personaggio findByID_1(long arg0) {
+
+    private void inizializationCombat(ejb.Personaggio arg0, ejb.Personaggio arg1) {
         // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
         // If the calling of port operations may lead to race condition some synchronization is required.
-        ejb.PersonaggioEJB port = service_1.getPersonaggioEJBPort();
-        return port.findByID(arg0);
+        ejb.CombatCommonEJB port = service.getCombatCommonEJBPort();
+        port.inizializationCombat(arg0, arg1);
     }
+
+
 
 }

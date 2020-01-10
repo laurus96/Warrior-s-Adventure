@@ -26,13 +26,21 @@ public class ObjectFactory {
 
     private final static QName _Attack_QNAME = new QName("http://EJB/", "attack");
     private final static QName _AttackResponse_QNAME = new QName("http://EJB/", "attackResponse");
-    private final static QName _InizializationCombat_QNAME = new QName("http://EJB/", "inizialization_combat");
-    private final static QName _InizializationCombatResponse_QNAME = new QName("http://EJB/", "inizialization_combatResponse");
+    private final static QName _Defense_QNAME = new QName("http://EJB/", "defense");
+    private final static QName _DefenseResponse_QNAME = new QName("http://EJB/", "defenseResponse");
+    private final static QName _Heals_QNAME = new QName("http://EJB/", "heals");
+    private final static QName _HealsResponse_QNAME = new QName("http://EJB/", "healsResponse");
+    private final static QName _InizializationCombat_QNAME = new QName("http://EJB/", "inizializationCombat");
+    private final static QName _InizializationCombatResponse_QNAME = new QName("http://EJB/", "inizializationCombatResponse");
+    private final static QName _Leave_QNAME = new QName("http://EJB/", "leave");
+    private final static QName _LeaveResponse_QNAME = new QName("http://EJB/", "leaveResponse");
     private final static QName _Personaggio_QNAME = new QName("http://EJB/", "personaggio");
     private final static QName _RemoveCombat_QNAME = new QName("http://EJB/", "removeCombat");
     private final static QName _RemoveCombatResponse_QNAME = new QName("http://EJB/", "removeCombatResponse");
     private final static QName _ReturnFight_QNAME = new QName("http://EJB/", "returnFight");
     private final static QName _ReturnFightResponse_QNAME = new QName("http://EJB/", "returnFightResponse");
+    private final static QName _Winner_QNAME = new QName("http://EJB/", "winner");
+    private final static QName _WinnerResponse_QNAME = new QName("http://EJB/", "winnerResponse");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: ejb
@@ -58,6 +66,38 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link Defense }
+     * 
+     */
+    public Defense createDefense() {
+        return new Defense();
+    }
+
+    /**
+     * Create an instance of {@link DefenseResponse }
+     * 
+     */
+    public DefenseResponse createDefenseResponse() {
+        return new DefenseResponse();
+    }
+
+    /**
+     * Create an instance of {@link Heals }
+     * 
+     */
+    public Heals createHeals() {
+        return new Heals();
+    }
+
+    /**
+     * Create an instance of {@link HealsResponse }
+     * 
+     */
+    public HealsResponse createHealsResponse() {
+        return new HealsResponse();
+    }
+
+    /**
      * Create an instance of {@link InizializationCombat }
      * 
      */
@@ -71,6 +111,22 @@ public class ObjectFactory {
      */
     public InizializationCombatResponse createInizializationCombatResponse() {
         return new InizializationCombatResponse();
+    }
+
+    /**
+     * Create an instance of {@link Leave }
+     * 
+     */
+    public Leave createLeave() {
+        return new Leave();
+    }
+
+    /**
+     * Create an instance of {@link LeaveResponse }
+     * 
+     */
+    public LeaveResponse createLeaveResponse() {
+        return new LeaveResponse();
     }
 
     /**
@@ -114,6 +170,22 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link Winner }
+     * 
+     */
+    public Winner createWinner() {
+        return new Winner();
+    }
+
+    /**
+     * Create an instance of {@link WinnerResponse }
+     * 
+     */
+    public WinnerResponse createWinnerResponse() {
+        return new WinnerResponse();
+    }
+
+    /**
      * Create an instance of {@link Fight }
      * 
      */
@@ -148,6 +220,58 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Defense }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link Defense }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://EJB/", name = "defense")
+    public JAXBElement<Defense> createDefense(Defense value) {
+        return new JAXBElement<Defense>(_Defense_QNAME, Defense.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link DefenseResponse }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link DefenseResponse }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://EJB/", name = "defenseResponse")
+    public JAXBElement<DefenseResponse> createDefenseResponse(DefenseResponse value) {
+        return new JAXBElement<DefenseResponse>(_DefenseResponse_QNAME, DefenseResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Heals }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link Heals }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://EJB/", name = "heals")
+    public JAXBElement<Heals> createHeals(Heals value) {
+        return new JAXBElement<Heals>(_Heals_QNAME, Heals.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link HealsResponse }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link HealsResponse }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://EJB/", name = "healsResponse")
+    public JAXBElement<HealsResponse> createHealsResponse(HealsResponse value) {
+        return new JAXBElement<HealsResponse>(_HealsResponse_QNAME, HealsResponse.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link InizializationCombat }{@code >}
      * 
      * @param value
@@ -155,7 +279,7 @@ public class ObjectFactory {
      * @return
      *     the new instance of {@link JAXBElement }{@code <}{@link InizializationCombat }{@code >}
      */
-    @XmlElementDecl(namespace = "http://EJB/", name = "inizialization_combat")
+    @XmlElementDecl(namespace = "http://EJB/", name = "inizializationCombat")
     public JAXBElement<InizializationCombat> createInizializationCombat(InizializationCombat value) {
         return new JAXBElement<InizializationCombat>(_InizializationCombat_QNAME, InizializationCombat.class, null, value);
     }
@@ -168,9 +292,35 @@ public class ObjectFactory {
      * @return
      *     the new instance of {@link JAXBElement }{@code <}{@link InizializationCombatResponse }{@code >}
      */
-    @XmlElementDecl(namespace = "http://EJB/", name = "inizialization_combatResponse")
+    @XmlElementDecl(namespace = "http://EJB/", name = "inizializationCombatResponse")
     public JAXBElement<InizializationCombatResponse> createInizializationCombatResponse(InizializationCombatResponse value) {
         return new JAXBElement<InizializationCombatResponse>(_InizializationCombatResponse_QNAME, InizializationCombatResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Leave }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link Leave }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://EJB/", name = "leave")
+    public JAXBElement<Leave> createLeave(Leave value) {
+        return new JAXBElement<Leave>(_Leave_QNAME, Leave.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link LeaveResponse }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link LeaveResponse }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://EJB/", name = "leaveResponse")
+    public JAXBElement<LeaveResponse> createLeaveResponse(LeaveResponse value) {
+        return new JAXBElement<LeaveResponse>(_LeaveResponse_QNAME, LeaveResponse.class, null, value);
     }
 
     /**
@@ -236,6 +386,32 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://EJB/", name = "returnFightResponse")
     public JAXBElement<ReturnFightResponse> createReturnFightResponse(ReturnFightResponse value) {
         return new JAXBElement<ReturnFightResponse>(_ReturnFightResponse_QNAME, ReturnFightResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Winner }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link Winner }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://EJB/", name = "winner")
+    public JAXBElement<Winner> createWinner(Winner value) {
+        return new JAXBElement<Winner>(_Winner_QNAME, Winner.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link WinnerResponse }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link WinnerResponse }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://EJB/", name = "winnerResponse")
+    public JAXBElement<WinnerResponse> createWinnerResponse(WinnerResponse value) {
+        return new JAXBElement<WinnerResponse>(_WinnerResponse_QNAME, WinnerResponse.class, null, value);
     }
 
 }

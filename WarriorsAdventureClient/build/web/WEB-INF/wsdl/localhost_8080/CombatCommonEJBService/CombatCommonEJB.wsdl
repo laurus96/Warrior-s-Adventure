@@ -4,17 +4,17 @@
 <xsd:import namespace="http://EJB/" schemaLocation="http://localhost:8080/CombatCommonEJBService/CombatCommonEJB?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="inizialization_combat">
-<part name="parameters" element="tns:inizialization_combat"/>
+<message name="inizializationCombat">
+<part name="parameters" element="tns:inizializationCombat"/>
 </message>
-<message name="inizialization_combatResponse">
-<part name="parameters" element="tns:inizialization_combatResponse"/>
+<message name="inizializationCombatResponse">
+<part name="parameters" element="tns:inizializationCombatResponse"/>
 </message>
-<message name="removeCombat">
-<part name="parameters" element="tns:removeCombat"/>
+<message name="leave">
+<part name="parameters" element="tns:leave"/>
 </message>
-<message name="removeCombatResponse">
-<part name="parameters" element="tns:removeCombatResponse"/>
+<message name="leaveResponse">
+<part name="parameters" element="tns:leaveResponse"/>
 </message>
 <message name="returnFight">
 <part name="parameters" element="tns:returnFight"/>
@@ -22,33 +22,73 @@
 <message name="returnFightResponse">
 <part name="parameters" element="tns:returnFightResponse"/>
 </message>
+<message name="winner">
+<part name="parameters" element="tns:winner"/>
+</message>
+<message name="winnerResponse">
+<part name="parameters" element="tns:winnerResponse"/>
+</message>
+<message name="heals">
+<part name="parameters" element="tns:heals"/>
+</message>
+<message name="healsResponse">
+<part name="parameters" element="tns:healsResponse"/>
+</message>
+<message name="removeCombat">
+<part name="parameters" element="tns:removeCombat"/>
+</message>
+<message name="removeCombatResponse">
+<part name="parameters" element="tns:removeCombatResponse"/>
+</message>
 <message name="attack">
 <part name="parameters" element="tns:attack"/>
 </message>
 <message name="attackResponse">
 <part name="parameters" element="tns:attackResponse"/>
 </message>
+<message name="defense">
+<part name="parameters" element="tns:defense"/>
+</message>
+<message name="defenseResponse">
+<part name="parameters" element="tns:defenseResponse"/>
+</message>
 <portType name="CombatCommonEJB">
-<operation name="inizialization_combat">
-<input wsam:Action="http://EJB/CombatCommonEJB/inizialization_combatRequest" message="tns:inizialization_combat"/>
-<output wsam:Action="http://EJB/CombatCommonEJB/inizialization_combatResponse" message="tns:inizialization_combatResponse"/>
+<operation name="inizializationCombat">
+<input wsam:Action="http://EJB/CombatCommonEJB/inizializationCombatRequest" message="tns:inizializationCombat"/>
+<output wsam:Action="http://EJB/CombatCommonEJB/inizializationCombatResponse" message="tns:inizializationCombatResponse"/>
 </operation>
-<operation name="removeCombat">
-<input wsam:Action="http://EJB/CombatCommonEJB/removeCombatRequest" message="tns:removeCombat"/>
-<output wsam:Action="http://EJB/CombatCommonEJB/removeCombatResponse" message="tns:removeCombatResponse"/>
+<operation name="leave">
+<input wsam:Action="http://EJB/CombatCommonEJB/leaveRequest" message="tns:leave"/>
+<output wsam:Action="http://EJB/CombatCommonEJB/leaveResponse" message="tns:leaveResponse"/>
 </operation>
 <operation name="returnFight">
 <input wsam:Action="http://EJB/CombatCommonEJB/returnFightRequest" message="tns:returnFight"/>
 <output wsam:Action="http://EJB/CombatCommonEJB/returnFightResponse" message="tns:returnFightResponse"/>
 </operation>
+<operation name="winner">
+<input wsam:Action="http://EJB/CombatCommonEJB/winnerRequest" message="tns:winner"/>
+<output wsam:Action="http://EJB/CombatCommonEJB/winnerResponse" message="tns:winnerResponse"/>
+</operation>
+<operation name="heals">
+<input wsam:Action="http://EJB/CombatCommonEJB/healsRequest" message="tns:heals"/>
+<output wsam:Action="http://EJB/CombatCommonEJB/healsResponse" message="tns:healsResponse"/>
+</operation>
+<operation name="removeCombat">
+<input wsam:Action="http://EJB/CombatCommonEJB/removeCombatRequest" message="tns:removeCombat"/>
+<output wsam:Action="http://EJB/CombatCommonEJB/removeCombatResponse" message="tns:removeCombatResponse"/>
+</operation>
 <operation name="attack">
 <input wsam:Action="http://EJB/CombatCommonEJB/attackRequest" message="tns:attack"/>
 <output wsam:Action="http://EJB/CombatCommonEJB/attackResponse" message="tns:attackResponse"/>
 </operation>
+<operation name="defense">
+<input wsam:Action="http://EJB/CombatCommonEJB/defenseRequest" message="tns:defense"/>
+<output wsam:Action="http://EJB/CombatCommonEJB/defenseResponse" message="tns:defenseResponse"/>
+</operation>
 </portType>
 <binding name="CombatCommonEJBPortBinding" type="tns:CombatCommonEJB">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="inizialization_combat">
+<operation name="inizializationCombat">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -57,7 +97,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="removeCombat">
+<operation name="leave">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -75,7 +115,43 @@
 <soap:body use="literal"/>
 </output>
 </operation>
+<operation name="winner">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="heals">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="removeCombat">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
 <operation name="attack">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="defense">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

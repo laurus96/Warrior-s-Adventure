@@ -40,6 +40,8 @@ public class ObjectFactory {
     private final static QName _FindByIDResponse_QNAME = new QName("http://EJB/", "findByIDResponse");
     private final static QName _FindCharacter_QNAME = new QName("http://EJB/", "findCharacter");
     private final static QName _FindCharacterResponse_QNAME = new QName("http://EJB/", "findCharacterResponse");
+    private final static QName _FineDuello_QNAME = new QName("http://EJB/", "fineDuello");
+    private final static QName _FineDuelloResponse_QNAME = new QName("http://EJB/", "fineDuelloResponse");
     private final static QName _Giocatore_QNAME = new QName("http://EJB/", "giocatore");
     private final static QName _InsertPersonaggio_QNAME = new QName("http://EJB/", "insertPersonaggio");
     private final static QName _InsertPersonaggioResponse_QNAME = new QName("http://EJB/", "insertPersonaggioResponse");
@@ -188,6 +190,22 @@ public class ObjectFactory {
      */
     public FindCharacterResponse createFindCharacterResponse() {
         return new FindCharacterResponse();
+    }
+
+    /**
+     * Create an instance of {@link FineDuello }
+     * 
+     */
+    public FineDuello createFineDuello() {
+        return new FineDuello();
+    }
+
+    /**
+     * Create an instance of {@link FineDuelloResponse }
+     * 
+     */
+    public FineDuelloResponse createFineDuelloResponse() {
+        return new FineDuelloResponse();
     }
 
     /**
@@ -508,6 +526,32 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://EJB/", name = "findCharacterResponse")
     public JAXBElement<FindCharacterResponse> createFindCharacterResponse(FindCharacterResponse value) {
         return new JAXBElement<FindCharacterResponse>(_FindCharacterResponse_QNAME, FindCharacterResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link FineDuello }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link FineDuello }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://EJB/", name = "fineDuello")
+    public JAXBElement<FineDuello> createFineDuello(FineDuello value) {
+        return new JAXBElement<FineDuello>(_FineDuello_QNAME, FineDuello.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link FineDuelloResponse }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link FineDuelloResponse }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://EJB/", name = "fineDuelloResponse")
+    public JAXBElement<FineDuelloResponse> createFineDuelloResponse(FineDuelloResponse value) {
+        return new JAXBElement<FineDuelloResponse>(_FineDuelloResponse_QNAME, FineDuelloResponse.class, null, value);
     }
 
     /**

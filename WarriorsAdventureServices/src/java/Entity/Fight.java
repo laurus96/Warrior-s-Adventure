@@ -27,77 +27,68 @@ public class Fight {
     }
     
     public String attacca(Personaggio attack){
-        int crit = 1 + ram.nextInt(19);
-        int danni = 2 * crit * (attack.getStrenght() / 100);
-        
-        System.out.println("Crit: " + crit);
-        System.out.println(attack.getStrenght() / 100);
-        System.out.println("Danni: " + danni);
-        System.out.println(a.getName() + "ha: " + a.getVitality());
-        System.out.println(b.getName() + "ha: " + b.getVitality());
-
-        
+        int crit = 1 + ram.nextInt(14);
+        int danni = crit * (attack.getStrenght() / 50);
         
         if(attack.getId() == a.getId()){
             //Attacca A
             if(this.dif_b){
-                danni = danni - ((b.getDefense() / 100) * 50);
+                danni = danni - ((b.getDefense() / 10) * 2);
                 this.dif_b = false;
             }
             b.setVitality(b.getVitality() - danni);
-            if(b.getVitality() <= 0){
-                return a.getId() + "";
+        
+            if(crit >= 12){
+                return "</br> <b> " + b.getName() + "</b> ha subito: <b>" + danni + "</b> danni, con un colpo critico, la sua vitalità è scesa a: <b>" + b.getVitality() + "</b>";
+                
             }
-            
-            if(crit >= 15){
-                return b.getName() + " ha subito: " + danni + " danni, con un colpo critico, la sua vitalità è scesa a: " + b.getVitality();
-            }
-            return b.getName() + " ha subito: " + danni + " danni, la sua vitalità è scesa a: " + b.getVitality();
+            return "</br> <b> " + b.getName() + "</b> ha subito: <b>" + danni + "</b> danni, la sua vitalità è scesa a: <b>" + b.getVitality() + "</b>";
             
             
         }else if(attack.getId() == b.getId()){
             //Attacca B
             if(this.dif_a){
-                danni = danni - ((a.getDefense() / 100) * 50);
+                danni = danni - ((a.getDefense() / 10) * 2);
                 this.dif_a = false;
             }
             a.setVitality(a.getVitality() - danni);
-            if(a.getVitality() <= 0){
-                return b.getId() + "";
+
+            if(crit >= 12){
+                return "</br> <b> " + a.getName() + "</b> ha subito: <b>" + danni + "</b> danni, con un colpo critico, la sua vitalità è scesa a: <b>" + a.getVitality() + "</b>";
             }
-            if(crit >= 15){
-                return a.getName() + " ha subito: " + danni + " danni, con un colpo critico, la sua vitalità è scesa a: " + a.getVitality();
-            }
-            return a.getName() + " ha subito: " + danni + " danni, la sua vitalità è scesa a: " + a.getVitality();
+            return "</br> <b> " + a.getName() + "</b> ha subito: <b>" + danni + "</b> danni, la sua vitalità è scesa a: <b>" + a.getVitality() + "</b>";
         }
         
         return "Scarano";
         
     }
     
-    public void difesa(Personaggio defense){
+    public String difesa(Personaggio defense){
         
         if(defense.getId() == a.getId()){
             this.dif_a = true;
+            return "</br> <b> " + a.getName() + "</b> si prepara a difendersi per il prossimo attacco";
         }
         
         else if(defense.getId() == b.getId()){
             this.dif_b = true;
+            return "</br> <b> " + b.getName() + "</b> si prepara a difendersi per il prossimo attacco";
         }
         
+        return "Scarano";
     }
     
     public String cura(Personaggio cura){
-        int pv_cura = (cura.getVitality() / 100) * 10;
+        int pv_cura = (cura.getVitality() / 50) * 10;
         
         if(cura.getId() == a.getId()){
             a.setVitality(a.getVitality() + pv_cura);
-            return a.getName() + " ha recuperato: " + pv_cura + " punti vita";
+            return "</br> <b> " + a.getName() + "</b> ha recuperato:  <b>" + pv_cura + "</b> punti vita";
         }
         
         else if(cura.getId() == b.getId()){
             b.setVitality(b.getVitality() + pv_cura);
-            return b.getName() + " ha recuperato: " + pv_cura + " punti vita";
+            return "</br> <b> " + b.getName() + "</b> ha recuperato: <b> " + pv_cura + "</b> punti vita";
         }
         
         return "Scarano";
@@ -105,15 +96,27 @@ public class Fight {
     
     public String fuga(Personaggio fuga){
         if(fuga.getId() == a.getId()){
-            return b.getId() + "";
+            a.setVitality(0);
+            return "</br> <b> " + a.getName() + "</b> abbandona lo scontro";
         }
         
         else if(fuga.getId() == b.getId()){
-            return a.getId() + "";
+            b.setVitality(0);
+            return "</br> <b> " + b.getName() + "</b> abbandona lo scontro";
         }
         
         return "Scarano";
         
+    }
+    
+    public Long verifyWinner(){
+        if(a.getVitality() <= 0){
+            return b.getId();
+        }else if (b.getVitality() <=0){
+            return a.getId();
+        }
+        
+        return -1L;
     }
     
 }

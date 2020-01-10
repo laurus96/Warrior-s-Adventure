@@ -32,4 +32,6 @@ public interface PersonaggioEJBRemote {
     Personaggio boughtWeapon(Personaggio p, Arma weapon);
     Personaggio boughtArmor(Personaggio p, Armatura armor);
     
+    void fineDuello(Personaggio winner);
+    
 }
