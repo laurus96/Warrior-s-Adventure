@@ -25,13 +25,15 @@
                 <%}%>
             <%}%>
          
-        <%String login = (String) session.getAttribute("login");
+
+            
+        <div>
+            <h1>Login</h1> 
+            <%String login = (String) session.getAttribute("login");
             if(login != null){
                 if(login.compareTo("FAIL") == 0){
                     session.removeAttribute("login");%>
-                        <script>
-                            alert("Username o Password errate");
-                        </script>    
+                    <p id="login">Username o Password errate</p>       
                 <%}
                 if(login.compareTo("BAN") == 0){
                     session.removeAttribute("login");%>
@@ -40,9 +42,6 @@
                         </script>    
                 <%}%>
             <%}%>
-            
-        <div>
-            <h1>Login</h1> 
             <form action="LoginServlet" method="post">
                 <input type="text" placeholder="Username" name="username" required><br>
                 

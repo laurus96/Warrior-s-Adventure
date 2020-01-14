@@ -135,7 +135,7 @@ public class DatabasePopulator {
         }
                 
         player1 = new Giocatore("laurus96", "metin@Server1", "lorenzo.cocchinone@gmail.com");
-        player2 = new Giocatore("tempesta59", "metin@Server1", "giuseppe9909@gmail.com");
+        player2 = new Giocatore("tempesta59", "ciao", "giuseppe9909@gmail.com");
         ban = new Giocatore("DeBanPlayer", "metin@Server1", "DeBanPlayer@gmail.com" );
         ban.setBan(true);
                 
