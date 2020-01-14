@@ -19,21 +19,6 @@
 
     </head>
 <body>
-    <%String status = (String) session.getAttribute("status_c");
-            if(status != null){
-                session.removeAttribute("status_c");
-                if(status.compareTo("DP_NA") == 0){%>
-                        <script>
-                            alert("Hai già il massimo dei personaggi");
-                        </script>
-                    <%}
-                if(status.compareTo("PASS") == 0){%>
-                        <script>
-                            alert("Personaggio creato");
-                        </script>
-                    <%}%>
-            <%}%>
-
     <div class="usemlo">
         <h1 class="username">${player.username}</h1>
         <h1 class="email">${player.email}</h1> 
@@ -54,6 +39,17 @@
             <a class="a2"><b>Tornei:</b> (Presto disponibile)</a>
             <a class="a3"><b>Il gioco non dispone della funzione di autosalvataggio, ricordati di salvare !</b></a>
         </div>
+
+        <%String status = (String) session.getAttribute("status_c");
+        if(status != null){
+            session.removeAttribute("status_c");
+            if(status.compareTo("DP_NA") == 0){%>-->
+                <p id="login" class="ing_alert">Limite massimo di personaggi raggiunto.</p>  
+            <%}
+            if(status.compareTo("PASS") == 0){%>-->
+                <p id="login" class="ing_alert">Personaggio correttamente creato.</p> 
+            <%}%>
+        <%}%>
     </div> 
 
     <!-- The Modal -->

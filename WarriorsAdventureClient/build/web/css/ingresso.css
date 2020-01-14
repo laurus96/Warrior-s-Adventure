@@ -6,7 +6,6 @@ html,body{
 
     height: 13%;
 }
-
 .username{
     float: left;
     margin-top: -10px;
@@ -38,9 +37,10 @@ html,body{
     background-color: black;
     color: white;
 }
-
-
 .div1{
+    border-style: solid;
+    border-color: red;
+
     float: left;
     height: 70%;
     width: 40%;
@@ -51,6 +51,18 @@ html,body{
 
     text-align: center;
     
+}
+.ing_alert{
+    position: absolute;
+    top: -15%;
+    left: -20%;
+    width: 400px;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    
+    font-weight: bolder;
+    font-size: large;
+    color: red;
 }
 .b1{
     position: absolute;

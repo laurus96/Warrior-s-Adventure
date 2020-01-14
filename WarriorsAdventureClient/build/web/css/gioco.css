@@ -1,6 +1,19 @@
 html,body{
     height: 100%;
     font-family: sans-serif;}
+
+.save_alert{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 400px;
+    margin-right: 0%;
+    transform: translate(-50%, -50%);
+    
+    font-weight: bolder;
+    font-size: large;
+    color: red;
+}
 /*----------------------------------
 Div Definition
 --------------------------------*/
@@ -80,8 +93,7 @@ Ussa Object
     font-size: 20px;}
 .logout:hover{
     background-color: black;
-    color: white;
-}
+    color: white;}
 .save{
     
     position: absolute;
@@ -95,14 +107,10 @@ Ussa Object
     border-style: solid;
     border-color: black;
 
-    font-size: 20px;
-    
-}
-
+    font-size: 20px;}
 .save:hover{
     background-color: black;
-    color: white;
-}
+    color: white;}
 .saldo{
     margin: auto;
     float: right;}
@@ -130,8 +138,7 @@ fight Object
 
     font-size: large;
 
-    overflow: scroll;
-}
+    overflow: scroll;}
 /*----------------------------------
 onpl Object
 --------------------------------*/
@@ -226,6 +233,20 @@ market Object
 .tdmarket{
         text-align: left;
         padding-left: 10px;}
+.market_alert{
+    text-align: center;
+
+    font-weight: bolder;
+    font-size: large;
+    color: red;
+
+    margin: 10px;
+
+    width: 18%;
+
+    position: absolute;
+    top: 650px;
+}
 /*----------------------------------
 buttonlist Object
 --------------------------------*/
@@ -242,8 +263,7 @@ buttonlist Object
     font-size: 20px;
     font-weight: bold;
 
-    float: left;
-}
+    float: left;}
 .actionbuttonsx:disabled{
     border-radius: 5px;
     border-style: solid;
@@ -257,8 +277,7 @@ buttonlist Object
     font-size: 20px;
     font-weight: bold;
 
-    float: left;
-}
+    float: left;}
 .actionbuttondx{
     border-radius: 5px;
     border-style: solid;
@@ -273,8 +292,7 @@ buttonlist Object
     font-size: 20px;
     font-weight: bold;
     
-    float: left;
-}
+    float: left;}
 .actionbuttondx:disabled{
     border-radius: 5px;
     border-style: solid;
@@ -289,16 +307,13 @@ buttonlist Object
     font-size: 20px;
     font-weight: bold;
     
-    float: left;
-}
+    float: left;}
 .actionbuttondx:hover{
     background-color: black;
-    color: white;
-}
+    color: white;}
 .actionbuttonsx:hover{
     background-color: black;
-    color: white;
-}
+    color: white;}
 /*----------------------------------
 Stats Object
 --------------------------------*/
