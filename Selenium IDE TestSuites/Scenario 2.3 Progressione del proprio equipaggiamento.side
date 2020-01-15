@@ -1,0 +1,130 @@
+{
+  "id": "e92749bb-273f-4399-9d3b-1beeb42d1a6b",
+  "version": "2.0",
+  "name": "Scenario 2.3 Progressione del proprio equipaggiamento:",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "e0a4fe08-b7b5-4271-afa0-1bfed0a066e3",
+    "name": "Scenario 2.4",
+    "commands": [{
+      "id": "92bec2fc-d08a-404a-89d5-3c0c4cde4caa",
+      "comment": "",
+      "command": "open",
+      "target": "/WarriorsAdventureClient/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a9728d16-c798-4a11-8406-c74f2db3bd6c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ae6e3428-9706-4da8-a214-706fbe9f11da",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "pippo89"
+    }, {
+      "id": "b5384745-7407-41ec-940f-96c5ed69cefe",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "metin@Server1"
+    }, {
+      "id": "4f234e57-bc03-4e32-8cb9-4b15cb712fdf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//input[@value='Gioca']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "250a397d-34e6-4fd3-9f9e-8afc3fc07354",
+      "comment": "",
+      "command": "click",
+      "target": "css=.b3",
+      "targets": [
+        ["css=.b3", "css:finder"],
+        ["xpath=//input[@value='Nome: Tersan, Livello: 7, Classe: Cavaliere']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "28ab3328-eb54-4e48-8802-3eeb7d08cde8",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(3) .marketbutton",
+      "targets": [
+        ["css=tr:nth-child(3) .marketbutton", "css:finder"],
+        ["xpath=(//input[@value='Compra'])[3]", "xpath:attributes"],
+        ["xpath=//tr[3]/td[2]/form/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4af4ba41-5cda-4396-8c7a-d3120818c222",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//p[@id='login']", "xpath:attributes"],
+        ["xpath=//div[7]/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Acquisto effettuato.')]", "xpath:innerText"]
+      ],
+      "value": "Acquisto"
+    }, {
+      "id": "42ffbcd3-2649-424d-9617-ccaa2e233c80",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=tr:nth-child(4) b",
+      "targets": [
+        ["css=tr:nth-child(4) b", "css:finder"],
+        ["xpath=//tr[4]/td/b", "xpath:position"],
+        ["xpath=//b[contains(.,'Arma: Ascia, Lv: 7, +42 a Forza')]", "xpath:innerText"]
+      ],
+      "value": "Forza"
+    }, {
+      "id": "3feddad3-8db0-4d6e-91c0-4c5eba90a26a",
+      "comment": "",
+      "command": "assert",
+      "target": "Acquisto",
+      "targets": [],
+      "value": "Acquisto effettuato."
+    }, {
+      "id": "2d60adb8-a87c-45ac-b60e-351be6ad3299",
+      "comment": "",
+      "command": "assert",
+      "target": "Forza",
+      "targets": [],
+      "value": "Arma: Ascia, Lv: 7, +42 a Forza"
+    }]
+  }],
+  "suites": [{
+    "id": "cc63062a-f68e-46d3-9be4-d9222f0fb09f",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e0a4fe08-b7b5-4271-afa0-1bfed0a066e3"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}

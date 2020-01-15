@@ -2432,6 +2432,101 @@
       "targets": [],
       "value": "Utente bannato, impossibile accedere."
     }]
+  }, {
+    "id": "095b2be1-c3c4-4616-bb9b-96a08d21fb76",
+    "name": "TC 10.2.0 Salvataggio Effettuato",
+    "commands": [{
+      "id": "1f8f080e-d43b-44ce-9882-523486d7ebce",
+      "comment": "",
+      "command": "open",
+      "target": "/WarriorsAdventureClient/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "76088a3c-981a-49c5-8234-6d6c9802d8b7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f92fb14b-8029-495e-8f64-d52ef8fa77ca",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Laurus96"
+    }, {
+      "id": "818bc6b3-4212-4844-b128-2a40a4f4e11a",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "metin@Server1"
+    }, {
+      "id": "c0bbb888-e3d4-442c-9e46-83449c29da64",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//input[@value='Gioca']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2d5c3c87-0bac-4bd3-b9e5-9ca236864ad5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.b3",
+      "targets": [
+        ["css=.b3", "css:finder"],
+        ["xpath=//input[@value='Nome: Lithia, Livello: 1, Classe: Paladino']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2f3cf5ef-cbe6-4756-a78f-d014371be2fa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.save",
+      "targets": [
+        ["css=.save", "css:finder"],
+        ["xpath=//input[@value='Salvataggio']", "xpath:attributes"],
+        ["xpath=//form[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1fe567b4-cc8b-49e0-a286-0442ae635698",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//p[@id='login']", "xpath:attributes"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Salvataggio correttamente effettuato.')]", "xpath:innerText"]
+      ],
+      "value": "Risultato"
+    }, {
+      "id": "26f5757f-419d-4420-96f6-4b4b860b8bfb",
+      "comment": "",
+      "command": "assert",
+      "target": "Risultato",
+      "targets": [],
+      "value": "Salvataggio correttamente effettuato."
+    }]
   }],
   "suites": [{
     "id": "f687a141-2b7d-4201-8ba2-53afceeedbfd",
@@ -2492,6 +2587,13 @@
   }, {
     "id": "acf41a1a-1b17-4130-a60d-a798a3c34111",
     "name": "Rimozione Account",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }, {
+    "id": "a4c985b8-3e0c-463e-b43e-8b194fb1a1ee",
+    "name": "Salvataggio dei progressi",
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
