@@ -28,13 +28,6 @@
         -->
         <script src="javascript/combatScript.js"></script>
         
-        
-
-        
-
-
-
-
     </head>
     <body>
         <div class="ussa">
@@ -42,25 +35,22 @@
             <form action="LogoutServlet", method="post">
                 <input type="submit" value="Logout" class="logout">
             </form>
-            <%String status_save = (String) session.getAttribute("status_save");
-            if(status_save != null){
-                session.removeAttribute("status_save");
-                if(status_save.compareTo("FAIL") == 0){%>
-                        <script>
-                            alert("Salvataggio non effettuato");
-                        </script>
-                    <%}
-                if(status_save.compareTo("PASS") == 0){
-                    session.removeAttribute("status_save");%>
-                        <script>
-                            alert("Salvataggio effettuato correttamente");
-                        </script>
-                    <%}%>
-            <%}%>
             <form action="SaveServlet", method="post">
                 <input type="submit" value="Salvataggio" class="save">
             </form>
             <h1 class="saldo">Saldo: ${character.gold} G</h1>
+
+            <%String status_save = (String) session.getAttribute("status_save");
+            if(status_save != null){
+                session.removeAttribute("status_save");
+                if(status_save.compareTo("FAIL") == 0){%>-->
+                    <p id="login" class="save_alert">Salvataggio non effettuato.</p>  
+                <%}
+                if(status_save.compareTo("PASS") == 0){
+                    session.removeAttribute("status_save");%>
+                    <p id="login" class="save_alert">Salvataggio correttamente effettuato.</p> 
+                <%}%>
+            <%}%>
         </div>
         <div class="fight">
             <h1 class="logcombat">Log Combattimento:</h1>
@@ -92,21 +82,6 @@
             </div>
         </div>
         <div class="market">
-            <%String status = (String) session.getAttribute("status_bought");
-            if(status != null){
-                session.removeAttribute("status_bought");
-                if(status.compareTo("FAIL") == 0){%>
-                        <script>
-                            alert("Saldo insufficiente o hai già acquistato questo oggetto");
-                        </script>
-                    <%}
-                if(status.compareTo("PASS") == 0){
-                    session.removeAttribute("status_bought");%>
-                        <script>
-                            alert("Acquisto effettuato");
-                        </script>
-                    <%}%>
-            <%}%>
             <h1 class="markettitle"> Mercato:</h1>
             <div class="marketlist">
                 <table class="markettable">
@@ -116,6 +91,17 @@
                     <tr><td class="td">Scudo LV5 <b>200G</b></td><td><form action=""><input class="marketbutton" type="button" value="Compra"></form></td></tr>
                     -->
                 </table>
+                <%String status = (String) session.getAttribute("status_bought");
+                if(status != null){
+                    session.removeAttribute("status_bought");
+                    if(status.compareTo("FAIL") == 0){%>-->
+                        <p id="login" valign="bottom" class="market_alert">Saldo insufficiente o oggetto già acquistato.</p> 
+                    <%}
+                if(status.compareTo("PASS") == 0){
+                    session.removeAttribute("status_bought");%>-->
+                    <p id="login" class="market_alert">Acquisto effettuato.</p> 
+                    <%}%>
+                <%}%>
             </div>
         </div>
         <div class="buttonlist">

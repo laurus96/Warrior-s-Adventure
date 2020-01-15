@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,42 +15,6 @@
     </head>
     <body>  
         <div>
-            <%String status = (String) session.getAttribute("status");
-            if(status != null){
-                session.removeAttribute("status");
-                if(status.compareTo("FE_UN") == 0){%>
-                        <script>
-                            alert("Formato username non valido. L'username deve contenere solo lettere e numeri e deve essere compreso tra 5 e 20.");
-                        </script>
-                    <%}
-                if(status.compareTo("FE_PW") == 0){%>
-                        <script>
-                            alert("Formato password non valido. La password deve contenere un carattere maiuscolo, un carattere speciale e almeno un numero e il tutto compreso tra 8 e 16 caratteri. ");
-                        </script>
-                    <%}
-                if(status.compareTo("FE_EM") == 0){%>
-                        <script>
-                            alert("Formato email non valido");
-                        </script>
-                    <%}
-                if(status.compareTo("DE_UN") == 0){%>
-                        <script>
-                            alert("Username già utilizzato");
-                        </script>
-                    <%}
-                if(status.compareTo("DE_EM") == 0){%>
-                        <script>
-                            alert("Email già utilizzata");
-                        </script>
-                    <%}
-                if(status.compareTo("PW_MS") == 0){%>
-                        <script>
-                            alert("Le password non corrispondono");
-                        </script>
-                    <%}
-                }%>
-
-            
             <h1>Registrazione</h1> 
             <form action="RegistrationServlet" method="post">
                 <input type="text" placeholder="Username" name="username" required><br>
@@ -63,7 +28,28 @@
                 
                 <input class="button" type="submit" value="Registrati"><br>
             </form>
+            <%String status = (String) session.getAttribute("status");
+            if(status != null){
+                session.removeAttribute("status");
+                if(status.compareTo("FE_UN") == 0){%>
+                    <p id="login" class="login_alert_reg">L'username deve contenere solo lettere e numeri e deve essere compreso tra 5 e 20 caratteri.</p>   
+                <%}
+                if(status.compareTo("FE_PW") == 0){%>
+                    <p id="login" class="login_alert_reg">La password deve contenere un carattere maiuscolo, un carattere speciale e almeno un numero e il tutto compreso tra 8 e 16 caratteri.</p> 
+                <%}
+                if(status.compareTo("FE_EM") == 0){%>
+                    <p id="login" class="login_alert_reg">Formato email non valido.</p> 
+                <%}
+                if(status.compareTo("DE_UN") == 0){%>
+                    <p id="login" class="login_alert_reg">Username già utilizzato.</p> 
+                <%}
+                if(status.compareTo("DE_EM") == 0){%>
+                    <p id="login" class="login_alert_reg">Email già utilizzata.</p> 
+                <%}
+                if(status.compareTo("PW_MS") == 0){%>
+                    <p id="login" class="login_alert_reg">Le password non corrispondono.</p> 
+                <%}
+            }%>
         </div>
-        
     </body>
 </html>

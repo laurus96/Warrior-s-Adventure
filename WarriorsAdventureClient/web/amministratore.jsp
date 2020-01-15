@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <jsp:useBean id="ammin" class="ejb.Amministratore"></jsp:useBean>
 
 <!DOCTYPE html>
@@ -20,49 +21,6 @@
 
     </head>
     <body>
-        <%String status_ban = (String) session.getAttribute("status_ban");
-            if(status_ban != null){
-                if(status_ban.compareTo("ER_BAN") == 0){
-                    session.removeAttribute("status_ban");%>
-                        <script>
-                            alert("Giocatore non bannato");
-                        </script>    
-                <%}
-                if(status_ban.compareTo("BAN_OK") == 0){
-                    session.removeAttribute("status_ban");%>
-                        <script>
-                            alert("Giocatore bannato");
-                        </script>    
-                <%}%>
-            <%}%>
-            
-            <%String status_unban = (String) session.getAttribute("status_unban");
-            if(status_unban != null){
-                if(status_unban.compareTo("ER_BAN") == 0){
-                    session.removeAttribute("status_unban");%>
-                        <script>
-                            alert("Impossibile eiminare il ban");
-                        </script>    
-                <%}
-                if(status_unban.compareTo("BAN_OK") == 0){
-                    session.removeAttribute("status_unban");%>
-                        <script>
-                            alert("Ban al giocatore eliminato");
-                        </script>    
-                <%}%>
-            <%}%>
-        
-            <%String status_rm = (String) session.getAttribute("status_rm");
-            if(status_rm != null){
-                if(status_rm.compareTo("PASS") == 0){
-                    session.removeAttribute("status_rm");%>
-                        <script>
-                            alert("Giocatore Rimosso");
-                        </script>    
-                <%}%>
-            <%}%>
-
-        
         <div class="tp">
             <div class="usdiv">
                 <h1 class="username">${amministratore.username}</h1>
@@ -81,7 +39,25 @@
                 </table> 
                 <input class="buttonBanList" type="button" id="b3" value="Visualizza Giocatori Bannati">
                 
-
+                <%String status_ban = (String) session.getAttribute("status_ban");
+                if(status_ban != null){
+                    if(status_ban.compareTo("ER_BAN") == 0){
+                        session.removeAttribute("status_ban");%>
+                        <p id="login" class="admin_alert">Giocatore non bannato.</p>  
+                    <%}
+                    if(status_ban.compareTo("BAN_OK") == 0){
+                        session.removeAttribute("status_ban");%>
+                            <p id="login" class="admin_alert">Giocatore bannato.</p>  
+                    <%}%>
+                <%}%>
+            
+                <%String status_rm = (String) session.getAttribute("status_rm");
+                if(status_rm != null){
+                    if(status_rm.compareTo("PASS") == 0){
+                        session.removeAttribute("status_rm");%>
+                            <p id="login" class="admin_alert">Giocatore rimosso.</p>
+                    <%}%>
+                <%}%>
             </div>
         </div>
         <!-- The Modal -->
@@ -95,6 +71,17 @@
                     <tr><td class="name">Funzionalita presto disponibile</td></tr>
                     -->
                 </table>
+                <%String status_unban = (String) session.getAttribute("status_unban");
+                if(status_unban != null){
+                    if(status_unban.compareTo("ER_BAN") == 0){
+                        session.removeAttribute("status_unban");%>-->
+                            <p id="login" class="modal_alert">Impossibile eliminare il ban.</p>  
+                    <<%}
+                    if(status_unban.compareTo("BAN_OK") == 0){
+                        session.removeAttribute("status_unban");%>-->
+                            <p id="login" class="modal_alert">Ban al giocatore eliminato.</p>
+                    <%}%>
+                <%}%>
             </div>
         </div>
 
