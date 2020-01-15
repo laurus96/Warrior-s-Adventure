@@ -9,7 +9,7 @@ $(document).ready(function (){
        var x = 0;
        
        for(x in object){
-            var online = "<tr><td class=\"td\">" + object[x].name + "</td><td>\n\
+            var online = "<tr><td class=\"td\">" + object[x].name +" Lv:"+ object[x].livello + "</td><td>\n\
                         <form action=\"NotifyServlet\" method=\"post\">\n\
                         <input class=\"fightbutton\" type=\"hidden\" value=\"" + object[x].id + "\" name=\"id_enemy\">\n\
                         <input class=\"fightbutton\" type=\"submit\" value=\"Fight\">\n\
