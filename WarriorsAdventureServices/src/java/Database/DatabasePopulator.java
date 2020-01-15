@@ -63,6 +63,7 @@ public class DatabasePopulator {
     private Giocatore player1;
     private Giocatore player2;
     private Giocatore player3;
+    private Giocatore player4;
     private Giocatore ban;
         
     private Amministratore am1;
@@ -139,20 +140,31 @@ public class DatabasePopulator {
         player1 = new Giocatore("laurus96", "metin@Server1", "lorenzo.cocchinone@gmail.com");
         player2 = new Giocatore("tempesta59", "metin@Server1", "giuseppe9909@gmail.com");
         player3 = new Giocatore("cipollino26", "metin@Server1", "cipolinno90@gmail.com");
+        player4 = new Giocatore("pippo89", "metin@Server1", "pluto@gmail.com" );
+        
+        
         ban = new Giocatore("fagottino", "metin@Server1", "DeBanPlayer@gmail.com" );
         ban.setBan(true);
                 
         playerejb.insertPlayer(player1);
         playerejb.insertPlayer(player2);
         playerejb.insertPlayer(player3);
+        playerejb.insertPlayer(player4);
         playerejb.insertPlayer(ban);
         
         
         characterejb.createCharacter("Lithia", "Paladino", player1);
+        characterejb.createCharacter("Marion", "Guerriero", player2);
+        
         Personaggio povero = new Personaggio("Cipolla", "Guerriero", player3.getUsername());
         povero.setGold(50);
         characterejb.insertPersonaggio(povero);
-        characterejb.createCharacter("Marion", "Guerriero", player2);
+        
+        Personaggio test = new Personaggio("Tersan", "Cavaliere", player4.getUsername());
+        test.setLivello(7);
+        test.setGold(12800);
+        characterejb.insertPersonaggio(test);
+        
         
         am1 = new Amministratore("laurus", "metin@Server1");
         am2 = new Amministratore("tempesta58","metin@Server1");
