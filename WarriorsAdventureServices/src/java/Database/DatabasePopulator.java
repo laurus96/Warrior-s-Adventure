@@ -14,6 +14,7 @@ import Entity.Amministratore;
 import Entity.Arma;
 import Entity.Armatura;
 import Entity.Giocatore;
+import Entity.Personaggio;
 import java.util.ArrayList;
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
@@ -61,6 +62,7 @@ public class DatabasePopulator {
     
     private Giocatore player1;
     private Giocatore player2;
+    private Giocatore player3;
     private Giocatore ban;
         
     private Amministratore am1;
@@ -135,15 +137,21 @@ public class DatabasePopulator {
         }
                 
         player1 = new Giocatore("laurus96", "metin@Server1", "lorenzo.cocchinone@gmail.com");
-        player2 = new Giocatore("tempesta59", "ciao", "giuseppe9909@gmail.com");
-        ban = new Giocatore("DeBanPlayer", "metin@Server1", "DeBanPlayer@gmail.com" );
+        player2 = new Giocatore("tempesta59", "metin@Server1", "giuseppe9909@gmail.com");
+        player3 = new Giocatore("cipollino26", "metin@Server1", "cipolinno90@gmail.com");
+        ban = new Giocatore("fagottino", "metin@Server1", "DeBanPlayer@gmail.com" );
         ban.setBan(true);
                 
         playerejb.insertPlayer(player1);
         playerejb.insertPlayer(player2);
+        playerejb.insertPlayer(player3);
         playerejb.insertPlayer(ban);
         
+        
         characterejb.createCharacter("Lithia", "Paladino", player1);
+        Personaggio povero = new Personaggio("Cipolla", "Guerriero", player3.getUsername());
+        povero.setGold(50);
+        characterejb.insertPersonaggio(povero);
         characterejb.createCharacter("Marion", "Guerriero", player2);
         
         am1 = new Amministratore("laurus", "metin@Server1");

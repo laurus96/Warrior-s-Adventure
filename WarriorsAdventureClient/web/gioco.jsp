@@ -94,11 +94,11 @@
                 <%String status = (String) session.getAttribute("status_bought");
                 if(status != null){
                     session.removeAttribute("status_bought");
-                    if(status.compareTo("FAIL") == 0){%>-->
+                    if(status.compareTo("FAIL") == 0){%>
                         <p id="login" valign="bottom" class="market_alert">Saldo insufficiente o oggetto già acquistato.</p> 
                     <%}
                 if(status.compareTo("PASS") == 0){
-                    session.removeAttribute("status_bought");%>-->
+                    session.removeAttribute("status_bought");%>
                     <p id="login" class="market_alert">Acquisto effettuato.</p> 
                     <%}%>
                 <%}%>
@@ -114,7 +114,7 @@
             <h1 class="statstitle"> Statistiche:</h1>
             <div class="statslist">
                 <table class="statstable">
-                    <tr><td class="td"><b>Punti vita base: ${character.baseVit},   Punti Vita: ${character.vitality} </b></td></tr>
+                    <tr><td class="td"><b>Punti Vita base: ${character.baseVit},   Punti Vita: ${character.vitality} </b></td></tr>
                     <tr><td class="td"><b>Punti Forza base: ${character.baseStr},   Forza ${character.strenght} </b></td></tr>
                     <tr><td class="td"><b>Punti Difesa base: ${character.baseDef},   Difesa: ${character.defense}</b></td></tr>
                     <tr><td class="td"><b>Arma: ${character.arma}, Lv: ${character.weaponLv}, +${character.weaponStr} a Forza</b></td></tr>

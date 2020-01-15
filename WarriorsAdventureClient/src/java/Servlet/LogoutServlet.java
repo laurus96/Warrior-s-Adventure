@@ -46,9 +46,15 @@ public class LogoutServlet extends HttpServlet {
             
             Personaggio update_character = (Personaggio) session.getAttribute("character");
             
-            updatePersonaggio(update_character);
+            if(update_character != null){
+                updatePersonaggio(update_character);
+            }
             
-            removePlayer((Giocatore) session.getAttribute("player"));
+            Giocatore online = (Giocatore) session.getAttribute("player");
+            
+            if(online != null){
+                removePlayer(online);
+            }
             
             session.invalidate(); 
 

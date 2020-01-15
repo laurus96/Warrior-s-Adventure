@@ -58,6 +58,18 @@
                             <p id="login" class="admin_alert">Giocatore rimosso.</p>
                     <%}%>
                 <%}%>
+                
+                <%String status_unban = (String) session.getAttribute("status_unban");
+                if(status_unban != null){
+                    if(status_unban.compareTo("ER_BAN") == 0){
+                        session.removeAttribute("status_unban");%>
+                        <p id="login" class="admin_alert">Impossibile eliminare il ban.</p>  
+                    <<%}
+                    if(status_unban.compareTo("BAN_OK") == 0){
+                        session.removeAttribute("status_unban");%>
+                        <p id="login" class="admin_alert">Ban al giocatore eliminato.</p>
+                    <%}%>
+                <%}%>
             </div>
         </div>
         <!-- The Modal -->
@@ -71,17 +83,7 @@
                     <tr><td class="name">Funzionalita presto disponibile</td></tr>
                     -->
                 </table>
-                <%String status_unban = (String) session.getAttribute("status_unban");
-                if(status_unban != null){
-                    if(status_unban.compareTo("ER_BAN") == 0){
-                        session.removeAttribute("status_unban");%>-->
-                            <p id="login" class="modal_alert">Impossibile eliminare il ban.</p>  
-                    <<%}
-                    if(status_unban.compareTo("BAN_OK") == 0){
-                        session.removeAttribute("status_unban");%>-->
-                            <p id="login" class="modal_alert">Ban al giocatore eliminato.</p>
-                    <%}%>
-                <%}%>
+
             </div>
         </div>
 
