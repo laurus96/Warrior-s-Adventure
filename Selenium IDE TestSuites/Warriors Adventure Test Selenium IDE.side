@@ -1590,7 +1590,7 @@
         ["xpath=//input[@name='username']", "xpath:attributes"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "Laurus96"
+      "value": "banana"
     }, {
       "id": "5f736042-61e9-405f-ab2a-b8c746c336c8",
       "comment": "",
@@ -2159,21 +2159,21 @@
     "id": "31d02322-377d-4db8-b1e0-22578bfbec92",
     "name": "TC 8.2.0 UnBan Giocatore",
     "commands": [{
-      "id": "2c1d8205-e840-420f-a0e1-b2ebefb36022",
+      "id": "96716ac4-3c06-4377-882e-8b765b2b4175",
       "comment": "",
       "command": "open",
       "target": "/WarriorsAdventureClient/",
       "targets": [],
       "value": ""
     }, {
-      "id": "365e130f-aff7-494f-aa0e-df2cf6910ae9",
+      "id": "919ef6d7-8c67-4148-a986-6f99c81f8455",
       "comment": "",
       "command": "setWindowSize",
       "target": "1936x1056",
       "targets": [],
       "value": ""
     }, {
-      "id": "b92ea3e6-0a05-4c08-b13b-410d6493264c",
+      "id": "4ccb1373-16cc-4483-87b5-df04c1caa64f",
       "comment": "",
       "command": "type",
       "target": "name=username",
@@ -2185,7 +2185,7 @@
       ],
       "value": "Tempesta58"
     }, {
-      "id": "eb44a579-c100-41c8-a4ef-301857391db1",
+      "id": "16594b26-bb5f-47eb-b34e-6f1dc169c3ed",
       "comment": "",
       "command": "type",
       "target": "name=password",
@@ -2197,7 +2197,7 @@
       ],
       "value": "metin@Server1"
     }, {
-      "id": "391f8c56-dfc7-484f-a8dc-3820bdbbf572",
+      "id": "f218b226-624c-4305-a47c-66e09a1b6c98",
       "comment": "",
       "command": "click",
       "target": "css=.button",
@@ -2208,7 +2208,7 @@
       ],
       "value": ""
     }, {
-      "id": "dea67961-adf7-4ad7-acce-e4d22b579e88",
+      "id": "4944acbd-ac7c-4c3f-9979-cc74b12a6ef2",
       "comment": "",
       "command": "click",
       "target": "id=b3",
@@ -2220,37 +2220,31 @@
       ],
       "value": ""
     }, {
-      "id": "fa750444-bc5d-4019-8436-0b77dd948752",
+      "id": "5516ae18-f725-46c4-a530-a30a5a65575a",
       "comment": "",
       "command": "click",
-      "target": "css=tr:nth-child(2) input:nth-child(2)",
+      "target": "css=.table2 input:nth-child(2)",
       "targets": [
-        ["css=tr:nth-child(2) input:nth-child(2)", "css:finder"],
+        ["css=.table2 input:nth-child(2)", "css:finder"],
         ["xpath=//input[@value='Rimuovi BAN']", "xpath:attributes"],
         ["xpath=//div[@id='myModal']/div/table/tr/td[2]/form/input[2]", "xpath:idRelative"],
         ["xpath=//div[2]/div/table/tr/td[2]/form/input[2]", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "2c48eb6a-68e6-4590-a58d-e5a4ce85d048",
+      "id": "abe3683b-be72-4796-a5df-6631d706d46d",
       "comment": "",
       "command": "storeText",
       "target": "id=login",
-      "targets": [
-        ["id=login", "id"],
-        ["css=#login", "css:finder"],
-        ["xpath=//p[@id='login']", "xpath:attributes"],
-        ["xpath=//p", "xpath:position"],
-        ["xpath=//p[contains(.,'Ban al giocatore eliminato.')]", "xpath:innerText"]
-      ],
+      "targets": [],
       "value": "Risultato"
     }, {
-      "id": "f63c3f6f-16cb-47af-b8f1-fd08fa7abbe0",
+      "id": "66b5a8a4-b795-4392-8a75-013a5b9b7d39",
       "comment": "",
-      "command": "assert",
-      "target": "Risultato",
+      "command": "echo",
+      "target": "${Risultato}",
       "targets": [],
-      "value": "Ban al giocatore eliminato."
+      "value": ""
     }]
   }, {
     "id": "f5f9ad77-9099-4749-98e5-2d9f1bcc953c",
