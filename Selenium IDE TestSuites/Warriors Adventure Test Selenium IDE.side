@@ -2523,75 +2523,40 @@
     }]
   }],
   "suites": [{
-    "id": "f687a141-2b7d-4201-8ba2-53afceeedbfd",
-    "name": "Registrazione TestSuite",
+    "id": "87593468-78ad-472d-859e-406fd6d3ffa6",
+    "name": "Presentation Logic TestSuites",
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["c76701b6-2e8d-4f02-a571-b19dfbc07ee4", "19150e44-df85-4c76-b8cc-26c4817a8a77", "6bee1ae7-d496-428f-aa54-3fd72ce84fc1", "9e4153e7-e1de-409d-87cf-ec6340a8ba0c", "a138cc1a-597e-4b29-aa8f-79eb38ebcf50", "456a3a8f-51dd-4b78-b5d5-aaf9376ca5af", "d8b255fe-2cee-4151-92ff-a8d3da33b356"]
+    "tests": ["c76701b6-2e8d-4f02-a571-b19dfbc07ee4", "19150e44-df85-4c76-b8cc-26c4817a8a77", "6bee1ae7-d496-428f-aa54-3fd72ce84fc1", "9e4153e7-e1de-409d-87cf-ec6340a8ba0c", "a138cc1a-597e-4b29-aa8f-79eb38ebcf50", "456a3a8f-51dd-4b78-b5d5-aaf9376ca5af", "d8b255fe-2cee-4151-92ff-a8d3da33b356", "9af35348-0c62-4f28-9b2d-95f68c3feb6c", "20d45443-4c7d-451f-a692-89ab51efae10", "c8ec1bd2-1f74-45bf-bb77-a9514b6396c8"]
   }, {
-    "id": "144a28f7-f221-463f-8274-23d9dfa93c1e",
-    "name": "Login TestSuite",
-    "persistSession": false,
-    "parallel": false,
-    "timeout": 300,
-    "tests": ["c8ec1bd2-1f74-45bf-bb77-a9514b6396c8", "9af35348-0c62-4f28-9b2d-95f68c3feb6c", "20d45443-4c7d-451f-a692-89ab51efae10"]
-  }, {
-    "id": "95354bb9-a44b-4256-8b06-869c01fd9529",
-    "name": "Mercato TestSuite",
+    "id": "f98c6053-5d05-4a4f-b73e-9b15260086db",
+    "name": "Market Logic TestSuites",
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
     "tests": ["08911fc0-012f-4657-ae88-69f283acf7ee", "7777463d-dea5-488b-ad64-bb8300176e27", "8f2e7a11-30b9-4998-9219-f20b628ef302"]
   }, {
-    "id": "3a54e223-c423-411b-8b72-3e52793e41dd",
-    "name": "Creazione Personaggio TestSuite",
+    "id": "49617531-1039-460c-93b2-8b375e1fee2e",
+    "name": "Administration Logic TestSuites",
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["49153b87-5780-409d-b123-12d69f4b2622", "d7fc280f-6561-419b-9d05-e326a8870ebf", "b8c3a2c5-a547-458f-a57a-68b9b774aa5c"]
+    "tests": ["f5f9ad77-9099-4749-98e5-2d9f1bcc953c", "31d02322-377d-4db8-b1e0-22578bfbec92", "49633d76-312d-4451-af9f-ce80e5011020", "c19b6529-e34b-47a1-a74b-201d1cd6e0ac"]
   }, {
-    "id": "1b458ab0-617c-4185-8926-9145da9191e4",
-    "name": "Visualizzazione Statistiche TestSuite",
+    "id": "5348aa0d-4de6-45b4-81d5-c1b841703ca3",
+    "name": "Character Logic TestSuites",
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": []
+    "tests": ["095b2be1-c3c4-4616-bb9b-96a08d21fb76", "49153b87-5780-409d-b123-12d69f4b2622", "d7fc280f-6561-419b-9d05-e326a8870ebf", "b8c3a2c5-a547-458f-a57a-68b9b774aa5c"]
   }, {
-    "id": "d78047a0-0cb8-438e-a6c3-5d95f35d5432",
-    "name": "Ban Giocatore",
+    "id": "9fbf07d8-05be-4229-b852-b0926245af0b",
+    "name": "UI Logic TestSuites",
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["c19b6529-e34b-47a1-a74b-201d1cd6e0ac"]
-  }, {
-    "id": "b051527a-c144-475d-870f-0140d36f6d53",
-    "name": "unBan Giocatore TestSuite",
-    "persistSession": false,
-    "parallel": false,
-    "timeout": 300,
-    "tests": []
-  }, {
-    "id": "d535feae-6a2c-4e7c-ab40-bffdec5082ff",
-    "name": "Lista Giocatori Bannati",
-    "persistSession": false,
-    "parallel": false,
-    "timeout": 300,
-    "tests": ["49633d76-312d-4451-af9f-ce80e5011020"]
-  }, {
-    "id": "acf41a1a-1b17-4130-a60d-a798a3c34111",
-    "name": "Rimozione Account",
-    "persistSession": false,
-    "parallel": false,
-    "timeout": 300,
-    "tests": []
-  }, {
-    "id": "a4c985b8-3e0c-463e-b43e-8b194fb1a1ee",
-    "name": "Salvataggio dei progressi",
-    "persistSession": false,
-    "parallel": false,
-    "timeout": 300,
-    "tests": []
+    "tests": ["1575f0f1-6773-4b61-9158-3697d57a736b", "d95f0fab-7b89-4832-a727-6f9bc904affa"]
   }],
   "urls": ["http://localhost:8080/"],
   "plugins": []

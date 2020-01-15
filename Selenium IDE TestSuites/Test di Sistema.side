@@ -1,0 +1,348 @@
+{
+  "id": "d1e7819d-462a-4a62-b45d-7418740e3227",
+  "version": "2.0",
+  "name": "Test di Sistema",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "18e61a97-4159-4a70-9299-1eba837f3b68",
+    "name": "Test di sistema",
+    "commands": [{
+      "id": "59ce5732-d35d-454e-9237-f07a8453f560",
+      "comment": "",
+      "command": "open",
+      "target": "/WarriorsAdventureClient/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eed992e8-4081-4f3b-b584-fc6107938071",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dbb219bd-2742-4c9c-b267-c2abdb9828ee",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Non hai un account ? Registrati ora...",
+      "targets": [
+        ["linkText=Non hai un account ? Registrati ora...", "linkText"],
+        ["css=a", "css:finder"],
+        ["xpath=//a[contains(text(),'Non hai un account ? Registrati ora...')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'registration.jsp')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Non hai un account ? Registrati ora...')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a78f3836-005f-4192-89a4-8b602e20233e",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1128dd02-49c5-4faa-8c25-2fb03c8564d1",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pullmino89"
+    }, {
+      "id": "c0bac627-53c7-41c4-9bde-f533fddc3d97",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "07a5efaf-8fbc-41c0-b383-826e13e1057d",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "pullmino@gmail.com"
+    }, {
+      "id": "39b23caf-15ef-46f4-a18d-7c2a7034181e",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ead55a56-4609-477d-aaf0-2c147fcf608d",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(5)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "metin@Server1"
+    }, {
+      "id": "470a1586-8988-474a-a3a6-d8f70123a46c",
+      "comment": "",
+      "command": "click",
+      "target": "name=repassword",
+      "targets": [
+        ["name=repassword", "name"],
+        ["css=input:nth-child(7)", "css:finder"],
+        ["xpath=//input[@name='repassword']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "856d7dc8-258a-4363-a82b-5267898ec4f4",
+      "comment": "",
+      "command": "type",
+      "target": "name=repassword",
+      "targets": [
+        ["name=repassword", "name"],
+        ["css=input:nth-child(7)", "css:finder"],
+        ["xpath=//input[@name='repassword']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": "metin@Server1"
+    }, {
+      "id": "a6c0bf62-4fcb-4adc-88b0-9c050e7dda7d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//input[@value='Registrati']", "xpath:attributes"],
+        ["xpath=//input[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "417313a0-f38f-45dc-bb70-faa451c87b54",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pullmino89"
+    }, {
+      "id": "36069fd9-d276-46b0-ba32-8b4033b956e3",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "metin@Server1"
+    }, {
+      "id": "a195a43d-6eb8-4230-9306-89eee3d31da7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//input[@value='Gioca']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0a9543e5-a078-4cfd-b72c-4ebf96c71e2c",
+      "comment": "",
+      "command": "click",
+      "target": "id=b4",
+      "targets": [
+        ["id=b4", "id"],
+        ["css=#b4", "css:finder"],
+        ["xpath=//input[@id='b4']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e633248c-556e-4abe-a347-76577abb8c04",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.im3", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div[@id='myModal']/div/form/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f914f628-4a11-49d4-bb2f-849f32c6aa71",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.im3", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div[@id='myModal']/div/form/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/form/input", "xpath:position"]
+      ],
+      "value": "PullminoPAWS"
+    }, {
+      "id": "f58e115f-9b3a-4dee-96bb-bc0767407b48",
+      "comment": "",
+      "command": "click",
+      "target": "name=classe",
+      "targets": [
+        ["name=classe", "name"],
+        ["css=.im2", "css:finder"],
+        ["xpath=//select[@name='classe']", "xpath:attributes"],
+        ["xpath=//div[@id='myModal']/div/form/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2a5f75b8-5098-42ca-b2f8-2aa25e7d2799",
+      "comment": "",
+      "command": "select",
+      "target": "name=classe",
+      "targets": [],
+      "value": "label=Paladino"
+    }, {
+      "id": "e165ebc4-ac16-4290-8fc7-a98f77f5c735",
+      "comment": "",
+      "command": "click",
+      "target": "name=classe",
+      "targets": [
+        ["name=classe", "name"],
+        ["css=.im2", "css:finder"],
+        ["xpath=//select[@name='classe']", "xpath:attributes"],
+        ["xpath=//div[@id='myModal']/div/form/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa3caa5d-98e9-42f7-a3b9-7a6bc1e2415a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.im",
+      "targets": [
+        ["css=.im", "css:finder"],
+        ["xpath=//input[@value='Crea']", "xpath:attributes"],
+        ["xpath=//div[@id='myModal']/div/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0270893a-074c-4585-8b00-cf9a0ae07a92",
+      "comment": "",
+      "command": "click",
+      "target": "css=.b3",
+      "targets": [
+        ["css=.b3", "css:finder"],
+        ["xpath=//input[@value='Nome: PullminoPAWS, Livello: 1, Classe: Paladino']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f3bdff30-3219-4fef-9b32-3e6c76320ad4",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(1) .marketbutton",
+      "targets": [
+        ["css=tr:nth-child(1) .marketbutton", "css:finder"],
+        ["xpath=//input[@value='Compra']", "xpath:attributes"],
+        ["xpath=//div[5]/div/table/tr/td[2]/form/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "43144ee7-782d-44c8-ba76-ad746a5e8c0a",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(4) .marketbutton",
+      "targets": [
+        ["css=tr:nth-child(4) .marketbutton", "css:finder"],
+        ["xpath=(//input[@value='Compra'])[4]", "xpath:attributes"],
+        ["xpath=//tr[4]/td[2]/form/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "71adef59-2344-4f0d-8d50-f5f77ff29a43",
+      "comment": "",
+      "command": "click",
+      "target": "css=.save",
+      "targets": [
+        ["css=.save", "css:finder"],
+        ["xpath=//input[@value='Salvataggio']", "xpath:attributes"],
+        ["xpath=//form[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1099f924-a7f7-41bd-a78c-e554bb24d70f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.logout",
+      "targets": [
+        ["css=.logout", "css:finder"],
+        ["xpath=//input[@value='Logout']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "12cd2501-a3d3-4d6b-81ad-ceceb3e81be1",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Pullmino89"
+    }, {
+      "id": "33f22fbf-9f49-4712-b1cd-fb37edcde388",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "metin@Server1"
+    }]
+  }],
+  "suites": [{
+    "id": "238f56d2-70ce-479d-ab79-594625b6ff4b",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["18e61a97-4159-4a70-9299-1eba837f3b68"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}

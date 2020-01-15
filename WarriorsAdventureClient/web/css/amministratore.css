@@ -124,8 +124,8 @@ input:hover{
 
 .admin_alert{
     position: absolute;
-    top: -55%;
-    left: 64%;
+    top: 3%;
+    left: 55%;
     width: 400px;
     margin-right: 0%;
     transform: translate(-50%, -50%);

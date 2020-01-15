@@ -24,22 +24,7 @@
         <div class="tp">
             <div class="usdiv">
                 <h1 class="username">${amministratore.username}</h1>
-                <form action="LogoutServlet", method="post">
-                    <input type="submit" value="Logout" class="logout">
-                </form>
-            </div>
-            <div class="tablediv">
-                <a class="lista">Giocatori Registrati:</a>
-                <table class="table">
-                    <!--
-                    <tr><td class="name">Laurus</td><form action=""><td class="butd"><input type="button" value="Cancella"></td><td><input type="button" value="Promuovi (NI)"></td></form></tr>
-                    <tr><td class="name">ZeroRonin</td><form action=""><td class="butd"><input type="button" value="Cancella"></td><td><input type="button" value="Promuovi (NI)"></td></form></tr>
-                    <tr><td class="name">VitScar</td><form action=""><td class="butd"><input type="button" value="Cancella"></td><td><input type="button" value="Promuovi (NI)"></td></form></tr>
-                    -->
-                </table> 
-                <input class="buttonBanList" type="button" id="b3" value="Visualizza Giocatori Bannati">
-                
-                <%String status_ban = (String) session.getAttribute("status_ban");
+                            <%String status_ban = (String) session.getAttribute("status_ban");
                 if(status_ban != null){
                     if(status_ban.compareTo("ER_BAN") == 0){
                         session.removeAttribute("status_ban");%>
@@ -70,6 +55,21 @@
                         <p id="login" class="admin_alert">Ban al giocatore eliminato.</p>
                     <%}%>
                 <%}%>
+                <form action="LogoutServlet", method="post">
+                    <input type="submit" value="Logout" class="logout">
+                </form>
+            </div>
+            <div class="tablediv">
+                <a class="lista">Giocatori Registrati:</a>
+                <table class="table">
+                    <!--
+                    <tr><td class="name">Laurus</td><form action=""><td class="butd"><input type="button" value="Cancella"></td><td><input type="button" value="Promuovi (NI)"></td></form></tr>
+                    <tr><td class="name">ZeroRonin</td><form action=""><td class="butd"><input type="button" value="Cancella"></td><td><input type="button" value="Promuovi (NI)"></td></form></tr>
+                    <tr><td class="name">VitScar</td><form action=""><td class="butd"><input type="button" value="Cancella"></td><td><input type="button" value="Promuovi (NI)"></td></form></tr>
+                    -->
+                </table> 
+                <input class="buttonBanList" type="button" id="b3" value="Visualizza Giocatori Bannati">
+                
             </div>
         </div>
         <!-- The Modal -->
