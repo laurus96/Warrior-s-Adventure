@@ -13,13 +13,13 @@ import java.util.Random;
  */
 public class Fight {
     
-    Personaggio a;
-    Personaggio b;
+    private Personaggio a;
+    private Personaggio b;
     
-    Random ram = new Random();
+    private Random ram = new Random();
     
-    boolean dif_a = false;
-    boolean dif_b = false;
+    private boolean dif_a = false;
+    private boolean dif_b = false;
 
     public Fight(Personaggio a, Personaggio b) {
         this.a = a;

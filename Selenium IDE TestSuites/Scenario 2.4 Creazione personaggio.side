@@ -1,0 +1,177 @@
+{
+  "id": "5cd46079-023f-47d2-ab31-0b1341171e4a",
+  "version": "2.0",
+  "name": "Scenario 2.4 Creazione personaggio",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "e74a15d9-621c-4af4-96e7-bb996991b16b",
+    "name": "Scenario 2.4",
+    "commands": [{
+      "id": "0a697fc0-f9ae-4c95-b5d2-e517b7a14f72",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1040",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2047a886-92cb-46e3-a19c-7827dcb564ba",
+      "comment": "",
+      "command": "open",
+      "target": "/WarriorsAdventureClient/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c1e540dd-06c9-4021-85ea-3ed019498709",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Tempesta59"
+    }, {
+      "id": "48cd2bd3-19f0-4eab-927e-96fa079aaf79",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "metin@Server1"
+    }, {
+      "id": "3475af84-2c20-49d0-91ec-4e8681119645",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//input[@value='Gioca']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc14659f-ac6d-4d0e-8837-f7cfd6aff3ab",
+      "comment": "",
+      "command": "click",
+      "target": "id=b4",
+      "targets": [
+        ["id=b4", "id"],
+        ["css=#b4", "css:finder"],
+        ["xpath=//input[@id='b4']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3c24ba99-7348-4b21-a8d3-9cc907d8ca3c",
+      "comment": "",
+      "command": "click",
+      "target": "name=classe",
+      "targets": [
+        ["name=classe", "name"],
+        ["css=.im2", "css:finder"],
+        ["xpath=//select[@name='classe']", "xpath:attributes"],
+        ["xpath=//div[@id='myModal']/div/form/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "76ddc4d6-a5b7-483e-8070-4afc6fb27270",
+      "comment": "",
+      "command": "click",
+      "target": "name=classe",
+      "targets": [
+        ["name=classe", "name"],
+        ["css=.im2", "css:finder"],
+        ["xpath=//select[@name='classe']", "xpath:attributes"],
+        ["xpath=//div[@id='myModal']/div/form/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa82b1ea-f20b-4e08-bad2-972fe537b00c",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.im3", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div[@id='myModal']/div/form/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "94a54edf-47be-4d34-b515-4bb4466432c7",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.im3", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div[@id='myModal']/div/form/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/form/input", "xpath:position"]
+      ],
+      "value": "Istrut"
+    }, {
+      "id": "a405b7be-c828-400e-9967-20791ae870ed",
+      "comment": "",
+      "command": "click",
+      "target": "css=.im",
+      "targets": [
+        ["css=.im", "css:finder"],
+        ["xpath=//input[@value='Crea']", "xpath:attributes"],
+        ["xpath=//div[@id='myModal']/div/form/input[2]", "xpath:idRelative"],
+        ["xpath=//div/form/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c0ed05fb-78c8-4ca2-97a7-52e66d8e4ba9",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.b2",
+      "targets": [
+        ["css=.b2", "css:finder"],
+        ["xpath=//input[@value='Nome: Istrut, Livello: 1, Classe: Guerriero']", "xpath:attributes"],
+        ["xpath=//tr[2]/td/form/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "df05cc8c-1123-455b-8b83-3d5d617a030a",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//p[@id='login']", "xpath:attributes"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Personaggio correttamente creato.')]", "xpath:innerText"]
+      ],
+      "value": "Risultato"
+    }, {
+      "id": "e64a359b-b97a-43a8-bcaa-3d8bf11b9140",
+      "comment": "",
+      "command": "assert",
+      "target": "Risultato",
+      "targets": [],
+      "value": "Personaggio correttamente creato."
+    }]
+  }],
+  "suites": [{
+    "id": "ce66e903-ede5-4669-9c22-7249e34c736a",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e74a15d9-621c-4af4-96e7-bb996991b16b"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}

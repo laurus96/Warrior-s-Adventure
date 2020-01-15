@@ -22,7 +22,8 @@ $(document).ready(function(){
                 
             }
             if(limit < 1){
-                document.getElementById("b4").style.visibility = "hidden";
+                var elem = document.getElementById("b4");
+                elem.parentNode.removeChild(elem);
             }
     });
     

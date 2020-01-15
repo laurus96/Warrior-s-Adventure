@@ -10,6 +10,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Ingresso</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/ingresso.css">
         
@@ -43,11 +44,14 @@
         <%String status = (String) session.getAttribute("status_c");
         if(status != null){
             session.removeAttribute("status_c");
-            if(status.compareTo("DP_NA") == 0){%>-->
+            if(status.compareTo("L3C") == 0){%>
                 <p id="login" class="ing_alert">Limite massimo di personaggi raggiunto.</p>  
             <%}
-            if(status.compareTo("PASS") == 0){%>-->
+            if(status.compareTo("PASS") == 0){%>
                 <p id="login" class="ing_alert">Personaggio correttamente creato.</p> 
+            <%}
+            if(status.compareTo("FE_NA") == 0){%>
+                <p id="login" class="ing_alert">Il nome del personaggio può contenere solo lettere al suo interno.</p> 
             <%}%>
         <%}%>
     </div> 

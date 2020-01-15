@@ -1,0 +1,2598 @@
+{
+  "id": "022aeb12-ab71-4eee-a459-98b98f83bc6e",
+  "version": "2.0",
+  "name": "Warriors Adventure Test Selenium IDE",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "9af35348-0c62-4f28-9b2d-95f68c3feb6c",
+    "name": "TC 2.1.0 Login FAIL",
+    "commands": [{
+      "id": "a8c18cac-6fd5-4cba-81b7-b4aad81013a5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "347b0b3d-799c-4541-94da-93c6d94d519e",
+      "comment": "",
+      "command": "open",
+      "target": "/WarriorsAdventureClient/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0bc70ed3-ea73-4aef-8d36-0ec3f629d9c0",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Tempesa58"
+    }, {
+      "id": "a741644b-ccbf-4238-9faa-4c1343c25bdb",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "UnaPasswordErrata"
+    }, {
+      "id": "0bb62f76-0c73-4dd1-b730-ec2497d956de",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//input[@value='Gioca']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b3581d18-5d63-4217-8d0a-0ba2c910bd24",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//p[@id='login']", "xpath:attributes"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Username o Password errate.')]", "xpath:innerText"]
+      ],
+      "value": "Risultato"
+    }, {
+      "id": "af6b97c3-a8a1-4adc-a391-39d0498f2c81",
+      "comment": "",
+      "command": "echo",
+      "target": "${Risultato}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0914c1d3-1ae4-46c2-be6b-ca03c37e438f",
+      "comment": "",
+      "command": "assert",
+      "target": "Risultato",
+      "targets": [],
+      "value": "Username o Password errate."
+    }]
+  }, {
+    "id": "c8ec1bd2-1f74-45bf-bb77-a9514b6396c8",
+    "name": "TC 2.3.0 Login PASS",
+    "commands": [{
+      "id": "f8653bfe-fe85-458a-b0ad-9026d5c4f813",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5fa80b6a-37a5-4c70-a498-9341bf7f8bb9",
+      "comment": "",
+      "command": "open",
+      "target": "/WarriorsAdventureClient/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cbaf3940-7fee-4a96-ac72-41ab241fcd7d",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Laurus96"
+    }, {
+      "id": "0fc97313-f5aa-4906-a975-7794c1ce174d",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "metin@Server1"
+    }, {
+      "id": "aabc1361-3199-419f-9c60-b5c4fc4dc3ad",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//input[@value='Gioca']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "740d6311-5364-425d-a3eb-561705781097",
+      "comment": "",
+      "command": "pause",
+      "target": "500",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "84a387c5-57ae-49a8-9863-58a378917afb",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Ingresso",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "c76701b6-2e8d-4f02-a571-b19dfbc07ee4",
+    "name": "TC 1.1.0 Registrazione Username Fail",
+    "commands": [{
+      "id": "c938342c-fcca-4adc-b213-dab049107027",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4ad57c73-2aca-42d7-ad34-7f643a11a317",
+      "comment": "",
+      "command": "open",
+      "target": "/WarriorsAdventureClient/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "13e994b8-bd7e-497d-a93e-ca64c7f01120",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Non hai un account ? Registrati ora...",
+      "targets": [
+        ["linkText=Non hai un account ? Registrati ora...", "linkText"],
+        ["css=a", "css:finder"],
+        ["xpath=//a[contains(text(),'Non hai un account ? Registrati ora...')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'registration.jsp')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Non hai un account ? Registrati ora...')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a617c858-b9a5-4499-9878-d639d8ddd80d",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Tempesta59@"
+    }, {
+      "id": "d3f0c9ea-184e-4021-a600-c045ee609236",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "tempesta58@gmail.com"
+    }, {
+      "id": "37965c6d-6173-4c5e-b81e-e84b195cf7e4",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(5)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "metin@Server1"
+    }, {
+      "id": "356b01aa-8b3e-493d-bea8-068b73db415b",
+      "comment": "",
+      "command": "type",
+      "target": "name=repassword",
+      "targets": [
+        ["name=repassword", "name"],
+        ["css=input:nth-child(7)", "css:finder"],
+        ["xpath=//input[@name='repassword']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": "metin@Server1"
+    }, {
+      "id": "2e2f423f-6c96-47eb-a1c5-9968660afbde",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//input[@value='Registrati']", "xpath:attributes"],
+        ["xpath=//input[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "11d5cae9-c158-4ba6-8fa8-bd17f86b13b7",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//p[@id='login']", "xpath:attributes"],
+        ["xpath=//p", "xpath:position"]
+      ],
+      "value": "Risultato"
+    }, {
+      "id": "80d39751-6761-4417-a488-bbc3726b3a3a",
+      "comment": "",
+      "command": "assert",
+      "target": "Risultato",
+      "targets": [],
+      "value": "L'username deve contenere solo lettere e numeri e deve essere compreso tra 5 e 20 caratteri."
+    }]
+  }, {
+    "id": "19150e44-df85-4c76-b8cc-26c4817a8a77",
+    "name": "TC 1.1.1 Registrazione Password Fail",
+    "commands": [{
+      "id": "6ed68ac9-620b-448a-a592-fe2550e781d1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b31d2bd1-b320-4f60-8066-880c160d1393",
+      "comment": "",
+      "command": "open",
+      "target": "/WarriorsAdventureClient/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "76e6ae0c-48d2-491c-97d1-e6b038992d5e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Non hai un account ? Registrati ora...",
+      "targets": [
+        ["linkText=Non hai un account ? Registrati ora...", "linkText"],
+        ["css=a", "css:finder"],
+        ["xpath=//a[contains(text(),'Non hai un account ? Registrati ora...')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'registration.jsp')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Non hai un account ? Registrati ora...')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6aaf1bd4-fca8-4ae4-b3d0-0ffecb9b206a",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Tempesta60"
+    }, {
+      "id": "f201fa21-d7be-49fd-8eec-016d204ea962",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "tempesta58@gmail.com"
+    }, {
+      "id": "f1ce9996-7a37-4702-a2d6-d9ccf51d45a5",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(5)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "metin@"
+    }, {
+      "id": "44997d1d-c1a8-4cd8-9066-76fb9bef7047",
+      "comment": "",
+      "command": "type",
+      "target": "name=repassword",
+      "targets": [
+        ["name=repassword", "name"],
+        ["css=input:nth-child(7)", "css:finder"],
+        ["xpath=//input[@name='repassword']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": "metin@"
+    }, {
+      "id": "9fad664c-e878-42e9-875e-d021822b7e62",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//input[@value='Registrati']", "xpath:attributes"],
+        ["xpath=//input[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee0a1bcd-ee50-4917-a658-16c28bd46768",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//p[@id='login']", "xpath:attributes"],
+        ["xpath=//p", "xpath:position"]
+      ],
+      "value": "Risultato"
+    }, {
+      "id": "785101e2-fcbe-489a-bacf-029a058df9e1",
+      "comment": "",
+      "command": "assert",
+      "target": "Risultato",
+      "targets": [],
+      "value": "La password deve contenere un carattere maiuscolo, un carattere speciale e almeno un numero e il tutto compreso tra 8 e 16 caratteri."
+    }]
+  }, {
+    "id": "6bee1ae7-d496-428f-aa54-3fd72ce84fc1",
+    "name": "TC 1.1.2 Registrazione Email Fail",
+    "commands": [{
+      "id": "fa2c3b0e-c561-4576-aa67-a2389426701a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "effd3b85-a2b2-4412-9220-94d5ad33f04e",
+      "comment": "",
+      "command": "open",
+      "target": "/WarriorsAdventureClient/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4d4e73cf-abde-483e-bd59-c6b8292b40f8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Non hai un account ? Registrati ora...",
+      "targets": [
+        ["linkText=Non hai un account ? Registrati ora...", "linkText"],
+        ["css=a", "css:finder"],
+        ["xpath=//a[contains(text(),'Non hai un account ? Registrati ora...')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'registration.jsp')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Non hai un account ? Registrati ora...')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a280d080-e5a3-41d9-9bc2-138bb16ed45b",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Tempesta60"
+    }, {
+      "id": "2c9efc08-c6fc-4b80-85c1-b81ac437a8b2",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "tempesta58gmail.com"
+    }, {
+      "id": "3f75382a-4551-49ee-8db0-1ec9d9c8919c",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(5)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "metin@Server1"
+    }, {
+      "id": "a582be68-540d-4d6f-9a2b-0729e7ea70f3",
+      "comment": "",
+      "command": "type",
+      "target": "name=repassword",
+      "targets": [
+        ["name=repassword", "name"],
+        ["css=input:nth-child(7)", "css:finder"],
+        ["xpath=//input[@name='repassword']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": "metin@Server1"
+    }, {
+      "id": "3d0f0926-0508-4285-aa0e-0d7e51f4d5af",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//input[@value='Registrati']", "xpath:attributes"],
+        ["xpath=//input[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9582679f-8da8-4368-b064-553535ac4330",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//p[@id='login']", "xpath:attributes"],
+        ["xpath=//p", "xpath:position"]
+      ],
+      "value": "Risultato"
+    }, {
+      "id": "65b04ebb-029f-4994-839e-4db86b9eadf2",
+      "comment": "",
+      "command": "assert",
+      "target": "Risultato",
+      "targets": [],
+      "value": "Formato email non valido."
+    }]
+  }, {
+    "id": "9e4153e7-e1de-409d-87cf-ec6340a8ba0c",
+    "name": "TC 1.1.3 Registrazione Username già utilizzato",
+    "commands": [{
+      "id": "c9d5901c-04b0-4e4a-bfe1-1984820ff7e3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fe024e05-43e8-427f-ba55-5d7975c8c6b8",
+      "comment": "",
+      "command": "open",
+      "target": "/WarriorsAdventureClient/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "785d8e73-6527-4577-83cc-d9d68b8040fc",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Non hai un account ? Registrati ora...",
+      "targets": [
+        ["linkText=Non hai un account ? Registrati ora...", "linkText"],
+        ["css=a", "css:finder"],
+        ["xpath=//a[contains(text(),'Non hai un account ? Registrati ora...')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'registration.jsp')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Non hai un account ? Registrati ora...')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "421713ce-d756-4243-ad63-b96e59f0de6f",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Tempesta59"
+    }, {
+      "id": "9b49f264-f4bb-4e36-aa8f-67fade6e54c9",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "tempesta60@gmail.com"
+    }, {
+      "id": "493b81ff-e910-4f0f-949e-fff61041fd2e",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(5)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "metin@Server1"
+    }, {
+      "id": "649596f2-49ea-4218-9014-011bfa4a2365",
+      "comment": "",
+      "command": "type",
+      "target": "name=repassword",
+      "targets": [
+        ["name=repassword", "name"],
+        ["css=input:nth-child(7)", "css:finder"],
+        ["xpath=//input[@name='repassword']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": "metin@Server1"
+    }, {
+      "id": "11208d56-8997-4ecc-aa28-1aa3dcee871b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//input[@value='Registrati']", "xpath:attributes"],
+        ["xpath=//input[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a1623454-893f-498e-b6b9-acd8a83cbcb0",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//p[@id='login']", "xpath:attributes"],
+        ["xpath=//p", "xpath:position"]
+      ],
+      "value": "Risultato"
+    }, {
+      "id": "323f3b1f-c34a-4cf3-b2aa-070888b8343f",
+      "comment": "",
+      "command": "assert",
+      "target": "Risultato",
+      "targets": [],
+      "value": "Username già utilizzato."
+    }]
+  }, {
+    "id": "a138cc1a-597e-4b29-aa8f-79eb38ebcf50",
+    "name": "TC 1.1.4 Registrazione Email già utilizzata",
+    "commands": [{
+      "id": "41e5e022-64a7-47b2-9ca4-d0ed5cd5e56f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6f5ed54a-7cd6-427f-8bfd-0f5939e3961c",
+      "comment": "",
+      "command": "open",
+      "target": "/WarriorsAdventureClient/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f88b8c88-16e4-4319-b472-4b0753e7c66d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Non hai un account ? Registrati ora...",
+      "targets": [
+        ["linkText=Non hai un account ? Registrati ora...", "linkText"],
+        ["css=a", "css:finder"],
+        ["xpath=//a[contains(text(),'Non hai un account ? Registrati ora...')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'registration.jsp')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Non hai un account ? Registrati ora...')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6db1eacb-66a1-47a2-8d30-e6197758f8a4",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Tempesta60"
+    }, {
+      "id": "1e66be89-5d01-4320-a6b0-ab1084b2c4ea",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "giuseppe9909@gmail.com"
+    }, {
+      "id": "ace4b111-1a96-4dc8-b27b-8ee2a4817b25",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(5)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "metin@Server1"
+    }, {
+      "id": "8e07ec22-8e62-4f02-ba62-90c88cb36386",
+      "comment": "",
+      "command": "type",
+      "target": "name=repassword",
+      "targets": [
+        ["name=repassword", "name"],
+        ["css=input:nth-child(7)", "css:finder"],
+        ["xpath=//input[@name='repassword']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": "metin@Server1"
+    }, {
+      "id": "ea2adc31-662e-4d0d-ba3c-6f8cc552a1db",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//input[@value='Registrati']", "xpath:attributes"],
+        ["xpath=//input[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "431fbd62-b34e-4e74-9b3c-d06edffa5abb",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//p[@id='login']", "xpath:attributes"],
+        ["xpath=//p", "xpath:position"]
+      ],
+      "value": "Risultato"
+    }, {
+      "id": "73ef20d0-31e4-468d-aff8-0932eaca19e9",
+      "comment": "",
+      "command": "assert",
+      "target": "Risultato",
+      "targets": [],
+      "value": "Email già utilizzata."
+    }]
+  }, {
+    "id": "456a3a8f-51dd-4b78-b5d5-aaf9376ca5af",
+    "name": "TC 1.1.5 Registrazione Passwords Mismatch",
+    "commands": [{
+      "id": "e3012b29-a483-4866-b943-3fdc6dc6b252",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cf7eb795-f785-49e0-b3c6-1751cc674a55",
+      "comment": "",
+      "command": "open",
+      "target": "/WarriorsAdventureClient/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4496ba47-5770-4e78-bfb4-facfaf3bb381",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Non hai un account ? Registrati ora...",
+      "targets": [
+        ["linkText=Non hai un account ? Registrati ora...", "linkText"],
+        ["css=a", "css:finder"],
+        ["xpath=//a[contains(text(),'Non hai un account ? Registrati ora...')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'registration.jsp')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Non hai un account ? Registrati ora...')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee27000c-abaf-444b-8f2f-4868ecaa8b6e",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Tempesta60"
+    }, {
+      "id": "258cacfd-e21d-4497-a5d5-8ecf4aa79630",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Tempesta60@gmail.com"
+    }, {
+      "id": "2a47aa88-761a-448b-9496-d4bf5cb7fb67",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(5)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "metin@Server1"
+    }, {
+      "id": "93f8e327-c50a-41b5-bff2-9e484033d1a8",
+      "comment": "",
+      "command": "type",
+      "target": "name=repassword",
+      "targets": [
+        ["name=repassword", "name"],
+        ["css=input:nth-child(7)", "css:finder"],
+        ["xpath=//input[@name='repassword']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": "metin@Server2"
+    }, {
+      "id": "43bf50e1-7069-4d9a-8a9d-bde0786d6587",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//input[@value='Registrati']", "xpath:attributes"],
+        ["xpath=//input[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bf068cdc-fca4-464c-8a2f-c188b63bb37c",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//p[@id='login']", "xpath:attributes"],
+        ["xpath=//p", "xpath:position"]
+      ],
+      "value": "Risultato"
+    }, {
+      "id": "3add481d-adf5-4c29-a386-57cbf4778957",
+      "comment": "",
+      "command": "assert",
+      "target": "Risultato",
+      "targets": [],
+      "value": "Le password non corrispondono."
+    }]
+  }, {
+    "id": "d8b255fe-2cee-4151-92ff-a8d3da33b356",
+    "name": "TC 1.1.6 Registrazione PASS",
+    "commands": [{
+      "id": "bc27be36-2ba6-41b1-9ce4-be63b8931541",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1f434706-9454-4bf8-b5dc-fcf5c2bc1a0d",
+      "comment": "",
+      "command": "open",
+      "target": "/WarriorsAdventureClient/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "44a79079-a8ac-41ff-a1ef-94136bd6aaff",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Non hai un account ? Registrati ora...",
+      "targets": [
+        ["linkText=Non hai un account ? Registrati ora...", "linkText"],
+        ["css=a", "css:finder"],
+        ["xpath=//a[contains(text(),'Non hai un account ? Registrati ora...')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'registration.jsp')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Non hai un account ? Registrati ora...')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d74b0b2-b6cc-4bd0-a89b-a42b004eaccb",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Tempesta60"
+    }, {
+      "id": "89b534d6-948e-4885-bf8e-0328529f3c9a",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Tempesta60@gmail.com"
+    }, {
+      "id": "03f038cb-8a82-422a-9f32-757f4fafcc21",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(5)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "metin@Server1"
+    }, {
+      "id": "3ed19df6-a00d-4b03-9f38-ee8c935b9712",
+      "comment": "",
+      "command": "type",
+      "target": "name=repassword",
+      "targets": [
+        ["name=repassword", "name"],
+        ["css=input:nth-child(7)", "css:finder"],
+        ["xpath=//input[@name='repassword']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": "metin@Server1"
+    }, {
+      "id": "5fa3fdf6-feac-43d9-bb31-1a1098cb1f84",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//input[@value='Registrati']", "xpath:attributes"],
+        ["xpath=//input[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e751e5ba-a0eb-4764-9d75-46699bad132a",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//p[@id='login']", "xpath:attributes"],
+        ["xpath=//p", "xpath:position"]
+      ],
+      "value": "Risultato"
+    }, {
+      "id": "7566504d-8a49-4100-9148-99cfb7b9aa38",
+      "comment": "",
+      "command": "assert",
+      "target": "Risultato",
+      "targets": [],
+      "value": "Utente registrato correttamente."
+    }, {
+      "id": "e313d06a-f334-4d68-8c9f-48bdccb931d0",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Login",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "7777463d-dea5-488b-ad64-bb8300176e27",
+    "name": "TC 3.2.0 Acquisto Oggetto già acquistato",
+    "commands": [{
+      "id": "2105f10c-2707-4679-8d48-e02ff7b4f38b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "87c86a6d-0584-45da-a392-5c4b41f4e65f",
+      "comment": "",
+      "command": "open",
+      "target": "/WarriorsAdventureClient/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2a9d985e-dad8-49e5-bd8c-37d6b83ea6a1",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Laurus96"
+    }, {
+      "id": "2ee7cc59-a662-4bd4-bbc2-52f9272175bc",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "metin@Server1"
+    }, {
+      "id": "68d63fa2-1926-441b-9902-e1b29cecabc9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//input[@value='Gioca']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7d287db-960b-4b18-8bf6-901882fef514",
+      "comment": "",
+      "command": "click",
+      "target": "css=.b3",
+      "targets": [
+        ["css=.b3", "css:finder"],
+        ["xpath=//input[@value='Nome: Lithia, Livello: 1, Classe: Paladino']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d28914d-39e4-4ddf-a70e-f6b6af3f0e2a",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(1) .marketbutton",
+      "targets": [
+        ["css=tr:nth-child(1) .marketbutton", "css:finder"],
+        ["xpath=//input[@value='Compra']", "xpath:attributes"],
+        ["xpath=//div[5]/div/table/tr/td[2]/form/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "70a96c01-6720-4202-b909-f3f36166e0fa",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//p[@id='login']", "xpath:attributes"],
+        ["xpath=//div[7]/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Saldo insufficiente o oggetto già acquistato.')]", "xpath:innerText"]
+      ],
+      "value": "Risultato"
+    }, {
+      "id": "2b7a0147-0a38-4a2b-9291-2faa323041f8",
+      "comment": "",
+      "command": "assert",
+      "target": "Risultato",
+      "targets": [],
+      "value": "Acquisto effettuato."
+    }, {
+      "id": "596e9ac8-de77-49c6-a454-1c196df4bcc2",
+      "comment": "",
+      "command": "pause",
+      "target": "500",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "af8410c9-559e-4960-9071-3a61a199eec1",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(1) .marketbutton",
+      "targets": [
+        ["css=tr:nth-child(1) .marketbutton", "css:finder"],
+        ["xpath=//input[@value='Compra']", "xpath:attributes"],
+        ["xpath=//div[5]/div/table/tr/td[2]/form/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "759ec199-78cf-4226-8985-9072eb73058c",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//p[@id='login']", "xpath:attributes"],
+        ["xpath=//div[7]/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Saldo insufficiente o oggetto già acquistato.')]", "xpath:innerText"]
+      ],
+      "value": "Risultato"
+    }, {
+      "id": "a0d686cc-4d40-457b-8919-2a89a812c862",
+      "comment": "",
+      "command": "assert",
+      "target": "Risultato",
+      "targets": [],
+      "value": "Saldo insufficiente o oggetto già acquistato."
+    }]
+  }, {
+    "id": "08911fc0-012f-4657-ae88-69f283acf7ee",
+    "name": "TC 3.1.0 Acquisto Saldo Insufficiente",
+    "commands": [{
+      "id": "b8fc0dd9-59c8-482e-aa5c-84f934bb23ea",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "43fd7170-f5d2-4dbe-b248-f08b2c3e27a8",
+      "comment": "",
+      "command": "open",
+      "target": "/WarriorsAdventureClient/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "087861d3-3c3e-47d5-be3b-3e7f463438a5",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "cipollino26"
+    }, {
+      "id": "c925c635-857b-4c1e-95a3-961f22878ade",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "metin@Server1"
+    }, {
+      "id": "82029a6d-e41d-47f3-9328-087dc8cac02e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//input[@value='Gioca']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a9d0fd2e-50da-4531-90aa-77c2bc201f26",
+      "comment": "",
+      "command": "click",
+      "target": "css=.b3",
+      "targets": [
+        ["css=.b3", "css:finder"],
+        ["xpath=//input[@value='Nome: Lithia, Livello: 1, Classe: Paladino']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a9c1ca12-093d-43c4-8670-da695343fcad",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(1) .marketbutton",
+      "targets": [
+        ["css=tr:nth-child(1) .marketbutton", "css:finder"],
+        ["xpath=//input[@value='Compra']", "xpath:attributes"],
+        ["xpath=//div[5]/div/table/tr/td[2]/form/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "699707f6-8134-45b3-a3a3-1aae6463b558",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//p[@id='login']", "xpath:attributes"],
+        ["xpath=//div[7]/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Saldo insufficiente o oggetto già acquistato.')]", "xpath:innerText"]
+      ],
+      "value": "Risultato"
+    }, {
+      "id": "f0d7d457-ca11-4ea9-9b66-92d43c9cc894",
+      "comment": "",
+      "command": "assert",
+      "target": "Risultato",
+      "targets": [],
+      "value": "Saldo insufficiente o oggetto già acquistato."
+    }]
+  }, {
+    "id": "8f2e7a11-30b9-4998-9219-f20b628ef302",
+    "name": "TC 3.3.0 Acquisto PASS",
+    "commands": [{
+      "id": "be0eb818-38c0-45e9-8892-9f42511a427b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f8ed2468-5599-4401-b8b3-7e7e90acce36",
+      "comment": "",
+      "command": "open",
+      "target": "/WarriorsAdventureClient/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5a867f83-4e31-42cb-913d-81d053b62fd0",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Laurus96"
+    }, {
+      "id": "edd8705d-7ae8-4fa3-ab3b-2f05808d51df",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "metin@Server1"
+    }, {
+      "id": "fa67228d-30c8-4c1e-8d83-0fc863692847",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//input[@value='Gioca']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "815a0248-19ce-4a11-b457-4f18666679d9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.b3",
+      "targets": [
+        ["css=.b3", "css:finder"],
+        ["xpath=//input[@value='Nome: Lithia, Livello: 1, Classe: Paladino']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "60a73ce7-20b8-40bb-957c-7bf6de092cee",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(1) .marketbutton",
+      "targets": [
+        ["css=tr:nth-child(1) .marketbutton", "css:finder"],
+        ["xpath=//input[@value='Compra']", "xpath:attributes"],
+        ["xpath=//div[5]/div/table/tr/td[2]/form/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "65839753-0e53-4c52-b047-c86a861abd21",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//p[@id='login']", "xpath:attributes"],
+        ["xpath=//div[7]/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Saldo insufficiente o oggetto già acquistato.')]", "xpath:innerText"]
+      ],
+      "value": "Risultato"
+    }, {
+      "id": "8b9e0c5f-6a3e-4353-9757-f1a4a5e62b16",
+      "comment": "",
+      "command": "assert",
+      "target": "Risultato",
+      "targets": [],
+      "value": "Acquisto effettuato."
+    }]
+  }, {
+    "id": "49153b87-5780-409d-b123-12d69f4b2622",
+    "name": "TC 4.1.0 Formato Nome Errato",
+    "commands": [{
+      "id": "0a59619e-21ab-4c05-ab18-05778c2d1f06",
+      "comment": "",
+      "command": "open",
+      "target": "/WarriorsAdventureClient/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "26815dbd-764c-48c0-a90d-c15b81044d67",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1040",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1bdaf534-1ef1-4165-b05a-824b4994801c",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Laurus96"
+    }, {
+      "id": "04e74e3b-7452-4bd1-8904-4577901c961d",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "metin@Server1"
+    }, {
+      "id": "b73e6b46-39e9-4c5a-bf33-0f52bccd8713",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//input[@value='Gioca']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a62cf212-833b-43d5-b415-bdf75000da4e",
+      "comment": "",
+      "command": "click",
+      "target": "id=b4",
+      "targets": [
+        ["id=b4", "id"],
+        ["css=#b4", "css:finder"],
+        ["xpath=//input[@id='b4']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "94302b55-2c9a-483b-8714-59efc373066f",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.im3", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div[@id='myModal']/div/form/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f4831e11-96da-424e-b829-ae690027a1e6",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.im3", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div[@id='myModal']/div/form/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/form/input", "xpath:position"]
+      ],
+      "value": "Emeril2"
+    }, {
+      "id": "3023ff7e-1dbe-4484-8270-b092e17dc705",
+      "comment": "",
+      "command": "click",
+      "target": "name=classe",
+      "targets": [
+        ["name=classe", "name"],
+        ["css=.im2", "css:finder"],
+        ["xpath=//select[@name='classe']", "xpath:attributes"],
+        ["xpath=//div[@id='myModal']/div/form/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e512cd6-6cda-4603-8ceb-8de60698a431",
+      "comment": "",
+      "command": "select",
+      "target": "name=classe",
+      "targets": [],
+      "value": "label=Paladino"
+    }, {
+      "id": "a566d187-0da3-45c8-9dad-a8a1b0a1ceda",
+      "comment": "",
+      "command": "click",
+      "target": "name=classe",
+      "targets": [
+        ["name=classe", "name"],
+        ["css=.im2", "css:finder"],
+        ["xpath=//select[@name='classe']", "xpath:attributes"],
+        ["xpath=//div[@id='myModal']/div/form/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6740c818-58f0-4c69-936c-867a09a1d20e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.im",
+      "targets": [
+        ["css=.im", "css:finder"],
+        ["xpath=//input[@value='Crea']", "xpath:attributes"],
+        ["xpath=//div[@id='myModal']/div/form/input[2]", "xpath:idRelative"],
+        ["xpath=//div/form/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "efff0259-5017-426b-ab1c-7f8cd30a3b66",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//p[@id='login']", "xpath:attributes"],
+        ["xpath=//div[7]/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Saldo insufficiente o oggetto già acquistato.')]", "xpath:innerText"]
+      ],
+      "value": "Risultato"
+    }, {
+      "id": "1acab3d8-c681-4dd4-b105-4d29941b2165",
+      "comment": "",
+      "command": "assert",
+      "target": "Risultato",
+      "targets": [],
+      "value": "Il nome del personaggio può contenere solo lettere al suo interno."
+    }]
+  }, {
+    "id": "b8c3a2c5-a547-458f-a57a-68b9b774aa5c",
+    "name": "TC 4.3.0 Creazione Personaggio",
+    "commands": [{
+      "id": "83e473b2-8f28-4dfa-a290-9be771b6456f",
+      "comment": "",
+      "command": "open",
+      "target": "/WarriorsAdventureClient/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bed30634-6b8a-4013-a4c1-14aefc23949e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1040",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3ff91b29-1d40-4e01-a8d0-bd207af5bc81",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Laurus96"
+    }, {
+      "id": "58ddd4ff-4476-41a0-8be2-dec2dca7eca5",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "metin@Server1"
+    }, {
+      "id": "62edabe2-e769-475f-bdcd-cc24d2cd8008",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//input[@value='Gioca']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ccda7bd-50c9-4aed-b65e-cbb7341565b9",
+      "comment": "",
+      "command": "click",
+      "target": "id=b4",
+      "targets": [
+        ["id=b4", "id"],
+        ["css=#b4", "css:finder"],
+        ["xpath=//input[@id='b4']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d936ce7f-5290-4031-899e-f7713a257bbc",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.im3", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div[@id='myModal']/div/form/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "50e56f97-c4c4-4bee-a7d8-c1c44893f84d",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.im3", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div[@id='myModal']/div/form/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/form/input", "xpath:position"]
+      ],
+      "value": "Lesiana"
+    }, {
+      "id": "5e6d7ce7-c0f0-4830-aa5e-947997cc27a8",
+      "comment": "",
+      "command": "click",
+      "target": "name=classe",
+      "targets": [
+        ["name=classe", "name"],
+        ["css=.im2", "css:finder"],
+        ["xpath=//select[@name='classe']", "xpath:attributes"],
+        ["xpath=//div[@id='myModal']/div/form/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7239b64f-d947-42bb-a7ba-7a0daa2268bb",
+      "comment": "",
+      "command": "select",
+      "target": "name=classe",
+      "targets": [],
+      "value": "label=Cavaliere"
+    }, {
+      "id": "bd7b962f-fdb8-4301-9da0-7e065441e9fd",
+      "comment": "",
+      "command": "click",
+      "target": "name=classe",
+      "targets": [
+        ["name=classe", "name"],
+        ["css=.im2", "css:finder"],
+        ["xpath=//select[@name='classe']", "xpath:attributes"],
+        ["xpath=//div[@id='myModal']/div/form/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "897c9771-7b2b-4ed8-91cf-df653572340a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.im",
+      "targets": [
+        ["css=.im", "css:finder"],
+        ["xpath=//input[@value='Crea']", "xpath:attributes"],
+        ["xpath=//div[@id='myModal']/div/form/input[2]", "xpath:idRelative"],
+        ["xpath=//div/form/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "769cbc99-73c1-4fb5-803e-6508350b0e22",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//p[@id='login']", "xpath:attributes"],
+        ["xpath=//div[7]/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Saldo insufficiente o oggetto già acquistato.')]", "xpath:innerText"]
+      ],
+      "value": "Risultato"
+    }, {
+      "id": "30d695c1-c8fc-4c00-a586-cd8418b97d19",
+      "comment": "",
+      "command": "assert",
+      "target": "Risultato",
+      "targets": [],
+      "value": "Personaggio correttamente creato."
+    }]
+  }, {
+    "id": "d7fc280f-6561-419b-9d05-e326a8870ebf",
+    "name": "TC 4.2.0 Creazione di un quarto personaggio",
+    "commands": [{
+      "id": "e1b961fd-50f4-4a19-b97b-5f6056702b19",
+      "comment": "",
+      "command": "open",
+      "target": "/WarriorsAdventureClient/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3d6dd3cd-0afb-4434-885e-bd10a92d99b2",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1040",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a4977c77-3e17-4af1-bd58-bb269e880605",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "banana"
+    }, {
+      "id": "5f736042-61e9-405f-ab2a-b8c746c336c8",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "metin@Server1"
+    }, {
+      "id": "ada7ffce-4c13-48c5-a2a2-a3767b14a31e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//input[@value='Gioca']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f4ffe72f-c49d-4dbf-8912-508de3b65645",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "id=b4",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "1575f0f1-6773-4b61-9158-3697d57a736b",
+    "name": "TC 5.1.7 Visualizzazione Statistiche Lithia",
+    "commands": [{
+      "id": "d5592557-cdae-4af6-afd1-2844ab20b5de",
+      "comment": "",
+      "command": "open",
+      "target": "/WarriorsAdventureClient/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8005f0da-6729-4d0a-8018-47bc835c3a2c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0d5b7157-70bd-405d-a16b-671a1caaa516",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Laurus96"
+    }, {
+      "id": "6095dd91-8a03-40da-9d19-ea70449e6f7a",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "metin@Server1"
+    }, {
+      "id": "c1fb043a-4b12-487e-8f73-462d914c408f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//input[@value='Gioca']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1b6f4d4b-2906-491f-8d0c-55c4c2ccbafb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.b3",
+      "targets": [
+        ["css=.b3", "css:finder"],
+        ["xpath=//input[@value='Nome: Lithia, Livello: 1, Classe: Paladino']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1415d140-ad94-45f3-a662-ad24f8072ce4",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=tbody > tr:nth-child(1) b",
+      "targets": [
+        ["css=tbody > tr:nth-child(1) b", "css:finder"],
+        ["xpath=//tbody/tr/td/b", "xpath:position"]
+      ],
+      "value": "Vitalità"
+    }, {
+      "id": "c050ca71-c7ce-4089-9bbc-d145c6dfb033",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=tbody > tr:nth-child(2) b",
+      "targets": [
+        ["css=tbody > tr:nth-child(2) b", "css:finder"],
+        ["xpath=//tbody/tr[2]/td/b", "xpath:position"]
+      ],
+      "value": "Forza"
+    }, {
+      "id": "a29b8a02-1164-4d05-81cf-6c4834dcd7db",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=tbody > tr:nth-child(3) b",
+      "targets": [
+        ["css=tbody > tr:nth-child(3) b", "css:finder"],
+        ["xpath=//tbody/tr[3]/td/b", "xpath:position"]
+      ],
+      "value": "Difesa"
+    }, {
+      "id": "84c805ce-b20c-430c-ba81-93f1dff95df8",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=tbody > tr:nth-child(4) b",
+      "targets": [
+        ["css=tbody > tr:nth-child(4) b", "css:finder"],
+        ["xpath=//tbody/tr[4]/td/b", "xpath:position"],
+        ["xpath=//b[contains(.,'Arma: Mani nude, Lv: 0, +0 a Forza')]", "xpath:innerText"]
+      ],
+      "value": "Arma"
+    }, {
+      "id": "ac85bbb8-c240-41c9-b739-4b089251c81d",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=tbody > tr:nth-child(5) b",
+      "targets": [
+        ["css=tbody > tr:nth-child(5) b", "css:finder"],
+        ["xpath=//tbody/tr[5]/td/b", "xpath:position"],
+        ["xpath=//b[contains(.,'Armatura: Straccio di seta, Lv: 0, +0 a Forza, +0 a Difesa, +0 a Vitalità')]", "xpath:innerText"]
+      ],
+      "value": "Armatura"
+    }, {
+      "id": "d0dc5390-2577-45f5-9e54-4541dd0ae69b",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=tbody > tr:nth-child(6) b:nth-child(1)",
+      "targets": [
+        ["css=tbody > tr:nth-child(6) b:nth-child(1)", "css:finder"],
+        ["xpath=//tbody/tr[6]/td/b", "xpath:position"],
+        ["xpath=//b[contains(.,'livello: 1')]", "xpath:innerText"]
+      ],
+      "value": "Livello"
+    }, {
+      "id": "f1436bec-e546-4dcb-9481-731eb7b1eed5",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=b:nth-child(2)",
+      "targets": [
+        ["css=b:nth-child(2)", "css:finder"],
+        ["xpath=//b[2]", "xpath:position"],
+        ["xpath=//b[contains(.,'1000EXP')]", "xpath:innerText"]
+      ],
+      "value": "Esperienza"
+    }, {
+      "id": "a5da2290-8216-4acf-b4f6-d7ba8573a25b",
+      "comment": "",
+      "command": "assert",
+      "target": "Vitalità",
+      "targets": [],
+      "value": "Punti Vita base: 100, Punti Vita: 100"
+    }, {
+      "id": "365f0e57-0dd8-4edc-af71-9f6f78cc5399",
+      "comment": "",
+      "command": "assert",
+      "target": "Forza",
+      "targets": [],
+      "value": "Punti Forza base: 75, Forza 75 "
+    }, {
+      "id": "ffd16f5b-9294-472f-a4c0-b3af8fae304e",
+      "comment": "",
+      "command": "assert",
+      "target": "Difesa",
+      "targets": [],
+      "value": "Punti Difesa base: 50, Difesa: 50"
+    }, {
+      "id": "c27e5cc2-5f4f-4125-ad00-8fce20d45c62",
+      "comment": "",
+      "command": "assert",
+      "target": "Arma",
+      "targets": [],
+      "value": "Arma: Mani nude, Lv: 0, +0 a Forza"
+    }, {
+      "id": "33dcfc2d-3aed-48b1-8849-1df158c9f5c3",
+      "comment": "",
+      "command": "assert",
+      "target": "Armatura",
+      "targets": [],
+      "value": "Armatura: Straccio di seta, Lv: 0, +0 a Forza, +0 a Difesa, +0 a Vitalità"
+    }, {
+      "id": "a0c5ce8a-b82d-44cf-9edc-309db4cbebb7",
+      "comment": "",
+      "command": "assert",
+      "target": "Livello",
+      "targets": [],
+      "value": "livello: 1"
+    }, {
+      "id": "f0b2ef4e-967c-4c7c-b05a-c6913fda1cd5",
+      "comment": "",
+      "command": "assert",
+      "target": "Esperienza",
+      "targets": [],
+      "value": "1000EXP"
+    }]
+  }, {
+    "id": "d95f0fab-7b89-4832-a727-6f9bc904affa",
+    "name": "TC 5.1.7 Visualizzazione Statistiche Marion",
+    "commands": [{
+      "id": "d1ffdc08-7fc1-4ad3-ab9e-edca5eabe5da",
+      "comment": "",
+      "command": "open",
+      "target": "/WarriorsAdventureClient/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e390b66c-5f35-4b0a-9cf5-d7aacfa6c01b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5a3f9c9e-c02a-43f2-b939-b7e35a84a6e2",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Tempesta59"
+    }, {
+      "id": "77f97b9b-f053-4070-aa72-4c226c28ee55",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "metin@Server1"
+    }, {
+      "id": "c6bb2302-5f3d-47f4-a3e4-c80b5383a07a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//input[@value='Gioca']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "779b6342-33e7-4142-8984-c0e7e9aefc64",
+      "comment": "",
+      "command": "click",
+      "target": "css=.b3",
+      "targets": [
+        ["css=.b3", "css:finder"],
+        ["xpath=//input[@value='Nome: Lithia, Livello: 1, Classe: Paladino']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7c774fc2-7b17-449d-9c0b-f0808acc9d2f",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=tbody > tr:nth-child(1) b",
+      "targets": [
+        ["css=tbody > tr:nth-child(1) b", "css:finder"],
+        ["xpath=//tbody/tr/td/b", "xpath:position"]
+      ],
+      "value": "Vitalità"
+    }, {
+      "id": "f5d035da-9241-460e-8047-2bc964b14169",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=tbody > tr:nth-child(2) b",
+      "targets": [
+        ["css=tbody > tr:nth-child(2) b", "css:finder"],
+        ["xpath=//tbody/tr[2]/td/b", "xpath:position"]
+      ],
+      "value": "Forza"
+    }, {
+      "id": "501f1a71-ae4d-4c64-897e-3bcdfe665de1",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=tbody > tr:nth-child(3) b",
+      "targets": [
+        ["css=tbody > tr:nth-child(3) b", "css:finder"],
+        ["xpath=//tbody/tr[3]/td/b", "xpath:position"]
+      ],
+      "value": "Difesa"
+    }, {
+      "id": "fdb2af6a-0ae4-41bb-bf64-e243dafe06a1",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=tbody > tr:nth-child(4) b",
+      "targets": [
+        ["css=tbody > tr:nth-child(4) b", "css:finder"],
+        ["xpath=//tbody/tr[4]/td/b", "xpath:position"],
+        ["xpath=//b[contains(.,'Arma: Mani nude, Lv: 0, +0 a Forza')]", "xpath:innerText"]
+      ],
+      "value": "Arma"
+    }, {
+      "id": "3ce22084-5bff-4947-b7a1-34c4030fcb19",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=tbody > tr:nth-child(5) b",
+      "targets": [
+        ["css=tbody > tr:nth-child(5) b", "css:finder"],
+        ["xpath=//tbody/tr[5]/td/b", "xpath:position"],
+        ["xpath=//b[contains(.,'Armatura: Straccio di seta, Lv: 0, +0 a Forza, +0 a Difesa, +0 a Vitalità')]", "xpath:innerText"]
+      ],
+      "value": "Armatura"
+    }, {
+      "id": "69a4c155-e9ec-4867-8fc3-967cd44b04ee",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=tbody > tr:nth-child(6) b:nth-child(1)",
+      "targets": [
+        ["css=tbody > tr:nth-child(6) b:nth-child(1)", "css:finder"],
+        ["xpath=//tbody/tr[6]/td/b", "xpath:position"],
+        ["xpath=//b[contains(.,'livello: 1')]", "xpath:innerText"]
+      ],
+      "value": "Livello"
+    }, {
+      "id": "621ca133-877d-4e36-abb1-ae8ec93c8bc2",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=b:nth-child(2)",
+      "targets": [
+        ["css=b:nth-child(2)", "css:finder"],
+        ["xpath=//b[2]", "xpath:position"],
+        ["xpath=//b[contains(.,'1000EXP')]", "xpath:innerText"]
+      ],
+      "value": "Esperienza"
+    }, {
+      "id": "368aaac3-d73c-428d-918c-bf96524dc555",
+      "comment": "",
+      "command": "assert",
+      "target": "Vitalità",
+      "targets": [],
+      "value": "Punti Vita base: 75, Punti Vita: 75"
+    }, {
+      "id": "1eee829c-9981-44e6-84f0-5242d8c7cd91",
+      "comment": "",
+      "command": "assert",
+      "target": "Forza",
+      "targets": [],
+      "value": "Punti Forza base: 100, Forza 100"
+    }, {
+      "id": "00aa55c1-daa1-47ee-b61d-f92681fd131c",
+      "comment": "",
+      "command": "assert",
+      "target": "Difesa",
+      "targets": [],
+      "value": "Punti Difesa base: 50, Difesa: 50"
+    }, {
+      "id": "0eb847da-6507-4f8c-9535-7ea8631fe442",
+      "comment": "",
+      "command": "assert",
+      "target": "Arma",
+      "targets": [],
+      "value": "Arma: Mani nude, Lv: 0, +0 a Forza"
+    }, {
+      "id": "469b94fc-12b3-4c6c-b186-2ae4a24af84b",
+      "comment": "",
+      "command": "assert",
+      "target": "Armatura",
+      "targets": [],
+      "value": "Armatura: Straccio di seta, Lv: 0, +0 a Forza, +0 a Difesa, +0 a Vitalità"
+    }, {
+      "id": "d1ea0f11-ac6d-44bb-b8eb-39075ebcf097",
+      "comment": "",
+      "command": "assert",
+      "target": "Livello",
+      "targets": [],
+      "value": "livello: 1"
+    }, {
+      "id": "2ff67128-d940-443f-a643-685f139abedd",
+      "comment": "",
+      "command": "assert",
+      "target": "Esperienza",
+      "targets": [],
+      "value": "1000EXP"
+    }]
+  }, {
+    "id": "c19b6529-e34b-47a1-a74b-201d1cd6e0ac",
+    "name": "TC 6.2.0 Ban Giocatore",
+    "commands": [{
+      "id": "058ac85a-a699-4c44-b43e-14275f00a6e0",
+      "comment": "",
+      "command": "open",
+      "target": "/WarriorsAdventureClient/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "46b73318-e6c0-407c-8fc6-3a2027c04904",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "54bc4a14-6801-4428-9e56-660a36f81419",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "laurus"
+    }, {
+      "id": "fef87301-42fa-4c4f-9573-6af93d7cdf85",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "metin@Server1"
+    }, {
+      "id": "9b6c3ef5-68aa-4602-8d83-353f92fb8f5a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//input[@value='Gioca']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a3a820dd-3795-4433-8530-4a6cec233c01",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(1) > .butd:nth-child(3) input:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(1) > .butd:nth-child(3) input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='BAN']", "xpath:attributes"],
+        ["xpath=//td[3]/form/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "60a17b1d-4b0b-44ac-9743-7a2b110d3a5f",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=login",
+      "targets": [
+        ["id=myModal", "id"],
+        ["css=#myModal", "css:finder"],
+        ["xpath=//div[@id='myModal']", "xpath:attributes"],
+        ["xpath=//div[5]", "xpath:position"]
+      ],
+      "value": "Risultato"
+    }, {
+      "id": "3846b99b-fa8f-420b-91ed-1898ec065fb6",
+      "comment": "",
+      "command": "assert",
+      "target": "Risultato",
+      "targets": [],
+      "value": "Giocatore bannato."
+    }]
+  }, {
+    "id": "49633d76-312d-4451-af9f-ce80e5011020",
+    "name": "TC 7.2.0 Lista Giocatori Bannati",
+    "commands": [{
+      "id": "726bfa0d-40fe-435d-82ca-914ce95b3cb8",
+      "comment": "",
+      "command": "open",
+      "target": "/WarriorsAdventureClient/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0cd9b6ae-9189-4057-9bbb-6e5cb84a3f5a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ee80aca5-1ca9-4764-b34d-b81e663fa4ef",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Tempesta58"
+    }, {
+      "id": "3e517ddf-c21d-402a-b963-a4c102064f3f",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "metin@Server1"
+    }, {
+      "id": "01efac24-cb5a-4750-b3b8-b252a0410b85",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//input[@value='Gioca']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "91cfa514-6500-4fd1-be1e-476869e524b2",
+      "comment": "",
+      "command": "click",
+      "target": "id=b3",
+      "targets": [
+        ["id=b3", "id"],
+        ["css=#b3", "css:finder"],
+        ["xpath=//input[@id='b3']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "484a1aca-0513-4055-9baa-4240eb9151a5",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.modal-content",
+      "targets": [
+        ["css=.modal-content", "css:finder"],
+        ["xpath=//div[@id='myModal']/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "31d02322-377d-4db8-b1e0-22578bfbec92",
+    "name": "TC 8.2.0 UnBan Giocatore",
+    "commands": [{
+      "id": "96716ac4-3c06-4377-882e-8b765b2b4175",
+      "comment": "",
+      "command": "open",
+      "target": "/WarriorsAdventureClient/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "919ef6d7-8c67-4148-a986-6f99c81f8455",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4ccb1373-16cc-4483-87b5-df04c1caa64f",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Tempesta58"
+    }, {
+      "id": "16594b26-bb5f-47eb-b34e-6f1dc169c3ed",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "metin@Server1"
+    }, {
+      "id": "f218b226-624c-4305-a47c-66e09a1b6c98",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//input[@value='Gioca']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4944acbd-ac7c-4c3f-9979-cc74b12a6ef2",
+      "comment": "",
+      "command": "click",
+      "target": "id=b3",
+      "targets": [
+        ["id=b3", "id"],
+        ["css=#b3", "css:finder"],
+        ["xpath=//input[@id='b3']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5516ae18-f725-46c4-a530-a30a5a65575a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.table2 input:nth-child(2)",
+      "targets": [
+        ["css=.table2 input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='Rimuovi BAN']", "xpath:attributes"],
+        ["xpath=//div[@id='myModal']/div/table/tr/td[2]/form/input[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/table/tr/td[2]/form/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "abe3683b-be72-4796-a5df-6631d706d46d",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=login",
+      "targets": [],
+      "value": "Risultato"
+    }, {
+      "id": "66b5a8a4-b795-4392-8a75-013a5b9b7d39",
+      "comment": "",
+      "command": "echo",
+      "target": "${Risultato}",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "f5f9ad77-9099-4749-98e5-2d9f1bcc953c",
+    "name": "TC 9.2.0 Account Eliminato",
+    "commands": [{
+      "id": "85ca77b7-42fa-4b5a-91a8-beb510a6eaaf",
+      "comment": "",
+      "command": "open",
+      "target": "/WarriorsAdventureClient/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "518b27ad-68bf-472f-af1c-17f538fb7f8e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3f937744-4ce1-4062-8409-aa1f16870467",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "laurus"
+    }, {
+      "id": "2a8804e5-c253-46b2-b499-75abc8035509",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "metin@Server1"
+    }, {
+      "id": "fca20e34-f601-4ce1-96d1-4a8c489df7c5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//input[@value='Gioca']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "be4fd4e0-e0e3-45d6-8a68-3db33b97a4d0",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(1) > .butd:nth-child(2) input:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(1) > .butd:nth-child(2) input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='Rimuovi']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5fcf3305-46bd-4f00-b13d-26e3a7f8795d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.tp",
+      "targets": [
+        ["css=.tp", "css:finder"],
+        ["xpath=//div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b0baf7ef-79c9-441e-a7d6-a47c7de956b6",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//p[@id='login']", "xpath:attributes"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Giocatore rimosso.')]", "xpath:innerText"]
+      ],
+      "value": "Risultato"
+    }, {
+      "id": "b3769574-6e28-4fa5-9474-b3df9cb6d15b",
+      "comment": "",
+      "command": "assert",
+      "target": "Risultato",
+      "targets": [],
+      "value": "Giocatore rimosso."
+    }]
+  }, {
+    "id": "20d45443-4c7d-451f-a692-89ab51efae10",
+    "name": "TC 2.2.0 Login Ban",
+    "commands": [{
+      "id": "1a12e52f-fbf4-415a-8e6c-384a3d665c9c",
+      "comment": "",
+      "command": "open",
+      "target": "/WarriorsAdventureClient/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "efb900b2-1393-4953-a0b0-6b3d35b84d2e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f15099e2-a588-4d4b-8371-24a8e7de4073",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Fagottino"
+    }, {
+      "id": "74c85ad4-da67-4079-b015-6bcd6af34bdf",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "metin@Server1"
+    }, {
+      "id": "a7861b8a-2f93-46fc-9c7e-cd3e07737c39",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//input[@value='Gioca']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "57deb0bb-6175-4f40-80c5-008ee7031efc",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//p[@id='login']", "xpath:attributes"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Username o Password errate.')]", "xpath:innerText"]
+      ],
+      "value": "Risultato"
+    }, {
+      "id": "6b6beb00-42ad-4e46-b526-e09608269c57",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//p[@id='login']", "xpath:attributes"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Username o Password errate.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "05eaabef-11b9-4910-8a97-de59e728426a",
+      "comment": "",
+      "command": "assert",
+      "target": "Risultato",
+      "targets": [],
+      "value": "Utente bannato, impossibile accedere."
+    }]
+  }, {
+    "id": "095b2be1-c3c4-4616-bb9b-96a08d21fb76",
+    "name": "TC 10.2.0 Salvataggio Effettuato",
+    "commands": [{
+      "id": "1f8f080e-d43b-44ce-9882-523486d7ebce",
+      "comment": "",
+      "command": "open",
+      "target": "/WarriorsAdventureClient/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "76088a3c-981a-49c5-8234-6d6c9802d8b7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f92fb14b-8029-495e-8f64-d52ef8fa77ca",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Laurus96"
+    }, {
+      "id": "818bc6b3-4212-4844-b128-2a40a4f4e11a",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "metin@Server1"
+    }, {
+      "id": "c0bbb888-e3d4-442c-9e46-83449c29da64",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//input[@value='Gioca']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2d5c3c87-0bac-4bd3-b9e5-9ca236864ad5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.b3",
+      "targets": [
+        ["css=.b3", "css:finder"],
+        ["xpath=//input[@value='Nome: Lithia, Livello: 1, Classe: Paladino']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2f3cf5ef-cbe6-4756-a78f-d014371be2fa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.save",
+      "targets": [
+        ["css=.save", "css:finder"],
+        ["xpath=//input[@value='Salvataggio']", "xpath:attributes"],
+        ["xpath=//form[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1fe567b4-cc8b-49e0-a286-0442ae635698",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["css=#login", "css:finder"],
+        ["xpath=//p[@id='login']", "xpath:attributes"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Salvataggio correttamente effettuato.')]", "xpath:innerText"]
+      ],
+      "value": "Risultato"
+    }, {
+      "id": "26f5757f-419d-4420-96f6-4b4b860b8bfb",
+      "comment": "",
+      "command": "assert",
+      "target": "Risultato",
+      "targets": [],
+      "value": "Salvataggio correttamente effettuato."
+    }]
+  }],
+  "suites": [{
+    "id": "f687a141-2b7d-4201-8ba2-53afceeedbfd",
+    "name": "Registrazione TestSuite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["c76701b6-2e8d-4f02-a571-b19dfbc07ee4", "19150e44-df85-4c76-b8cc-26c4817a8a77", "6bee1ae7-d496-428f-aa54-3fd72ce84fc1", "9e4153e7-e1de-409d-87cf-ec6340a8ba0c", "a138cc1a-597e-4b29-aa8f-79eb38ebcf50", "456a3a8f-51dd-4b78-b5d5-aaf9376ca5af", "d8b255fe-2cee-4151-92ff-a8d3da33b356"]
+  }, {
+    "id": "144a28f7-f221-463f-8274-23d9dfa93c1e",
+    "name": "Login TestSuite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["c8ec1bd2-1f74-45bf-bb77-a9514b6396c8", "9af35348-0c62-4f28-9b2d-95f68c3feb6c", "20d45443-4c7d-451f-a692-89ab51efae10"]
+  }, {
+    "id": "95354bb9-a44b-4256-8b06-869c01fd9529",
+    "name": "Mercato TestSuite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["08911fc0-012f-4657-ae88-69f283acf7ee", "7777463d-dea5-488b-ad64-bb8300176e27", "8f2e7a11-30b9-4998-9219-f20b628ef302"]
+  }, {
+    "id": "3a54e223-c423-411b-8b72-3e52793e41dd",
+    "name": "Creazione Personaggio TestSuite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["49153b87-5780-409d-b123-12d69f4b2622", "d7fc280f-6561-419b-9d05-e326a8870ebf", "b8c3a2c5-a547-458f-a57a-68b9b774aa5c"]
+  }, {
+    "id": "1b458ab0-617c-4185-8926-9145da9191e4",
+    "name": "Visualizzazione Statistiche TestSuite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }, {
+    "id": "d78047a0-0cb8-438e-a6c3-5d95f35d5432",
+    "name": "Ban Giocatore",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["c19b6529-e34b-47a1-a74b-201d1cd6e0ac"]
+  }, {
+    "id": "b051527a-c144-475d-870f-0140d36f6d53",
+    "name": "unBan Giocatore TestSuite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }, {
+    "id": "d535feae-6a2c-4e7c-ab40-bffdec5082ff",
+    "name": "Lista Giocatori Bannati",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["49633d76-312d-4451-af9f-ce80e5011020"]
+  }, {
+    "id": "acf41a1a-1b17-4130-a60d-a798a3c34111",
+    "name": "Rimozione Account",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }, {
+    "id": "a4c985b8-3e0c-463e-b43e-8b194fb1a1ee",
+    "name": "Salvataggio dei progressi",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}

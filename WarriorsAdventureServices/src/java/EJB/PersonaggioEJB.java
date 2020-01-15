@@ -18,6 +18,7 @@ import javax.persistence.TypedQuery;
 import EJBInterface.PersonaggioEJBRemote;
 import Entity.Arma;
 import Entity.Armatura;
+import java.util.regex.Pattern;
 /**
  *
  * @author giuse
@@ -51,9 +52,12 @@ public class PersonaggioEJB implements PersonaggioEJBRemote{
 
     @Override
     public String createCharacter(String name, String classe, Giocatore p) {
+          if(Pattern.matches("[A-Za-z]+", name) == false){
+            return "FE_NA";
+        }
         Personaggio new_character = new Personaggio(name, classe, p.getUsername());
         if(listCharacter(p).size() > 2){
-            return "DP_NA";
+            return "L3C";
         }
         insertPersonaggio(new_character);
         return "PASS";
