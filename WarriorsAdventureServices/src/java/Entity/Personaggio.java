@@ -60,7 +60,6 @@ public class Personaggio implements Serializable {
     private int defense;
     private int strenght;
     private int gold;
-    private String guild;
     private int exp;
     private int remainexp;
     
@@ -126,7 +125,6 @@ public class Personaggio implements Serializable {
             strenght = base_str;
         }
         gold=10000;
-        guild=null;
         exp=0;
         remainexp=1000-exp;
         
@@ -167,9 +165,6 @@ public class Personaggio implements Serializable {
         return gold;
     }
 
-    public String getGuild() {
-        return guild;
-    }
 
     public int getExp() {
         return exp;
@@ -207,9 +202,6 @@ public class Personaggio implements Serializable {
         this.gold = gold;
     }
 
-    public void setGuild(String guild) {
-        this.guild = guild;
-    }
 
     public void setExp(int exp) {
         this.exp = exp;
