@@ -1,0 +1,365 @@
+html,body{
+    height: 100%;
+    font-family: sans-serif;}
+
+.save_alert{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 400px;
+    margin-right: 0%;
+    transform: translate(-50%, -50%);
+    
+    font-weight: bolder;
+    font-size: large;
+    color: red;
+}
+/*----------------------------------
+Div Definition
+--------------------------------*/
+.ussa{
+    text-align: center;
+
+    padding: 5px;
+
+    height: 5%;}
+.fight{
+    height: 70%;
+    width: 40%;
+
+    float: left;}
+.onpl{
+    height: 70%;
+    width: 15%;
+
+    margin-left: 5px;
+
+    float: left;}
+.notify{
+    height: 70%;
+    width: 24.256%;
+
+    margin-left: 5px;
+
+    float: left;}
+.market{
+    height: 70%;
+    width: 19.5%;
+
+    margin-left: 5px;
+
+    float: left;}
+.buttonlist{
+    height: 20%;
+    width: 40%;
+
+    margin-top: 5px;
+
+    float: left;}
+.stats{
+    height: 20%;
+    width: 20%;
+
+    margin-top: 5px;
+    margin-left: 5px;
+
+    float: left;}
+.mission{
+    height: 20%;
+    width: 39.14%;
+
+    margin-top: 5px;
+    margin-left: 5px;
+
+    float: left;}
+/*----------------------------------
+Ussa Object
+--------------------------------*/
+.username{
+    margin: auto;
+    float: left;}
+.logout{
+    position: absolute;
+    top: 4%;
+    left: 40%;
+    width: 250px;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+
+    font-size: 20px;}
+.logout:hover{
+    background-color: black;
+    color: white;}
+.save{
+    
+    position: absolute;
+    top: 4%;
+    left: 60%;
+    width: 250px;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+
+    font-size: 20px;}
+.save:hover{
+    background-color: black;
+    color: white;}
+.saldo{
+    margin: auto;
+    float: right;}
+/*----------------------------------
+fight Object
+--------------------------------*/
+.logcombat{
+    margin-left: 5px;
+    margin-bottom: 2px;
+    font-size: medium;}
+.textarea{
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+
+    padding: 2px;
+
+    height: 94%;}
+.text{
+    text-align: justify;
+
+    margin: 5px;
+    height: 99%;
+
+    font-size: large;
+
+    overflow: scroll;}
+/*----------------------------------
+onpl Object
+--------------------------------*/
+.onlineplayer{
+    margin-left: 5px;
+    margin-bottom: 2px;
+    font-size: medium;}
+.onlinelist{
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+
+    padding: 2px;
+
+    height: 94%;}
+.ontable{
+    text-align: center;
+    width: 100%;}
+.td{
+    text-align: left;
+    padding-left: 10px;}
+.fightbutton{
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+
+    margin-left: 105px;
+
+    font-size: 15px;}
+.fightbutton:hover{
+    background-color: black;
+    color: white;}
+/*----------------------------------
+notify Object
+--------------------------------*/
+.notifytitle{
+    margin-left: 5px;
+    margin-bottom: 2px;
+    font-size: medium;}
+.notifylist{
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+
+    padding: 2px;
+
+    height: 94%;}
+.notifytable{
+    text-align: center;
+    width: 100%;}
+.notifybutton{
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+
+    font-size: 15px;}
+.notifybutton:hover{
+    background-color: black;
+    color: white;}
+/*----------------------------------
+market Object
+--------------------------------*/
+.markettitle{
+    margin-left: 5px;
+    margin-bottom: 2px;
+    font-size: medium;}
+.marketlist{
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+
+    padding: 2px;
+
+    height: 94%;}
+.markettable{
+    text-align: center;
+    width: 100%;}
+.marketbutton{
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+
+    margin-left: 10px;
+
+    font-size: 15px;}
+.marketbutton:hover{
+    background-color: black;
+    color: white;}
+.tdmarket{
+        text-align: left;
+        padding-left: 10px;}
+.market_alert{
+    text-align: center;
+
+    font-weight: bolder;
+    font-size: large;
+    color: red;
+
+    margin: 10px;
+
+    width: 18%;
+
+    position: absolute;
+    top: 650px;
+}
+/*----------------------------------
+buttonlist Object
+--------------------------------*/
+.actionbuttonsx{
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+
+    height: 92px;
+    width: 374px;
+
+    margin-bottom: 5px;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    float: left;}
+.actionbuttonsx:disabled{
+    border-radius: 5px;
+    border-style: solid;
+    border-color: grey;
+
+    height: 92px;
+    width: 374px;
+
+    margin-bottom: 5px;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    float: left;}
+.actionbuttondx{
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+    
+    height: 92px;
+    width: 375px;
+    
+    margin-bottom: 5px;
+    margin-left: 5px;
+    
+    font-size: 20px;
+    font-weight: bold;
+    
+    float: left;}
+.actionbuttondx:disabled{
+    border-radius: 5px;
+    border-style: solid;
+    border-color: grey;
+    
+    height: 92px;
+    width: 375px;
+    
+    margin-bottom: 5px;
+    margin-left: 5px;
+    
+    font-size: 20px;
+    font-weight: bold;
+    
+    float: left;}
+.actionbuttondx:hover{
+    background-color: black;
+    color: white;}
+.actionbuttonsx:hover{
+    background-color: black;
+    color: white;}
+/*----------------------------------
+Stats Object
+--------------------------------*/
+.statstitle{
+    margin-left: 5px;
+    margin-bottom: 2px;
+    font-size: medium;}
+.statslist{
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+
+    padding: 2px;
+
+    height: 80%;}
+.statstable{
+    text-align: center;
+    width: 100%;}
+/*----------------------------------
+Mission Object
+--------------------------------*/
+.missiontitle{
+    margin-left: 5px;
+    margin-bottom: 2px;
+    font-size: medium;}
+.missionlist{
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+
+    padding: 2px;
+
+    height: 80%;}
+.missiontable{
+    text-align: center;
+    width: 100%;}
+.missionbutton{
+    border-radius: 5px;
+    border-style: solid;
+    border-color: black;
+
+    margin-left: 350px;
+
+    font-size: 15px;}
+.missionbutton:hover{
+    background-color: black;
+    color: white;}
