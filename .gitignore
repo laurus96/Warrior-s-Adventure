@@ -1,2 +1,6 @@
 
 .DS_Store
+/WarriorsAdventureClient/dist/
+/WarriorsAdventureClient/build/
+/WarriorsAdventureServices/build/
+/WarriorsAdventureServices/dist/
