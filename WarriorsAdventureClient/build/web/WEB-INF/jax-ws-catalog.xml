@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/PlayerEJBService/PlayerEJB?wsdl" uri="wsdl/localhost_8080/PlayerEJBService/PlayerEJB.wsdl"/>
+    <system systemId="http://localhost:8080/PlayerEJBService/PlayerEJB?xsd=1" uri="wsdl/localhost_8080/PlayerEJBService/PlayerEJB.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/CharacterEJBService/CharacterEJB?wsdl" uri="wsdl/localhost_8080/CharacterEJBService/CharacterEJB.wsdl"/>
+    <system systemId="http://localhost:8080/CharacterEJBService/CharacterEJB?xsd=1" uri="wsdl/localhost_8080/CharacterEJBService/CharacterEJB.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/GiocatoreEJBService/GiocatoreEJB?wsdl" uri="wsdl/localhost_8080/GiocatoreEJBService/GiocatoreEJB.wsdl"/>
+    <system systemId="http://localhost:8080/GiocatoreEJBService/GiocatoreEJB?xsd=1" uri="wsdl/localhost_8080/GiocatoreEJBService/GiocatoreEJB.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/PersonaggioEJBService/PersonaggioEJB?wsdl" uri="wsdl/localhost_8080/PersonaggioEJBService/PersonaggioEJB.wsdl"/>
+    <system systemId="http://localhost:8080/PersonaggioEJBService/PersonaggioEJB?xsd=1" uri="wsdl/localhost_8080/PersonaggioEJBService/PersonaggioEJB.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/AmministratoreEJBService/AmministratoreEJB?wsdl" uri="wsdl/localhost_8080/AmministratoreEJBService/AmministratoreEJB.wsdl"/>
+    <system systemId="http://localhost:8080/AmministratoreEJBService/AmministratoreEJB?xsd=1" uri="wsdl/localhost_8080/AmministratoreEJBService/AmministratoreEJB.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ArmaEJBService/ArmaEJB?wsdl" uri="wsdl/localhost_8080/ArmaEJBService/ArmaEJB.wsdl"/>
+    <system systemId="http://localhost:8080/ArmaEJBService/ArmaEJB?xsd=1" uri="wsdl/localhost_8080/ArmaEJBService/ArmaEJB.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/ArmaturaEJBService/ArmaturaEJB?wsdl" uri="wsdl/localhost_8080/ArmaturaEJBService/ArmaturaEJB.wsdl"/>
+    <system systemId="http://localhost:8080/ArmaturaEJBService/ArmaturaEJB?xsd=1" uri="wsdl/localhost_8080/ArmaturaEJBService/ArmaturaEJB.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/OnlinePlayerEJBService/OnlinePlayerEJB?wsdl" uri="wsdl/localhost_8080/OnlinePlayerEJBService/OnlinePlayerEJB.wsdl"/>
+    <system systemId="http://localhost:8080/OnlinePlayerEJBService/OnlinePlayerEJB?xsd=1" uri="wsdl/localhost_8080/OnlinePlayerEJBService/OnlinePlayerEJB.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/NotifyPlayerEJBService/NotifyPlayerEJB?wsdl" uri="wsdl/localhost_8080/NotifyPlayerEJBService/NotifyPlayerEJB.wsdl"/>
+    <system systemId="http://localhost:8080/NotifyPlayerEJBService/NotifyPlayerEJB?xsd=1" uri="wsdl/localhost_8080/NotifyPlayerEJBService/NotifyPlayerEJB.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/FightEJBService/FightEJB?wsdl" uri="wsdl/localhost_8080/FightEJBService/FightEJB.wsdl"/>
+    <system systemId="http://localhost:8080/FightEJBService/FightEJB?xsd=1" uri="wsdl/localhost_8080/FightEJBService/FightEJB.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/CombatCommonEJBService/CombatCommonEJB?wsdl" uri="wsdl/localhost_8080/CombatCommonEJBService/CombatCommonEJB.wsdl"/>
+    <system systemId="http://localhost:8080/CombatCommonEJBService/CombatCommonEJB?xsd=1" uri="wsdl/localhost_8080/CombatCommonEJBService/CombatCommonEJB.xsd_1.xsd"/>
+</catalog>

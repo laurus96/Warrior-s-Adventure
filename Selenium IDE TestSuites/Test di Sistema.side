@@ -137,6 +137,27 @@
       ],
       "value": ""
     }, {
+      "id": "e9d580f5-45f1-4f51-8920-221d3597bd58",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=login",
+      "targets": [],
+      "value": "Registrazione"
+    }, {
+      "id": "3f50031b-d136-45f5-a0d6-0fa3979331b6",
+      "comment": "",
+      "command": "assert",
+      "target": "Registrazione",
+      "targets": [],
+      "value": "Utente registrato correttamente."
+    }, {
+      "id": "4599d115-9a55-4c66-9347-6b3e08cb3b1a",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Login",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "417313a0-f38f-45dc-bb70-faa451c87b54",
       "comment": "",
       "command": "type",
@@ -255,6 +276,20 @@
       ],
       "value": ""
     }, {
+      "id": "d7113f32-ba17-4e49-858e-b7b888578dd2",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=login",
+      "targets": [],
+      "value": "Creazione_personaggio"
+    }, {
+      "id": "5e5e2bc2-ecee-4d8c-a21b-cb2c50c8cd1f",
+      "comment": "",
+      "command": "assert",
+      "target": "Creazione_personaggio",
+      "targets": [],
+      "value": "Personaggio correttamente creato."
+    }, {
       "id": "0270893a-074c-4585-8b00-cf9a0ae07a92",
       "comment": "",
       "command": "click",
@@ -265,6 +300,104 @@
         ["xpath=//input[2]", "xpath:position"]
       ],
       "value": ""
+    }, {
+      "id": "d2bd6763-a6dc-4d5c-aaaf-3d0e533052d0",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=tbody > tr:nth-child(1) b",
+      "targets": [],
+      "value": "Vitalità"
+    }, {
+      "id": "fa397d70-11a6-4e6c-91ff-2003e6c4caae",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=tbody > tr:nth-child(2) b",
+      "targets": [],
+      "value": "Forza"
+    }, {
+      "id": "3e4c2233-9f35-4fa7-974d-4f9d32c47bb9",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=tbody > tr:nth-child(3) b",
+      "targets": [],
+      "value": "Difesa"
+    }, {
+      "id": "6e3690a8-c617-43bf-8077-3c1fb7f2fb18",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=tbody > tr:nth-child(4) b",
+      "targets": [],
+      "value": "Arma"
+    }, {
+      "id": "08f36d53-6bc1-428f-8da9-ba62c4c295c9",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=tbody > tr:nth-child(5) b",
+      "targets": [],
+      "value": "Armatura"
+    }, {
+      "id": "90308fb3-3f96-4391-a05e-11ca6c4e2da0",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=tbody > tr:nth-child(6) b:nth-child(1)",
+      "targets": [],
+      "value": "Livello"
+    }, {
+      "id": "a49e812b-19dd-4231-a7e2-a218387b5841",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=b:nth-child(2)",
+      "targets": [],
+      "value": "Esperienza"
+    }, {
+      "id": "1e6a1e65-81c4-473f-a75f-5fc7c49ddcf4",
+      "comment": "",
+      "command": "assert",
+      "target": "Vitalità",
+      "targets": [],
+      "value": "Punti Vita base: 100, Punti Vita: 100"
+    }, {
+      "id": "568ad3c2-f539-41e8-a16a-33ce45a9ad95",
+      "comment": "",
+      "command": "assert",
+      "target": "Forza",
+      "targets": [],
+      "value": "Punti Forza base: 75, Forza 75 "
+    }, {
+      "id": "fa737850-4e1a-4d38-bfcd-911193abe0c6",
+      "comment": "",
+      "command": "assert",
+      "target": "Difesa",
+      "targets": [],
+      "value": "Punti Difesa base: 50, Difesa: 50"
+    }, {
+      "id": "0e19f242-a4ca-4a83-adea-c434f91ce37a",
+      "comment": "",
+      "command": "assert",
+      "target": "Arma",
+      "targets": [],
+      "value": "Arma: Mani nude, Lv: 0, +0 a Forza"
+    }, {
+      "id": "9aa33a0b-a64d-48b2-9510-257cfffdf138",
+      "comment": "",
+      "command": "assert",
+      "target": "Armatura",
+      "targets": [],
+      "value": "Armatura: Straccio di seta, Lv: 0, +0 a Forza, +0 a Difesa, +0 a Vitalità"
+    }, {
+      "id": "84c59ee4-64b2-4051-b308-ef9b33333c65",
+      "comment": "",
+      "command": "assert",
+      "target": "Livello",
+      "targets": [],
+      "value": "livello: 1"
+    }, {
+      "id": "3d1e9a42-51f7-42f9-a30e-1b969f4a21d7",
+      "comment": "",
+      "command": "assert",
+      "target": "Esperienza",
+      "targets": [],
+      "value": "1000EXP"
     }, {
       "id": "f3bdff30-3219-4fef-9b32-3e6c76320ad4",
       "comment": "",
@@ -277,6 +410,20 @@
       ],
       "value": ""
     }, {
+      "id": "b8597c05-3e07-41db-93f6-164224ea7881",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=login",
+      "targets": [],
+      "value": "Acquisto_1"
+    }, {
+      "id": "f7534230-14db-44c3-8ada-2dc9625e93b8",
+      "comment": "",
+      "command": "assert",
+      "target": "Acquisto_1",
+      "targets": [],
+      "value": "Acquisto effettuato."
+    }, {
       "id": "43144ee7-782d-44c8-ba76-ad746a5e8c0a",
       "comment": "",
       "command": "click",
@@ -287,6 +434,20 @@
         ["xpath=//tr[4]/td[2]/form/input[2]", "xpath:position"]
       ],
       "value": ""
+    }, {
+      "id": "c3ad2baa-b5cc-408a-8a64-cbfeb0c11ffb",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=login",
+      "targets": [],
+      "value": "Acquisto_2"
+    }, {
+      "id": "d5ea4228-277a-4506-915c-12ed04d16c3d",
+      "comment": "",
+      "command": "assert",
+      "target": "Acquisto_2",
+      "targets": [],
+      "value": "Acquisto effettuato."
     }, {
       "id": "71adef59-2344-4f0d-8d50-f5f77ff29a43",
       "comment": "",
@@ -299,6 +460,20 @@
       ],
       "value": ""
     }, {
+      "id": "a1862f99-e517-49ff-9c77-6568ff982e43",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=login",
+      "targets": [],
+      "value": "Salvataggio"
+    }, {
+      "id": "daec866f-3026-434f-ae7c-2a3bddf48e29",
+      "comment": "",
+      "command": "assert",
+      "target": "Salvataggio",
+      "targets": [],
+      "value": "Salvataggio correttamente effettuato."
+    }, {
       "id": "1099f924-a7f7-41bd-a78c-e554bb24d70f",
       "comment": "",
       "command": "click",
@@ -308,6 +483,13 @@
         ["xpath=//input[@value='Logout']", "xpath:attributes"],
         ["xpath=//input", "xpath:position"]
       ],
+      "value": ""
+    }, {
+      "id": "f410cd44-f2be-4544-9755-b409ea95b3e0",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "Login",
+      "targets": [],
       "value": ""
     }, {
       "id": "12cd2501-a3d3-4d6b-81ad-ceceb3e81be1",
